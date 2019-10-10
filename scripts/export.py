@@ -1,4 +1,5 @@
-from medpy.models import *
+from dcodex_carlson.models import *
+
 import re
 import sys
 from collections import defaultdict

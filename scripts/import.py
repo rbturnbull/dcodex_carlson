@@ -1,4 +1,4 @@
-from medpy.models import *
+from dcodex_carlson.models import *
 import re
 import sys, os
 #https://django-extensions.readthedocs.io/en/latest/runscript.html
