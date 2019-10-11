@@ -1,0 +1,164 @@
+{% extends "dcodex/base.html" %}
+{% load static %}
+{% block title %}Location{% endblock %}
+{% load dcodex_carlson_tags %} 
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'dcodex_carlson/css/location.css' %}" />
+<style>
+body {
+    background: white;
+    font-family: 'Gentium Plus';
+    
+}
+.reading {
+    font-size: 2.0em;
+    background: #efefef;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid #007AFF;
+    cursor: pointer;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.sublocation {
+    padding: 10px;
+    margin: 20px;
+    background-color: none;
+
+}
+.basetext {
+    font-size: 4.0em;
+    text-align: center;
+}
+.selected {
+    background-color: yellow;
+    border: 2px solid red;
+}
+#hover {
+    position: absolute;
+    width: 230px;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    display: none;
+    background-color: #bbbbbb;
+    padding: 20px;
+    border-radius: 15px;  
+    font-size: 2.0em;  
+}
+#next_location {
+    position: absolute;
+    right: 0px;
+    top:0px;
+}
+#prev_location {
+    position: absolute;
+    left: 0px;
+    top:0px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div id=logo></div>
+{% if location.next %}
+    <div id=next_location>
+        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/">Next</a>
+    </div>
+{% endif %}
+{% if location.prev %}
+    <div id=prev_location>
+        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/">Prev</a>
+    </div>
+{% endif %}
+<center>
+{% for verse_label in location.verse_labels.all %}
+    <span class=verse_reference>{{ verse_label.reference }}</span>
+{% endfor %}
+
+<div class=basetext>{{ location.base_text_greek }}</div>
+
+{% for sublocation in sublocations %}
+    <div class=sublocation data-sublocationid="{{ sublocation.id }}">
+    <!--
+        <span>Sublocation {{ sublocation.id }}:</span>
+    -->
+        {% witness_attests_reading witness sublocation '0' parallel as selected %}                                
+        <span class="reading {% if selected %}selected{% endif %}" data-code="0">Base</span>
+        {% for reading in sublocation.reading_set.all %}
+            {% witness_attests_reading witness sublocation reading.order parallel as selected %}        
+            <span class="reading {% if selected %}selected{% endif %}" data-code="{{ reading.order }}">{{ reading.text_greek }}</span>
+        {% endfor %}
+
+        {% witness_attests_reading witness sublocation '?' parallel as selected %}                
+        <span class="reading {% if selected %}selected{% endif %}" data-code="?">?</span>
+        
+        {% witness_attests_reading witness sublocation '-' parallel as selected %}                                
+        <span class="reading {% if selected %}selected{% endif %}" data-code="-">—</span>        
+    </div>
+    <hr>
+{% endfor %}
+
+</center>
+<div id=hover></div>
+{% endblock %}
+
+
+{% block javascript %}
+<script src="{% static 'dcodex_carlson/js/location.js' %}"></script>
+<script>
+var hover_xhr = null;
+
+$( document ).ready(function() {
+    console.log( "loading from location.html" );
+    
+    $('.reading').click(function(e) {
+        sublocationdiv = $(this).parent();
+        sublocation_id = sublocationdiv.data('sublocationid');
+        reading = $(this);
+
+        $.ajax({
+            type: "POST",
+            url: "/dcodex_carlson/set_attestation/",
+            data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id, 'witness_id': {{ witness.id }} },
+            success: function(msg){
+                if (msg == "OK") {
+                    sublocationdiv.children( '.reading' ).removeClass( 'selected' );
+                    reading.addClass( 'selected' );
+                }
+                else {
+                    alert("There was a problem setting the attestation.");
+                }
+            }
+        });        
+        
+	});
+    $( ".reading" ).hover(
+        function(event) {
+            sublocationdiv = $(this).parent();
+            sublocation_id = sublocationdiv.data('sublocationid');
+            if (hover_xhr != null) {
+                hover_xhr.abort();
+            }
+            hover_xhr = $.ajax({
+                type: "POST",
+                url: "/dcodex_carlson/attestations/",
+                data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id},
+                success: function(msg){
+                    $("#hover").html(msg);  
+                    var left = event.pageX  + 10;
+                    var top = event.pageY + 20;
+                    $('#hover').css({top: top,left: left}).show();
+                }
+            });
+    
+        }, function() {
+            $("#hover").hide();
+        }
+    );
+
+});
+</script>
+{% endblock %}

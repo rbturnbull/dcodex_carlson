@@ -3,6 +3,19 @@ from django.db import models
 import re
 import sys, os
 from collections import defaultdict
+import unicodedata
+import logging
+
+
+def convert_greek_unicode(text):
+    betacode = "FPAULOSTKQNRDEWIXHGMhCZB" + "i"
+    unicode  = "φπαυλοστκθνρδεωιχηγμ῾ξζβ" + "\u0345"
+    trans = str.maketrans(betacode, unicode)
+    text = text.translate(trans)
+    text = text.replace("σ ", "ς ")
+    if text[-1] == "σ":
+        text = text[:-1] + "ς"
+    return unicodedata.normalize("NFC", text) # This isn't working for rough breathing...
 
 class Parallel(models.Model):
     code = models.CharField(max_length=10)
@@ -24,8 +37,18 @@ class Witness(models.Model):
         verbose_name_plural = 'Witnesses'
     def all_sigla_names(self):
         return [str(siglum) for siglum in self.siglum_set.all()]
-
-
+    def attests_reading(self, sublocation, code, parallel = None, corrector=None ):
+        attestation_count = Attestation.objects.filter( sublocation=sublocation, witness=self, code=code, parallel=parallel, corrector=corrector ).count()        
+        if attestation_count:
+            return True
+        return False
+    def set_attestation(self, sublocation, code, corrector=None, parallel=None):
+        Attestation.objects.filter( witness=self, sublocation=sublocation, corrector=corrector, parallel=parallel ).all().delete()
+        attestation = Attestation( witness=self, sublocation=sublocation, code=code, corrector=corrector, parallel=parallel )
+        attestation.save()
+        
+        return attestation
+    
 class Siglum(models.Model):
     witness = models.ForeignKey( Witness, on_delete=models.CASCADE )
     name = models.CharField(max_length=200)
@@ -70,6 +93,17 @@ class Location(models.Model):
     
     def __str__(self):
         return self.base_text
+    def base_text_greek(self):
+        return convert_greek_unicode( self.base_text )
+    def get_parallels(self):
+        parallels = Parallel.objects.filter( attestation__sublocation__location=self ).distinct()
+        if len(parallels) == 0:
+            parallels = [None]
+        return parallels
+    def next(self):
+        return Location.objects.filter( id__gt=self.id ).order_by('id').first()
+    def prev(self):
+        return Location.objects.filter( id__lt=self.id ).order_by('-id').first()
     
 class SubLocation(models.Model):
     location = models.ForeignKey( Location, on_delete=models.CASCADE )
@@ -79,6 +113,21 @@ class SubLocation(models.Model):
         return "%s:%d" % (str(self.location), self.order)
     class Meta:
         ordering = ['order']
+    def get_parallels(self):
+        parallels = Parallel.objects.filter( attestation__sublocation=self ).distinct()
+        if len(parallels) == 0:
+            parallels = [None]
+        return parallels
+    def attestations(self, parallel=None):
+        return Attestation.objects.filter( sublocation=self, parallel=parallel )
+    def code_attestations(self, code, parallel=None):
+        return Attestation.objects.filter( sublocation=self, code=code, parallel=parallel )
+    def attestations_string(self, parallel=None):
+        attestations = self.attestations(parallel)
+        return " ".join( [str(attestation.witness) for attestation in attestations] )        
+    def code_attestations_string(self, code, parallel=None):
+        attestations = self.code_attestations(code, parallel)
+        return " ".join( [str(attestation.witness) for attestation in attestations] )        
     
 class Reading(models.Model):
     sublocation = models.ForeignKey( SubLocation, on_delete=models.CASCADE )
@@ -88,6 +137,9 @@ class Reading(models.Model):
         return self.text
     class Meta:
         ordering = ['order']
+    def text_greek(self):
+        return convert_greek_unicode( self.text ).replace(".", " ")
+        
 
     
 class Attestation( models.Model ):
@@ -108,9 +160,6 @@ class Suppression( models.Model ):
             parallel_switch = "/%s " % (self.parallel.code)
         return "%s- %s ;" % (parallel_switch, str(self.witness) )
 
-
-def make_greek_unicode(text):
-    return text.strip()
     
 def get_witness_or_create_from_siglum_name( siglum_text ):
     siglum = Siglum.objects.filter(name=siglum_text).first()
@@ -204,7 +253,7 @@ class Collation( models.Model ):
 
                 base_text = sublocations.pop(0)
         
-                location = Location(base_text=make_greek_unicode(base_text))
+                location = Location(base_text=base_text.strip())
                 location.save()
                 self.locations.add(location)     
             
@@ -264,7 +313,7 @@ class Collation( models.Model ):
                 
                     readings = sublocation_text.strip().split()
                     for reading_index, reading in enumerate( readings ):
-                        reading = Reading( sublocation=sublocation, text=make_greek_unicode(reading), order=reading_index+1 )
+                        reading = Reading( sublocation=sublocation, text=reading.strip(), order=reading_index+1 )
                         reading.save()
             
                 for parallel in re.findall('(.*?)<(.*?)>', parallels):
@@ -287,9 +336,8 @@ class Collation( models.Model ):
                                 corrector = int(siglum_components[1])
 
                             witness = get_witness_or_create_from_siglum_name( siglum_text )
-                            for code, sublocation in zip(vector, sublocation_objects):                    
-                                attestation = Attestation( witness=witness, sublocation=sublocation, code=code, corrector=corrector, parallel=parallel )
-                                attestation.save()
+                            for code, sublocation in zip(vector, sublocation_objects):      
+                                witness.set_attestation(sublocation=sublocation, code=code, corrector=corrector, parallel=parallel)
 
                 prev_location_data = location_data
                             
@@ -320,9 +368,7 @@ class Collation( models.Model ):
         
             if len(sublocations) == 0:
                 continue
-            parallels = Parallel.objects.filter( attestation__sublocation__location=location ).distinct()
-            if len(parallels) == 0:
-                parallels = [None]
+            parallels = location.get_parallels()
             for parallel in parallels:
                 if parallel != None:
                     print(parallel.code, file=file)
