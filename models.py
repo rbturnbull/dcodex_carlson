@@ -74,6 +74,7 @@ class Location(models.Model):
 class SubLocation(models.Model):
     location = models.ForeignKey( Location, on_delete=models.CASCADE )
     order    = models.IntegerField( )
+    weighting = models.CharField(max_length=10, default="")
     def __str__(self):
         return "%s:%d" % (str(self.location), self.order)
     class Meta:
@@ -159,7 +160,6 @@ class Collation( models.Model ):
                 if ms[0] == '/':
                     parallel_code = ms[1:]
                     parallel, created = Parallel.objects.get_or_create( code=parallel_code )                
-                    print("Parallel:", parallel)
                     self.parallels.add(parallel)
                 else:
                     sigla = ms.split("~")
@@ -190,7 +190,6 @@ class Collation( models.Model ):
                     witness = get_witness_or_create_from_siglum_name( siglum_name )
                     suppression = Suppression(parallel=parallel, witness=witness)
                     suppression.save()
-                    print(suppression)
                     self.suppressions.add( suppression )
         
             prev_location_data = initial_data
@@ -210,7 +209,6 @@ class Collation( models.Model ):
                 self.locations.add(location)     
             
         
-                print("-----------")        
                 macro_matches = re.findall("/*([a-z])* =([\-\+]*) (.*?);", prev_location_data)
                 for match in macro_matches:
                     parallel = None
@@ -234,7 +232,6 @@ class Collation( models.Model ):
                     for siglum_name in sigla_names:
                         witness = get_witness_or_create_from_siglum_name( siglum_name )
                         macro.witnesses.add( witness )
-                    print(macro)
                     location.macros.add(macro)
                 
                 verse_matches = re.findall("/*([a-z])* @ ([^\s]+)", prev_location_data)
@@ -250,18 +247,20 @@ class Collation( models.Model ):
                     verse_label.save()                
 
                     location.verse_labels.add(verse_label)
-                    print(verse_label)
                 
-                print("Base:", base_text)
-                print("Sublocations:", sublocations)
-                print( "Parallels:", parallels )     
-
             
                 sublocation_objects = []
                 for order, sublocation_text in enumerate(sublocations):
                     sublocation = SubLocation( location=location, order=order )
                     sublocation.save()
                     sublocation_objects.append(sublocation)
+                    
+                    # Check for weighting of variant
+                    sublocation_components = re.match( "^(\*[^\s]+) (.*)", sublocation_text )
+                    if sublocation_components:
+                        sublocation.weighting = sublocation_components.group(1)
+                        sublocation.save()
+                        sublocation_text = sublocation_components.group(2)
                 
                     readings = sublocation_text.strip().split()
                     for reading_index, reading in enumerate( readings ):
@@ -272,7 +271,6 @@ class Collation( models.Model ):
                     parallel_code = parallel[0].strip()
                     collation_codes = parallel[1].strip().split("|")
                 
-                    print("Parallel:", parallel_code)
                     parallel = None
                     if len(parallel_code) > 0:
                         parallel, created = Parallel.objects.get_or_create( code=parallel_code )
@@ -281,11 +279,6 @@ class Collation( models.Model ):
                         sigla = collation_code.strip().split()
                         vector = sigla.pop(0)
                     
-                        print("Vector:", vector)
-                        print("Sigla:", sigla)
-                    
-
-                        
                         for siglum_text in sigla:
                             siglum_components = siglum_text.split(":")
                             siglum_text = siglum_components[0]
@@ -301,29 +294,29 @@ class Collation( models.Model ):
                 prev_location_data = location_data
                             
 
-    def export(self):
+    def export(self, file=sys.stdout):
+        output = ""
         print("* %s %s ;" % (
             " ".join(["/%s" % parallel.code for parallel in self.parallels.all()]),
             " ".join(["~".join(witness.all_sigla_names()) for witness in self.witnesses.all()]),
-            ) )
+            ), file=file )
         for suppression in self.suppressions.all():
-            print(suppression)
+            print(suppression, file=file)
 
         for location in self.locations.all():
             for verse_label in location.verse_labels.all():
-                print(verse_label)
+                print(verse_label, file=file)
             for macro in location.macros.all():
                 if macro.description:
-                    print('" %s "' % macro.description )
-                print(macro)
+                    print('" %s "' % macro.description, file=file )
+                print(macro, file=file)
             
-    #        print(location)
-            print("{{}")
-            print( "[ %s" % (location.base_text) )
+            print("{{}", file=file)
+            print( "[ %s" % (location.base_text), file=file )
             sublocations = location.sublocation_set.all()
             for sublocation in sublocations:
-                print(" | %s" % ( " ".join( [reading.text for reading in sublocation.reading_set.all()] )   ))
-            print("]")
+                print(" |%s %s" % ( sublocation.weighting, " ".join( [reading.text for reading in sublocation.reading_set.all()] )   ), file=file)
+            print("]", file=file)
         
             if len(sublocations) == 0:
                 continue
@@ -332,39 +325,34 @@ class Collation( models.Model ):
                 parallels = [None]
             for parallel in parallels:
                 if parallel != None:
-                    print(parallel.code)
-                print("<")
+                    print(parallel.code, file=file)
+                print("<", file=file)
                 codes_dict = defaultdict(list)
 
                 for witness in Witness.objects.filter( attestation__sublocation__location=location, attestation__parallel=parallel ).distinct():
 
                     correctors = Attestation.objects.filter( sublocation=sublocation, witness=witness, parallel=parallel ).order_by('corrector').values('corrector').distinct()
-    #                print("correctors:", correctors)
                     for corrector in correctors:
                         corrector = corrector['corrector']
-    #                    print("Corrector:", corrector)
                         codes = ""                
                         for sublocation in sublocations:
                             attestation = Attestation.objects.filter( sublocation=sublocation, witness=witness, parallel=parallel, corrector=corrector ).first()
-    #                        print("attestation", attestation)
                             symbol = attestation.code if attestation else "?"
                             codes += symbol
                     
-                        corrector_suffix = ":%d" % corrector if corrector else ""
+                        corrector_suffix = ":%d" % corrector if corrector != None else ""
                         witness_string = "%s%s" % (witness, corrector_suffix)
-    #                    print(codes, witness_string)
                         codes_dict[codes].append( witness_string )
                 delimiter = ""
                 for code in codes_dict:                
-                    print(" %s %s %s " % (delimiter, code, " ".join(codes_dict[code]) ) )
+                    print(" %s %s %s " % (delimiter, code, " ".join(codes_dict[code]) ), file=file )
             
                     delimiter = "|"
 
-                print(">")
+                print(">", file=file)
         
 
-            print("}")        
-    #        return
+            print("}", file=file)        
 
         
     

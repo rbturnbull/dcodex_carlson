@@ -1,0 +1,4923 @@
+" Collation of Mark 6:45-8:26 || Matt 14:22-16:2 "
+* /k /m
+  ROOT NA 
+  p45
+  01 A~02 B~03 C~04 D~05 E~07 F~09 G~012 H~013 K~017 L~019
+  M~021 N~022 P~024 Q~026 S~028 U~030 W~032 Y~034
+  Ga~036 De~037 Th~038 Pi~041 Ps~044 Om~045 
+  1 2 13 28 33 69 118 124 157 209 346
+  543 565 574 579 669 700 788 826 828 983
+  1071 1424 1582 2327~1359~1359 2427
+  a~B3 aur~B15 b~B4 c~B6 d~B5 e~B2 f~B10 ff1~B9 ff2~B8
+  g1~B7 h~B12 i~B17 k~B1 l~B11 n~B16 q~B13 r1~B14 vg
+  sa bo sin cur pesh hark arm geo~geo1 eth
+  Orig
+  TR WH
+;
+
+/k - e ff1 g1 h n r1 2427 cur WH NA TR 
+F G H K L M N P Q S U Y Ga Om 2 28 69 118 124 157 346 543 574 579 669 788 826 828 983 1071 1424 2327 aur c f ff2 i l q vg sa bo sin pesh hark arm geo eth Orig ;
+
+/m - NA Ps 543 574 669 826 828 983 2327 2427 
+     i n 
+	 sa bo arm geo eth
+     Orig TR WH 
+F G H K L M N P Q S U Y Ga Om 2 28 69 118 124 157 346 579 788 1071 1424 aur c e f ff1 ff2 g1 h l q r1 vg sin cur pesh hark ;
+
+" ^ Chron "  " Commenting out Chron for testing purposes "
+
+" Macros: "
+
+" $S = SWANSON witnesses -- all Greek, no papyri "
+/k = $S 01 A B C D E F G H K L M N P Q S U W Y Ga De Th Pi Ps Om 
+        1 2 13 28 33 69 118 124 157 346 565 579 700 788 1071 1424 1582 ;
+/m = $S 01 A B C D E F G H K L M N P Q S U W Y Ga De Th Pi Ps Om 
+        1 2 13 28 33 69 118 124 157 346 565 579 700 788 1071 1424 1582 ;
+
+" $T = TEXTUS RECEPTUS -- witnesses collated against TR. "
+/k = $T TR 574 669 669 2327 ;
+/m = $T TR ;
+
+" $C = CRITICAL -- witnesses collated against Critical Text (NA) "
+/k = $C NA WH ROOT ;
+/m = $C NA WH ROOT ;
+
+" $M = MAJORITY -- Swanson's Gothic M symbol "
+/k = $M E F G H S Y Om ;
+/m = $M E F G H S Y Om ;
+
+" $L = LAKE -- Lake group, family 1 "
+/k = $L 1 118 1582 209 ;
+/m = $L 1 118 1582 209 ;
+
+" $F = FERRAR -- Ferrar group, family 13 (Lake et al. 1941) "
+/k = $F 13 69 124 346 543 788 826 828 983 ;
+/m = $F 13 69 124 346     788             ;
+
+" $E = FAMILY E "
+
+" $P = FAMILY PI "
+
+" $I = Itala (Juelicher) "
+/k = $I a aur b c d f     ff2      i l n q    ;
+/m = $I a aur b c d f ff1 ff2 g1 h   l   q r1 ;
+
+" $? = Lacunose or those only affirmatively cited "
+/k = $? Orig sa bo eth sin cur pesh hark arm geo ;
+/m = $? Orig sa bo eth sin cur pesh hark arm geo ;
+
+" Temporarily lacunose "
+/k =+ $? C P Q Ps k n ;
+/m =+ $? p45 A H N Q Ga 69 k r1 ;
+
+/k - ROOT ;
+/m - ROOT ;
+
+" Aland 147 = Mark 6:45-52 = Matt 14:22-33 Walking on Water "
+/k @ Mk6:45
+/m @ Mt14:22
+
+{{}
+[ KAI EUQUS HNAGKASEN TOUS MAQHTAS AUTOU
+| -EUQ. | KAI.EUQ./tunc=TOTE | EUQ)EWS | EUQ./+ECEGERQEIS
+| HNAGK./+hO.IS | +(hO.IS~HNAGK.) | -AUTOU ]
+/k	< 00000-0 B L W De 28 579 $C 01 Th
+	| 00100-0 A $L 565 983 Orig $M K M N U Ga Pi 118 69 124 157 700 788 1071 1424 $T 2 
+	| 0010100 $F 574 543 826 828
+	| 00110-0 D
+	| 00?00-0 sin pesh hark
+	| 00?00-1 aur f l vg
+	| 00?10-1 $I
+	| 10?10-1 c
+	| ????0-0 33
+	| ??????? p45 >
+" KAI EUQEWS HNAGKASEN TOUS MAQHTAS "
+/m	< 00100-0 Th B P 124 788 28 1071 
+	| 00100-1 01:1 De 118 579 D W $C $L 33 700
+	| 0010100 565 E F K Pi $F 2 157 346 1424 $T
+	| 0010101 C:1 G Y L M S U Om
+	| 00?00-0 aur ff1
+	| 00?00-1 e
+	| 00?0100 $I
+	| 00?0101 d l vg
+	| 00?0110 g1
+	| 01?0101 f
+	| 10?00-1 01:0 C:0 >}
+
+{{}
+[ EMBHNAI EIS TO PLOION | -TO ]
+/k	< 0 B L W De 28 579 $C D A $F $M K M N U Ga Pi 118 209 69 124 157 700 788 1071 1424 $T 2 Orig sin pesh hark
+	| 1 01 Th $L 565 33
+	| ? p45 $I vg >
+" EMBHNAI EIS TO PLOION "
+/m	< 0 01 C De 118 579 G Y L M S U Om D W $C P Th 124 788 E F K Pi $F 2 157 346 1424 28 1071
+	| 1 B $L 33 700 565
+	| ? $I e vg >}
+
+{{}
+[ KAI PROAGEIN | PROS(AGEIN | PR./+AUTON ]
+/k	< 00 B 01 $C A E:0 K L W Ga De Om 2 1424 $M M U Pi 157 1071 $T
+	| 01 D:1 N Th 565 $L $F 28 700 346 Orig $I vg 
+	| 10 579
+	| 11 D:0
+	| ?1 bo arm eth sin pesh hark
+	| ?? p45 33 >
+" KAI PROAGEIN AUTON "
+/m	< 00 D $I e
+	| 01 B $C $T $S 01 F aur c f l q vg
+	| 10 ff1
+	| 11 118 209 >}
+
+{{}
+[ EIS TO PERAN PROS BHQSAIDAN
+| -EIS..PER. | EIS/PROS | -PROS.BHQ. | -PROS | PROS/EIS | PROS/APO ]
+/k	< 000000 B 01 $C A D E:0 K L N Ga De Om $F 579 346 1424 $M M U Pi 157 1071 $T
+	| 000010 Th 565 28 700 Orig
+	| 0000?0 $I
+	| 0001?0 a
+	| 001??? 983
+	| 010000 2
+	| 0?00?0 33 aur c d f ff2 vg pesh hark
+	| 1?0000 W 118
+	| 1?0010 $L 1582
+	| 1?00?0 sin
+	| 1?00?1 q
+	| 1?00?? p45 >
+/m	< 001??? B $C $T $S $F $L $I e vg >}
+
+{{}
+[ hEWS AUTOS APOLUEI                   " /m hEWS hOU APOLUSHi "
+| hEWS/+AN | hEWS/+IDEIN | hEWS.AUT./DE~AUT.
+| hOU+/AUT. | -AUT. | AUT)OUS AUT)ON | APOL.~AUT.
+| APOLU)SHi AP)ELUSEN APOLU)SEI ]
+/k	< 00000000 B 01 $C 1
+	| 00000001 p45 A N Om 33 828 $M E:1 M U Pi 157 1071 $T 
+	| 00000003 E:0 K Ga 1582 $F 2 28 579 700 2327
+	| 00000100 L
+	| 00000201 346
+	| 00010001 118 209
+	| 00011??1 1424
+	| 00100000 D
+	| 00100002 Th 565 b
+	| 01000200 De
+	| 10000001 W a $I vg
+	| ?000000? hark
+	| ?000001? pesh
+	| ?000???? sin >
+/m	< 00010001 $I
+	| 00011??1 B $C $T $L $S aur d f ff1 l vg e >}
+
+{{}
+[ TON OXLON
+| T.OXL./TOUS.OXLOUS T.OXL./populum=TON.LAON ]
+" TURBAM: a b d | POPULUM: cet. "
+/k	< 0 B 788 $C $T $S 118 209 $F 346 a b d vg
+	| 1 $L 69 700 1071 565 sin pesh hark
+	| 2 $I
+	| ? p45 >
+/m	< 0 F:0 ff1
+	| 1 B $C $T $L $S F:1 $I vg e >}
+
+/k @ Mk6:46
+/m @ Mt14:23a
+
+{{}
+[ KAI APOTACAMENOS AUTOIS 
+| -APOT. | APOT./APOLU(SAS) | APOTACAMEN)ON
+| -AUT. | AUT./TOUS.OXLOUS | AUT./(TON.OXL)ON ]
+/k	< 000000 B 118:1 788 $C $T $S $L 118:0 $F 69 700 1071 565 p45 sin b f
+	| 001000 346
+	| 010000 $I vg >
+/m	< 010000 ff1
+	| 010010 d e $C $T B $L $S 01:1
+	| 010011 $I vg
+	| 1??1?? 01:0 >}
+
+" Lake 1941:81 only lists 13 in favor of PROSEUCASQAI "
+[ APHLQEN EIS TO OROS PROSEUCASQAI
+| AN(HLQEN) | (AN)EBH | AP./+hO.IHSOUS | -EIS..PROS. | PRO(EUCASQAI
+| PROS./+KAT.IDIAN:a | :a~PROS. ]
+/k	< 000000? B 118:1 788 $C $T $S 69 700 1071 p45 543 826 828 983 sin $I b vg
+	| 000010? $F 346
+	| 0001?0? 565
+	| 100000? $L 118:0 >
+/m	< 1100010 $C $T B $L $S ff1 e
+	| 1100011 $I vg
+	| 1110011 c >
+
+/k @ Mk6:47a
+/m @ Mt14:23b
+[ KAI OYIAS GENOMENHS       " /m OYIAS DE GENOMENHS MONOS "
+| KAI~/~DE | -GEN. | GEN./+MONOS ]
+/k	< 000 B $C $T $S $L $F A L D K:0 De 1582:0 118 28 565 1071 $I vg hark
+	| 100 N 983 sin pesh
+	| ?00 p45 >
+/m	< 101 $C $T B $S $F $L $I vg e
+	| 111 g1 >}
+
+/k @ Mk6:47b
+/m @ Mt14:24a
+{{}
+[ HN | v47b- | -HN | HN/+PALAI | HN+/EKEI | +(EKEI~HN) ]
+/k	< 0000? B $C $T $S $F A L K:0 N 565 1071 1582:1 $I vg sin pesh hark
+	| 0010? p45 D $L 1582:0 118 28 a d i ff2 b
+	| 0100? De
+	| 1???? c >
+/m	< 00010 $C $T $S $F $L $I vg
+	| 00011 e >}
+
+{{}
+[ TO PLOION EN MESWi THS QALASSHS
+| TO/+DE TO/+GAR | PL./+HDH
+| PL./+STADIOUS.POLLOUS | +(POL./hIKANOUS) 
+| -EN..QAL. | -EN | EN/EIS | MES)ON MES)Hi.T)Hi.QALASS)Ai ]
+/k	< 000?0000 B $C $T $S $L $F K:1 N De 1582:0 118 28 1071 p45 $I vg
+	| 000?0002 D 565
+	| 000?000? sin hark pesh
+	| 000?01?0 K:0
+	| 20100?00 b
+	| ???????? c >
+/m	< 100?0002 a aur f ff1 l vg
+	| 100?0011 d D
+	| 100?01?1 28
+	| 110?0002 $I e
+	| 110?01?1 1424 F 01 C $M K L M P U W De Pi $L 2 33 157 565 579 1071 $T
+	| 11101??? B $F 788 346 $C WH
+	| 11111??? Th 700 >}
+ 
+{{}
+[ /k KAI AUTOS MONOS | -MONOS | IHSOUS+/AUTOS ]
+/k	< 00 B $C $T $S $L $F p45 $I vg sin pesh hark
+	| 01 ff2
+	| 11 aur
+	| ?? c >
+/m	< -- $* >}
+
+"      hijk              12         o   p   q    3   "{{}
+[ ((EN.MES.T.QAL)) ((STAD.hIKAN.)) EPI THS GHS | HN+/EPI
+| ^(HN/APEIXEN) | ^(HN~EN.MES..hIK) ^(HN~STAD.hIK.)
+| -EPI.T.GHS | ^(EPI.T.G.~HN) | -EPI | EPI/APO ]
+/k	< 0??0?00 B 01 L W 579 1424 $C p45 D De Th 565 700 $M K N Ga Pi $L $F 2 33 28 157 1071 $T $I vg pesh
+	| 10?0000 A U 124 sin
+	| 10?000? bo
+	| 10?0100 M hark
+	| ??????? c >
+/m	< 0??1??? $I vg
+	| 1001??? D 1424 F 28 01 C $M K L M P U W De Pi $L 2 33 157 565 579 1071 $T
+	| 1011??? d ff1 e
+	| 1100101 B $F 788 346 $C
+	| 1110001 Th
+	| 112001? 700 >}
+
+/k @ Mk6:48a
+/m @ Mt14:24b
+
+{{}
+[ /k KAI IDWN AUTOUS | IDWN/EIDEN ]
+/k	< 0 B 01 L W 579 1424 $C D De Th $I vg bo
+	| 1 p45 A U 124 M 565 700 $M K N Ga Pi $L $F 2 33 28 157 1071 $T i c pesh hark arm eth >
+/m	< - $* >}
+
+{{}
+[ BASANIZOMENOUS EN TWi ELAUNEIN
+| BASAN./_ON | BASAN./+EN.TWi.PLOIWi
+| EN.T.ELAU./hUPO.TWN.KUMATWN | EN.T.ELAU./KAI.ELAUNONTAS | T.ELAU.~AUTOUS ]
+/k	< 00000 B 01 L W 579 1424 $C vg aur f l A U 124 M $M K N Ga Pi $L $F 2 33 28 157 1071 $T
+	| 00010 D c 
+	| 00011 Th a b d q 565 700 i
+	| 01000 De
+	| 10011 ff2
+	| ?0000 p45 >
+/m	< 001?0 l:0
+	| 101?0 B $C $T $S $F $L $I vg l:1
+	| 101?1 e >}
+
+" 1   2   3   4       5       6   "
+[ HN GAR hO ANEMOS ENANTIOS AUTOIS
+| -HN..AUT. | GAR/DE | ENANTIOS~hO.ANEMOS
+| -AUT. | AUT.~hO..EN. AUT.~HN..EN. EN.~AUT.~hO.AN.
+| AUT./+SFODRA | AUT./+KAI.AUTOS.MONOS.HN.EPI.THS.GHS ]
+/k	< 0000000 B L De $C D $M K M N U Ga Pi 118 2 33 157 579 1071 $T
+	| 0000010 W Th $F 28 700
+	| 00000?? p45
+	| 0000100 a ff2
+	| 0000101 c
+	| 0001?00 i
+	| 0001?10 565
+	| 0010000 01 A 1424 d f q l vg 
+	| 00100?? Orig
+	| 0011?00 $L
+	| 0100100 aur
+	| 0100200 b >
+/m	< 0000100 $I aur b ff2 q
+	| 0010000 Th
+	| 0010100 h
+	| 0010300 ff1
+	| 0011?00 B $C $T $L $S d f l e
+	| 0100100 a c
+	| 0111?00 vg
+	| 1?????? g1 >
+
+/k @ Mk6:48b
+/m @ Mt14:25
+[ PERI TETARTHN    FULAKHN THS NUKTOS
+"      TETARTHi DE FULAKHi THS NUKTOS "
+| KAI+/PERI PERI/+DE PERI/+OUN
+| -PERI | THN+/TET. | TETART)Hi.FULAK)HI TETART)HS.FULAK)HS
+| T.NUKT.~PERI..FUL. | T.NUKT./hWRAi ]
+/k	< 000000 B L De $C 01
+	| 00?000 a aur
+	| 100000 A 1424 W Th $F 28 $L D $M K M N U Ga Pi 118 2 33 157 579 1071 $T
+	| 10?000 d f q vg l ff2
+	| 10?011 i c
+	| 1????? pesh hark arm eth
+	| 200000 700 
+	| 201000 565
+	| 20?000 b
+	| 2????? bo
+	| ?0001? p45 >
+/m	< 210100 $C B $T $L $S Th
+	| 210200 D
+	| 21?200 $I vg e
+	| 110100 W >
+
+" /k p45 coded as supporting either AUT[OIS THS NUKTOS PERI TE /  "
+"    TARTHN] FULAKHN ... or even as AUT[OIS KAI HN hWRA PERI TE / "
+"    TARTHN] FULAKHN ... "
+
+[ ERXETAI PROS AUTOUS ((PERIPATWN)) | KAI+/ERX.^ | ^KAI~/~OUN
+| ERX./HLQEN | AP(ERXETAI | -PROS.AUTOUS | AUT)ON | PERIP.~PROS.AUT.
+| AUT./+hO.IS^ |  ^hO.IS/AUTOS | ^hO.IS~PROS.AUT. ]
+/k	< 0?000000?? B 118 $C $T $S $F G L 788 $L
+	| 0?00000??? p45
+	| 0?000100?? 579
+	| 0?001??0?? W Th 565
+	| 0?001??10? D
+	| 0??00000?? q aur l vg
+	| 0??0000100 f
+	| 0??01??0?? $I
+	| 0??01??10? d ff2 a
+	| 10?01??10? i
+	| 11?01??11? c
+	| ???????10? pesh >
+/m	< 0?100000?? $L 33 B 01 $C
+	| 0?10000100 C:1 700 788 346 $F 565 1424 Th
+	| 0?110000?? C:0 S 157 P De W
+	| 0?11000100 $M K L M U Pi 118 209 2 579 1071 $T
+	| 0?11000101 28
+	| 0?110010?? D
+	| 0??00000?? aur ff1 l q vg
+	| 0??0000100 $I g1 e a b c f ff2 h
+	| 0??10010?? d >
+
+[ PERIPATWN EPI THS QALASSHS
+| EPI.T.QAL.~PERIP. | EPI/EN,T)Hi.QALASS)Hi T)HN.QALASS)AN ]
+/k	< 00 B 118 $C $T $S $F D F L W Th 565 788 $I vg
+	| 01 33 579
+	| 02 a b ff2
+	| 10 $L
+	| ?? p45 >
+/m	< 00 C S 157 565 1424 D 28 $M K L M U Pi 118 209 2 579 1071 $T $I
+	| 02 B 01 $L 33 $C P W De Th $F 700 788 346 d f ff2 l q vg e >
+
+/k =+ $? 983 ;
+"     1     2       3       4    "
+[ /k KAI HQELEN PARELQEIN AUTOUS
+| ht:KAI..QALASSEHS- | 2/_HSEN | 2/HQELHSEN 2/HLQEN | 4~3 | 4/AUTOIS ]
+/k	< 00000 B 118 $C $T $S $L $F W Th 33 579
+	| 00001 L
+	| 00010 2327
+	| 00100 565 788
+	| 0010? p45
+	| 01000 D
+	| 0?000 $I vg
+	| 1???? 983
+	| ????? G >
+/m	< ----- $* >
+
+/k @ Mk6:49
+/m @ Mt14:26
+{{}
+[ hOI DE IDONTES AUTON 
+| -hOI | hOI/hO | ~DE/KAI~ | hOI.DE/+MAQHTAI | +(MAQ.+AUTOU)
+| ID.AUTON~hOI | AUT)OUS ]
+/k	< 0000?00 B 01 L De Th 33 $C 124 788 $T $L $S 828
+	| 0000?01 $F 543 826
+	| 0100?00 579
+	| ?000?00 $I vg
+	| ??????? p45 >
+/m	< 0001000 B 01:1 D $C d
+	| 0001110 f
+	| 0011000 $F 788 346
+	| 0011010 C 1582:1 33 $M K L M P U De Pi 118 209 2 28 157 579 1071 W 565 $T
+	| 1000??0 $I a aur b ff1 ff2 g1 h q e
+	| 1010??0 c l vg
+	| 1?00??0 700 01:0 Th 1424
+	| 1?10??0 $L 1582:0 >}
+
+[ EPI THS QALASSHS PERIPATOUNTA
+| -EPI.T.QAL.PERIP. | PERIP.~EPI.T.QAL. | T)HN.QALASS)AN
+| PERIP./+KAI.HQELEN.PARELQEIN.AUTOUS ]
+/k	< 0000 B 01 L De Th 33 $C 579
+	| 0100 124 788 $T $S $L $F
+	| 01?0 b ff2 i $I vg
+	| 01?1 l
+	| 01?? bo pesh hark arm eth
+	| ???? p45 >
+/m	< 0000 C 1582 33 $L B 01 D $C $I vg e
+	| 0010 $M K L M P U W De Pi 118 209 2 28 157 565 579 1071 $T ff1
+	| 0100 Th 700 $F 788 346 g1
+	| 1??0 1424
+	| 1??? b >
+
+/k =- $? 983 ;
+
+"    1     2     3       4   "
+{{}
+[ EDOCAN hOTI FANTASMA ESTIN
+| EDOC./ETARAXQHSAN | EDOC./+LEGONTES | EDOC./+PANTES | FANT.~EDOC.
+| -hOTI | ESTIN/EINAI ]
+/k	< 000000 B 01 L De 33 579 $C
+	| 000011 D Th 565 700 A $M K M N U Ga Pi 118 $F 2 157 1071 1424 $T $I vg
+	| 000111 W $L 28
+	| 000??? p45
+	| ????11 arm >
+/m	< 101000 1424
+	| 110000 B 01 D Th $F 700 788 346 $C $T $S $L $I vg
+	| 110001 ff1
+	| 110010 e >}
+
+[ KAI ANEKRACAN
+| 1+APO.FOBOU | 2/EKRACAN ]
+/k	< 00 B 01 D Th 565 700 L De 33 579 $C W $L 28
+         A $M K M N U Ga Pi 118 $F 2 157 1071 1424 $T
+	| 0? $I vg
+	| ?? p45 >
+/m	< 11 $C $T B $L $S
+	| 1? $I vg e >
+
+/k @ Mk6:50
+/m @ Mt14:27
+{{}
+[ /k PANTES GAR AUTON EIDON 
+| -GAR..EIDON | -AUTOU | EID)AN EIDON/IDONTES ]
+/k	< 000 L De 33 579 $C W $L 28 A $M K M N U Ga Pi 118 $F 2 157 1071 1424 $T p45
+	| 001 B 01 WH
+	| 002 q
+	| 00? l vg
+	| 01? f
+	| 1?? D Th 565 700 $I >
+/m	< --- $* >}
+
+[ /k KAI ETARAXQHSAN
+| -KAI | ETAR./EFOBHQHSAN ]
+/k	< 00 B 01 $C L De D Th 33 565 579 700
+         A $M K M N U W Ga Pi $L $F 2 28 157 1071 $T
+	| 00 p45
+	| 01 1424
+	| 00 $I vg
+	| 10 c >
+/m	< -- $* >
+
+{{}
+[ hO DE EUQUS ELALHSEN MET AUTWN
+| -hO | -DE | ~DE/KAI~ | -EUQ. | EUQ)EWS | ELAL./+hO.IS
+| -MET.AUTWN | +(MET.AUTWN~hO.IS) | MET.AUT./AUTOIS MET.AUTWN/PROS.AUTOUS ]
+/k	< 0000000?0 B 01 L De $C
+	| 0000101?? 1424
+	| 0001?00?2 33 579 c
+	| 1000000?0 Th 
+	| 1000100?1 565
+	| 1010100?0 A $M K M N U W Ga Pi $L $F 2 28 157 1071 $T
+	| 1010100?2 700
+	| 1010?00?0 aur l vg
+	| 1010?00?1 b
+	| 1010?00?2 q f
+	| 1011?00?2 D d ff2 i a
+	| ?00?????? bo
+	| ?01?????? sin pesh hark arm eth
+	| ????????? p45 >
+/m	< 1000000?1 01:0 D
+	| 100001001 B $C
+	| 100001011 Th $F 700 788 346 01:1
+	| 100011011 $T $L $S
+	| 1000?00?1 d
+	| 1000?00?2 ff1
+	| 1000?1001 g1 e
+	| 1000?1011 f
+	| 1010?1001 $I a aur b c h l vg ff2
+	| 11?0?1011 q >}
+
+{{}
+[ KAI LEGEI AUTOIS
+| -K.LEGEI.AUTOUS | K.LEG.AUT./LEGWN LEGEI/EIPEN ]
+/k	< 00 B 01 L De $C p45 Th 33 565 579 700 1424 A $M K M N U W Ga Pi $L $F 2 28 157 1071 $T q
+	| 01 D a b d ff2 i 
+	| 02 f aur l vg
+	| 1? c >
+/m	< 01 $C $T B 01 D $S $F $L $I vg e >}
+
+"     1     2   3   4      5    "
+[ QARSEITE EGW EIMI MH FOBEISQE
+| -QARS. | KAI=et+/MH | FOB./+hOTI=quia | MH~FOB.~EGW.EIMI ]
+/k	< 0000 B $C $T $S $L $F D L 28 574 579 828 $I vg
+	| 0001 W
+	| 0??? p45
+	| 1000 G 2327 2 >
+/m	< 0000 B $C 01 D $T $L $S aur c d f l q vg
+	| 0001 $I
+	| 0100 e
+	| 0111 ff1
+	| 1000 1424 >
+
+/m @ Mt14:28
+[ /m APOKRIQEIS DE AUTWi hO PETROS EIPEN
+| APOKRIQ)H,KAI+/hO | -DE | ~DE/KAI~
+| -AUTWi | AUT.~hO.PETR.EIP. hO.PETR.~AUT. | -hO | SIMWN+/PETROS ]
+/k	< ------- $* >
+/m	< 0000000 $M K L M P U Pi 2 28 565 $T 01 C W Th $L $F 788 $C 700 346
+	| 0000010 D
+	| 00000?0 $I b d f ff2 h q
+	| 0000100 WH B 1424
+	| 00001?0 g1
+	| 0000200 33
+	| 0001?00 De 157 118 209 579 1071
+	| 0001??0 a aur c l vg
+	| 00100?1 ff1
+	| 11?00?0 e >
+
+[ /m KURIE EI SU EI KELEUSON ME
+| EI.SU.EI~KE | ME/MOI ]
+/k	< -- $* >
+/m	< 00 $C $T B WH $S $L
+	| 01 C De
+	| 10 01
+	| 0? $I vg e >
+
+[ /m ELQEIN PROS SE EPI TA hUDATA
+| AP(ELQEIN | PROS.SE~ELQ. EPI.T.hUD.~PROS.SE | T)O.hUD)WR=aquam ]
+/k	< --- $* >
+/m	< 000 B 01 C D W Th $L $F 788 $C De 33 157 $I e
+	| 001 aur f l vg
+	| 010 118 209 579 1071 1424 $M K L M P U Pi 2 28 565 $T
+	| 020 700
+	| 100 346 >
+
+/m @ Mt14:29
+{{} [ /m hO DE EIPEN | ~DE/KAI~ | DE=autem,at | IS+/EIPEN
+| EIPEN/+AUTWi^ | ^AUT.~EIP. | EIPEN/LEGEI=ait ]
+/k	< ------ $* >
+/m	< 0000?0 f d e
+	| 0100?0 aur
+	| 0100?1 $I
+	| 0?00?0 $C B 01 D $T $L $S h
+	| 0?00?1 vg
+	| 0?0101 q
+	| 0?10?0 E
+	| 1?00?1 a
+	| 1?0110 ff1 >}
+
+"     d    e     f     g   h    i        j     k     "
+[ /m ELQE KAI KATABAS APO TOU PLOIOU (((hO) PETROS))
+| f/KATABHSEN,i+KAI | jk~ghi | g/EK ]
+/k	< --- $* >
+/m	< 000 $C B 01 D $T $L $S d
+	| 001 700
+	| 010 $I vg
+	| 100 e
+	| 110 ff1 >
+
+[ /m (hO) PETROS PERIEPATHSEN EPI TA UDATA
+| -hO | PERIEP)ATAN | T)WN.UDAT)WN | T)O.hUD)WR ]
+/k	< ---- $* >
+/m	< 0000 $C $T $L $S
+	| 1000 B 01 D
+	| ?000 d
+	| ?001 e
+	| ?101 $I vg
+	| ?111 a >
+
+[ /m KAI HLQEN PROS TON IHSOUN
+| -KAI | ELQEIN+/KAI | -HLQ. | HLQ./+OUN ]
+/k	< ---- $* >
+/m	< 0000 $C B 700 C:0
+	| 1110 $I vg e
+	| 1101 01:0
+	| 1111 01:1 W 33 C:1 $S $F $L $T >
+
+/m @ Mt14:30
+
+[ /m BLEPWN DE TON ANEMON ISXURON EFOBHQH
+| -ISX. | ISX./+SFODRA | EFOB./+ELQEIN ]
+/k	< --- $* >
+/m	< 000 $C B:1 D $S $F $L $T $I vg e
+	| 011 W
+	| 100 B:0 01 >
+
+[ /m KAI ARCAMENOS KATAMONTIZESQAI EKRACEN LEGWN | EKR./EKRAUGAZEN ]
+/k	< - $* >
+/m	< 0 $C $T B $L $S W
+	| 1 565
+	| ? $I vg e >
+
+[ /m KURIE SWSON ME | -ME ]
+/k	< - $* >
+/m	< 0 $C $T B $S W 1582:1 118 209 $I vg e
+	| 1 $L 1582:0 >
+
+/m @ Mt14:31
+[ /m EUQEWS DE hO IHSOUS EKTEINAS THN XEIRA
+| ~DE/KAI~ | EUQ)US | -hO.IS | -hO | EKTEIN)E | XEIRA/+KAI ]
+/k	< ------ $* >
+/m	< 000000 $C $T B $L $S
+	| 000100 D
+	| 001?00 E
+	| 010000 01 Th 700
+	| 0?0?00 d f
+	| 0?0?11 e
+	| 1?0?00 $I vg g1:1
+	| 1?0?01 aur
+	| 1?0?10 g1:0
+	| 1?0?11 c >
+
+/m =- $? N ;
+"       h        i    j    k     l  "
+[ /m EPELABETO AUTOU KAI LEGEI AUTWi
+| k/EIPEN ]
+/k	< - $* >
+/m	< 0 B $C $T $S $F $L $I vg e
+	| 1 2 >
+
+"        m       n   o      p    "
+[ /m OLIGOPISTE EIS TI EDISTASAS ]
+
+/k @ Mk6:51a
+/m @ Mt14:32
+/k =+ $? p45 ;
+{{}
+[ KAI ANEBH PROS AUTOUS EIS TO PLOION
+| ANEBH/ANABANTWN.AUTWN ANEBH)SAN ANEB)AS
+| ANEBH/EMBA(NTWN) | EIS.T.PL.~PROS.AUTOUS | EIS/EN,T)Wi.PLOI)Wi ]
+/k	< 0000 B 01 L De W 28 Th $L 1582 828:1 A $M K M N U Ga Pi $F 33 157 579 1071 1424 $C $T b f l vg
+	| 0001 118 2 2327
+	| 0010 D 565 700 $I
+	| 2000 828:0
+	| 3010 d q
+	| ??1? bo >
+/m	< 1000 $C B 01 D Th $F 33 700 788 346 1424
+	| 1010 a vg
+	| 1011 d
+	| 1100 $T $L $S
+	| 3010 $I e
+	| 3011 g1 >}
+
+[ KAI EKOPASEN hO ANEMOS | -KAI ]
+/k	< 0 B 01 L De D 565 700 W 28 Th $L 1582 118 2
+        A $M K M N U Ga Pi $F 33 157 579 1071 1424 $C $T $I vg
+	| ? a >
+/m	< 1 $C $T B 01 D Th $S $F $L $I vg e >
+
+/k @ Mk6:51b
+/m @ Mt14:33
+[ /k KAI LIAN EK PERISSOU 
+| KAI~/~DE | -LIAN | -EK.PERIS. | -EK,PERISS)WS ]
+/k	< 0000 118 209 2 A $M K M N U Ga Pi $F 33 157 579 1071 1424 $C $T
+	| 000? $I vg
+	| 001? B 01 L De WH
+	| 0100 W 28 $L
+	| 0101 D 565 700 Th
+	| 010? b
+	| ?000 hark arm
+	| ?01? sin pesh eth >
+/m	< ---- $* >
+
+{{}
+[ /k EN hEAUTOIS ECISTANTO
+| EN(bis) | AU(TOIS AU(TOUS,+KAI | EC)ESTANTO EC)EPLHSSONTO
+| EC./+KAI.EQAUMAZON EQAMBAZON.KAI+/EC. | EC./+LIAN.EN.hEAUTOIS ]
+/k	< 00000 B 01 De 28 $C
+	| 00010 D:1 A $M K M N U Ga Pi $F 2 33 157 579 700 1071 $T 
+	| 00011 565
+	| 00021 1424
+	| 00110 D:0
+	| 00200 $L
+	| 00?00 $I vg
+	| 00?10 a aur b d f q
+	| 01000 L
+	| 01010 W
+	| 12010 Th
+	| ???0? sin
+	| ???1? pesh hark >
+/m	< ----- $* >}
+
+/m =+ $? 28 h ;
+
+[ /m hOI DE EN TWi PLOIWi PROSEKUNHSAN AUTWi LEGONTES
+| ~DE/KAI~ | -EN.T.PL. | PL./+ELQONTES^ | ^PROS)ELQONTES ^(ONTES
+| ^(ELQON.KAI | PROSEKUN)OUN ]
+/k	< ------ $* >
+/m	< 000??0 B 01 C:1 N $L 700 $C
+	| 000??1 579
+	| 001000 D $M K L M P U W De Pi 2 33 157 565 1071 $T d
+	| 001010 $I vg e
+	| 001100 Th $F 788 346 1424
+	| 001200 118 209
+	| 00120? 28
+	| 001??? h
+	| 011000 C:0
+	| 100??0 ff1 >
+
+[ /m ALHQWS QEOU hUIOS EI | hUIOS~QU | EI/ESTI | EI/+SU ]
+/k	< --- $* >
+/m	< 000 aur f B $C $T $L $S
+	| 100 $I vg e
+	| 101 d D
+	| 110 b:0 c ff1 ff2
+	| 111 b:1 >
+
+/k @ Mk6:52
+[ OU GAR SUNHKAN EPI TOIS ARTOIS
+| 3/SUNHKON | 3/_KEN | 45/TWN.ARTWN 45/TOUS.ARTOUS ]
+/k	< 000 B 01 De 28 $C D L Th $L 1424
+          A $M K M N U Ga Pi $F 2 33 157 579 700 1071 $T
+	| 001 565
+	| 002 2327
+	| 100 W
+	| ?0? $I vg
+	| ?1? ff2 >
+/m	< --- $*
+	| ?0? ff1 >
+
+{{} [ /k ALL HN AUTWN hH KARDIA PEPWRWMENH
+| ALL~/~GAR ALL~/~DE | -AUTWN | hH.KARDIA~AUTWN | PEPWR)OMENH ]
+/k	< 0000 B 01 M:1 Th 33 $C 1424
+	| 0010 L De
+	| 01?0 579
+	| 1000 574 2327 669 A $M K M:0 N U W Ga Pi $F 2 157 700 1071 $I vg
+	| 1010 D $L 69 28 $T 565
+	| 1011 209
+	| 2010 b >
+/m	< 1010 ff1
+	| ---- $* >}
+
+" Aland 148.  Healings at Gennesaret Mark 6:53-56 = Matt 14:34-36 "
+/k @ Mk6:53
+/m @ Mt14:34
+[ KAI DIAPERASANTES
+| -KAI | KAI/+KAI | )APARANTES | DIAPERA)SAS
+| DIAP./+EKEIQEN^ | ^EK.~DIAP. ]
+/k	< 00000? B 01 L 33 579 $C A M Ga 1582 118 124 $T
+	         $M K N Pi $L 2 F H U W De Th 565 $F 69 28 157:1 700 788
+	         1071 346 1424 aur f l vg
+	| 000010 D b c d ff2 q
+	| 000011 a
+	| 01000? 157:0
+	| 1?0011 i >
+/m	< 00000? B $C $T $S $F $L $I vg e ff1:1
+	| 000010 c
+	| 00010? ff1:0
+	| 00100? 2 >
+
+{{}
+[ EPI THN GHN HLQON EIS GENNHSARET 
+| EPI/EIS | -THN
+| -HLQON | HLQON~EPI.T.GHN | HLQ)AN | HLQ)EN | AP(HLQON | -EIS ]
+/k	< 00000?00 B 01 L 33 579 $C
+	| 00010?00 Th 565 28 700 
+	| 00010?01 A M Ga 1582 118 124 $T D $M K N Pi $L 2 F U 157 1071
+	| 00010?11 1424
+	| 00011?00 W
+	| 001????0 De
+	| 0?01?001 b f q
+	| 10010001 $F 69
+	| 11010001 788
+	| 11010101 346
+	| 1?01?001 $I vg a aur c ff2 >
+/m	< 00010000 B 01 W 33 579 $C D Th
+	| 00010001 13 C 788 N 1424 $F 346 157
+	| 00011000 WH
+	| 0?01?001 $I vg
+	| 10010001 F L 565 $L 1071 $T 118 2 $M K M P U Pi
+	| 11010001 De 700
+	| 1?01?001 e >}
+
+{{}
+[ KAI PROSWRMISQHSAN | -K.PROS. ]
+/k	< 0 B 01 L De 69 346 $C $F 579 543 826 828 A $M K M N U Ga Pi 118 124 2 33 157 1071 1424 $T f vg l
+	| 1 D W Th 28 $L 788 565 700 983 $I sin pesh >
+/m	< 1 B $C $T $S $F $L $I vg e >}
+
+/k @ Mk6:54
+/m @ Mt14:35
+[ KAI | -KAI ]
+/k	< 0 B $C $T $S $L $F 
+	| 0 $I vg
+	| 1 a >
+/m	< 0 B $C $T $S $F $L $I vg e >
+
+{{}
+[ /k ECELQONTWN AUTWN EK TOU PLOIOU EUQUS
+| (ELQONTES | -AUTWN
+| EN/EIS,T)O,PLOI)ON/+ECELQWNTOS.TOU.KURIOU.hMWN.IHSOU.XRISTOU
+| -EUQ. | EUQ)EWS ]
+/k	< 00000 B:1 01 L De 69 346 $C W Th 28 574 543 826 828 983
+	| 00001 D $L 788 A $M K M N U Ga Pi 118 124 2 33 157 1071 1424 $T
+	| 0001? 565 700
+	| 00100 579
+	| 01000 B:0
+	| 0?00? ff2 i a b l vg aur c f d
+	| 0?01? q
+	| 10000 $F >
+/m	< ----- $* >}
+
+[ EPIGNONTES AUTON | EPEGNW)SAN | -AUTON ]
+/k	< 00 B 01 L De 69 346 $C W Th 28 $L 788 $F 579
+         A $M K M N U Ga Pi 118 124 2 33 157 1071 1424 $T
+	| 10 D 565 700 $I vg >
+/m	< 00 B $C $T $S $F $L $I vg e
+	| 01 N ff1 >
+
+[ +hOI.ANDRES.TOU.TOPOU.EKEINOU | +
+| ANDR./ANQRWPOI=homines | -EKEINOU | EK.~T.TOPOU ]
+/k	< 0??? B 01 L 579 1424 $C D $M K M N U Ga Pi 2 157 $T $I vg
+	| 1000 A G 1071 $L 118 De 33 c 
+	| 101? W $F Th 28 565 700 346 574 >
+/m	< 1000 $C B $S $L $T W $I vg
+	| 1001 Th $F 700 788 346
+	| 101? 01 579
+	| 1100 e ff1 >
+
+[ +adorabant.eum.et.confestim | +^ | +^adora)verunt | -confestim ]
+/k	< 0?? $C $T $S $L $F $I vg >
+/m	< 0?? $C $T $S $L $F aur d f ff2:1 g1 l q vg e
+	| 100 a b
+	| 101 c ff2:0
+	| 110 ff1 >
+
+/k @ Mk6:55
+{{}
+[ PERIEDRAMON hOLHN THN XWRAN EKEINHN 
+| PERID./+DE^ | ^~DE/KAI~ | EK(EDRAMON APESTEIL(ON
+| PERIDRAM)ONTES PERIEDRA)MEN | PERIEDRAM)AN
+| EIS+/hOLHN | XWR./PERIXWRON XWR./GHN | -EKEIN. ]
+/k	< 0?000000 B 01 L 579 1424 $C Th De 33
+	| 0?000110 W $F
+	| 0?010010 A G 1071 28 $M K M N U Ga Pi 2 157 $T
+	| 0?020110 346
+	| 10010010 D
+	| 10?1?000 a d
+	| 11010010 118 209 565 700
+	| 11110010 $L
+	| 11?1?000 $I vg
+	| 11?1?010 b q >
+/m	< 0?200110 W
+	| 0?201110 $C B $S $F $L $T 01 Th 13
+	| 0?201120 1424
+	| 0?20?1?0 $I vg e
+	| 0?20?1?1 ff1 >}
+
+[ KAI HRCANTO EPI TOIS KRABATTOIS
+| 1- | 2/EIRCATO 2..PERIFEREIN/PROSHNEGKAN | 2+AUTWi
+| 345- | 3/EN | 4- 45/TOUS.KRABBATOUS | 5+FEREIN.PANTAS ]
+/k	< 0000000 B L $C 01:1 De 124 33
+	| 0000010 W Th 69 788 346 $F
+	| 0000020 1424
+	| 0000100 01:0
+	| 0100000 579
+	| 1000000 E H Om 157 2 $T F:0 1071 A F:1 G Y K M N S U Ga Pi
+	| 1000001 700
+	| 1000010 $L 118 209 28
+	| 1000011 D 565
+	| 10000?0 aur c f l vg
+	| 10000?1 a b q d ff2 i >
+/m	< 0201??0 1424
+	| 0211??0 $C B Th 13 $T $S $F $L $I vg e >
+
+{{}
+[ TOUS KAKWS EXONTAS PERIFEREIN
+| EX)WNTAS | -PERIF. | *(FEREIN | PERIFER)ON
+| PERIF./+GAR PERIF./+DE | PERIF./+AUTOUS ]
+/k	< 000000 B 01 $C A Y Ga 33 L W De 2:0 28 $M K N U Pi $F 2:1 157 1071 1424 $T
+	| 000111 D
+	| 001000 M 118 Th $L
+	| 010?00 565 700
+	| 100000 579
+	| ?00000 aur f l vg
+	| ?00010 c
+	| ?00111 a d
+	| ?00121 b ff2 i q >
+/m	< 000000 $C B $T $S $F $L $I vg e >}
+
+[ /k hOPOU HKOUON hOTI ESTIN
+| 1/hOTI | 2/HKOUSQH 234/AN.HKOUSAN.TON.IHSOUN.EINAI | EKEI+4 4+EKEI ]
+/k	< 000 B $C L De Th
+	| 010 01
+	| 001 A Y Ga 33 579 M 118
+	      $M K N U Pi $F 2:1 157 1071 1424 $T
+	| 020 D
+	| 102 W 565
+	| 002 $L 28 700
+	| ??? 2:0
+	| 020 b q a d ff2 
+	| 021 i
+	| 001 aur c f l vg
+	| ??1 hark
+	| ??0 pesh >
+/m	< --- $* >
+
+/k @ Mk6:56a
+{{}
+[ /k KAI hOPOU AN
+| hOPOU/POU hOPOU/hOPOT hOPOU/hOTAN | AN/EAN -AN ]
+/k	< 00 B $C A L M 118 Th 2:0 28 700
+		 $M K N U Pi $F 2:1 157 1071 1424 $T
+	| 01 01 Y Ga 33 579 De
+	| 10 D
+	| 20 W $L
+	| 32 565 
+	| ?? $I vg >
+/m	< -- $* >}
+
+" 369/36 also = 789- "
+[ /k EISEPOREUETO EIS KWMAS H EIS POLEIS H EIS AGROUS
+| EISEPOREU)ONTO EISPOREU)ONTAI (EPOREUETO
+| POL.~AGR. 369/36 369/639 369/936
+| 3/KWMHN | 5- | TAS+6 | 6/POLIN | 8- 789- | 9+H ]
+/k	< 00000000 B 33 579 $C
+	| 00000001 01
+	| 10010010 A W
+	| 01001000 D
+	| 00100010 F
+	| 12000020 L:0
+	| 10000000 L:1
+	| 13010110 M:0
+	| 13010010 M:1
+	| 00000010 N
+	| 03010010 U
+	| 20000000 De
+	| 04010010 Th
+	| 02000020 $L
+	| 14010010 565
+	| 01010010 700
+	| 00010010 $M K Ga Pi $F 2 28 157 1071 1424 $T
+	| 3101?01? b q
+	| 0010?00? f
+	| 0000?00? aur c
+	| 0111?00? a
+	| 0100?01? i
+	| 0100?00? d ff2 l vg >
+/m	< -------- $* >
+
+{{}
+[ /k EN TAIS AGORAIS ETIQESAN TOUS ASQENOUNTAS
+| EN.THi.AGORAi+/EN | KAI+/EN | AGORIAS/PLATEIAS | ETIQ)OUN
+| PANTAS+/TOUS | ASQEN)EIS | ASQ./+AUTWN | ETIQ.T.ASQ.~EN.T.AGOR. ]
+/k	< 00000000 B 01 L De 1424 $C
+	| 00010000 A $M K M N U W Ga Th Pi 118 $F 2 33 28 157 579 1071 $T 
+	| 00010100 $L
+	| 00110000 D 565 700
+	| 00110?00 $I vg
+	| 00110?11 aur c
+	| 00111?00 b q
+	| 01110?01 ff2
+	| 11110?00 a
+	| ???1???? hark >
+/m	< -------- $* >}
+
+/k @ Mk6:56b
+/m @ Mt14:36
+[ KAI PAREKALOUN AUTON | -AUTON ]
+/k	< 0 B 01 L De 1424 $C D 565 700 $L 
+	    A $M K M N U W Ga Th Pi 118 $F 2 33 28 157 579 1071 $T
+	| 0 $I vg >
+/m	< 0 $C $T B:1 $S $F $L $I vg e
+	| 1 B:0 q >
+
+{{} [ hINA KAN | -KAN | KAN/+MONON ]
+/k	< 00 B 01 L De 1424 $C D 565 700 $L A $M K M N U W Ga Th Pi 118 $F 2 33 28 157 579 1071 $T $I vg >
+/m	< 00 $I vg
+	| 01 Th $L $F 33 788 346 1424 f
+	| 11 $C B $T $S 118 209 d ff1 e >}
+
+{{} [ TOU_1 KRASPEDOU TOU_2 hIMATIOU AUTOU hAYWNTAI 
+| -T.KRASP. | hAY.~T.KRAS..AUTOU | AUTOU~T.hIM. AUTOU~T.KRAS.T.hIM.
+| T)WN.hIMATI)WN | hAY)WTAI hAY)ONTAI ]
+/k	< 00000 B 01 L De 1424 $C D 565 700 $L 579 A $M M N U W Th Pi 118 $F 2 33 28 157 1071 $T $I vg
+	| 00001 ff2
+	| 00002 669 H K 346
+	| 00100 Ga
+	| 0?000 Orig
+	| 10010 2327 >
+/m	< 00000 $I vg ff2:1
+	| 00001 ff2:0
+	| 01000 $C B $T $S 01 W d e $L
+	| 01002 E Om 1 13 2:0 579 1071 346
+	| 01200 1424 >}
+
+[ KAI hOSOI AN hHYANTO AUTOU ESWiZONTO
+| -KAI..ESWiZONTO | hOSOI/hWi | -AN | AN/EAN | hH)PTONTO | -AUTOU | AUT)ON  
+| DI(ESWiZONTO | ESWiZ)HSAN ]
+/k	< 000000000 B L W Th 28 $C
+	| 000000010 $F
+	| 000001?01 565
+	| 000010000 A $M Om:1 K M N Pi 118 2 157 1071 1424 $T
+	| 000010010 700
+	| 000110000 U Ga
+	| 001?00000 01 33
+	| 001?00010 $L
+	| 001?00100 D
+	| 001?01?11 De
+	| 00???00?? aur c d f l vg
+	| 00???1??? $I
+	| 011?00001 579
+	| 1???????? Om:0
+	| ????1???? hark >
+/m	< 000001?11 C 33 157
+	| 001?01?01 01 579 
+	| 001?01?11 $C B $T $L $S W
+	| 00???1??? $I vg e >
+
+" Aland 150. Defilement Mark 7:1-23 = Matt 15:1-20 "
+/k @ Mk7:1
+/m @ Mt15:1
+{{} [ KAI SUNAGONTAI PROS AUTON 
+| KAI/TOTE | PROS(AGONTAI PRO(AGONTAI | SUN)ERXONTAI
+| -PROS,AUT)Wi | AUT(ON)/TWi.IHSOU ]
+/k	< 00000 B $L 565 700 $C $T $S $F $I vg >
+/m	< 11100 D:0 $I vg e 
+	| 11110 $L 1424
+	| 11111 B 01 Th 579 788 $C $F 33 565 118 209 157 700 1071 346 C $M K L M N P U W De Pi 2 $T f q
+	| 12100 D:1 >}
+
+{{}
+[ hOI FARISAIOI KAI TINES TWN GRAMMATEWN ELQONTES APO hIEROSOLUMWN 
+| -hOI | AP.hIER.~FAR..ELQ. | TINES.T.GRAMM.~hOI.FAR.
+| -TINES.TWN,GRAMMAT)EIS | -ELQ. | -APO ]
+/k	< 000000 B $C $T $S $F
+	| 100000 $L 565 700
+	| ?00000 a b f q aur c d l vg
+	| ?00010 ff2 i >
+" APO hIEROSOLYMWN FARISAIOI KAI GRAMMATEIS "
+/m	< 010110 $F 33 565
+	| 010111 346
+	| 011110 C $M K L M N P U W De Pi 2 $T
+	| 100110 $L
+	| 110110 B 01 Th 124:0 579 788 $C D 1424
+	| 111110 118 157 700 1071
+	| ?01110 $I
+	| ?10110 d ff2
+	| ?11110 209 l q vg e >}
+
+/k @ Mk7:2
+[ /k KAI IDONTES TINAS TWN MAQHTWN AUTOU 
+| -KAI | ID./EIDOTES | AUTOU~TINAS.T.MAQ. | TIN)ES | AUT./+TINAS ]
+/k	< 00000 B 01:1 L 33 579 1424 $C De $F A $M K M N U Ga Th Pi
+            $L 69 124 2 28 157 700 1071 346 $T aur d l vg
+	| 00010 01:0
+	| 00011 W
+	| 00100 565
+	| 01000 D
+	| 10000 b a c f ff2 i q >
+/m	< ----- $* >
+
+" Origen In Matt 11.8 has 'KOINAIS' GAR KAI 'ANIPTOIS' "
+
+{{}
+[ /k hOTI KOINAIS | EIPON+/hOTI | -hOTI ]
+/k	< 00 B 01:1 L 33 579 1424 $C 01:0
+	| 01 D W $F 565 A $M K M N U Ga Th Pi $L 69 124 2 28 157 700 1071 346 $T $I vg 
+	| 10 De >
+/m	< -- $* >}
+
+[ /k XERSIN TOUT ESTIN ANIPTOIS | -TOUT..ANIPT. ]
+/k	< 0 B $C $S $F $L $T $I a vg
+	| 1 aur b c >
+/m	< - $* >
+
+{{}
+[ /k ESQIOUSIN TOUS ARTOUS
+| ARTOUS/+EMEMYANTO^ | ESQI)ONTAS ESQI)EIN=manducare
+| -TOUS | ART)ON ARTOUS/AUTOUS
+| +(EMEMYANTO/KATEGNWSAN) | +(EMEM)YATO) | +(EM./+AUTOIS) ]
+/k	< 0000??? B L De $C
+	| 0011??? 01
+	| 0110??? A $M Ga 157 1424 2327 574 669:0
+	| 0111??? 2:0
+	| 0?????? sin
+	| 1000000 579
+	| 1000010 33
+	| 1100000 N W Th $F 28:0 565 700
+	| 1100010 788
+	| 1100100 D
+	| 1102000 Y
+	| 1110000 F K M U S Pi Om $L 28:1 $T 1071 669:1
+	| 1111001 2:1
+	| 11?0?00 a
+	| 12?0?00 f i vg
+	| 12?1?00 $I
+	| 12?1?01 c aur ff2
+	| 1???00? pesh hark >
+/m	< ------- $* >}
+
+/k @ Mk7:3
+[ /k hOI GAR | GAR/DE ]
+/k	< 0 B $C $T $S $L $F Orig d f q vg
+	| 1 $I
+	| ? a >
+/m	< - $* >
+
+[ /k FARISAIOI KAI PANTES hOI IOUDAIOI | -PANTES ]
+/k	< 0 B 01 W D:0 De 579 $C $T $S $L $F D:1 Orig $I vg
+	| 1 565 >
+/m	< - $* >
+
+[ /k EAN MH PUGMHi NIYWNTAI TAS XEIRAS | -PUGMi | PUG./PUKNA | NIY/IYWNTAI ]
+/k	< 000 B 565 $C $T $L $S $F Orig D:1 579 828 c ff2 i q
+	| 010 D:0 01 W b a f l vg d
+	| 011 De
+	| 01? pesh hark
+	| 0?0 aur
+	| 1?? sin >
+/m	< --- $* >
+
+[ /k OUK ESQIOUSIN | EQI)WSIN | ESQ./+TON | ESQ./+ARTON | ESQ./+AUTWN ]
+/k	< 0000 B 700 $C $T $L $S F H L M:0 Th $F 33 28 157 Orig
+	| 0010 D 1071
+	| 0110 M:1
+	| 1000 01 Ga
+	| ??00 aur f l q vg
+	| ??01 c
+	| ??10 $I
+	| ???? p45 >
+/m	< ---- $* >
+
+[ /k KRATOUNTES THN PARADOSIN TWN PRESBUTERWN
+| OU+/KRAT. | KRAT./KATOIKOUNTES | -T.PARAD. | PARADOSI)AN | PRESB./IOUDAIWN ]
+/k	< 00000 B 700 $C $T $L $S 01 1071 Orig H K M:0 Th $F 33 28 157 M:1 Ga
+	| 00010 D
+	| 000?0 $I vg
+	| 000?1 i
+	| 001?0 F
+	| 11000 579
+	| ??000 p45 >
+/m	< ----- $* >
+
+/k =+ $? N ;
+
+/k @ Mk7:4
+[ /k KAI AP AGORAS | AGORAS/+DE | AGORAS/3+hOTAN.ELQWSIN ]
+/k	< 00 B 01 A Pi 565 579 $C F K $F 2:0 L De 700 Orig
+         $M M N U Ga Th $L 69 124:1 2:1 33 28 157 788 1071 1424 $T vg
+	| 01 D $I
+	| 11 W
+	| ?? p45 >
+/m	< -- $* >
+
+[ /k EAN MH BAPTISWNTAI
+| hRANTI(SWNTAI | BAPTI)Z(WNTAI | BAPTIS)ONTAI ]
+/k	< 000 A Pi 565 579 $C D W 700 543 826 828 Orig
+          $M M N U Ga Th $L 69 124:1 2:1 33 28 157 788 1071 1424 $T
+	| 001 K $F 2:0 983
+	| 010 F De
+	| 011 L
+	| 0?? $I vg
+	| 100 B 01 WH
+	| ?00 p45 >
+/m	< --- $* >
+
+[ /k OUK ESQIOUSIN KAI ALLA POLLA | POLLA/ALLA | POLLA/TINA ]
+/k	< 00 B p45 01 A Pi 565 579 $C D F K $F 2:0 L W De
+         $M M N U Ga Th $L 69 124:1 2:1 33 28 157 788 1071 1424 $T $I vg
+	| 01 Orig
+	| 10 700 >
+/m	< -- $* >
+
+[ /k ESTIN hA PARELABON KRATEIN
+| hA.PARELABON/hAPER.ELABON | PAREL./+AUTOIS | KRAT./THREIN ]
+/k	< 000 700 $C $T $S $L $F Orig
+	| 001 a b
+	| 011 D $I vg
+	| 0?? N
+	| 100 B 579
+	| ?00 p45 >
+/m	< --- $* >
+
+[ /k BAPTISMOUS POTHRIWN KAI CESTWN ]
+
+[ /k KAI XALKIWN KAI KLINWN | -KAI.KLINWN ]
+/k	< 0 D Th $L 565 700 $C W 124 28:1 1424 33 579 Orig A
+        $M K M U Ga Pi $F 2 157 1071 $T $I vg
+	| 1 B p45 01 L De 28:0 WH >
+/m	< - $* >
+
+/k @ Mk7:5a
+" Lake 1941:82 would list 69 for 3- "
+[ /k KAI EPERWTWSIN AUTON 
+| EPEITA+/KAI | -KAI | (ERWTWSIN ]
+/k	< 000 B 01 L $C D Th $L 565 700 33 579
+	| 00? $I vg
+	| 100 De
+	| 110 A $M K M U Ga Pi $F 2 157 1071 $T
+	| 111 W 124 28:1 1424 28:0
+	| 11? f
+	| ??? p45 >
+/m	< --- $* >
+
+[ /k hOI FARISAIOI KAI hOI GRAMMATEIS 
+| -K.hOI.GRAM. | GRAM.~FARIS. | GRAM./+LEGONTES | GRAM./+KAI ]
+/k	< 0000 B 01 L 33 579 1424 $C A $M K M U Ga Pi $L 2 157 1071 $T 543 $I vg
+	| 0001 574
+	| 0010 D W Th $F 28 565 700 d ff2 i
+	| 00?? p45
+	| 0100 q
+	| 0110 aur c
+	| 1?10 De >
+/m	< ---- $* >
+
+/k @ Mk7:5b
+/m @ Mt15:2
+
+{{}
+[ DIA TI OU PERIPATOUSIN hOI MAQHTAI SOU 
+| hOI.MAQ.SOU~OU.PERIP. | OU.PERIP./PARABAINOUSIN OU.PERIP./PARALAMBANOUSI
+| SOU/+hOI.DE.PARABAINOUSI ]
+/k	< 000 B 01 L 33 579 1424 $C De
+	| 100 p45 D W Th $F 28 565 700 A $M K M U Ga Pi $L 2 157 1071 $T $I vg >
+/m	< 110 $C B $T $L $S 788:1 $I e vg
+	| 111 788:0
+	| 120 1071 >}
+
+[ KATA THN PARADOSIN TWN PRESBUTERWN | -KATA ]
+/k	< 0 B 01 L 33 579 1424 $C De p45 D W Th $F 28 565 700
+        A $M K M U Ga Pi $L 2 157 1071 $T
+	| 1 aur c f ff2 i
+	| 0 a b d q l vg >
+/m	< 1 $C B $T $S $F $L $I e vg >
+
+[ ALLA KOINAS XERSIN
+| ALLA/OU.GAR.NIPTONTAI | -KOINAS | KOINAS/ANIPTOIS
+| TA(I)S+/XERSIN | XERSIN/XEIRAS | X./+(AUTWN) | X./+KAI | X./+ANIPTOIS ]
+/k	< 00000000 B 01:0 Th $L 33 579 700 $C
+	| 00000001 $F 788 124
+	| 00000011 p45
+	| 00010000 D W 565 28
+	| 000?0000 a d i q vg
+	| 00100000 Ga K Pi 1424 01:1 A $M L M U De 2 157 1071 $T
+	| 001?0000 aur c f ff2 l b >
+/m	< 10010100 346
+	| 10011000 B 01 De $L 579 700 WH 1424 
+	| 10011100 D Y Pi 565 W 157 118 209 $C $T $S
+	| 11??1000 f g1
+	| 11??1100 $I vg e >
+
+[ ESQIOUSIN TON ARTON 
+| hOTAN+/ESQ. | ESQI)WSIN | ESQ./manducant ESQ./edunt
+| ESQ./+TO | T.ARTON~ESQ. | -TON ]
+/k	< 00?000 B 01 Th $L 33 579 700 $C D W 565 Ga $F A $M L M U De 2 157 1071 $T
+	| 00?001 K Pi 1424 788 2327
+	| 00?010 124
+	| 00?100 28
+	| 00??0? $I vg
+	| 0???0? p45 >
+/m	< 10?010 W 157 346 1424
+	| 11?010 565 Y Pi
+	| 11?011 $C B D $T $L $S 01
+	| 1?1?0? ff2
+	| 1?1?1? $I vg
+	| 1?2?0? e >
+
+/k @ Mk7:6a
+/m @ Mt15:3a
+{{}
+[ hO DE EIPEN AUTOIS 
+| hO/+IS | DE/quibus | DE/autem,at | -EIPEN | EIPEN/LEGEI=ait
+| APOKRIQEIS+/EIPEN | /(APOK./APEKRISEN) | EIPEN/+KAI
+| -AUTOIS | AUTOIS~hO..EIPEN | AUTOIS/+hOTI | Mt.3b-6~Mk.8-13 ]
+/k	< 000001000000 aur f l vg
+	| 000001001?00 $I
+	| 000001001?10 b q
+	| 000011000010 d
+	| 00?0?0??0000 B 01 L De 33 579 $C
+	| 00?0?1000000 Th 1071
+	| 00?0?1000010 p45 A 28 D $L $F 565 W 788 1424 $M K M U Ga Pi 1582 118 69 2 157 700 $T
+	| 01?001001?00 c >
+/m	< 000001000001 $I vg
+	| 000011001?01 d
+	| 000011111?01 e
+	| 0001?11?0001 c
+	| 001001000101 ff1
+	| 00?0?1000001 $C B 01 565 W $T $L $S
+	| 00?0?1001?01 D
+	| 100011000001 ff2:1
+	| 100011100001 ff2:0 >}
+
+/k @ Mk7:6b
+/m @ Mt15:7
+/m =+ $? P ;
+
+[ KALWS EPROFHTEUSEN 
+| hUPOKRITAI+/KALWS | PROE(FHTEUSEN EPROE(FHTEUSEN ]
+/k	< 00 B:0 01 L De 33 579 $C D $L $F 565 Th 1071
+	| 01 B:1 A 28 1424 983 $M K M U Ga Pi 1582 118 209 69 2 157 700 $T
+	| 02 W 788
+	| 0? p45 $I vg >
+/m	< 10 $C B:0 01 C D L Th 124 579 De
+	| 11 B:1 $M K M N U W Pi $L $F 2 33 157 565 700 788 1071 346 1424 $T
+	| 1? $I vg e >
+
+[ HSAIAS PERI hUMWN TWN hUPOKRITWN
+| hO+/HSAI. | PERI.hUMWN~HSAUAS | HS./+hO.PROFHTHS | -T.hUPOKR. | -T. ]
+/k	< 00000 B 01 L De 33 579 $C $L $F 565 W 788 Th 1071
+            $M K M U Ga Pi 1582 118 69 2 157 700 $T
+	| 00001 D
+	| 0000? $I vg
+	| 01000 p45 A 28
+	| 01100 1424 >
+/m	< 0001? K Pi 33 565
+	| 0101? 01 D Th W B $C $T $L $S
+	| 0111? 1424
+	| 1101? 157
+	| ?101? $I vg e
+	| ?111? ff1 >
+
+{{}
+[ hWS GEGRAPTAI hOTI 
+| -hWS | hWS/KAI hWS/hOS | GEGRAPTAI/EIPEN GEGRAPTAI/LEGWN | -hOTI ]
+/k	< 0000 B 01 L 1071 $C
+	| 0001 A $M K M U W Ga De Pi 118:1 $F 2 33 28 157 579 1424 $T f l q vg
+	| 000? p45
+	| 0011 $L 118:0 565 
+	| 0111 D aur d i
+	| 0211 Th a b 
+	| 1?21 700 c ff2 >
+/m	< 1?21 $C B $T $L $S 565 $I vg e >}
+
+/k @ Mk7:6c
+/m @ Mt15:8
+
+{{}
+[ hOUTOS hO LAOS TOIS XEILESIN ME TIMAi
+| EGGIZEI.MOI+/hOUTOS | (MOI/ME) | (hOUT..LAOS~EGG.MOI)
+| -hOUTOS | hOUTOS/AUTOS hOUTOS/hOUTWS hOUTOS~/~DE | hO.LAOS~hOUTOS
+| LAOS/+TWi.STOMATI.AUTWN.KAI | -(KAI)TOIS.X.M.TIMAI | ME~T.XEIL.
+| XEIL./+AUTWN | TIMAI/AGAPAi ]
+/k	< 0??00000000 $C $T $S $L $F
+	| 0??00000001 W
+	| 0??00100000 B 1071 $I vg 
+	| 0??00100001 D b c
+	| 0??00100100 l
+	| 0??01100000 F
+	| 0??03100000 ff2
+	| 0??1??00001 a
+	| ???????0000 p45 >
+/m	< 0??00100000 B 01 D L Th 124 33 579 700 788 1424 $C $I aur g1 l vg
+	| 0??00100001 b d ff1 e
+	| 0??00100100 ff2
+	| 10000110000 C $M K M N U W Pi 118 209 2 565 157 1071 346 $T
+	| 10000111000 Om
+	| 10002110000 E:0 $F
+	| 1001??10000 De
+	| 10100100000 $L
+	| 11000110000 F
+	| 1?000110000 q
+	| 1?000110010 f >}
+
+[ hH DE KARDIA AUTWN PORRW APEXEI AP EMOU
+| DE/OUN | AUT)OU
+| -APEX. | (EXEI | AP)ESTHKEN AP)ESTIN AP)ESTHi | APEX.(bis) | META+/AP ]
+/k	< 0000000 B 01 A $M K U Ga Pi $L 69:1 2 33 $F 28 157 579 700 1071 1424 $C $T
+	| 0000001 69:0
+	| 0000010 13
+	| 0000100 D
+	| 0000200 Th 565
+	| 0000210 L
+	| 0000300 De
+	| 0000?00 $I vg
+	| 0001000 W
+	| 0100000 M
+	| ??????? p45 >
+/m	< 0000000 $C B $T $L $S S:1
+	| 0001100 D 1424
+	| 000??00 $I vg e
+	| 001???0 S:0
+	| 0100000 Th
+	| 100??00 ff1 >
+
+/k @ Mk7:7
+/m @ Mt15:9
+[ MATHN DE SEBONTAI ME
+| -DE | SEBONT)ES | -ME | ME~SEB. ]
+/k	< 0000 B p45 $F $C $T $L $S a c d q Orig
+	| 0001 $I vg
+	| 001? ff2
+	| 0100 13 >
+/m	< 0000 $C B $T $S $F $L $I e
+	| 0001 a f vg
+	| 001? De
+	| 1000 l q >
+
+[ DIDASKONTES DIDASKALIAS ENTALMATA ANQRWPWN
+| DIDASK./(bis) | DIDASKALI)AN | KAI+/ENT. ]
+/k	< 000 B $C $T $S $L $F 69:1 $I
+	| 001 p45 69:0 a aur f i vg
+	| 011 c >
+/m	< 000 $C B $T $L $S 700:1 d q vg
+	| 001 2 $I e
+	| 011 ff1
+	| 100 700:0 >
+
+/k @ Mk7:8
+/m @ Mt15:3b
+/m =- $? P ;
+"         1        2    3     4     "
+[ /+ BAPTISMOUS CESTWN KAI POTHRIWN 
+| + | in~Mk7:9 | POT.~CESTWN ]
+/k	< 0?? B 01 L W De 124 $C p45 $L
+	| 100 D 28 1071 a d ff2 i
+	| 101 Th 565 b c q
+	| 110 A F K Pi 157 579 $M M U Ga Om 118
+          $F 2 33 700 1424 $T 2327 f l vg aur >
+/m	< 0?? $C B $T $S $F $L $I vg e >
+
+"     1   2      3        4      5     6     "
+[ /+ KAI ALLA PAROMOIA TOIAUTA POLLA POIEITE
+| -ALLA | PAR./PARAPOIA | 3+hA 4+hA | 4-
+| 5+5 | 5~3 5~4 | -POIEITE | 6~45 6~5 ]
+/k	< 00000000 1071 $M M U Ga Om:1 118 $F 2 33 700 1424 $T
+	| 00000002 F K Pi
+	| 0000001? Th 565 28
+	| 00000200 157 b
+	| 00001000 Om:0
+	| 00010000 2327 c
+	| 00100001 D d
+	| 00100100 a
+	| 00110000 ff2 f
+	| 00110002 i q l
+	| 00210002 aur vg
+	| 01000000 579
+	| 10000000 A
+	| ???????? B 01 L W De 124 $C p45 $L >
+/m	< -------- $* >
+
+[ /m DIA TI KAI hUMEIS PARABAINETE
+| -KAI | hH(MEIS | PARABAI)NAI | PARA)LAMB(AINETE ]
+/k	< ---- $* >
+/m	< 0000 $C B $T $L $S 01:1 $I vg e
+	| 0010 D
+	| 0100 $F
+	| 1000 01:0 579 q
+	| 1001 1071 >
+
+/m =+ $? P ;
+
+[ AFENTES THN ENTOLHN TOU QEOU
+| -AFENTES..ANQRWPWN | -AFENTES | AF./+GAR 
+| T)AS.ENTOL)AS | QU/KU | QU/+KAI.KAI ]
+/k	< 000000 B 01 D L W De Th 124 28 565 $C p45 1071 $I
+	| 000111 c
+	| 001000 A $M K M U Ga Pi $L $F 2 33 157 579 700 1424 $T aur f l vg
+	| 1????? 2327 >
+/m	< 010000 01 $C B $T $L $S D $I vg e
+	| 010??? P >
+
+[ KRATEITE THN PARADOSIN TWN ANQRWPWN
+| KR./DIA | PARAD./ENTOLHN | T.ANWN/hUMWN | T.ANWN~PARAD. ]
+/k	< 0000 B 01 D L W De Th 124 28 565 $C 1071
+           A $M K M U Ga Pi $L $F 2 33 157 579 700 1424 $T $I vg
+	| 0100 p45
+	| ???? 2327 >
+/m	< 1010 $C B $T $L $S 01 D $I vg e
+	| 1011 ff1 >
+
+/k @ Mk7:9
+[ /k KAI ELEGEN AUTOIS 
+| -K.ELEG.AUT. | ELEGEN/EIPEN | -AUTOIS ]
+/k	< 000 B $C $T $S $L $F D $I vg
+	| 001 579
+	| 010 a
+	| 1?? 28
+	| ??? p45 >
+/m	< --- $* >
+
+[ /k KALWS AQETEITE THN ENTOLHN TOU QEOU | KALWS/KAQWS ]
+/k	< 0 $C B $T $S $L $F 28 D $I vg
+	| 1 579
+	| ? p45 >
+/m	< - $* >
+
+[ /k hINA THN PARADOSIN hUMWN STHSHTE
+| hH(MWN | THR(HTE | STH)RHTE ]
+/k	< 000 D W Th 28 $C $L 565 $I d
+	| 010 A $M L U Ga 118 124 2 157 700 $T 788
+          01 Y K M S De Pi $F 33 1071 1424 WH aur l vg
+	| 011 B
+	| 110 579
+	| ??? p45 >
+/m	< --- $* > 
+
+/k @ Mk7:10
+/m @ Mt15:4
+{{} [ MWUSHS GAR EIPEN
+| MWUSHS.GAR/hO.GAR.QEOS | GAR/DE GAR/OUN=nam
+| EIPEN/LEGEI EIPEN/ENETEILATO.LEGWN | EIPEN~MWUSHS ]
+/k	< 0000 B p45 D W Th 28 $C $L 565 A $M L U Ga 118 124 2 157 700 $T 788 01 Y K M S De Pi $F 33 1071 1424 579 $I vg
+	| 0010 c
+	| 0100 b >
+/m	< 1000 d q e $C B D 01:1 700 Th 124 579 788 $L
+	| 1020 f 01:0 C $M 118 209 2 N W 1071 1424 De Y K L M U Pi $F 33 157 565 346 $T
+	| 1200 $I vg
+	| 1201 ff2 >}
+
+{{} [ TIMA TON PATERA SOU_1 KAI THN MHTERA SOU_2 
+| -SOU_1 | KAI/H | -SOU_2 ]
+/k	< 000 B 124 346 $C $T $L $S W 983 $I vg
+	| 001 D Th 1582 $F d
+	| 00? p45 >
+/m	< 000 N W 1071 1424 $I
+	| 001 Th 124 579 788 C:1 Y K L M U Pi $F 33 157 565 346 $T g1 l
+	| 101 B D 01 C:0 $M 118 2 700 $C De $L aur d:0 ff1 vg e
+	| 111 d:1 >}
+
+{{} [ KAI hO KAKOLOGWN PATERA H MHTERA QANATWi TELEUTATW
+| KAK./AQETWN | -H.MHTERA | TELEUT)EITW ]
+/k	< 000 B 124 346 $C $T $L $S Th 1582 $F $I vg
+	| 001 D d
+	| 100 W
+	| ?00 p45 >
+/m	< 000 $C B D 01 W Th 13 565 $T $S $F $L $I e
+	| 001 d ff1 vg
+	| 011 a >}
+
+/k @ Mk7:11
+/m @ Mt15:5
+[ hUMEIS DE LEGETE
+| -LEGETE | LE./+hOTI ]
+/k	< 00 B:0 01 W 28 D De 2 Th 33 579 A Y K 157 565 700 L
+         B:1 $M M U Ga Pi $F $L 1424 $C $T $I vg
+	| 01 1071
+	| 10 b
+	| ?? p45 >
+/m	< 00 $C B $T $L $S D 13 $I vg e >
+
+[ EAN EIPHi ANQRWPOS 
+| hOS+/EAN | DE+/EAN | EAN/AN | -ANOS | hO+/ANOS | EAN..ANOS:bis ]
+/k	< 000000 B:0 01 W 28 D Y K 157 565 700 L De 2 Th B:1 $M M U Ga Pi $F $L 1424 $C $T
+	| 000010 1071
+	| 00?0?0 $I vg
+	| 00?0?1 ff2
+	| 101000 A 579
+	| 1011?0 33 >
+/m	< 1001?0 1071 S Y L W Om 118 157 33 579
+	| 1011?0 $C B $T $L $S
+	| 10?1?0 $I vg e
+	| 1111?0 D $F 788 346 >
+
+[ TWi PATRI H THi MHTRI 
+| PATR./+AUTOU | -H.T.MHTRI | -THi | MHTRI/MHTHR | MHTR./+AUTOU ]
+/k	< 00000 B:0 01 W 28 p45 A De 2 33 B:1 $M M U Ga Pi $F $L 1424 $C $T
+	| 00001 Y K 157 565 700 Th
+	| 00010 1071
+	| 00100 579
+	| 00110 L
+	| 00?00 aur b f l vg
+	| 01??0 983
+	| 10000 D
+	| 10?00 a c d ff2 i q >
+/m	< 00000 $C B $T $L $S D 13 W
+	| 00?00 $I vg e
+	| 10000 1071
+	| 10?01 ff1 >
+
+"   1     2   3     4   "
+[ KORBAN hO ESTIN DWRON | 1234/reus.erit.gehennae.ignis
+| 123- | 1,4/donum,munus | 9~231 ]
+/k	< 0000 B $C $T $S $L $F $I vg
+	| 0001 c
+	| 0010 a b >
+/m	< 0000 b
+	| 01?? $I vg e $C B $T $L $S
+	| 1??? ff1 >
+
+{{} [ hO EAN EC EMOU WFELHQHiS
+| -hO | hO/+DE | EAN/AN | -EC | WFELHQ)EIS | WF./+OUDEN.ESTIN ]
+/k	< 000000 B 01 Th $L $C L Ga 700 828 A $M K M U Pi 118 124 2:1 33 579 1071 1424 $T
+	| 000010 574 2:0 157
+	| 001000 D:1 W 28
+	| 001100 D:0
+	| 00?0?0 $I vg
+	| 100000 De $F 565
+	| ????00 p45 >
+/m	< 000000 $C B 565 01:1 1424 $T $S 118 209
+	| 000001 01:0
+	| 001000 D:1 Th $L W
+	| 00?000 $I vg
+	| 00?010 d q
+	| 00?100 e
+	| 00???? ff1
+	| 011000 D:0 $F >}
+
+/k @ Mk7:12
+/m @ Mt15:6
+
+[ OUKETI AFIETE AUTON OUDEN POIHSAI
+| KAI+/OUKETI | hOTI+/OUKETI | OUKETI/OUK | OUKETI/+MH
+| ENAFI(ETE AFIETE/TIM(ETE | AFI)ETAI AFI)HSAI AFIET)HSH
+| -AUTON..POIHSAI | AUT)Wi ]
+/k	< 00000000 B 01 Th $L $C $F 565 28 700
+	| 0000000? b
+	| 00000100 De
+	| 0000100? c d ff2 q i
+	| 0000?00? a
+	| 00101100 D
+	| 01000000 L
+	| 10000000 W A $M K M U Pi 118 124 2 33 157 579 1071 1424 $T
+	| 10000001 Ga
+	| 1000000? aur f l vg
+	| 10000??? p45 >
+/m	< 0011221? B C 33 565 $C D Th $L 1582:0 788
+	| 0011231? 01 118 209 579 700
+	| 001?2?1? $I e
+	| 1011221? E:1 N 124 1071 346 W $F
+	| 1011231? 1582:1 $M K L M U De Pi 2 157 1424 $T
+	| 101?2?1? aur c f l q vg >
+
+[ TWi PATRI H THi MHTRI 
+| -T.PATRI..MHTRI | T)ON.PAT)ERA..T)HN.MAT)ERA | PAT./+AUTOU
+| -H.T.MHTRI  | H/KAI | MHT./+AUTOU ]
+/k	< 000000 B 01 D L Th $F 28 700 $C W
+	| 000001 Ga 565 1424 118 209
+	| 001000 $L
+	| 001001 A $M K M U Pi 124 2 33 157 579 1071 $T
+	| 001011 Om
+	| 0?0000 $I
+	| 0?1000 aur f l vg
+	| 1????? De
+	| ?????? p45 >
+/m	< 010001 Th $L 1424
+	| 011000 $F 788 346 579 700 33 1071 $I 
+	| 011001 C De $M K L M N U W Pi 2 157 $T aur f ff1 vg
+	| 011010 b
+	| 011011 565 c q
+	| 0111?? B 01 D $C Om a d e >
+
+/k @ Mk7:13
+/k =- $? n ;
+"      1      2    3    4   5   "
+[ AKUROUNTES TON LOGON TOU QEOU 
+| KAI+1 | 1/HKURWSATE | 23- | 2- | 3/NOMON
+| ab:3+THN.ENTOLHN | a- | 5/KURIOU ]
+/k	< 000000?0 B 01 D L Th $F 28 700 $C Ga 565 1424 De Om A $M K M U Pi 124 2 33 157 579 1071 $T
+	| 00000100 W
+	| 00011100 $L 118
+	| 0?0?00?0 $I vg
+	| 0?0?00?1 c
+	| ?0000??? p45
+	| ??0?00?0 n >
+/m	< 110000?0 B 01:1 D $C Th 579 700
+	| 110010?0 01:0 C $F 788 346
+	| 110?00?0 a b d ff1 ff2 e
+	| 110?01?0 aur c f g1 l q vg
+	| 111??100 Om $L 1424 565 33 1071 $M K L M N U W Pi 2 157 $T
+	| 111??110 De >
+
+"  1      2       3   " 
+[ THi PARADOSEI hUMWN 
+| 12/DIA.THN.PARADOSIN | 3+THi.MWRAi ]
+/k	< 00 B $C $T $S $L $F 1424 W De
+	| 01 D
+	| 10 1071
+	| ?0 aur f l vg
+	| ?1 $I
+	| ?? p45 >
+/m	< 10 $C B 01 D Th W 13 565 $T $S $F $L $I vg e >
+
+"     4      5      "
+[ /k hHi PAREDWKATE 
+| 4/HN | 5/PAREDOTE 5/PARADEDWKATE ]
+/k	< 00 B $C $T $S $L $F 1424 D $I vg
+	| 01 W
+	| 02 De
+	| 10 1071
+	| ?? p45 >
+/m	< 00 ff1
+	| -- $* >
+
+"     1     2        3      4      5     "
+[ /k KAI PAROMOIA TOIAUTA POLLA POIEITE 
+| 1..5- | 1+ALLA | 3- | 4~3 | 3/TA.AUTA 3/TAUTA | 3/_Wi | 4+4 ]
+/k	< 0000000 B 118 $C $T $S $I vg
+	| 0000001 Om
+	| 0000100 D b
+	| 0000200 574
+	| 0001000 01 M:0 $L $F 157 579 700
+	| 0001010 M:1
+	| 001???0 983 De
+	| 00?1??? p45
+	| 1?????? W >
+/m	< ------- $* >
+
+/k @ Mk7:14
+/m @ Mt15:10
+
+"  1        2          3     4    5   "
+[ KAI PROSKALESAMENOS PANTA TON OXLON 
+| 2- | 2/PROSKALETE=con/advocatis | 2+hO.IHSOUS
+| 2+hEAUTWi=ad.se | 2+PALIN 
+| 3- | 45~3 | 45/TOUS.OXLOUS 45/TWN.OXLWN ]
+/k	< 00000000 Th 700 A $M K M U W Pi $L $F 2 33 28 157 579 1071 1424 $C $T f
+	| 00000010 a n
+	| 000001?0 565
+	| 00001000 B 01 D L De $I vg
+	| 00010101 c
+	| 00100000 Ga
+	| 01001001 b
+	| 1?001001 q
+	| ???????? p45 >
+/m	< 000001?0 $C B $T $L $S Th
+	| 000001?1 d
+	| 000001?2 De
+	| 000101?1 ff1 f
+	| 010001?1 q e
+	| 010101?1 $I vg >
+
+"   1      2    "
+[ ELEGEN AUTOIS 
+| 1/EIPEN 1/LEGEI | 2/PROS.AUTOUS ]
+/k	< 00 p45 01 D L De Ga A $M K M U W Pi $L $F
+         2 33 28 157 579 1071 1424 $C $T $I vg
+	| 10 Th 700 565 a n 
+	| 20 B >
+/m	< 10 $C B $T $L $S Th $I c vg
+	| 11 ff1
+	| 20 e >}
+
+{{}
+[ AKOUSATE MOU PANTES KAI SUNETE 
+| AKOU)ETE | AKOU./+hHMEIS=vos
+| -MOU.PANTES | -PANTES | PAN)TA | -KAI | SUN)IETE ]
+/k	< 0000000 B $C
+	| 0000001 D Th 565 
+	| 0000100 H
+	| 0001?00 L
+	| 1000001 A $M K M U W Ga Pi $L $F 2 33 28 157 579 700 1071 $T
+	| 101??00 De 1424
+	| 101??01 01
+	| ?00000? $I vg
+	| ?00001? f
+	| ??????? p45 >
+/m	< 001??01 Th
+	| 101??00 1424
+	| 101??01 $C B $T $L $S
+	| ?01??0? $I vg e
+	| ?11??0? b ff1 >}
+
+/k @ Mk7:15
+/m @ Mt15:11
+
+{{} [ OUDEN ESTIN ECWQEN TOU ANQRWPOU 
+| OUDEN/OUD OUDEN/OU | PAN+/ESTIN | -ESTIN..ANOU | ECWQEN/ECW ]
+/k	< 0000 B $C 01 D:1 L De Th 565 A $M K M U W Ga Pi $L $F 2 33 28 157 579 700 1071 $T
+	| 0001 p45 1424
+	| 000? $I vg
+	| 1000 D:0 >
+/m	< 201? $C B 01 W Th 13 565 $T 1424 $S $F $L $I vg e
+	| 211? D d >}
+
+"       1         2    3 "
+[ EISPOREUOMENON EIS AUTON 
+| 4~123 | TO+1 | 1/)ERXOMENON | 1/EIS)ERXO(MENON
+| 2/EP | 3/AUTO 3/TO.STOMA | 3+TOUTO ]
+/k	< 0000000 B 01:1 L Th $C 565 579 1071
+              A D $M K M U W:1 Ga Pi $L $F 2 33 28 157 700 1424 $T
+	| 0000010 W:0
+	| 0000100 01:0
+	| 0?0?0?0 $I vg
+	| 0?????? p45
+	| 1000000 De >
+/m	< 0100020 157
+	| 0101020 $C $T $L $S 01:1
+	| 0101021 01:0
+	| 010?020 $I vg e
+	| 0111020 B >
+
+"  1    2        3      4   "
+[ hO DUNATAI KOINWSAI AUTON 
+| 1- | 1/TO 1/hOU | 2- | 3/KOINUN 3/KOINOI 3/KOINWNI
+| 4- | 4~3 4~23 | 4/TON.ANQRWPON ]
+/k	< 0000000 01 L Th $C De 1071
+	| 0000010 p45 W:0 A D $M K M U W:1 Ga Pi $L $F 2 33 28 157 700 1424 $T $I vg
+	| 0000020 c ff2
+	| 00001?? 565
+	| 0111000 B
+	| 0200010 579
+	| 1?00010 a n >
+/m	< 1?12001 $C $T $L $S
+	| 1?13001 D
+	| 1?1?001 $I vg e >
+
+/m =+ $? F ;
+
+{{} [ ALLA TA_1 EK TOU ANQRWPOU EKPOREUOMENA ESTIN TA_2 KOINOUNTA TON ANQRWPON 
+| -ALLA....ANON | T)O_1,EKPOREUOMEN)ON | TA_2/+EIS
+| -EK.T.ANOU | EK/APO | T.ANOU/AUTOU ANOU/STOMATOS
+| -EKPOR. | EKPOR.~EK.T.ANOU | EKPOR./+EKEINA 
+| -ESTIN..ANON | -ESTIN | ESTIN/EISIN | TA_2/TOUTO TA_2/EKEINO
+| KOIN)OI KOIN)AUTA KOIN)WNEI ]
+/k	< 00000000000000 B 01:1 L De Th $C
+	| 00000000000002 01:0
+	| 00000000100000 D W 33 565 700
+	| 00000000100?00 $I vg
+	| 00000001100?00 f
+	| 0000001?001?00 579
+	| 00001101100000 A $M K M U Ga Pi $L $F 2 157 1071 $T
+	| 00001101100100 28
+	| 0001??0?000000 1424 >
+/m	< 01000201001?03 ff1
+	| 01000201001?11 $C B $T $S 118:1 209
+	| 01000201001?23 D vg f g1
+	| 0100020101???? $L 124 1071
+	| 01001201001?03 a e
+	| 01001201001?11 33
+	| 01001201001?23 $I d
+	| 0101??0?001?03 aur
+	| 0110020101???? 118:0
+	| 0????????01?11 F
+	| 1????????????? 579 l >}
+
+/k @ Mk7:16
+{{} [ + EI TIS EXEI WTA AKOUEIN AKOUETW | + | EI.TIS.EXEI/hO.EXWN | KAI+/EI ]
+/k	< 0?? B 01 L 28 $C 669:0
+	| 100 A D $M K M U W Ga De Th Pi $L $F 2 33 157 565 579 700 1424 $T $I vg 669:1
+	| 101 c
+	| 110 1071 >
+/m	< 0?? $* >}
+
+/k @ Mk7:17
+/m @ Mt15:12
+" K/k begins different hand "
+
+{{} [ KAI hOTE | -KAI | KAI.hOTE/TOTE ]
+/k	< 00 B $C $T $S $L $F $I vg
+	| 10 543 >
+/m	< ?1 $C B $T $S $L D $I vg e >}
+
+[ EISHLQEN EIS OIKON APO TOU OXLOU
+| PRO(HLQEN | ELQ)ONTES | EISHLQ)ON | EISHLQEN/+hO.IHSOUS
+| -EIS..OXLOU | TON+/OIKON | OIK)IAN ]
+/k	< 0000000 B $C $T $S $F M Th $L 33 1071
+	| 0000010 De
+	| 0000011 D 565
+	| 00000?? $I vg
+	| 0001000 S
+	| 0010000 U W 579 2327
+	| 0010010 01 >
+/m	< 10101?? ff1 e
+	| 11001?? B $C $T $S $F $L $I vg >
+
+{{} [ EPHRWTWN AUTON hOI MAQHTOI AUTOU 
+| KAI+/EPHR. | hOI.MAQ.AUT.~EPHR.AUT. AUTON..AUTOU~EPHR. 
+| EPHR./LEGOUSIN | aor:EPHRWT)HSAN;EIPAN EPHRW)TOUN
+| -AUTON | AUTON/AUTWi | -AUTOU ]
+/k	< 0000000 B $C $T $S $F
+	| 0000001 De
+	| 00001?0 983
+	| 0001000 Th $L 33 579 c 669
+	| 0002000 1071 $I vg
+	| 1000000 M >
+/m	< 0110010 $L 33
+	| 0110011 B D Th $F 579 700 788 346 $C
+	| 0111010 C $M K L M N U W De Pi 118 209 2 157 565 1071 1424 $T
+	| 0111011 01
+	| 01111?0 $I vg
+	| 01111?1 d
+	| 02111?0 ff1 e >}
+
+[ /m OIDAS hOTI hOI FARISAIOI
+| + ]
+/k	< - $* >
+/m	< ? $C $T $S $F $L $I vg e >
+
+/m =+ $? b ;
+{{} [ /m AKOUSANTES TON LOGON ESKANDALISQHSAN
+| -AK.T.LOGON | -T.LOGON | TON/TOUTON  | LOGON~T. ]
+/k	< ---- $* >
+/m	< 0000 $C B $T $S $L $F
+	| 000? l vg d
+	| 0010 $I
+	| 0011 f e
+	| 0100 K
+	| 0??? b
+	| 1000 1424 >}
+
+/m @ Mt15:13
+{{} [ /m hO DE APOKRIQEIS EIPEN
+| ~DE/KAI~ | DE/+IHSOUS | APEKRIQ)H/+KAI | EIPEN/LEGEI=ait | EIPEN/+AUTWi ]
+/k	< ----- $* >
+/m	< 00000 $C B $T $S $L $F d
+	| 00001 N De 565
+	| 00010 q aur f l vg
+	| 00100 e
+	| 01010 $I c ff2 ff1 g1
+	| 11010 a >}
+
+[ /m PASA FUTEIA HN OUK EFUTEUSEN | + ]
+/k	< - $* >
+/m	< ? $C $T $S $F $L $I e vg >
+
+{{} [ /m hO PATHR MOU hO OURANIOS EKRIZWQHESTAI | -MOU | EN+/OURAN)OIS ]
+/k	< -- $* >
+/m	< 00 $I vg e $C $T $L $S
+	| 01 157
+	| 10 ff1 >}
+
+/m @ Mt15:14
+
+[ /m AFETE AUTOUS | AUT./TOUS.TUFLOS ]
+/k	< - $* >
+/m	< 0 $C $T $S $F $L $I vg e
+	| 1 D d >
+
+/m =- $? F ;
+
+
+[ /m TUFLOI EISIN hODHGOI (TUFLWN)
+| -TUFLOI | EISIN/+GAR |  hODHGOI~TUFLOI | -TUFLWN ]
+/k	< ---- $* >
+/m	< 0000 $I vg e 01:1 L Th $L $F 33 579 700 788 346 1424 $C
+	| 0001 d B D
+	| 0010 q N C $M M U W De Pi 2 157 565 1071 $T
+	| 0011 01:0
+	| 0100 ff1
+	| 1000 K
+	| ???0 F >
+
+/m =+ $? N ;
+
+"      g    h    i     j     k    "
+[ /m TUFLOS DE TUFLON EAN hODHGHi
+| h/GAR | j- | j~i | k/_GWN k/_GEI | k+SFALHSETAI | k+KAI ]
+/k	< ------ $* >
+/m	< 000000 $C $T $L $S e
+	| 000110 $I ff2 a f l vg g1 q ff1
+	| 000200 1424
+	| 001000 d
+	| 01?000 F
+	| 01?100 1071
+	| 01?111 Th $F 788 346
+	| 100110 aur c >
+
+{{} [ /m AMFOTEROI EIS BOQUNON PESOUNTAI
+| OUXI+/AMF. | PES.~EIS.BOQ. | EM(PESONTAI | TON+/BOQ. | BOQ./BOQRON ]
+/k	< ----- $* >
+/m	< 00000 $C $T B 01 C $M K M U De Pi 118 209 2 33 157 579 1071
+	| 000?? $I vg e
+	| 00100 F W 565
+	| 01000 L
+	| 01001 $L
+	| 01010 Th $F 788 346
+	| 01100 700
+	| 01101 D
+	| 011?? d
+	| 10100 1424 >}
+
+/m @ Mt15:15
+"         a      b  c   d     e     f      g     h   "
+[ /m APOKRIQEIS DE hO PETROS EIPEN AUTWi FRASON hHMIN
+| APEKRIQH+a,KAI+e | f- | f~e f~cde | f/AUTOIS ]
+/k	< ---- $* >
+/m	< 0000 01 $L $C De $F 346 33 700
+           C D $M K L M U W Pi 118 2 157 565 1071 1424 $T $I vg
+	| 0001 579
+	| 0010 B
+	| 0020 Th 124 788
+	| 01?? ff1
+	| 1000 e >
+
+
+"  i     j     "
+[ THN PARABOLHN
+| KURIE+/THN | PERI+/T)HS.PARABOL)HS | PARAB./+TAUTHN^ | ^TAUT.~T.PARAB.
+| ^TAUTHN/AUTHN ]
+/k	< 00000 B 01:1 D L 33 579 $C 01:0 De $I vg
+	| 0010? c f
+	| 01000 M 700 $T Om $L 28 $S $F >
+/m	< 000?? B 01 $L WH 579 700 
+	| 00100 Th 33 $C C D $M K L M U W Pi 118 209 2 157 565 1071 1424 $T $I vg e
+	| 00101 De
+	| 00110 $F 346 124 788 >
+
+/k @ Mk7:18
+/m @ Mt15:16
+
+"  a    b     c   "{{}
+[ KAI LEGEI AUTOIS
+| a- | a/~DE | hO+b | IHSOUS+b | b/ELEGEN b/EIPEN | c- | c/AUTWi ]
+/k	< 0000000 B 01:1 D L 33 579 $C 01:0 M 700 $T De Om $S $F $I vg
+	| 0000100 $L 28 >
+/m	< 011021? B D $C 01 33 1424 $I vg e
+	| 0111200 q
+	| 0111201 157
+	| 011121? Th 565 788 $T $L $S f
+	| 1?00000 ff1 >}
+
+/m =- $? r1 ;
+"    d    e    f       g      h   "
+[ hOUTWS KAI hUMEIS ASUNETOI ESTE 
+| d- | d/hOUTOS d/AKMHN | g/ASUNTOI ]
+/k	< 1?0 28
+	| 000 B:1 $C $T $S $L $F 1 33 1424 $I vg
+	| 001 B:0
+	| 010 Om >
+/m	< 020 $C $T $S $F $L $I vg e
+	| 02? 33 >
+
+/m @ Mt15:17
+"  a    b    c   "
+[ OU NOEITE hOTI
+| a/OUPW | c/TI ]
+/k	< 00 B $C $T $S $F 33 1424
+	| 01 1
+	| 0? $I vg
+	| 10 01 L U $L 700 De
+	| 1? f >
+/m	< 00 $C B D Th 565 788 33 579 $I vg e
+	| 10 01 $T $L $S 1424 f q >
+
+"  d   e   f          g       "
+[ PAN TO EXWQEN EISPOREUOMENON
+| f- | g~f | g/(EIS)ERXO(MENON) | hij~g ]
+/k	< 0000 B $C $T $S $F 01 L U 700 $L 33
+	| 00?0 $I vg
+	| 0100 1424
+	| 01?0 c
+	| 1?00 De >
+/m	< 1?00 $C 01 $T $L $S 33
+	| 1?10 B Th
+	| 1??0 ff1 d e
+	| 1??1 $I vg >
+
+"  h   i     j      k   l       m      n     "
+[ EIS TON ANQRWPON OU DUNATAI AUTON KOINWSAI
+| h- | h/DIA | ij/TO.STOMA | klmn- | hij~(klmn/OU.KOINOI) ]
+/k	< 00000 B $C $T $S $L $F $I vg
+	| 1?001 01 >
+/m	< 0011? $C B Th 01 $T $L $S $F $I vg e
+	| 0111? 1071 >
+
+/k @ Mk7:19
+[ /k hOTI OUK EISPOREUETAI
+| -hOTI | hOTI~/~GAR | EIS)ERXETAI ]
+/k	< 000 B $C $T $L $S A $F W Th 33 De
+	| 00? aur c f l vg
+	| 011 D
+	| 01? $I
+	| 1?? ff2 >
+/m	< --- $* >
+
+[ /k AUTOU EIS THN KARDIAN
+| KARD./DIANOIAN KARD./SWMA=corpus | EIS.T.KARD.~AUTOU ]
+/k	< 00 B $C $T $L $S A $F Th 33
+	| 01 D De $I vg
+	| 10 W
+	| 21 b >
+/m	< -- $* >
+
+[ ALL EIS THN KOILIAN
+| -ALL | KOIL./+AUTOU | KOIL./+XWREI ]
+/k	< 000 B $C $T $L $S A $F D W De 33 $I vg
+	| 010 Th a
+	| 0?? n >
+/m	< 101 $C B Th 01 $T $S $F $L $I vg e >
+
+{{} [ KAI EIS TON AFEDRWNA EKPOREUETAI
+| EKPOR.~EIS.T.AFEDR. | -TON | AFEDR./OXETON
+| EKPOR./EKBALL(ETAI EKPOR./ECERX(ETAI EKPOR./XWREI | EKPOREU)WNTAI ]
+/k	< 00000 B A $M L M Ga De Th $F 2:0 28 565 1071 $C Y K U Pi 1582:1 157 $T 2:1 33
+	| 00001 579
+	| 00010 01
+	| 00030 W
+	| 00120 D
+	| 01000 S $L 700
+	| 01010 1424
+	| 0???0 $I vg >
+/m	< 00010 $C B Th $T $L $S
+	| 01010 01
+	| 0??10 $I vg r1
+	| 1??10 e >}
+
+{{}
+[ /k KAQARIZWN PANTA TA BRWMATA
+| KAI+/KAQ. | EK(KAQARIZON | KAQARI)ZEI KAQARI)ZON
+| -PANTA | -TA | BRWM.+et.exit.in.rivum ]
+/k	< 000000 B A $M L De Th $F 2:0 28 565 1071 $C 01 S $L W 33 1424 Orig
+	| 000010 579
+	| 001000 D
+	| 002000 Y K U Pi 1582 157 $T M Ga 700
+	| 010000 2:1
+	| 0?00?0 $I vg
+	| 0?00?1 a n
+	| 0?01?0 c
+	| 1010?0 i >
+/m	< ------ $* >}
+
+/k @ Mk7:20
+/m @ Mt15:18
+
+[ ELEGEN DE hOTI | -ELEGEN | ELEG)ON | -DE | DE/GAR | -hOTI ]
+/k	< 00000 B $C $T $S $L $F Y:0 Pi:0 Om 28 118 700 346 1424 $I vg
+	| 0000? n
+	| 00010 33
+	| 01000 D F >
+/m	< 1?001 $C B $T $L $S 01 $I vg
+	| 1?1?1 e >
+
+{{}
+[ TO EK TOU ANQRWPOU EKPOREUOMENON
+| -TO | T)A..EKPOREUOMEN)A | -EK | -TOU | EKP.~EK.T.ANOU | ANOU/STOMATOS ]
+/k	< 000000 B $C $T $S $L $F D F Om 28 118 33 700 346 Y:1 Pi:1
+	| 000010 1424
+	| 001000 Y:0
+	| 010000 $I vg 
+	| 100000 Pi:0
+	| ???0?? N >
+/m	< 010011 $C B $T $L $S 01
+	| 010111 1071
+	| 010?11 $I vg e >}
+
+[ /m EK THS KARDIAS ECERXETAI 
+| -EK.. | ERX)ONTAI ]
+/k	< -- $* >
+/m	< 00 B 01:1 C $M K L U De Pi:0 $L $F 2 157 565 579 700 346 $C $T
+         D W:0 124 788 1071
+	| 01 F M Pi:1 1424 W:1 Th $I vg e
+	| 1? 01:0 33 >
+
+/k =+ $? n ;
+{{}
+[ EKEINO KOINOI TON ANQRWPON
+| -EKEINO..ANON | K(AI)+/EK. | EKEI)NA EKEI)NW | KOI)NEI KOI)NWNEI
+| T)WN.ANQRW)PWN ]
+/k	< 00000 B $C $T $L $S $F F Y:0 N Pi:0 700 1424
+	| 00001 346
+	| 00010 118
+	| 00100 D 
+	| 001?0 $I vg
+	| 001?? n
+	| 00200 Om 28
+	| 0??00 33 >
+/m	< 00100 D:1
+	| 00120 D:0
+	| 01100 B 01:1 C $M K L U De Pi $L $F 2 157 565 579 700 346 $C $T F M 1424 Th 124 788 1071 $I vg e
+	| 1???? W r1
+	| ????? 01:0 33 >}
+
+/k =- $? N ;
+/k @ Mk7:21
+/m @ Mt15:19
+
+[ ESWQEN GAR EK THS KARDIAS TWN ANQRWPWN
+| -ES.,EK~GAR | ESQ.(bis) | -GAR | GAR/DE | -T.ANWN
+| T.ANON~T.KARDIAS | T.ANWN/PANTWN=omnium | T)OU.AN)OU ]
+/k	< 00000000 B $C $T $S $F D:0 W 33 $I vg
+	| 00000001 M
+	| 00000010 i
+	| 00000100 De
+	| 00001??? $L 118
+	| 00010000 c d f ff2 l
+	| 001?0100 28
+	| 01000000 700 >
+/m	< 1?001??? $C B $T $L $S 01:1 $I vg e
+	| ???????? 01:0 33 W >
+
+[ hOI_1 DIALOGISMOI hOI_2 KAKOI EKPOREUONTAI
+| KAI+/hOI_1 | EKP.~hOI_1..KAKOI | -hOI_1 | DI(LOGISMOI (LOGISMOI
+| -hOI_2 | KAK./PONHROI | EC(ERXONTAI ]
+/k	< 0000000 B:1 $C $T $S $F M De $L 118 28 D:1
+	| 000000? 33
+	| 0000100 D:0 W
+	| 0001000 B:0
+	| 0002000 983
+	| 00????? $I vg
+	| 01????? a >
+/m	< 011?111 $C B $T $L $S 01 W
+	| 01????? $I vg e
+	| 111?111 157 >
+
+" NB: MOIXEIAI is placed in v22 in non-Byz versifications. "
+"     1      2      3      4     "{{}
+[ PORNEIAI KLOPAI FONOI MOIXEIAI
+| -PORN. | 1/PORNEIA | -KLOP. | KLOP./KLEMMATA
+| -FON. | FON)OS | -MOIX. | MOIXEI)A
+| K.~P. | 4~3 | F.M.~P.K. | 1~34~2 | 3~2
+| a:4+YEUDOMARTURIAI | a~4 ]
+/k	< 00000000000000? B 01 L De 579 $C Th
+	| 00000000011010? A $M K M N U Ga Pi $F 2 157 1424 $T
+	| 00000000011100? $L 124 33 565 700
+	| 00000001011010? 1071
+	| 00000100011100? W 28:0
+	| 00001?000?11?0? 28:1
+	| 000?0000011010? f l vg
+	| 000?0000111100? $I
+	| 01010100010000? D >
+/m	< 000000000010010 $C B $T $L $S 01 33 579
+	| 000000000101010 L W
+	| 000000000110010 1424
+	| 000?00000010010 vg $I
+	| 000?00000101010 q
+	| 000?001?0?10010 a
+	| 001?0000?01?010 e
+	| 1?000000?010010 E >}
+"              ^^^^^        "
+" NB: 1234=00000 1243=01000 4123=01110 4132=01101
+      3412=00100 1432=01010 4213=11110 4312=01100 "
+
+/k @ Mk7:22
+[ /k PLEONECIAI PONHRIAI DOLOS | PLEONECI)A | PON.~PLEON. | PONHRI)A | DOL)OI ]
+/k	< 0000 B 01 L De 579 $C $L 124 33 1071 A $M K M N U Ga Pi $F 2 157 1424 $T
+	| 0001 Th
+	| 0100 l
+	| 0110 vg
+	| 1010 W 28 $I
+	| 1101 565
+	| 1110 D d
+	| 1111 700 >
+/m	< ---- $*
+	| 1001 ff1 >
+
+{{}
+[ ASELGEIA OFQALMOS PONHROS
+| livido+/ASELG. | -ASELG. | ASELGEI)AI ]
+/k	< 000 B 124 788 $C $T $L $S D F:1 De Th 118 $F 2 $I vg
+	| 001 F:0 69 579 565 983 l
+	| 100 f
+	| ??? 33 >
+/m	< 01? ff1
+	| --- $* >}
+
+/k =- $? n ;
+[ BLASFHMIA 
+| -BLASF. | BLASFHIMI)AI ]
+/k	< 00 B $F $C $T $S F 69 579 33 $I vg 1582
+	| 01 D Th 565 $L 118 13 346 2 b c 
+	| 1? De >
+/m	< 00 D:0 e
+	| 01 $C B $T $F $L $S D:1 $I vg
+	| ?? r1 >
+
+[ /k hUPHFANIA AFROSUNH 
+| 2/hUPHFANIAI | KAI+2 | 3/AFROSUNAI ]
+/k	< 000 B 124 700 $C $T $L $S F 69 579 33 De 118 $F 2 $I vg
+	| 010 f
+	| 100 D b
+	| 101 Th 565 >
+/m	< ??? $C B $T $F $L $S D $I vg e >
+
+/k @ Mk7:23
+/m @ Mt15:20
+"   a     b    c    d     e        f       "{{}
+[ PANTA TAUTA TA PONHRA ESWQEN EKPOREUETAI
+| -PANTA | -TAUTA | TAUTA~PANTA | -TA..ESW. | -T.PON. | -TA | -PON.
+| EKPOR.~ESWQEN | EKPOR./EST(AI) | EKPOREU)ONTAI ]
+/k	< 0000000000 B D A $M M U Pi 2 157 1071 $C $T 01 118
+	| 0000000001 G N 983
+	| 000000000? $I vg
+	| 0000000101 De
+	| 0000010000 E Th
+	| 00001??000 $L 565
+	| 0010000000 669 Ga
+	| 0010000001 K 28 1424
+	| 0010010000 $F
+	| 0010011000 579
+	| 00101??001 700
+	| 001????000 33
+	| 01?0000000 W 788
+	| 10?0000000 L
+	| 11?0001000 13 >
+/m	< 10?1???010 $C B $T $F $L $S
+	| 10?1???011 D $I vg e
+	| ?????????? 33 >}
+" Swanson missing A/k here; Lake has A=Pi "
+
+/m =- $? k ;
+
+[ KAI KOINOI TON ANQRWPON 
+| -KAI | EKEINA+/KOINOI | KOINOI/TA.KOINOUNTA KOINOI/KOINEI
+| KOIN)OUNTA | EK+/T.ANQRWPON~KAI ]
+/k	< 00000 B D A $M M U Pi 69 124 2 157 1071 346 $C $T
+            E Th G N K 28 L W 788 Ga $L 565 $F 33 579 700
+	| 01000 01
+	| 10000 De 
+	| 10001 1424
+	| 10200 ff2
+	| 11000 $I vg >
+/m	< 10100 $C B $T $L $S D:1 $I vg e
+	| 10110 D:0
+	| 1???0 r1
+	| ??100 k >
+
+/m =+ $? k ;
+
+{{} [ + TO DE ANIPTOIS XERSIN FAGEIN OU KOINOI TON ANQRWPON
+| + | XERSIN~ANIPT. | FAG/ESQIEIN | KOIN)WNEI KOI)NEI ]
+/k	< 0??? B $C $T $S $L $F $I vg
+	| 100? c >
+/m	< 0??? ff2:0 1071 1424
+	| 1000 $C B $T $L $S D:1
+	| 1001 D:0
+	| 1002 C
+	| 100? F 33 $I vg e k ff2:1
+	| 1010 118 209
+	| 110? ff1 >}
+
+
+" Aland 151. Syrophoenician Matt 15:21-28 = Mark 7:24-30 "
+
+/k @ Mk7:24
+/m @ Mt15:21
+
+{{}
+[ EKEIQEN DE ANASTAS APHLQEN
+| -EKEIQEN | KA(KEIQEN | ~DE/KAI~ | ANASTAS~EKEIQEN | (ECELQ)WN
+| hO.IS+/APHLQEN | (AP.~hO.IS) | (hO.IS~EKEIQEN)
+| APHLQEN/ANEXWRHSEN | EC(HLQEN (HLQEN APHLQEN/ANA_ ]
+/k	< 000000??00 $C B 01 1424
+	| 000000??01 L De
+	| 001000??00 Th $L $F aur l vg A $M K N U Ga Pi 118 124 157 1071 $T 2
+	| 001000??02 28 565 700 M
+	| 0010011000 574
+	| 001100??00 D $I q f
+	| 0011010000 ff2
+	| 001110??01 c
+	| 010000??00 579 33
+	| 1?1?00??00 W
+	| 1???0?0?02 Orig >
+" KAI ECELQWN EKEIQEN hO IHSOUS ANEXWRHSEN "
+/m	< 0001110013 k
+	| 0011110013 $C B D 01 W 1424 $T 13 $S $F $L $I vg e
+	| 0011110113 788
+	| 1??1?0??13 33 >}
+
+[ EIS TA hORIA TUROU
+| hORIA/MEQORIA hORIA/MERH | TUROU/SURIAS
+| TUR./+KAI.SIDWNOS | (+SID./SODWMOS) (+SID./finenis) ]
+/k	< 0000 D W Th $C $I L De 28 565 ff2 Orig
+	| 0010 B 01 $L $F 579 aur f l q vg 700 c 574
+	| 1010 1424 A $M K N U Ga Pi 118 124 2 157 1071 $T M
+	| ?010 33 >
+"         2     0    1     0    "
+" EIS TA MERH TUROU KAI SIDWNOS "
+/m	< 2010 $C B D 01 W 1424 $T $S $F $L $I vg
+	| 2011 13
+	| 2012 k
+	| 2110 e
+	| 2??? 33
+	| ???? r1 >
+
+[ /k KAI EISELQWN EIS OIKIAN 
+| EISELQ)EN | THN+/OIKIAN | OIKIAN/OIKON ]
+/k	< 000 B 01 K Pi De $F 124 788 346 2 33 A $M L M N U Ga $L 28 69 157 579 700 1071 1424 $C 2327 669
+	| 001 574
+	| 010 D W $T 565 Orig
+	| 0?? $I vg
+	| 110 Th >
+/m	< --- $* >
+
+[ /k OUDENA HQELEN GNWNAI | HQEL)HSEN ]
+/k	< 0 B D W $T K Pi Th 2 33 A $M L M N U Ga $L 28 69 157 579 700 1071 1424 $C c q
+	| 1 01 De $F 124 788 346 565 Orig $I vg >
+/m	< - $* >
+
+[ /k KAI OUK HDUNHQH LAQEIN
+| ED(UNHQH) | HDU)NASQH HDU) HDU)NATO | LAQEIN/LALEIN ]
+/k	< 000 D W $T Th $F A $M L M N U Ga $L 28 157 579 700 1071 1424 $C 2
+	| 010 B 01:1 WH
+	| 011 01:0
+	| 020 13
+	| 030 565
+	| 110 K Pi De
+	| ??0 $I vg
+	| ??? 33 >
+/m	< --- $* >
+
+/k @ Mk7:25
+/m @ Mt15:22
+{{}
+[ ALL EUQUS AKOUSASA GUNH PERI AUTOU 
+| ALL~/~DE ALL~/~GAR ALL/KAI | -EUQ. | EUQ/IDOU | EUQ)EWS
+| GUNH~ALL..AKOU. GUNH.P.AUT.~AKOU. P.AUT.~AKOU.
+| hWS+/AKOU. | AKOU./ECELQOUSA | hH+/GUNH | GUNH/+TIS
+| GUNH/+XANANAIA | PERI.AUTOU/APO.TWN.hORIWN.EKEINWN | /(EKEINWN/AUTHS) ]
+/k	< 00000000000? B L 579 $C 01 De 33
+	| 000?000?000? f
+	| 10011000000? D:1
+	| 10011100000? D:0
+	| 100?110?000? d
+	| 200?110?000? $I vg
+	| 21??0000000? W Th $L 565 28 983 A $M K N U Ga Pi 124 2 157 1071 1424 $T
+	| 21??0000100? 700
+	| 21??0001000? M $F 788
+	| 21??000?000? a n
+	| 31??300?000? q
+	| ???????????? p45 >
+" KAI IDOU PERI AUTOU GUNH XANANAIA APO TWN hORIWN EKEINWN ECELQOUSA "
+/m	< 301?20100110 $C B D 01 W $F $S $L $T
+	| 301?20100111 1424
+	| 301?201?011? $I vg k e
+	| 301?301?011? ff2
+	| ?01?301??11? r1 >}
+
+{{}
+[ /k hHS EIXEN TO QUGATRION AUTHS PNEUMA AKAQARTON
+| -hHS | hHS/H | EIXEN~T.QUG.AUT. | -TO | -AUTHS
+| PNA.AKAQ.~EIXEN | EN+/PNEUMA)TI.AKARQT)Wi ]
+/k	< 0000000 B L 579 $C M A $M K N U Ga Pi 124 2 157 1071 1424 $T
+	| 0000100 01 D Th $L 565 De 700 2327 
+	| 0000101 W $F
+	| 0000?0? 33
+	| 000?100 $I vg
+	| 001?100 a c f n q
+	| 001?110 ff2
+	| 0101101 p45
+	| 1?01101 28 788 >
+/m	< ------- $* >}
+/k =+ $? n ;
+
+/m =+ $? r1 ;
+[ /m EKRAZEN LEGOUSA 
+| EKRA)CEN | EKRAUGA(ZEN) | -LEG. | LEG./+OPISW.AUTOU^ | ^OP.AUT.~LEG.
+| ^AUTOU/AUTWi ]
+/k	< ------ $* >
+/m	< 0000?? B 01:1 Th 700 $L $C
+	| 000100 D
+	| 0?00?? q
+	| 0?010? c d
+	| 0?011? ff1
+	| 0?11?? k
+	| 1000?? 01:0 $F 579 788 346
+	| 100101 M
+	| 1100?? C 1424
+	| 110101 L $M K U W De Pi 118 209 2 157 565 1071 $T
+	| 1?00?? a aur l vg e
+	| 1?010? $I ff2
+	| 1?011? f
+	| ?????? 33 >}
+
+[ /m ELEHSON ME KURIE hUIOS DAUID | hUI)E ]
+/k	< - $* >
+/m	< 0 B D W Th 565 700 $C
+	| 1 $L 1582 $T 01 C $M K L M U De Pi 118 $F 2 157 579 788 1071 346 1424
+	| ? 33 $I vg e f >
+
+/m =- $? b ;
+{{} [ /m hH QUGATHR MOU KAKWS DAIMONIZETAI
+| KAKWS/DEINWS | DAIM./daemonizatur DAIM./a.daemonio.vexatur ]
+/k	< -- $* >
+/m	< 00 d k
+	| 01 $I vg e
+	| 0? $C B $T $S 1582:1 118 209
+	| 11 a
+	| 1? $L 1582:0 >}
+
+/m @ Mt15:23
+{{}
+[ /m hO DE OUK APEKRIQH AUTHi LOGON
+| -DE | DE/autem ~DE/at~ | DE/+IS | AUT)Wi | LOG)Wi | LOG.~OUK..AUT. ]
+/k	< ------ $* >
+/m	< 010100 d ff1
+	| 010101 k e
+	| 011100 a
+	| 020100 f q
+	| 021100 b c ff2 g1
+	| 0??000 $C B $S $F $L $T
+	| 0??010 13:1
+	| 0??110 13:0
+	| 1?0100 aur l vg >}
+
+{{}
+[ /m KAI PROSELQONTES hOI MAQHTAI AUTOU | -AUTOU ]
+/k	< - $* >
+/m	< 0 $C B $T $S $F $L $I vg
+	| 1 b ff1 k e >}
+
+{{}
+[ /m HRWTOUN AUTON LEGONTES | KAI+/HRWT. | HRW)TWN | HRW)THSAN ]
+/k	< --- $* >
+/m	< 000 $I vg $C B
+	| 001 1424 k e
+	| 010 13 $T $L $S
+	| 100 aur ff1 >}
+
+{{}
+[ /m APOLUSON AUTHN | AUT./+KURIE ]
+/k	< - $* >
+/m	< 0 $C B $T $S $F $L $I vg k
+	| 1 e >}
+
+"      q    r       s      t   "{{}
+[ /m hOTI KRAZEI OPISQEN hHMWN
+| AKOLOUQEI.KAI+r | r/KRAZH | s/EMPROSQEN ]
+/k	< --- $* >
+/m	< 000 $C B $T $S $L $I vg k e
+	| 001 W
+	| 010 L $F
+	| 100 b >}
+
+/m @ Mt15:24
+"     a  b     c        d "{{}
+[ /m hO DE APOKRIQEIS EIPEN
+| b+IHSOUS | d/LEGEI=AIT | KAI+d ]
+/k	< --- $* >
+/m	< 000 $C B $T $L $S d
+	| 001 e k
+	| 010 $I vg
+	| 110 f ff1 >}
+
+"     e       f    "
+[ /m OUK APESTALHN
+| ? ]
+/k	< - $* >
+/m	< ? $C B $T $S $F $L $I vg e k >
+
+"     g  h  i   j   k     "{{}
+[ /m EI MH EIS TA PROBATA
+| i/PROS | k+TAUTA ]
+/k	< -- $* >
+/m	< 00 $C B $T $L $S
+	| 01 D
+	| 10 W
+	| ?0 $I vg e k
+	| ?1 d >}
+
+"     l     m       n      o    "{{}
+[ /m TA APOLWLOTA OIKOU ISRAHL
+| l- | m+TA ]
+/k	< -- $* >
+/m	< 00 $C B $T $L $S
+	| 01 Th
+	| 0? $I vg e k
+	| 10 U >}
+
+/m @ Mt15:25
+"    a        b        c    d     e   f    "{{}
+[ ELQOUSA PROSEPESEN PROS TOUS PODAS AUTOU
+| -ELQ...AUTOU | hH.DE+/ELQ. | EIS(ELQOUSA AP(ELQOUSA PROS(ELQOUSA
+| ELQ./+KAI | -PROSEP. | PROS(EKUNEI | PROSEKU)NHSEN
+| PROS.T.POD.AUT./AUTWi^ PROS/EIS PROS/PARA | ^AUT)ON ]
+/k	< 00000000? B 118 124 $C $T $S W 33 D:1
+	| 000000010 $L $F 28
+	| 00000003? 574
+	| 00010000? D:0 a q
+	| 00100000? 01 L 579
+	| 00100002? 700
+	| 00101?010 b c i
+	| 00110000? De aur d f ff2 l vg
+	| ????????? p45 >
+" hH DE ELQOUSA PROSEKUNEI AUTWi "
+/m	< 010001010 B 01:0 D M $L $F 33 579 700 788 1071 346 1424 $C $T Th d
+	| 010001011 aur b c ff1 ff2 k g1:1
+	| 010001110 01:1 C $M K L U W Pi 2 157 565
+	| 010001111 $I vg g1:0
+	| 012001010 118 209
+	| 012001110 S
+	| 013001111 De
+	| 1???????? e >}
+
+/k @ Mk7:26
+"     g  h  i   j     k    "
+[ /k hH DE GUNH HN hELLHNIS
+| j~gi | g- | h/DE | i- | k/hELLHN ]
+/k	< 00000 B p45 01 Th $L 579 $C D M:1 700 L W 28 565 1424
+	| 10000 A K Pi 1071 E F H $T
+            G Y M:0 N S Ga Om $F 2 157
+	| 11000 U
+	| 00001 De
+	| 0000? 33
+	| 1?01? b 
+	| 1?11? c ff2 i
+	| 1?00? aur f l q vg
+	| 0?00? a d >
+/m	< ----- $* >
+
+"         m          n   o    "
+[ /k SUROFOINIKISSA TWi GENEI
+| m/SURA_ m/_ | m/_NISSA | no~m ]
+/k	< 100 B E F H M:1 700 
+          G Y M:0 N S Ga Om $F 2 157 2327 574 669
+	| 000 p45 01 Th $L 579 $C A K Pi 1071 L De 28 565 1424
+	| 210 D
+	| 110 U W
+	| ??? 33
+	| 010 $T
+	| 010 $I vg
+	| 110 q
+	| 210 i
+	| 111 a >
+/m	< --- $* >
+
+"  p    q    r    "
+[ KAI HRWTA AUTON
+| p- | p+procidens.ad.pedes.ejus | qr/LEGOUSA ]
+/k	< 000 B $C $T $S $L $F
+	| ?00 p45
+	| 000 $I vg
+	| 010 c i >
+" LEGOUSA "
+/m	< 101 $C B D 01 W 1424 $T $S $F $L $I vg e k >
+
+[ /k hINA TO DAIMONION EKBALHi EK THS QUGATROS AUTHS
+| EK.T.QUG.AUTHS~EKB. EKB.~T.DAIM. | EKBAL)LHi EKBAL)LEI EKBAL)EI
+| -EK | EK/APO ]
+/k	< 0000 B 01 De $C A $M K N U W Ga Pi 124 1071 1424 $I vg 669
+	| 0001 D
+	| 001? p45 L $L 565 700 574
+	| 00?? 33
+	| 0100 F 2 157 $T Th
+	| 011? 118 209
+	| 0200 M
+	| 0300 579
+	| 031? 28
+	| 101? $F
+	| 121? 69
+	| 2001 c ff2
+	| 201? q >
+/m	< ---- $* >
+
+/m =- $? r1 ;
+"      a     b     c "{{}
+[ /m KURIE BOHQEI MOI
+| b/BOHQHSON | bc~a ]
+/k	< -- $* >
+/m	< 00 $C B $T $L $S 1582:0
+	| 10 Th 1582:1
+	| ?0 d f l q vg k e
+	| ?1 $I >}
+
+/k @ Mk7:27
+/m @ Mt15:26
+{{}
+[ KAI ELEGEN AUTHi 
+| -KAI | KAI~/~DE | hO+/ELEGEN | IS+/ELEGEN
+| APOKRIQEIS+/ELEGEN | +(AP./APEKRIQH.KAI)
+| ELEGEN/LEGEI ELEGEN/EIPEN
+| -AUTHi | AUT)Wi | PROS+/AUT)HN | AUT.~ELEGEN ]
+/k	< 00000?00000 B 01 De $C L 579
+	| 00000?10000 D Th 700 
+	| 00000?10100 a
+	| 00000?20100 d
+	| 010???10100 f
+	| 01110?20000 F 2 157 $T M 118 $F 69 565 A $M K N U W Ga Pi 124 1071 1424
+	| 01110?21??? $L 28
+	| 1?100?20100 $I vg
+	| 1?100?21??? c
+	| 1?110?10000 q
+	| ??000??0000 p45 33 >
+" hO DE APOKRIQEIS EIPEN "
+/m	< 01101010011 ff1
+	| 01101011??? $I
+	| 01101020010 a
+	| 01101021??? $C B 01 D W $S $F $L $T d
+	| 01101121??? k e
+	| 011???1???0 r1
+	| 1?101011??? f vg aur l >}}
+
+/k =- $? n ;
+
+[ /k AFES PRWTON XORTASQHNAI TA TEKNA | T.TEKNA~PRWTON ]
+/k	< 0 B 01 D L De $L 124 579 700 1424 $C p45 Th 33
+        A $M K M N U W Ga Pi 118 $F 2 28 157 1071 $T $I vg
+	| 1 565 q >
+/m	< - $* >
+
+{{}
+[ OU GAR ESTIN KALON LABEIN 
+| OK/OUK,-GAR | EC(ESTIN | -KAL. | LAB.~KAL. | LAB./ARAI LAB./ESQIEIN=sumere ]
+/k	< 00000 B 01 D L De $L 124 579 700 1424 $C
+	| 00001 Th 565
+	| 0000? $I vg
+	| 00010 A $M K M N U W Ga Pi 118 $F 2 28 157 1071 $T
+	| 0???0 p45
+	| 1000? aur l
+	| ????? 33 >
+" OUK ESTIN KALON LABEIN "
+/m	< 10000 $C B 01 W $S $F $L $T f q k e
+	| 10001 aur l vg
+	| 111?0 D $I >}
+
+[ TON ARTON TWN TEKNWN | ? ]
+/k	< ? $C B $T $S $L $F $I vg k >
+/m	< ? $C B $T $S $F $L $I vg e k >
+
+{{}
+[ KAI TOIS KUNARIOIS BALEIN 
+| KAI/+BALLEIN | TOIS/TOUTOIS=illud | BAL.~T.KUN. | BAL./DIDOUN=dare ]
+/k	< 0000 B 01 $C p45 Th $L 28
+	| 0010 D W 700 118 $F 565 A $M K L M N U Ga De Pi 124 2 33 579 1071 346 1424 $T 
+	| 1000 157
+	| ?000 q
+	| ?010 $I vg
+	| ?110 b >
+" KAI BALEIN TOIS KUNARIOIS "
+/m	< 0010 $C B 01 D W $S $F $L $T
+	| ?010 $I vg e k
+	| ?011 a b >}
+
+/k @ Mk7:28
+/m @ Mt15:27
+{{}
+[ hH DE APEKRIQH KAI LEGEI AUTWi 
+| hH/hO | -APEKRIQH | -KAI | LEG)OUSA LEGEI/EIPEN | -AUT. | AUT.~LEGEI ]
+/k	< 000000 B 01 $C 157 A $M K L M N U Ga De Pi 124 2 33 579 1071 346 1424 $T aur l vg
+	| 001000 b
+	| 001101 D W 700 Th a d f i n q 
+	| 00111? $L 28 118 $F 565
+	| 001200 c
+	| 101200 ff2
+	| ???1?? p45 >
+" hH DE EIPEN "
+/m	< 01121? $C B 01 D W $S $F $L $T $I vg e k >}
+
+{{}
+[ KURIE KAI TA KUNARIA
+| NAI(utique)+/KE | /(NAI/etiam) /(NAI/ita) | KE/+ALLA | GAR+/KAI ]
+/k	< 0?00 p45 W Th $F 565 700 $C
+	| 0?01 543
+	| 0?10 D $I
+	| 1010 aur f l vg
+	| 1110 q
+	| 1210 a n
+	| 1?00 B De 33 28 579 01 H WH 
+	| 1?01 L $L 1071 346 1424 A $M K M N U Ga Pi 124 2 157 $T >
+" NAI KURIE GAR KAI TA KUNARIA "
+/m	< 1000 e
+	| 1001 $I k
+	| 1101 aur d f l vg
+	| 1201 ff1
+	| 1?00 B 
+	| 1?01 $C 01 D W $T $L $S r1 >}
+
+"    k      l      m        n    "{{}
+[ hUPOKATW THS TRAPEZHS ESQIOUSIN 
+| -hUPOK.T.TRAP. | ESQ.~hUP.T.TRAP. APO.T..PAIDIWN~ESQ.
+| hUPOK./+TA | APO(KATW | ESQI)EI ]
+/k	< 00000 B De 33 28 579 D L $L 1071 346 1424 W Th $F 565 700 $C
+	| 00001 H 983 A $M K M N U Ga Pi 124 2 157 $T
+	| 0010? p45
+	| 00?0? $I vg
+	| 01000 01:1
+	| 01010 01:0
+	| 02?0? c >
+/m	< 1???0 D
+	| 1???1 $C B 01 W $T $L $S
+	| 1???? $I vg e k >}
+
+"  o   p    q     r     s    "{{}
+[ APO TWN YIXIWN TWN PAIDIWN 
+| -APO.T.YIX. | YIX)WN | YIX./+TWN.PIPTONTWN
+| APO.THS.TRAPEZHS+/T.PAIDIWN | ^T)WN.TRAPEZ)WN
+| -T.PAIDIWN | PAIDIWN/PEDWN PAIDIWN/KURIWN.AUTWN PAIDIWN/KUNARIWN ]
+/k	< 0000?00 B $C $T $S $L $F p45 N 346
+	| 0010?1? 1071 2327
+	| 0011000 157
+	| 0100?00 W
+	| 0100?01 D
+	| 0?00?00 $I vg >
+/m	< 0011002 $C B 01 W $T $L $S 1424:1
+	| 0011003 D
+	| 0?11002 $I vg k e
+	| 0?11102 d
+	| 1??1002 1424:0 >}
+
+/k @ Mk7:29
+/m @ Mt15:28
+"  a    b     c   "{{}
+[ KAI EIPEN AUTHi 
+| a/TOTE.APOKRIQEIS:12 a/hO=qui a/DE~b | EIPEN/LEGEI=AIT
+| c+hO.IHSOUS:34
+| 34~bc | c- | c~b | c/PROS.AUTHN=ad.illam | c/(AUT)Wi ]
+/k	< 000?0000 B $C $T $S $L $F p45 D W 157 1071 346 a n
+	| 00100000 N
+	| 010?0000 $I vg
+	| 200?0010 c
+	| 300?0100 f >
+"  a1    a2       c3   c4     b     c   "
+" TOTE APOKRIQEIS hO IHSOUS EIPEN AUTHi "
+/m	< 100?0000 D
+	| 100?0001 d
+	| 10100010 ff1
+	| 10110000 B 01 W $T $S $F $L $C
+	| 10110001 33 q
+	| 101110?? Th
+	| 11110001 f g1 l vg k e aur
+	| 11111??? $I a b c ff2
+	| 1111???? r1 >}
+
+{{} [ /k DIA TOUTON TON LOGON hUPAGE 
+| hUPAGE~DIA..LOGON | -TON | LOGON/+SOU=tuum ]
+/k	< 000 B 01 L De Th 1071 $C Ga 157 A $M K M N U W Pi $F 2 33 28 579 1424 $T
+	| 0?0 aur l vg
+	| 0?? p45
+	| 100 $L 565 700 118
+	| 110 D
+	| 1?0 $I
+	| 1?1 a n >
+/m	< --- $* > }
+
+{{} [ /m W GUNH MEGALH SOU hH PISTIS | -W | hH.PISTIS~SOU ]
+/k	< -- $* >
+/m	< 00 $C B $T $L $S d
+	| 01 $I vg e k
+	| 10 D >}
+
+{{} [ /k ECELHLUQEN EK THS QUGATROS SOU TO DAIMONION
+| ECEL./+GAR | T. DAIM.~EK.T.QUG.SOU | EK/APO ]
+/k	< 000 B 01 L De Th 1071 $C $L
+	| 001 Ga
+	| 010 p45 D 565 700 A $M K M N U W Pi $F 2 33 28 579 1424 $T aur d f i l vg 209
+	| 011 $I 118
+	| 101 157
+	| ??? b >
+/m	< --- $* >}
+
+"      q       r   s    t     "{{}
+[ /m GENHQHTW SOI hWS QELEIS
+| +GENN..QEL. | SOI/+EK.THS.QUGATROS.SOU | SU+/QELEIS ]
+/k	< 0?? B $C $T $S $L $F $I vg
+	| 110 b >
+/m	< 100 $C B 01 D W $T $S $F $L $I vg k
+	| 101 e >}
+
+" NOTE: End of different hand for K "
+/k @ Mk7:30
+
+[ /k KAI APELQOUSA EIS TON OIKON AUTHS hEUREN
+| -TON | -AUTHS | hE(AUTHS | hEUR)ON ]
+/k	< 0000 B $C $T $S $F d ff2
+	| 0001 Pi
+	| 0010 01 Th 33 579
+	| 01?0 p45 W $L 28 aur f
+	| 1000 L c l vg
+	| 1010 a n
+	| 11?0 D $I >
+/m	< ---- $* >
+
+{{}
+[ /k TO PAIDION BEBLHMENON EPI THN KLINHN KAI TO DAIMONION ECELHLUQOS
+| T.DAIM.EC.~T.PAID...KLINHN | T.PAID.BEBL./THN.QUGATERA.BEBLHMENHN
+| PAID./+AUTHS | EPI/hUPO | T)HS.KLIN)HS T)HN.KLIN)HS
+| -TO | ECELHLUQ)WS ECELHLUQ)WN ECELHLUQ)OTI ]
+/k	< 0000000 B 01 1424 $C
+	| 0000010 De
+	| 00000?? $I vg
+	| 0000100 33
+	| 0000201 579
+	| 0001000 L
+	| 0100000 D 
+	| 01000?? d
+	| 0110000 Th 565 700
+	| 01100?? f
+	| 0110100 $L
+	| 01101?? q
+	| 1100000 1071
+	| 1100100 A $F 788 $M M N U W Ga Pi 69 124 157 $T 2:1
+	| 1100101 Om 13 2:0 28 983
+	| 1100102 346
+	| 1100103 K
+	| 11001?0 p45
+	| 11101?? a n >
+/m	< ------- $* >}
+
+"      1   2    3      4    5   6    7      8    "
+[ /m IAQH hH QUGATHR AUTHS APO THS hWRAS EKEINHS
+| 8~67 ]
+/k	< - $* >
+/m	< 0 $C B $T $L $S d
+	| 1 $I vg e k >
+
+" Aland 152. Healing of a Deaf Mute, etc. Matt 15:29-31 = Mark 7:31-37 "
+
+/k @ Mk7:31
+/m @ Mt15:29
+
+/m =- $? P ;
+{{}
+[ KAI PALIN ECELQWN EK TWN hORIWN TUROU
+| -KAI | -PALIN | -ECELQ...hORIWN | ECELQ./METABAS ECELQ./KATABAS
+| ECELQ.)+hO.IS  | EK...TUROU/EKEIQEN | EK/APO ]
+/k	< 0000000 B 01 D L De 33 700 $C W $L 579 1424 A E Y K M N U Pi 118 157 $T 13 788 $I vg
+	| 0000001 Th 565 28 q
+	| 0000100 $M Ga 2 $F 2327 574 669
+	| 0000101 1071
+	| 0001000 a n
+	| 101???? c
+	| ??00000 p45 >
+" KAI METABAS EKEIQEN "
+/m	< 010101? $C B 01 D W $T $S $F $L $I vg e k
+	| 010201? 1424 >}
+
+{{}
+[ HLQEN DIA SIDWNOS EIS THN QALASSAN THS GALILAIAS 
+| hO.IS+(HLQ. | -HLQ. | HLQEN)+PALIN | -DIA.SIDWN.
+| DIA.SIDWN.~HLQ | DIA/KAI | EIS/PROS EIS/PARA ]
+/k	< 0000000 B 01 D L De 33 700 $C Th 565
+	| 0000001 $I vg
+	| 0000110 W $L $F 69 124 346 28
+	| 0000111 $M Ga 2 1071 A E Y K M N U Pi 118 157 $T q
+	| 0000112 1424
+	| 000011? p45
+	| 00?1??0 579
+	| 01?0?01 aur
+	| 1000001 c >
+" hO IHSOUS HLQEN PARA THN QALASSAN THS GALILAIAS "
+/m	< 0001??? b ff2 g1 r1
+	| 1001??0 1424
+	| 1001??2 $C B 01 D W $T $L $S
+	| 1001??? aur d ff1 l q vg e k
+	| 1011??? $I >}
+
+/k =+ $? n ;
+[ /k ANA MESON TWN hORIWN DEKAPOLEWS | EIS+(DEKAPOL)IN | THS+(DEKAP. ]
+/k	< 00 B p45 579 $C $T $S $L $F
+	| 01 D Th
+	| 0? $I vg
+	| 11 W >
+/m	< -- $* >
+
+{{}
+[ /m KAI ANABAS EIS TO hOROS EKAQHTO EKEI | hOROS)+hO.IHSOU | -EKEI ]
+/k	< -- $* >
+/m	< 00 $C B $T $L $S $I vg e
+	| 01 k
+	| 10 $F 788 346 >}
+
+/k @ Mk7:32
+/m @ Mt15:30
+[ KAI FEROUSIN AUTWi | FER./PROSHLQON | AUT)ON ]
+/k	< 00 B $C $T $S $L $F $I vg
+	| 01 574 >
+" KAI PROSHLQON AUTWi "
+/m	< 10 $C B 01 D W $S $F $L $T $I vg e k >
+
+[ /m OXLOI POLLOI EXONTES MEQ EAUTWN
+| -POL. ]
+/k	< - $* >
+/m	< 0 $C B $T $S $L $F $I vg e k
+	| 1 b ff2:0 g1 r1 >
+
+{{}
+[ /m XWLOUS TUFLOUS KULLOUS KWFOUS
+| -TUFL. | TUFL.~XWL. TUFL.~KUL.~XWL. | KUL.~TUFL.
+| -KWF. | KWF.~KUL. KWF.~TUFL.KUL. KWF.~XWL.TUFL.KUL. ]
+/k	< ----- $* >
+/m	< 00000 01 157 $C a b d ff2
+	| 00001 $M P U $F 118 2 700 788 1071 346 $T Th f
+	| 00002 C K M Pi 565
+	| 00003 L W De aur
+	| 0001? D k e
+	| 00100 B
+	| 01000 c g1 r1
+	| 01001 ff1
+	| 01002 579
+	| 01003 $L 33 l q vg
+	| 02003 1424
+	| 1??00 S >}
+
+{{}
+[ /m KAI hETEROUS POLLOUS
+| -KAI..POL. | POLL.~hET. | -POLL. | POLL./+mutos=KWFOS ]
+/k	< ---- $* >
+/m	< 0000 $C B $T $S $L $F $I vg k e b:1
+	| 0011 b:0
+	| 0101 ff1
+	| 1??? L Th
+	| ???? r1 >}
+
+/m =- $? H ;
+
+{{}
+[ /m KAI ERRIQAN AUTOU_1 PARA TOUS PODAS AUTOU_2
+| -AUTOU_1 | AUT)OUS_1 | AUTOU_1/+MAKROQEN.EMPROSQEN.AUTOU
+| -PARA.T. | PARA/PROS PARA/hUPO | AUTOU_2/TOU.IU ]
+/k	< ------ $* >
+/m	< 000000 B Th 1582:1 $F 579 $C 01 L
+	| 000001 C:1 $M K M P W Pi $L 1582:0 2 157 565 1071 $T
+	| 000020 D
+	| 0001?1 C:0
+	| 001010 1424
+	| 010000 124 33 700 788 346 a c ff1
+	| 010001 De f
+	| 010010 aur ff2 g1 l vg
+	| 010011 q
+	| 010020 $I k e b d
+	| 1?0001 118
+	| ???001 H
+	| ?????? r1 U > " U not in Swanson here "}
+
+{{}
+[ /m KAI EQERAPEUSEN AUTOUS
+| AUT)OIS | AUT./+PANTAS ]
+/k	< -- $* >
+/m	< 00 $C B $T $L $S
+	| 01 D
+	| 10 C 1071
+	| ?0 $I vg l k e
+	| ?1 b c d ff2 g1 r1 >}
+/m =+ $? r1 ;
+
+[ /k KWFON KAI_1 MOGILALON KAI PARAKALOUSIN AUTON
+| ANDRA:a+/KWFON | KWF.~a: | -KAI_1 | MOGG(ILALON MOIG(ILALON
+| -PARAK. | PARAKA)LOUN PARAKAL)ONTES | -AUTON ]
+/k	< 0?00000 B:0 01 D Th 565 700 $C
+	| 0?01000 B:1 W De
+	| 0?0?000 l vg
+	| 0?0?010 $I
+	| 0?0?021 a
+	| 0?10000 A $M K M U Pi $L 1582:0 124 788 $T 543 826
+	| 0?100?? p45
+	| 0?11000 E F:1 H L N Ga 118 $F 1582:1 2 28 157 579 1071 1424
+	| 0?11010 33
+	| 0?12000 69
+	| 100?010 aur
+	| 110?010 c >
+/m	< ------- $* >
+
+[ /k hINA EPIQHi AUTWi THN XEIRA
+| AUTWi..XEIRA~EPIQ. | T)AS.XEIR)AS ]
+/k	< 00 B $C $T $S $L $F p45 D E:0 Ga 157 W 01:1 $I vg
+	| 01 01:0 33 N 579 De
+	| 10 aur c >
+/m	< -- $* >
+
+/k @ Mk7:33
+
+{{} [ /k KAI APOLABOMENOS AUTON
+| EPI(LABOMENOS PRO(LABOMENOS (LABOMENOS | AUT)OU ]
+/k	< 00 B $C $T $S $L $F p45 01 33 D N 579 E:1
+	| 01 669
+	| 10 E:0 Ga 157 983 118 209
+	| 11 2327
+	| 20 W
+	| 30 De
+	| ?? $I vg >
+/m	< -- $* >}
+
+[ /k APO TOU OXLOU KAT IDIAN
+| KAT.ID.~APO..OXL. | APO/EK ]
+/k	< 00 B A $M K M N U Pi $L 2 33 700 1071 $C $T
+	     D L W Th 565 $F 124 28 118 157 579 c f ff2
+	| 01 Ga De $I vg 669
+	| 0? p45
+	| 10 01 1424 >
+/m	< -- $* >
+
+[ /k EBALEN TOUS DAKTULOUS AUTOU_1 EIS TA hWTA AUTOU_2 KAI PTUSAS
+| PT.~EB...KAI PT.~TOUS..KAI PT.~EIS..KAI PT.~KAI hHYATO..AUT.~PT.
+| EN(EBALEN EP(EBALEN | E)LABEN | -TOUS | -AUTOU_1 | AUTOU_1~T.DAKT.
+| -EIS..AUTOU_2 | -AUTOU_2 | -KAI ]
+/k	< 000000000 B A $M K M N U Pi $L 2 33 700 1071 $C $T Ga De 118 157
+	| 0000001?0 579
+	| 000001000 1424
+	| 00001?000 01:1 L
+	| 000?00000 aur f
+	| 000?00010 l vg
+	| 00101?000 01:0
+	| 100000000 D
+	| 100?00000 $I
+	| 100?001?0 b ff2
+	| 100?1?1?0 i
+	| 111?1?1?0 c
+	| 200000000 Th 565
+	| 300000000 28
+	| 30011?000 W
+	| 320000000 $F
+	| 411000000 p45
+	| 520000001 124 >
+/m	< --------- $* >
+
+{{}
+[ /k hHYATO THS GLWSSHS AUTOU
+| GLWSS)AS | GL./XEIROS ]
+/k	< 00 B $C $T $S $L p45 D $F 124 1424 $I vg
+	| 10 W
+	| 01 De >
+/m	< -- $* >}
+
+
+/k @ Mk7:34
+[ /k KAI ANABLEYAS EIS TON OURANON ESTENACEN
+| -KAI..ESTENACEN | AN(ESTENACEN ]
+/k	< 00 B $C $T $S $L p45 W De 700
+	| 01 D $F 124
+	| 0? $I vg
+	| 1? 1424 >
+/m	< -- $* >
+
+[ /k KAI LEGEI AUTWi | -AUTWi ]
+/k	< 0 B $C $T $S $L $F p45 01:2 W D De $I vg
+	| 1 S q >
+/m	< - $* >
+
+[ /k EFFAQA hO ESTIN DIANOIXQHTI
+| EFFAQA/EFFEQA | ESTIN/KAI=et ]
+/k	< 00 B $C $T $S $L $F S 01:0 01:1
+	| 10 01:2 W D b l vg aur f ff2 i q a d
+	| 11 c
+	| ?? p45 >
+/m	< -- $* >
+
+/k @ Mk7:35
+{{}
+[ /k KAI EUQEWS HNOIGHSAN AUTOU hAI AKOAI
+| -EUQ. | DI(HNOIGHSAN | HNOI)XQHSAN | AUTOU~hAI.AK. | AUT)Wi ]
+/k	< 00000 $L $C
+	| 01000 W Th 565 700
+	| 01001 124
+	| 01100 p45 E A $M K M N U Ga Pi 118 $F 2 28 157 1071 1424 $T 
+	| 01101 788
+	| 0??10 aur c f l vg
+	| 10000 B 01 De WH
+	| 10010 D
+	| 10100 L
+	| 11000 33 579
+	| 1??10 a b d ff2 i q >
+/m	< ----- $* >}
+
+[ /k KAI ELUQH hO DESMOS THS GLWSSHS AUTOU
+| KAI/+EUQUS:a | a:~KAI | -hO.DESMOS ]
+/k	< 0?0 B $C D E W Th $L 124 33 579 565 700 788
+	      A $M K M N U Ga Pi 118 $F 2 28 157 1071 1424 $T $I vg
+	| 100 01 De
+	| 110 L
+	| ??1 p45 >
+/m	< --- $* >
+
+"     n    o      p   "
+[ /k KAI ELALEI ORQWS
+| ELAL)HSEN ELAL)Hi | ORQWS/+adeo.ut.omnis.stuperat ]
+/k	< 00 B 01 L W 33 $C p45 D 700 De 28 565 788 1424
+	     A $M K M N U Ga Pi $L $F 2 157 $T $I vg
+	| 01 a
+	| 10 Th
+	| 20 579
+	| ?? 1071 >
+/m	< -- $* >
+
+/k @ Mk7:36
+"     a      b          c    d     e       f    "
+[ /k KAI DIESTELLETO AUTOIS hINA MHDENI LEGWSIN
+| b/ENETEILATO | e+MHDEN | f/EIPWSIN | f+PERI.AUTOU ]
+/k	< 0000 B 01 L W 33 $C Th
+	| 0010 788 A $M K M N U Ga Pi $L $F 2 157 $T
+	| 0011 1424
+	| 0100 28 565
+	| 0110 D 700
+	| 1000 De 579
+	| ?000 p45 $I vg
+	| ?100 q d
+	| ???? 1071 >
+/m	< ---- $* >
+
+"      g    h    i        j      "
+[ /k hOSON DE AUTOIS DIESTELLETO
+| g/hOI g/hOSWi | i- | AUTOS+i | i~1 | AUTOS+i(bis)
+| j- | j/ENETE(LETO) | j/(DIESTE)LETO j/(DIESTEI)LATO ]
+/k	< 000?0000 B L 565 579 $C 01 A $L aur f l vg q
+	| 000?0002 28
+	| 000?0011 De
+	| 00100000 N 983 $M Y:1 K M U Ga Pi 69 124 157 $T
+	| 00100001 2
+	| 0010000? p45
+	| 00101000 Y:0
+	| 00110000 $F 33
+	| 00110001 1071
+	| 00110002 1424
+	| 100?0000 a
+	| 110?01?? D b d ff2 i c
+	| 200?0000 W Th 700 >
+/m	< -------- $* >
+
+"      k      l        m          n     "
+[ /k AUTOI MALLON PERISSOTERON EKHRUSSON
+| k- | l+DE | m/KAI=_que | l~m | m/_RWS ]
+/k	< 00000 B L 565 579 $C N De 33 1424
+	| 00001 01 D 1071
+	| 0000? b d i
+	| 0001? f
+	| 001?? c ff2
+	| 0101? q
+	| 10000 A $L Y:0 W Th $F 2 28:1 $M Y:1 K M U Ga Pi 69 124 157 $T
+	| 10001 700
+	| 1001? aur l vg a
+	| 11000 28:0
+	| ??000 p45 >
+/m	< ----- $* >
+
+/k @ Mk7:37
+/m @ Mt15:31
+
+[ /k KAI hUPERPERISSWS ECEPLHSSONTO LEGONTES 
+| hUPER)EK(PERISSWS | hUPERPERI)SSW hUPERPERI)SSOU ]
+/k	< 00 B $C $T $S $F
+	| 01 W
+	| 10 D U $L 1582:0 118 700
+	| 12 1582:1
+	| ?? p45 $I vg >
+/m	< -- $* >
+
+/m =- $? F ;
+{{}
+[ /m hWSTE TON OXLON QAUMASAI BLEPONTAS 
+| T)OUS.OXL)OUS | BLEP.~QAUM. | BLEPONT)ES BLEPONT)A
+| BLEP./+ALALOUS.LALOUNTAS ]
+/k	< ---- $* >
+/m	< 0000 01 U $L $F 157 579 700 788 346 1424 $C C D
+	| 0010 De Th
+	| 0020 33
+	| 00?0 d
+	| 1000 F $M K L M P W Pi 118 209 2 565 $T
+	| 1001 1071
+	| 10?0 $I vg k e
+	| 1100 B
+	| ???? N >}
+
+[ /k KALWS PANTA PEPOIHKEN
+| PANTA~KALWS | PANTA/PASIS=omnibus | PEPOIHKEN/POIEI=facit ]
+/k	< 000 B $C $T $S $L $F $I vg
+	| 001 l
+	| 010 q
+	| 101 c >
+/m	< --- $* >
+
+{{}
+[ KAI TOUS KWFOUS POIEI AKOUEIN 
+| -KAI..BLEPONTAS | hWS+/KAI | -KAI | -TOUS | POI.AK./(AKOU)NTAS
+| POI.AK./LALOU(NTAS) | POIEI/(PEPOIH)KEN
+| AK.~POI. LALEIN~AKOUEIN | AK./+KAI.LALOUNTAS ]
+/k	< 000000010 De
+	| 000000100 W aur q vg
+	| 00000?000 01 L 33 A D $M K M N U Ga Pi $L $F 2 157 579 700 1071 1424 $C $T b c d ff2 i a f l
+	| 001000000 Th 565 
+	| 001000020 28
+	| 010000000 B
+	| ????????? p45 >
+" TOUS KWFOUS LALONTAS "
+/m	< 001010??0 B 1071 
+	| 001010??1 N
+	| 001011??0 $C 01 W D 1424 $T $L $S
+	| 001?10??0 e
+	| 001?11??0 $I vg k
+	| 1???????? a >}
+
+[ /k KAI TOUS ALALOUS LALEIN 
+| -TOUS | -ALALOUS ]
+/k	< 00 Th 565 A D $M K M N U Ga Pi $L $F 2 157 579 700 1071 1424 $C $T
+	| 10 B 01 L 33 De
+	| 11 W 28
+	| ?0 $I vg >
+/m	< -- $* >
+
+{{}
+[ /m KULLOUS hUGIEIS
+| KAI+/KULL. | -KULL...PERIPAT. | -KULL.hUG.
+| TUFL.BLEP.~KUL...KAI KAI.XWL...KAI~KULL.hUG. ]
+/k	< ---- $* >
+/m	< 0000 B C M P W De 565 $C $M K L U Pi 2 $T N 1071 f q d 209
+	| 0010 01 $L 700:1 $I vg k e
+	| 0011 700:0
+	| 01?0 118
+	| 1000 124 33 D Th $F 157 788 1424 346
+	| 1002 579
+	| ???? a >}
+
+{{}
+[ /m KAI XWLOUS PERIPATOUNTAS
+| -KAI | PERIPA)TEIN ]
+/k	< -- $* >
+/m	< 00 B 01 $L 579 C M P W De 565 $C N D Th $F 157 788 1424 346 d f k
+	| 01 124
+	| 10 $M K L U Pi 2 $T 33 700:0 700:1 1071 $I vg e 209
+	| ?? 118 a >}
+
+{{}
+[ /m KAI TUFLOUS BLEPONTAS
+| -KAI  | TOUS+/TUFL. | BLEPONT)ES ]
+/k	< --- $* >
+/m	< 000 B $C $T $L $S 01 L $F 33 1071 579 1424
+	| 001 De
+	| 010 D
+	| 0?0 d f k e
+	| 100 700
+	| 1?0 $I vg
+	| ??? a >}
+
+{{}
+[ /m KAI EDOCASAN TON QEON ISRAHL
+| EDOCA)ZON EDOCA)ZEN | -ISR. | TOU+/ISR. | ISR./+AMHN ]
+/k	< ---- $* >
+/m	< 0000 B $C $T $S D De 700
+	| 00?0 d
+	| 1000 01 L $L 33 1071
+	| 1010 1424
+	| 10?0 $I vg k:1 e
+	| 11?1 579
+	| 20?0 k:0 >}
+
+" Aland 153. Feeding of the Four Thousand Matt 15:32-39 = Mark 8:1-10 "
+
+/k @ Mk8:1
+/m @ Mt15:32a
+" Lake 1941:85 has PALIN PAMPOLLOU for 124, Swanson implicit "
+{{} [ /k EN EKEINAIS TAIS hHMERAIS PALIN POLLOU OXLOU ONTOS
+| EKEIN./+DE | -PALIN | PAM+/POLLOU | ONTOS~OXLOU OXLOU~POLLOU ]
+/k	< 0000 B 01 G:0 L M N De $L $F 33 579 1071 1424 $C aur vg
+	| 0002 l
+	| 0010 124
+	| 0011 565
+	| 0100 828
+	| 0110 157 A $M K U Ga Pi 118 2 $T
+	| 1000 D W Th 28 c d ff2 
+	| 1002 b f i a
+	| 1100 q
+	| 1110 700
+	| ???? p45 >
+/m	< ---- $* >}
+
+{{}
+[ /k KAI MH EXONTWN TI FAGWSIN
+| -KAI | EXW(NTOS | EX./+AUTWN ]
+/k	< 000 B A K M Pi 33 788 1071 01 L N $L 28 $C $M U Ga 118 $F 2 157 $T De 124 1424 a b f
+	| 001 D W Th 565 700 d
+	| 010 579 ff2
+	| 100 $I vg >
+/m	< --- $* >}
+
+{{}
+[ PROSKALESAMENOS TOUS MAQHTAS LEGEI AUTOIS
+| hO.IS+/PROSK. | DE+/PROSK. | PROSK./EIPEN=dixit | TOUS/TOU
+| MAQ./+AUTOU | MAQ./+PALIN | LEGEI/EIPEN | -AUTOIS | AUT)OUS ]
+/k	< 000000000 01 L N $L 28 $C D
+	| 000001000 De
+	| 000010000 B A K M Pi 33 788 1071 Th 565 700 579 
+	| 000010010 W
+	| 000010100 1424
+	| 000?00000 $I vg
+	| 000?00100 c
+	| 100010000 $M U Ga 118 $F 2 157 $T
+	| 100010100 124
+	| 100?00000 f >
+" hO DE IHSOUS PROSALESAMENOS AUTOU TOUS MAQHTAS EIPEN "
+/m	< 110000100 01
+	| 11000011? W Th 700
+	| 110010000 C
+	| 110010100 K Pi 157 579 
+	| 110010101 565
+	| 11001011? $C B:1 D $T $L $S
+	| 11011011? B:0
+	| 110?1011? $I vg a e
+	| 111?1011? k >}
+
+/k @ Mk8:2
+/m @ Mt15:32b
+{{}
+[ SPLAGXNIZOMAI EPI TON OXLON
+| SPLAGXNI)SQHS | -EPI | -OXLON
+| T)OU.OXL)OU T)Wi.OXL)Wi | OXL(ON)/+TOUT(ON) | ^(TOUT.~OXL.) ]
+/k	< 00000? B $L De $F 157 $T 01 A $M K M N U Ga Pi 124 2 33 28 700 $C
+	| 000010 L 1071 1424
+	| 000110 D
+	| 00020? W Th 565
+	| 000?0? aur l vg
+	| 000?10 $I q
+	| 010?10 a f
+	| 11000? 579 >
+" SPLAGXNIZOMAI EPI TON OXLON "
+/m	< 00000? $C B 01 W $T $L $S E:0 N:1
+	| 000010 D E:1
+	| 000?10 d
+	| 00100? N:0
+	| 010?0? a aur ff2 g1 l q vg e k
+	| 010?10 c f
+	| 010?11 $I b ff1 >}
+
+{{}
+[ hOTI HDH hHMERAI TREIS PROSMENOUSIN MOI
+| hOTI/+IDOU=ecce | -HDH | hHMER.~HDH
+| hHMER)AIS.TRI)SIN hHMER)AS | TREIS/+EISIN
+| KAI+/PROSM. | PROSM./APO.POTE.hWDE.EISIN
+| PROS)KATER(OUSIN | -MOI..FAGWSIN | -MOI | MOI/MOU MOI/ME ]
+/k	< 00000000000 L 1071 W Th 01 A $M K M N U Ga Pi 124 2 33 28 700 $C 2327 574 669
+	| 000000001?? 579
+	| 0000101?010 D
+	| 00010000010 B
+	| 00020000000 De $F 157 $T 565 1424
+	| 000?101?01? a d
+	| 00120000000 $L
+	| 001?101?01? $I
+	| 01??1000000 q
+	| 100?0000000 aur l vg f >
+" hOTI HDH hHMERAI TREIS PROSMENOUSIN MOI "
+/m	< 00000000000 W $C $S $L E:1
+	| 00000000001 De
+	| 00000000002 700
+	| 00001100000 D
+	| 00020000000 01 N Th $F 157 788 346 $T
+	| 00020001000 1424
+	| 000?100000? q f
+	| 000?100100? ff1 d
+	| 001?100000? $I e k vg
+	| 01?00000000 B >}
+
+{{}
+[ KAI OUK EXOUSIN TI FAGWSIN
+| EXW)SIN | FAG)EIN TI.FAG./escam ]
+/k	< 00 B $C $T $S $L $F D Th 700 E W
+	| 10 L N De 2 33 1424 157 565 1071 828 983
+	| ?? 579 $I vg >
+/m	< 00 $C B 01 D $T $L $S 2:1 $I vg e k
+	| 01 W q
+	| 02 a b c
+	| 10 2:0 >}
+
+/k @ Mk8:3
+/m @ Mt15:32c
+{{}
+[ KAI EAN APOLUSW AUTOUS NHSTEIS EIS OIKON AUTWN 
+| -KAI | -EAN | KAI.EAN/KAN | APOLU)SAI APOLU)SOMEN
+| AUT.~APOL. NHST.~AUT. | NHST./+hEWS
+| -EIS.OIKON.AUT. | TON+/OIKON | -AUTWN
+| AUT./+OU.QELW | +(-QELW) | +(OU~APOLUSW...NHSTEIS) +(OU.QELW~NHSTEIS)
+| hOUTWS+/NHST ]
+/k	< 0000000000??0 B 01 De $L 1582 33 $C A $M K M N U Ga Pi 2 118 1424 $T 579
+	| 0000000100??0 $F 28 2327 983
+	| 0000000?00??0 vg f
+	| 0000010000??0 W
+	| 0001000000??0 1071
+	| 0002000?00??0 l
+	| 0002100?00??0 c
+	| 0010000000??0 L
+	| 01?0000000??0 157 E
+	| 01?1000011000 D
+	| 01?1000?11000 ff2 a i q d
+	| 01?1001??1000 Th 700 aur b 565 >
+" KAI APOLUSAI AUTOUS NHSTEIS OU QELW "
+/m	< 01?1001??1000 $C B D 01 W $T $S $L $F $I vg
+	| 01?1001??1011 e
+	| 01?1001??1020 c
+	| 01?1001??1110 k
+	| 01?1201??1000 118 209 >}
+
+{{}
+[ EKLUQHSONTAI EN THi hODWi
+| -EKLUQ...hODWi | MH+.EKL. | +(MH/MHPOTE) | EKLUQ)WSIN EKLUQ)HSWNTAI ]
+/k	< 00?0 B 01 L De W $L 1582 33 $C A $M K M N U Ga Pi 2 118 157 1071 1424 $T $F 28 2327
+	| 00?1 983 l vg f c
+	| 00?2 579
+	| 0101 D ff2 a i q d Th 700 aur b 
+	| 0111 565 >
+" MHPOTE EKLUQWSIN EN THi hODWi "
+/m	< 0101 01 700 $L 1582:0 $I vg 
+	| 0111 $C B W D:1 $T $S 118 209 1582:1 f ff2 e k
+	| 1??? D:0 >}
+
+{{}
+[ /k KAI TINES AUTWN 
+| hOTI+/KAI | -KAI | KAI/+GAR | -AUTWN | EC+/AUTWN ]
+/k	< 00000 B 01 L De W $L 1582:0 33 $C 28 579
+	| 00001 q
+	| 00100 1582:1
+	| 00101 aur f l vg
+	| 01100 Th 700 $F A $M K M N U Ga Pi 2 118 157 1071 1424 $T
+	| 0111? 565
+	| 10000 a
+	| 10001 D ff2 i $I
+	| 1001? b >
+/m	< ----- $* >}
+
+{{}
+[ /k APO MAKROQEN HKASIN
+| -APO | -HKASIN | HKASIN/EISIN | HK)OUSIN ]
+/k	< 0000 01 W 579 $C D Th $L 69 124 33 28 565 1071 1424
+	| 0001 $F
+	| 0010 B L De WH
+	| 01?? 346
+	| 1000 A $T N 700
+	| 1001 $M K M U Ga Pi 2 157 574 2327 669
+	| ?000 $I vg >
+/m	< ---- $* >}
+
+/k @ Mk8:4
+/m @ Mt15:33
+
+{{}
+[ KAI APEKRIQHSAN AUTWi hOI MAQHTAI AUTOU hOTI POQEN
+| -KAI | KAI~/~DE | APEKR./LEGOUSIN | -AUTWi | -AUTOU | -hOTI
+| hOTI/+KAI.EIPAN | +(K.EIPAN/LEGONTES) | POQEN/+OUN ]
+/k	< 0000000?0 B L De 579 $C
+	| 0000010?0 A $T $M K M U Ga Pi 2 157 N 700 $F 346 D Th $L 69 124 33 28 565 1071 1424 $I vg 
+	| 000001110 c
+	| 000011110 W
+	| 000100100 01
+	| 0001010?0 ff2 >
+" KAI LEGOUSIN AUTWi hOI MAQHTAI POQEN "
+/m	< 001000000 f
+	| 001000001 d
+	| 0010010?0 118 $T $S
+	| 0010010?1 D:0 Th
+	| 001010001 aur l vg
+	| 0010110?0 B 124 $C 01 700
+	| 0010110?1 $L 1582 579
+	| 011000000 q
+	| 011000001 c
+	| 011010001 $I
+	| 1?1010001 ff1 g1 e k >}
+
+/k =+ $? 543 ;
+{{}
+[ /k TOUTOUS DUNHSETAI TIS hWDE 
+| -TOUTOUS | TOS(OUTOUS | -hWDE | hWDE~TOUT..TIS hWDE~TIS
+| DUNHS.TIS~TOUTOUS | DUN)HSHTAI DUN)ASAI DUN)ATAI
+| -TIS | TIS/AUTOUS TIS/TOIS ]
+/k	< 00000000 B 01 $M L M N U Ga De 118 124 2 33 157 579 $C $T A K Pi
+	| 00000100 $F
+	| 00000102 13
+	| 00010?00 d ff2 l vg q f
+	| 00010?1? aur
+	| 00020?00 i b c
+	| 001?0000 D H 1424
+	| 001?011? 69 1071
+	| 01010000 Th 565
+	| 01010300 28
+	| 01010?00 a
+	| 01011000 700
+	| 1?010000 $L
+	| 1?010201 W >
+/m	< -------- $* >}
+
+{{}
+[ XORTASAI ARTWN EP hERHMIAS
+| hHMIN+/X. | EP.hER.~ARTWN~+hWSTE~XORT. | TOSOUTOI+/ARTWN | +(ARTWN~TOS.)
+| ART)ON | XORT./+AUTOUS | XORTA)SQHNAI | EP.hERHMI)AIS EP/EN;hERHMI)Ai ]
+/k	< 000?0000 B 01 $M L M N U De 124 2:1 33 579 $C $T D 1424 W Th 565 $F 69 1071 28 700 788 346 $I vg
+	| 000?0001 A Pi
+	| 000?0100 $L
+	| 000?1000 F H Ga 1 118 2:0 157 2327
+	| 000?1001 K >
+" hHMIN EN hERHMIAi hWSTE XORTASAI ARTOI TOSOUTOI "
+/m	< 01100002 579
+	| 011100?2 a b ff2 g1
+	| 110?00?2 ff1
+	| 11100002 $C B 01 D W $T $L $S
+	| 11110012 1424
+	| 111100?2 $I e k vg >}
+
+{{}
+[ /m OXLON TOSOUTON
+| OXL)OUS.TOSOUT)OUS | -TOS. | TOS.~OXL. ]
+/k	< --- $* >
+/m	< 000 $C $S $F $L $T aur l vg e k
+	| 100 b d f q
+	| 101 a
+	| 11? c ff1 ff2 g1 >}
+
+/k =- $? C ;
+/k @ Mk8:5
+/m @ Mt15:34
+{{}
+[ KAI HRWTA AUTOUS 
+| -KAI | KAI/hO.DE | HRWTA/LEGEI;AUT)OIS | EP(HRWTA | HRW)THSEN
+| AUT.(bis) | AUT)Wi | AUTOUS/+LEGWN | AUTOUS/+hO.IS | +(-hO) ]
+/k	< 000000000? B De $C 01 579 L 1424
+	| 000100000? D $F 33 28 N 1071 A $M K U Ga Pi $L 69 2 157 788 346 $T
+	| 000100010? Th 700 565
+	| 000110000? M
+	| 000?00000? $I vg
+	| 000?10000? a
+	| 010110000? W
+	| 010?00000? c
+	| ?????????? C >
+" KAI LEGEI AUTOIS hO IHSOUS "
+/m	< 001??0000? 1424
+	| 001??00010 $C B 01 D W $T $L $S C 157:1
+	| 001??00011 Th
+	| 001??0001? $I vg e:1
+	| 001??0101? k e:0
+	| 001??10010 157:0
+	| 1?1??00010 124 565 788
+	| 1?1??0001? ff1 >}
+
+{{}
+[ POSOUS EXETE ARTOUS | POSOUS/+hWDE | ART.~EX. ]
+/k	< 00 B De $C L M N 1071 826 828 983 A $M K U Ga Pi $L 69 2 157 788 346 $T
+	| 01 01 579 D $F 33 28 Th 700 565 1424 $I vg 
+	| 11 W
+	| ?? C >
+" POSOUS ARTOUS EXETE "
+/m	< 01 $C B 01 D W $T $S $L $F $I vg e k
+	| 11 c >}
+
+{{}
+[ hOI DE EIPAN hEPTA
+| hOI.D.EIPAN/APOKRIQHSEN | EIP)ON | EIP./+AUTWi ]
+/k	< 000 B De $C 01 579 N W 565
+	| 010 C D $F 33 28 M Th 700 1071 1424 A $M K U Ga Pi $L 69 2 157 788 346 $T
+	| 011 L
+	| 0?0 $I vg
+	| 0?1 i l >
+" hOI DE EIPAN hEPTA "
+/m	< 000 $C 01 $F $L 33 579 788 346 $S
+	| 001 D
+	| 010 B C $M K L M N P W Pi 118 209 124 157 565 $T
+	| 0?0 d
+	| 0?1 $I vg k e
+	| 1?0 ff1 >}
+
+{{}
+[ /m KAI OLIGA IXQUDIA | OLIGA/DUO | IXQU)AS ]
+/k	< -- $* >
+/m	< 00 $C $S $F $L $T $I vg k e
+	| 01 c
+	| 11 ff1 >}
+
+/k @ Mk8:6a
+/m @ 15:35
+{{}
+[ KAI PARAGGELLEI TWi OXLWi ANAPESEIN EPI THS GHS
+| KAI~/~DE | PARAGG./EKELEUSEN | PARHGG(EILEN PARAGG(EILAS | PARAGG./+hO.IS
+| T.OXL./AUT(OIS) | T)OIS.OXL)OIS T)OUS.OXL)OUS
+| EPI.T.GHS~ANAP. | EPI/EIS | T)HN.G)HN ]
+/k	< 000000000 B 01 L De $C D
+	| 000000001 l vg
+	| 000000011 d
+	| 000001001 q
+	| 001000000 C S Om 118 700 A $M K M N U W Ga Pi $F 2 28 157 $T
+	| 001000001 $L 33 1424 983 $I
+	| 001000011 579
+	| 001011000 1071
+	| 002000000 Th 565
+	| 101000001 ff2
+	| 101100001 c >
+" KAI PARHGGEILAS TWi OXLWi ANAPESEIN EPI THN GHN "
+/m	< 002000001 B 01 D Th $L $F 33 579 788 $C 346
+	| 002002001 d
+	| 01?000001 157 aur l vg b
+	| 01?000010 c ff2:0
+	| 01?000011 $I ff2:1 g1 q
+	| 01?000101 ff1
+	| 01?001000 700:1
+	| 01?001001 700:0 $M K L M N P U W De Pi 118 209 2 565 1071 $T f k e
+	| 01?001011 a
+	| 01?002001 C 1424 >}
+
+/k @ Mk8:6b
+/m @ Mt15:36
+{{} [ KAI LABWN TOUS hEPTA ARTOUS
+| -KAI | LABWN/ELABEN | LAB./+IS | -hEPTA ]
+/k	< 0000 B $C $T $S $L $F $I vg
+	| 1100 a d >
+" ELABEN TOUS hEPTA ARTOUS "
+/m	< 0000 C 1424 157 $M K L M N P U W De Pi 118 209 2 565 1071 $T l q vg ff1 aur
+	| 0010 f b
+	| 0100 700 346
+	| 0101 k e
+	| 0111 a c ff2 g1
+	| 1100 d B 01 D Th $L $F 33 579 788 $C >}
+
+{{}
+[ /m KAI TOUS IXQUAS
+| +K.T.IX. | -TOUS | DUO+/IXQUAS | IXQU)DIA ]
+/k	< ---- $* >
+" KAI TOUS IXQUAS "
+/m	< 0??? L
+	| 1000 B 01:1 $S $L $C $T 118 565 1424 346
+	| 1010 01:0 124 788
+	| 1100 $F
+	| 1?00 $I vg k e
+	| 1?10 ff1
+	| 1?11 q >}
+
+{{} [ EUXARISTHSAS EKLASEN KAI EDIDOU TOIS MAQHTAIS AUTOU
+| KAI+/EUX. | EULOGHSAS+/EUX. | EUXARISTH)SEN | -EKLASEN
+| EDIDOU/EDWKEN | T.MAQ.AUTOU/AUTOIS | -AUTOU ]
+/k	< 0000000 B 01 L M De $F $C A $M K N U Ga Th Pi $L 124 2 28 157 565 1071 $T $I vg 33
+	| 0000001 579 1424 983 c
+	| 000001? W
+	| 1000000 C S Om 118 700 D 574 a d f >
+"  1 0        0       0          0     0            1 "
+" KAI EUXARISTHSAS EKLASEN KAI EDIDOU TOIS MAQHTAIS   "
+/m	< 0000000 157
+	| 0000100 K L M Pi C:1 $M N P U W De 2 1071 $T 118 209
+	| 0011100 C:0
+	| 1000000 c ff1
+	| 1000001 B 01 $F 124 $L 33 579 700 346 $C D Th d
+	| 1000100 565 1424 $I vg e
+	| 100010? k
+	| 1001100 a g1
+	| 1100001 788 > }
+" NB: 33/k for -AUTOU seems wrong in Swanson "
+
+/m =+ $? k ;
+
+[ /k hINA PARATIQWSIN
+| PARAT./PARAQWSIN | PARAT./+PROS.AUTOUS=ante.illos ]
+/k	< 00 B 01 C L M De $F $C 33 579
+	| 10 W 1424 A D $M K N U Ga Th Pi $L 124 2 28 157 565 700 1071 $T
+	| ?0 $I vg
+	| ?1 f >
+/m	< -- $* >
+
+{{}
+[ KAI PAREQHKAN TWi OXLWi
+| -KAI | KAI~/~DE | KAI/+hOI.MAQHTAI | +(MAQ./+AUTOU)
+| -PAREQ. | PAREQHK)EN | T)OIS.OXL)OIS PROS+/T)OUS.OXLO)US=ante.turbas ]
+/k	< 000?000 B 01 D W De 1424 565 A C $M K L M N U Ga Th Pi $L $F 2 33 28 157 700 $C $T $I vg
+	| 000?001 b c f l
+	| 000?002 q
+	| 000?010 579 1071 >
+" hOI DE MAQHTAI TOIS OXLOIS "
+/m	< 0010000 $I vg
+	| 00101?1 ff1
+	| 010?001 e
+	| 0110001 f
+	| 01101?0 D Th C $M N P U W De 118 209 2 565 1071 1424 $T d:1 
+	| 01101?1 K L M Pi 157
+	| 01101?1 B 01 $L $F 33 579 700 788 346 $C
+	| 1?101?0 d:0 >}
+
+/k @ Mk8:7
+{{}
+[ /k KAI EIXON IXQUDIA OLIGA
+| KAI~/~DE | -EIXON | EIX)AN | H(XON
+| KAI+/IXQ. | OLIGA~IXQ. | OLIGA/DUO=duos ]
+/k	< 0000000 1071 A C $M K L M N U Ga Th Pi $L $F 2 33 28 157 700 $C $T
+	| 0010000 B 01 D W De 1424 WH
+	| 00??000 a d l vg
+	| 01??000 565
+	| 0?01000 579
+	| 10??010 ff2
+	| 10??110 c f i aur q
+	| 10??111 b >
+/m	< ------- $* >}
+
+{{}
+[ /k KAI EULOGHSAS AUTA
+| EUL./EUXARISTHSAS | -AUTA | AUTA~EU. | TA+/AUTA | AUTA/TAUTA ]
+/k	< 00000 B 01 L De $C C Th 118 1424 1071
+	| 00100 M 69 N W E $L 28 565 $F 124 346
+	| 00101 A F:0 Y K Pi $I vg
+	| 00111 F:1
+	| 01??? $M U Ga 2 $T 33 157 579 700
+	| 11??? D q d >
+/m	< ----- $* >}
+
+{{}
+[ /k EIPEN KAI TAUTA PARATIQENAI
+| -EIPEN | -KAI.TAUTA | PARAT.~K.TAUTA | -KAI
+| -TAUTA | TAUTA/AU(TA) | (TAUT)OUS (TAUT)OIS
+| EKELEUSEN+/PARAT. | PAR)EQHKEN PAR)AQETE PAR)AQHNAI | PARAT./+TWi.OXLWi ]
+/k	< 0000000000 B 01:1 L De $C
+	| 0000000020 C
+	| 0000010020 33 579
+	| 0000010030 700
+	| 0000011100 D
+	| 0001012030 N
+	| 0010010000 A
+	| 0010010030 $M U Ga 2 $T F Y K Pi M:0 69 118 1424 $F
+	| 0010010031 M:1
+	| 0011010020 157
+	| 0011010030 1071 346 574
+	| 01?????000 124
+	| 01?????030 W Th $L 28 565
+	| 1000000100 d
+	| 1000011000 q
+	| 10001??100 $I vg
+	| 11?????010 01:0 >
+/m	< ---------- $* >}
+
+/k @ Mk8:8
+/m @ Mt15:37
+/k =- $? k ;
+{{}
+[ KAI EFAGON KAI EXORTASQHSAN 
+| KAI~/~DE | EFAG./+PANTES | +(KAI.EX.~PANTES) ]
+/k	< 00? B C D L W De Th $L 124 28 565 700 $C $I vg
+	| 010 01 33 579
+	| 10? A $M N U Ga $F 2 157 1424 $T
+	| 111 K M Pi 1071
+	| ??? k >
+" KAI EFAGON PANTES KAI EXORTASQHSAN "
+/m	< 010 $C $T $S $L $F $I vg e >}
+
+{{}
+[ KAI hHRAN PERISSEUMATA KLASMATWN hEPTA SPURIDAS
+| PERIS.KLASM.~hHRAN | TA+/PERIS.
+| PERISSEU)MA PERISSEU)SANTA PERISSEUMAT)WN PERISSEU)ON
+| -KLASM. | TWN+/KLASM. | KLASMA)TA | KLASM./ARTWN
+| SPUR.~hEPTA hEPTA.SPUR.~KLASM. | SP./SFURIDAS | SPUR./+PLHREIS ]
+/k	< 0000000000 B A:1 $M K M N U Ga Pi $L 2 28 157 579 1424 $C $T
+	| 0000000001 $F 1071
+	| 0000000010 A:0 WH
+	| 0000000100 L
+	| 0001???000 De
+	| 0001???001 W
+	| 0100000000 C 
+	| 0100000010 01
+	| 0100100010 Th
+	| 0110100110 D
+	| 0120000001 700
+	| 0120010001 33
+	| 0130000100 565
+	| 0?01???0?0 k
+	| 0?10?000?0 a c ff2
+	| 0?10?000?1 i
+	| 0?10?001?0 d q aur f l vg
+	| 0?10?002?0 b >
+" KAI KLASMATWN TO PERISSEUON KLASMATWN hHRAN hEPTA SPURIDAS PLHREIS "
+/m	< 0140100001 De 2 1071 01 C $M K L M N P U W Pi 118 209 $F 157 565 788 346 1424 $T
+	| 0?40?000?1 f q
+	| 0?40?012?1 ff1
+	| 1140100001 B Th $L 33 579 700 $C
+	| 1140100011 D WH
+	| 1?40?000?1 aur g1 l vg d
+	| 1?40?010?1 $I a b c ff2 e >}
+
+/k @ Mk8:9a
+/m @ Mt15:38
+{{}
+[ HSAN DE hWS TETRAKISXILIOI
+| DE/+hOI.FAGONTES^ | ^(hOI.EQIONTES~DE~HSAN)
+| -hWS | hWS)EI | hWS.TETR./+ANDRES^ | ^(ANDRES~hWS.TETR) ]
+/k	< 0?000? B L 33 579 1424 $C
+	| 0?001? De
+	| 0?1?0? 01
+	| 10000? A D N Th 28 W C $M K U Ga Pi $L $F 2 157 565 $T d f l vg 
+	| 100010 G 1071 $I
+	| 10010? M 118 209
+	| 101?0? k
+	| 101?10 aur
+	| ??000? 700 >
+" hOI DE EQIOUNTES HSAN hWS TETAKISXILIOI ANDRES "
+/m	< 110010 B Th $L $F 33 788 346 124 
+	| 110100 157
+	| 110111 01 579
+	| 111?10 D W C $M K L M N P U De Pi 118 2 565 700 1071 1424 $C $T
+	| 1?1?10 $I a aur b c d f ff2 g1 l q e vg
+	| 1?1?11 ff1 >}
+
+[ /m XWRIS GUNAIKWN KAI PAIDIWN
+| PAID.~GUN. ]
+/k	< - $* >
+/m	< 0 B $S $C $T $F 33 788 346 118 209 f
+	| 1 01 579 D Th $L 124 $I vg e >}
+
+/k @ Mk8:9b
+/m @ 15:39a
+
+{{}
+[ KAI APELUSEN AUTOUS
+| AP)OLUSAS | AUTOUS/TOUS.OXLOUS ]
+/k	< 00 B L 33 579 1424 $C 01 G 1071 M 118 De A D N Th 28 W C $M K U Ga Pi $L $F 2 157 565 $T $I vg k
+	| ?? 700 >
+/m	< 11 $C B 01 D W $T $S $L $F $I vg e
+	| 1? P >}
+
+/m =+ $? P ;
+
+/k @ Mk8:10
+/m @ 15:39b
+{{}
+[ KAI EUQUS EMBAS EIS TO PLOION
+| -KAI | KAI/hO.DE.IHSOUS | -EUQ. | EUQ)EWS | EMBAS~EUQUS
+| ANA(BAS | EN)EBH EN)BAINEI | EMBAS/+AUTOS^ | ^(AUTOS+/EMBAS) | -TO ]
+/k	< 00000000?0 01 C De $C
+	| 00000000?1 L
+	| 0000000100 B
+	| 00001000?1 W $L $F 28
+	| 00010000?0 $M Ga 157 2 $T 33 579
+	| 00010010?0 565
+	| 00010110?0 Th
+	| 00011000?0 A K M N U Pi 1071 1424
+	| 00011000?1 124
+	| 000?0000?? aur l vg
+	| 000?0??0?? a f q
+	| 001??11110 D
+	| 001???011? b d i
+	| 001????11? k
+	| 011????0?? c ff2
+	| ??010010?1 700 >
+" ENEBH EIS TO PLOION "
+/m	< 1?1??010?0 B 01 $C S Om $T 33
+	| 1?1??010?1 $L 124 579
+	| 1?1??020?0 D
+	| 1?1??110?0 C 118 209 M N W Pi 565 1424 $M K L U De Th 2 157 700 1071
+	| 1?1??110?1 $F 788 346
+	| 1?1???10?? $I vg e >}
+
+{{}
+[ /k META TWN MAQHTWN AUTOU
+| -META.T.MAQ.AUTOU | HLQEN~META..AUTOU ]
+/k	< 00 B $C $T $S $L $F $I vg
+	| 01 c
+	| 1? k >
+/m	< -- $* >}
+
+" Lake 1941:85 reads HLQON for 124. "
+{{}
+[ HLQEN EIS TA MERH DALMANOUQA
+| KAI+/HLQ. | DI(HLQEN | HLQ)ON | HLQ./+hO.IS | EIS/PROS
+| T)O.MER)OS | MERH/hORIA MERH/XWRA=terra
+| -DALM. | THS+/DALM. | DALM./MAG(AE)DA(N) DALM./MAGDALA DALM./DALMOUNAI ]
+/k	< 0000000000 B 01:1 A C $M K M U Ga De Pi 1582:1 124 2 33 157 579 $C $T l
+	| 0000000002 $L 1582:0 $F
+	| 00000000?0 vg
+	| 00000001?? 118
+	| 0000001000 N 1424
+	| 00000010?1 c aur
+	| 00000020?1 i
+	| 00000100?1 $I b ff2
+	| 0000011001 28
+	| 0001000000 01:0 L
+	| 1000000000 700
+	| 1000000001 565
+	| 1000000002 Th
+	| 10000000?1 a d
+	| 1000001000 1071
+	| 1000001001 D
+	| 10000010?0 f
+	| 10000100?0 q
+	| 1000111003 W
+	| 10001110?1 k
+	| ???????001 p45 >
+" KAI ELQEN EIS TA hORIA MAGADAN "
+/m	< 1000001001 B 01 $C
+	| 1000001002 M N W Pi 565 S Om $T $L 124 $F 788 346 33 579 $M K L U De Th 2 157 700 1071
+	| 1000001011 D
+	| 10000010?1 $I vg e
+	| 10000010?2 q
+	| 1010001002 C 118 209
+	| 1100001002 1424 >}
+
+" Aland 154. The Pharisees Seek a Sign Matt 16:1-4 = Mark 8:11-13 "
+/k @ Mk8:11
+/m @ Mt16:1
+
+/m =+ $? F ;
+
+{{} [ KAI ECHLQON hOI FARISAIOI
+| KAI~/~DE | ECHL./HRCANTO | PROS(ELQONTES) | (ECHLQ)ONTES
+| ECHL./+PROS.AUTON=ad.eum
+| -hOI | FAR./+KAI.SADDOUKAIOI^ | hOI+/^SADD. | ^SADD.~FAR.
+| FAR./+PROS.TON.IHSOUN ]
+/k	< 0000000??0 B p45 $M K M U Pi $L 124 157 565 700 $C $T D $F 69 788 1424 01 A C E G L N W Ga De Th 2 28 579 1071 346
+	| 0000000??1 574
+	| 00000?0??0 aur d f ff2 l vg a
+	| 0100000??0 33
+	| 01000?0??0 c k
+	| 10000?0??0 b i q >
+" KAI PROSELQONTES hOI FARISAIOI KAI SADDOUKAIOI "
+/m	< 00101?1?00 $I vg
+	| 0011001000 $C B D W 1424 $T L Y C $M K M N U Pi 118 $F 2 788 1071 346 209
+	| 0011001100 01 De Th 700
+	| 0011001110 33 579
+	| 0011011000 $L 565
+	| 00110?1?00 d q e
+	| 00111?1?00 f
+	| ?????????? 157 >}
+" Swanson missing 157 here "
+
+{{} [ /k KAI HRCANTO SUZHTEIN AUTWi  
+| -KAI.HRC. | HRC)ATO | -SUZ.AUT. | SUN+/AUT. ]
+/k	< 0000 B $M K M U Pi $L 124 157 565 700 $C $T 1424 01 A C E G L N W Ga De Th 2 28 579 1071 346 $I vg
+	| 0001 D
+	| 001? 69 788 983 d
+	| 0100 $F
+	| 1?00 33 c k
+	| ???? p45 >
+/m	< ---- $* >}
+
+{{} [ /m PEIRAZONTES EPHRWTHSAN AUTON
+| PEIR./+AUTON | KAI+/EPHR.
+| (HRWT. | EPHRWT)WN | -AUTON | AUTOU~EPHR. | ..AUTON/+LEGONTES ]
+/k	< ------- $* >
+/m	< 0000000 B 118 209 $C $T $S 2 1071
+	| 0000010 D
+	| 0001000 01:0 Th $L $F 565 788 346 1424
+	| 0010000 01:1
+	| 00?0000 f q e
+	| 00?0010 d
+	| 01?0000 $I vg
+	| 01?0001 ff1
+	| 01?01?0 ff2
+	| 11?0000 c >}
+
+/k =+ $? k ;
+{{} [ ZHTOUNTES PAR AUTOU SHMEION
+| -ZHT.PAR.AUT. | -ZHT. | SU(ZHTOUNTES
+| ZHT./+TI | SHM.~PAR.AUT. | PAR/hUP | AUT)Wi | TO+/SHM.   ]
+/k	< 00000000 B $C $T $S $L 01
+	| 00000001 D
+	| 0000000? aur c ff2 i
+	| 0000001? a b d f l vg
+	| 00000100 W
+	| 00010000 124 28
+	| 00011000 Th 565
+	| 0001100? q
+	| 00100000 $F 69 788
+	| 01?00000 13 826 828
+	| 1??????0 De
+	| ????0?10 p45 >
+" SHMEION "
+/m	< 1??????0 $C B D 01 W $T $F $L $S
+	| 1??????? $I e vg >}
+
+{{} [ ((SHMEION)) APO TOU OURANOU PEIRAZONTES AUTON
+| IDEIN+/APO | APO/EK | PEIR.AUT.~SHM.APO.T.OUR. | AUT.~PEIR.
+| PEIR./EPIDEICAI,AUT)OIS | ^(DEICAI | AUTON~APO...PEIR. ]
+/k	< 00000?0 B $C $T $S $L D De Th 565 124 28
+	| 01000?0 $F $I vg p45 W 69 788 346
+	| 10000?0 01 >
+/m	< 0100100 $C B D 01 W $T $F $S $L
+	| 0100110 2
+	| 01001?0 $I vg e
+	| 01001?1 c
+	| 01011?0 a g1
+	| 01101?0 ff1 >}
+
+/k @ Mk8:12
+/m @ Mt16:2
+
+{{} [ KAI ANASTENACAS TWi PNEMATI AUTOU LEGEI
+| AUTOU=ipse+/KAI | -KAI | KAI~/~DE | hO+/ANAST. | IHSOUS+/ANAST.
+| -ANAST. | ANAST./hO.APOKRIQEIS | (STENACAS | ANASTENAC)E,KAI
+| -T.PNA.AUT. | -AUTOU | hE(AUTOU
+| -LEG. | LEG./LEIP(EI | LEG./EIP)EN | LEG./+AUTOIS ]
+" Swanson has Ga and M:0 listed twice "
+/k	< 0000000000000000 B $C $T $S $F C f q
+	| 0000000000000010 a
+	| 0000000000000100 Th
+	| 0000000000001??0 ff2
+	| 0000000000010000 A L 1071
+	| 00000000001?0000 D M:1 W $L 983 $I vg
+	| 000000000??????0 Ga
+	| 000000000??????? p45
+	| 0000000100000000 669 M:0
+	| 1010000000000000 c >
+" hO DE APOKRIQEIS EIPEN AUTOIS "
+/m	< 0011001?01??0000 a c g1
+	| 0011001?01??0001 $I aur l vg
+	| 0011001?01??0010 D d
+	| 0011001?01??0011 $C B 01 W 1424 $T $F $L $S
+	| 0011001?11??0011 e
+	| 0011101?01??0001 ff1 ff2
+	| 01?001??01??0011 1071 >}
+
+{{} [ /m Mt8:2b-3 | -vv.2b-3 post.v9 | -v.2b ]
+/k	< -- $* >
+/m	< 00 $C $S $L $T 2:1 $I vg e
+	| 01 157
+	| 1? B 01 Y $F 2:0 788
+	| 20 579 >}
+
+{{} [ /m OYIAS GENOMENHS LEGETE EUDIA PURRAZEI GAR hO OURANOS
+| -GAR | META.NEFELWN=cum.nubibus+/hO.OUR | -hO.OUR.
+| OUR./+KAI.GINETAI.hOUTWS ]
+/k	< ---- $* >
+/m	< 0000 $C $S $L $T 2:1 579 aur d f ff1 l q vg e ff2:1
+	| 0001 K
+	| 0010 W
+	| 0100 a c ff2:0 g1 b
+	| 1000 M
+	| ???? B 01 Y $F 2:0 157 788 >}
+
+/m @ Mt16:3
+{{} [ /m KAI PRWI SHMERON XEIMWN PURRAZEI GAR STUGNAZWN hO OURANOS
+| -KAI..GAR | -KAI | KAI~/~DE | KAI/+PALIN | PRWI(AS | PRWI/+LEGETE
+| -SHMERON | -GAR | -STUGNAZWN
+| STUGNAZ(EI~PURRAZ(WN | hO.OUR.~STUGN. | OURANOS/AHR ]
+/k	< ------------ $* >
+/m	< 000000000000 C De $M M U Pi 1582:1 118 565 700 346 $T $S $L 579 $C
+	| 000000000001 D
+	| 000000000010 2:1
+	| 000010000000 E 33
+	| 000010000100 1071
+	| 0000?0000000 $I vg
+	| 0000?0001??0 a
+	| 0000?1000000 b
+	| 0000?1100000 ff2
+	| 000100000000 K
+	| 0010?0110000 ff1
+	| 01?0?0000000 e
+	| 1???????0000 W
+	| ???????????? B 01 Y $F 2:0 157 788 >}
+
+/m =- $? F ;
+
+{{} [ /m TO MEN PROSWPON TOU OURANOU GINWSKETE DIAKRINEIN
+| KAI+/TO.. | hUPOKRITAI+/TO.. | -MEN | MEN/KAI | DIAKR.~GIN. ]
+/k	< ----- $* >
+/m	< 00000 D W De $C 579 $I e
+	| 00001 l vg aur
+	| 01000 E F K 1071 $M M U Pi 1582:1 118 209 565 700 346 $T ff1 g1 ff2
+	| 01001 f
+	| 01100 b
+	| 011?0 2:1
+	| 00000 $S $L
+	| 10000 C:1 33
+	| 10010 C:0
+	| ????? B 01 Y $F 2:0 788 >}
+
+{{} [ /m TA DE SHMEIA TWN KAIRWN OU DUNASQE
+| -DUN. | DUN/SUNIETE | ..DUN./+DOKIMA(ZEIN | ^DOKIMAZ(ETE ^DOKIMA(SAI ]
+/k	< ---- $* >
+/m	< 000? D Th C E F H K Pi $L 2:1 157 565 1071 1424 $C $T d f g1 q vg De
+	| 0010 G M N U 33 579 a b ff2 l aur c ff1 e
+	| 0012 W
+	| 010? S Om 118 209 346 700
+	| 1?11 L
+	| ???? B 01 Y $F 2:0 788 >}
+
+/m @ Mt16:4
+{{} [ TI hH GENEA hAUTH 
+| KAI.APOKRIQEIS.EIPEN.AUTOIS+/TI..
+| -TI | TI/hOTI | -hH  | -hAUT. | ..hAUT./+PONHRA^ | ^PON./+KAI.MOIXALIS
+| TI..hAUTH/+ESTIN ]
+/k	< 000000?0 B $C $T $S $L $F A L 1071 D M W Ga Th
+	| 000?00?0 $I vg
+	| 000?10?0 b
+	| 001000?0 C
+	| 0???00?0 p45 >
+/m	< 01?00111 124
+	| 01?11100 D
+	| 01?11110 W $T B 01 Y 2:0 579 $C G M N U 33 L S Om 118 209 346 De Th $F 788 C E F H K Pi $L 2:1 157 565 1071 1424
+	| 01??1100 $I e
+	| 01??1110 aur b c f l q vg
+	| 11?11110 700 >}
+
+{{} [ ZHTEI SHMEION 
+| SHM.~ZHT. | ZHT./AITEI | EPI(ZHTEI ]
+/k	< 000 B 01 C D Th $L 33 565 700 $C L De 28 118 209 579
+	| 0?? $I vg
+	| 101 F H Ga W $F 1071 1424 A $M K M N U Pi 2 157 $T
+	| 110 p45
+	| 1?? f q >
+" SHMEION EPIZHTEI "
+/m	< 000 D:0
+	| 0?? b c e
+	| 100 D:1 Th
+	| 101 B:1 01 Y 2:0 579 $C G M N U 33 L S Om 118 209 346 W De $F 788 124 C E F H K Pi $L 2:1 157 565 1071 1424 $T
+	| 110 B:0
+	| 1?? $I vg
+	| ??? 700 >}
+
+{{} [ /k AMHN LEGW hUMIN | -LEG.hUM. | -hUMIN ]
+/k	< 00 01 C D Th $L 33 565 700 $C $I vg F H Ga De $F 1071 28 118 579 1424 A $M K M N U Pi 2 157 $T
+	| 01 B L WH
+	| 1? p45 W >
+/m	< -- $* >}
+
+{{} [ EI DOQHSETAI THi GENEAi TAUTHi SHMEION
+| EI/OU | KAI+/SHM./~OU+/DOQ...TAUT.~KAI
+| -T.GEN. | TAUT.~T.GEN. | (AUTHi TAUT./EKEINHi | -SHM. ]
+/k	< 000000 B 01 C D Th $L 33 565 700 $C A $M K M N U Pi 2 157 $T
+	| 000010 F H Ga L 118 579 1424
+	| 000020 28
+	| 0000?0 $I vg
+	| 00???? p45
+	| 100000 De $F 1071
+	| 100100 W >
+" KAI SHMEION OU DOQHSETAI AUTHi "
+/m	< 011?10 $C B 01 D W $T $S $F $L
+	| 011??0 $I vg e
+	| 011??1 c >}
+
+{{} [ /m EI MH TO SHMEION IWNA | IWNA/+TOU PROFHTOU ]
+/k	< - $* >
+/m	< 0 B 01 L 579 700 $C D aur d ff1 g1 l vg
+	| 1 1071 $T $S $F $L $I e >}
+
+/k @ Mk8:13
+{{} [ KAI AFEIS AUTOUS | AFEIS/KATELIPWN | -AUT. ]
+/k	< 00 B 01 C L De $C p45 A $M M 2 157 D W $F 28 700 H K U Ga Pi $L 124 $T Th 33 565 579 Om 1071 346 1424
+	| 10 N
+	| ?0 $I vg
+	| ?1 aur >
+" KAI KATELIPWN AUTOUS "
+/m	< 10 $C B D 01 W $T $S $F $L
+	| ?0 $I vg
+	| ?1 e >}
+
+{{} [ PALIN EMBAS APHLQEN EIS TO PERAN
+| -PAL.EMB. | -PALIN | PALIN/KAI | -EMBAS | EMBAS~PALIN | APHLQEN~PAL.EMB.
+| EMBAS/+EIS.PLOION^ | ^TO+/PL.
+| KAI+/APHLQEN | DI(HLQEN | APHLQ)ON | -EIS.T.PERAN ]
+/k	< 0000000?0000 B 01 C L De $C
+	| 000000100000 D W $F 28 700 Th 33 565 579
+	| 000000100010 346
+	| 000000100100 1071
+	| 000000100??0 p45
+	| 0000001?0000 d q a
+	| 0000001?1000 i
+	| 000010100000 A $M M 2 157 Om H K U Ga Pi $L 124 $T N
+	| 0000101?0000 aur f l vg
+	| 0000101?1000 ff2
+	| 0001?1100001 1424
+	| 0010?01?0001 b
+	| 01???01?1000 c >
+" APHLQEN "
+/m	< 1?????0?0001 $C B D 01 W $T $S $L $I vg
+	| 1?????0?1001 e >}
+
+
+" Aland 155. The Leaven of the Pharisees Matt 16:5-12 = Mark 8:14-21 "
+/k @ Mk8:14
+/m @ Mt16:5
+/k =- $? k ;
+{{}
+[ KAI EPELAQONTO LABEIN ARTOUS
+| ELQONTES.EIS.TO.PERAN+/EPEL. | ^-ELQ. | ^EC)ELQONTES | ^ELQ)ONTOS
+| AP)ELAQONTO | EPELA)QENTO EPELA)QONTES
+| EPEL.+hOI.MAQHTAI | ^hOI.MAQ.~EIS.TO.PERAN.EPEL.
+| ^MAQ./+AUTOU | ART.~LAB. | ART)ON ]
+/k	< 0???000?000 Th $L 565 700 B:1 01 A C $M K L M N Ga De Pi 2 157 579 $C $T $I vg k
+	| 0???000??10 33 1424 q
+	| 0???0010000 D 28 c d
+	| 0???0010100 p45 U 124 1071 346
+	| 0???0010110 $F 69 788
+	| 0???010??00 B:0
+	| 0???1210100 W >
+" KAI ELQONTES hOI MAQHTAI EIS TO PERAN EPELAQONTO ARTOUS LABEIN "
+/m	< 1000000??10 De
+	| 10000010011 700
+	| 10000011000 B
+	| 10000011010 $F 01 C Th 118 124 788 $C 346
+	| 10000011100 K Pi 579 1424
+	| 10000011110 157 565 1071 $T $M L M N U W $L 2 33 aur f l q vg
+	| 10010010000 e
+	| 10010010010 d
+	| 10010010110 $I
+	| 10100010110 D
+	| 11??0010110 ff1 >}
+
+{{}
+[ /k KAI EI MH hENA ARTON OUK EIXON MEQ hEAUTWN EN TWi PLOIWi
+| -KAI | KAI/+nihil.amplius.habebant | -EI.MH | hENA/+MONON ARTON/+MONON
+| OUK.EIXON~ARTON | -OUK | EIXON/EXONTES
+| -MEQ.hEAUTON | MET.AU(TON | MEQ.hE.~EIXON
+| EN/EIS.T)ON.PLOI)ON ]
+/k	< 00000000001 579
+	| 00000000000 B U 124 33 1424 01 A C $M K L M N Ga De Pi 157 $C $T aur f l vg
+	| 00000000100 2
+	| 00000100?1? $I a
+	| 00020000000 1071
+	| 00110111??? k
+	| 0100010001? b
+	| 10000100000 D
+	| 100001000?? d
+	| 10000100?1? ff2 i q
+	| 10010100?1? c
+	| 10110110000 Th $L 565 700 13 983
+	| 10111110000 W $F 28
+	| ?0110110000 p45 >
+/m	< ----------- $* >}
+
+/k @ Mk8:15
+/m @ Mt16:6
+{{}
+[ KAI DIESTELLETO AUTOIS LEGWN
+| KAI~/~DE | -DIEST.,LEG./EIPEN~AUT.
+| EN(ESTELLETO | DIE)STEILATO
+| -AUTOIS | hO.IS+/LEGWN ]
+/k	< 000000 B $C $T $S $L
+	| 000001 c
+	| 000011 aur
+	| 000100 E F $F 28 1424
+	| 000?00 $I vg k
+	| 001100 De
+	| ????00 p45 >
+" hO DE IHSOUS EIPEN AUTOIS "
+/m	< 01??01 ff1
+	| 11??00 aur l vg
+	| 11??01 $C B $S $F $L $T $I e
+	| 11??11 01 >}
+
+{{}
+[ ORATE BLEPETE
+| -ORATE | -BLEP. | KAI+/BLEP. | BLEP./PROSEXETE ]
+/k	< 0000 B $C $T $S 2:1
+	| 0010 p45 C 124 $F 28 1424 aur c f l
+	| 01?? De 700 $I
+	| 0??? G vg
+	| 1000 D Th $L 565 2:0 a k >
+" ORATE KAI PROSEXETE " 
+/m	< 0001 De e
+	| 0011 $C B $T $S $L ff1 d f q aur l vg g1
+	| 1001 a b c ff2 >}
+
+/k =+ $? G ;
+[ APO THS ZUMHS_1 TWN FARISAIWN
+| -APO...ZHMHS_2 ]
+/k	< 0 B $C $T $S $L $F $I vg k
+	| 1 828 >
+/m	< 0 B $C $S $F $L $T $I vg e >
+
+{{}
+[ KAI THS ZUMHS_2 hHRWiDOU
+| -KAI...hHR. | APO+/THS | T.Z.hHR./SADOUKAIWN | hHR./TWN.hHRWDIANWN ]
+/k	< 0000 B N 01 A C D $M K L M U Ga Pi 2 33 157 579 700 1071 1424 $C $T b c d l vg
+	| 0001 p45 Th 565 i
+	| 0100 De 124 a aur f ff2 q
+	| 0101 W $L $F 28 k >
+/m	< 1??? U 157
+	| 001? $C B $S $F $L $T $I vg e >}
+
+/k @ Mk8:16
+/m @ Mt16:7
+[ KAI
+| KAI/hOI.DE KAI/TOTE KAI/OUN ]
+/k	< 0 B N De 124 Th $L $F 28
+	    01 A C D $M K L M U Ga Pi 2 33 157 579 700 1071 1424 $C $T
+	| 1 p45 W 565
+	| 0 $I vg k >
+/m	< 1 B $C $S $F $L $T aur ff1 l vg f
+	| 2 D $I e
+	| 3 q >
+
+[ DIELOGIZONTO PROS ALLHLOUS
+| PROS.ALL./EN.hEAUTOIS | ALL./+LEGONTES ]
+/k	< 00 B W $L 28 565 700 $C p45 01 D
+	| 01 579 1424 346
+	     A C $M K L M N U Ga De Th Pi 118 $F 2 33 157 $T
+	| 11 1071
+	| 00 $I 
+	| 01 aur l vg
+	| 11 f
+	| 10 c k >
+/m	< 11 $C B $S $F $L $T D W $I vg e >
+
+{{}
+[ hOTI ARTOUS OUK EXOUSIN
+| -OUK  | EX)OMEN | EX)W(MEN | EXOUSIN/EIXAN | ELAB(OMEN ]
+/k	< 00000 B W $L 28 565 700 $C p45 k
+	| 00010 D $I
+	| 01000 01 1071 A C $M L M N U Ga De Th Pi 118 $F 33 157 $T aur f l vg 2:1
+	| 01001 579 1424
+	| 01100 346 K Om 2:0
+	| 10010 ff2 >
+/m	< 01001 $C B $S $F $L $T 2:1 $I vg e
+	| 01101 2:0 >}
+
+/k @ Mk8:17
+/m @ Mt16:8
+/k =+ $? k ;
+{{}
+[ KAI GNOUS LEGEI AUTOIS
+| -KAI | GN)ONTES | hO.IS+/LEGEI | ^LEG.AUT~hO.IS | LEG./EIPEN | -AUT. | AUT)OUS ]
+/k	< 000?000 B 01:1 $C
+	| 000?001 De
+	| 0010000 D U M W $F 124 28 579 01:0 A C $M K N Ga Pi $L 2 33 157 1071 1424 $T a
+	| 0010100 Th 565 700
+	| 0011000 L
+	| 100?000 aur i
+	| 1010000 $I vg
+	| 1011000 b
+	| ??????? p45 >
+" GNOUS DE hO IHSOUS EIPEN "
+/m	< 100111? aur c d l q vg e f
+	| 101011? B $S $F $L $T $C
+	| 101111? ff1
+	| 110111? $I a
+	| 111111? b ff2 g1 >}
+
+{{}
+[ TI DIALOGIZESQE
+| DIA+/TI | TI/+EN | TI/+hEAUTOIS TI/+TAIS.KARDIAS.hUMWN
+| DIAL./+OLIGOPISTOI ]
+/k	< 0000 B 01:1 $C L 01:0 A C $M K N Ga Pi $L 2 33 157 1071 1424 $T De
+	| 0010 579
+	| 0110 M
+	| 0111 p45 W $F
+	| 0120 D U
+	| 0121 124 28 565 700
+	| 1121 Th
+	| ?000 aur f l vg
+	| ?120 $I >
+" TI DIALOGIZESQE EN hEAUTOIS, OLIGOPISTOI "
+/m	< 0111 $C B $S $F $L $T $I vg e >}
+
+{{}
+[ hOTI ARTOUS OUK EXETE
+| EX)OMEN | ELAB(ETE ]
+/k	< 00 B 01 C L W 124 33 28 579 788 $C A $M K M U Ga Pi 118 $F 2 157 700 1071 $T D E N Th 565 $L 1424 $I vg
+	| 10 De
+	| ?? p45 >
+/m	< 00 $C B 01 D $I vg e
+	| 01 W $S $F $L $T f >}
+
+/m @ Mt16:9
+{{}
+[ hOUPW NOEITE OUDE SUNIETE
+| NO)ETAI | -OUDE.SUN. | OUDE/KAI OUDE/OUTE | SUN./MNHMONEUETE ]
+/k	< 0000 B:0 E:0 B:1 01 C L W 124 33 28 579 788 $C p45 D N 1424 E:1 A $M K M U Ga Pi 118 $F 2 157 700 1071 $T $I vg
+	| 0001 Th 565
+	| 01?? $L
+	| 1010 De >
+" hOUPW NOEITE OUDE MNHMONEUETE "
+/m	< 0001 B 01:1 D $S $F $L $T $C
+	| 0021 W
+	| 00?1 $I vg e
+	| 01?? 01:0 >}
+
+[ /k PEPWRWMENHN EXETE THN KARDIAN hUMWN
+| ETI+/PEP. | PEPWRWMEN)H.)ESTIN.)hH.KARDI)A | hUM.~E.T.K | EX)ONTES ]
+/k	< 0000 B 01 C L W 124 33 579 788 $C N 1424 $L E:0 De
+	| 1000 A $M K M U Ga Pi 118 $F 2 157 700 1071 $T E:1
+	| 000? p45
+	| 0100 D
+	| 0110 565 Th
+	| 0001 28
+	| 0100 b c d i ff2 a
+	| 1100 q aur
+	| 1000 f l vg >
+/m	< ---- $* >
+
+/k @ Mk8:18
+[ /k OFQALMOUS EXONTES OU BLEPETE
+| OFQ..BL./EXETE.KAI.OU.BLEPOUSIN ]
+/k	< 0 B $C $T $S $L $F p45 $I vg 
+	| 1 W c >
+/m	< - $* >
+
+{{}
+[ /k KAI WTA EXONTES OUK AKOUETE
+| -KAI..AK. | -KAI | KAI/OUDE=nec | EX)ETAI.KAI ]
+/k	< 0000 B $C $T $S $L $F 01:1 $I vg
+	| 0001 W c
+	| 0010 d
+	| 01?0 01:0
+	| 1??? i
+	| ???? p45 >
+/m	< ---- $* >}
+
+{{}
+[ /k KAI OU MNHMONEUETE
+| hOUPW.NOEITE+/KAI | -KAI | KAI.OU/OUDE | -OU.MN. ]
+/k	< 0000 B $C $T $S $L $F 124 346
+	| 0010 D $I vg
+	| 01?0 W 1424 983
+	| 01?1 28
+	| 1010 p45 Th 565
+	| 11?1 N >
+/m	< ---- $* >}
+
+/k @ Mk8:19
+/k =- $? k ;
+{{}
+[ hOTE TOUS PENTE ARTOUS
+| T.PENTE.ARTOUS~hOTE | hOTE/hOTI | -hOTE | -PENTE | -ARTOUS ]
+/k	< 00000 B $C $T $S 124 346 $L
+	| 00010 $F
+	| 000?0 a aur f l q vg d
+	| 01000 De 69 209
+	| 10000 579
+	| ??100 28 788
+	| ??1?0 b c ff2
+	| ??1?1 i
+	| ????0 k
+	| ????? p45 >
+" TOUS PENTE ARTOUS "
+/m	< 00000 D d
+	| ??100 B 01 W $S $F $L $T $I vg e $C >}
+
+{{}
+[ EKLASA EIS TOUS PENTAKISXILIOUS
+| KAI+/EKL... | TOUS+/EKL. | ^/hOUS+ | -EKLASA | EKLAS)ATE | -EIS
+| -TOUS | T)WN.PETAKISLI)WN | PENT./+ANQRWPOUS ]
+/k	< 000000000 B A W:1 01 C M Th $L 33 565 1424 U 579 $M K L N W:0 Ga Pi 118 124 2 157 700 1071 $C $T
+	| 000000100 p45
+	| 000000101 De
+	| 000000?00 aur f vg
+	| 000000?01 a l
+	| 000010000 2327
+	| 010000000 D
+	| 011000000 $F 28
+	| 011000?00 d i k
+	| 011000?01 $I >
+" TWN PENTAKISXILIWN "
+/m	< 0001?0?01 aur c ff2 f
+	| 0001?0?11 vg
+	| 0001?1000 D
+	| 0001?1010 B $C $S $F $L $T
+	| 0001?1?00 d
+	| 0001?1?01 $I
+	| 0111?1?10 e
+	| 1001?1?01 b ff1 q
+	| 1001?1?11 a >}
+
+{{}
+[ POSOUS
+| KAI+/POS. hWN=ex.quibus+/POS. | hO)SOUS ]
+/k	< 00 B A W:1 $F 28 p45 $M K L N W:0 Ga Pi 118 124 2 157 700 1071 $C $T $I k vg
+	| 01 U
+	| 10 01 C M Th $L 33 565 1424 D De 579 aur d f l
+	| 20 a b c i >
+/m	< 00 ff1
+	| 10 B $C $S $L D $T $I vg e >}
+
+{{}
+[ KOFINOUS KLASMATWN PLHREIS HRATE
+| -KOF. | -KLAS.PLHR  | KLAS.~KOF. | -PLHR. | PL.~KL. HR.~PL. | HRATE/ELABETE ]
+/k	< 000000 B L 565 1424 $C 01 C De Th $L 124 33 700 f l vg
+	| 000010 p45 N 28 $M K U W Ga Pi 118 2:1 157 $T A F M 2327
+	| 000020 D 1071
+	| 0001?0 $F 2:0 $I
+	| 0011?0 579
+	| 10?1?0 k >
+/m	< 01???1 $C B $L $S D $T $I vg e >}
+
+{{}
+[ /k LEGOUSIN AUTWi DWDEKA
+| KAI=at,et+/LEG. hOI=qui+/LEG. | LEG./EIPAN  | -AUTWi | AUT.~LEG.
+| DWD./hEPTA=VII ]
+/k	< 00000 B $C $T $S $L $F q aur l vg
+	| 001?0 k
+	| 11000 f
+	| 11010 a d i
+	| 11011 b
+	| 211?0 c ff2 >
+/m	< ----- $* >}
+
+/k @ Mk8:20
+/m @ Mt16:10
+{{}
+[ hOTE TOUS
+| -v20 | hOTE/EK hOTE/OUDE | hOTE/+DE KAI+/hOTE | KAI+/TOUS | -TOUS ]
+/k	< 00000 B L 565 1424 $C 579
+	| 00010 01 WH
+	| 00011 De
+	| 0001? aur l vg
+	| 00100 D 1071 Th $L 124 33 700 $F 2:0 28 A $M K M U W Ga Pi 118 2:1 157 $T
+	| 0010? $I
+	| 00110 C N
+	| 0011? f
+	| 0020? c
+	| 0100? k
+	| 0???? p45
+	| 1???? b >
+/m	< 0020? ff1 e
+	| 02000 $C B $L $S D $T
+	| 0200? $I vg >}
+
+{{}
+[ hEPTA EIS TOUS TETRAKISXILIOUS
+| hEPTA/+ARTOUS | hEPTA/+EKLASA | hEPTA/+KAI | -EIS | -TOUS
+| T)WN.TETRAKISXILI)WN T)OIS.TETRAKISXILI)OUS | TETR./+ANQRWOUS ]
+/k	< 0000000 B A D E:0 Th 565 700 579 $M K M:0 N U Ga Pi $L 2 33 28 157 1071 $C $T
+	| 0000100 L
+	| 0000101 De
+	| 0000?00 $I
+	| 0000?01 ff2
+	| 0001?00 k
+	| 1000000 01 C M:1 $F W 788
+	| 1000100 p45 346
+	| 1000?00 f l vg
+	| 1000?01 q
+	| 1001010 1424
+	| 1100?01 c
+	| ??????? b >
+" hEPTA ARTOUS TWN TETRAKISXILIWN "
+/m	< 1000?01 aur c f ff1
+	| 1001010 B W $S $F $L $C $T
+	| 1001020 D
+	| 1001?00 e
+	| 1001?01 l
+	| 1001?11 vg
+	| 1001?20 d
+	| 1010?01 a b ff2 g1 q >}
+
+{{}
+[ POSWN SPURIDWN PLHRWMATA KLASMATWN HRATE
+| KAI+/POSWN | POS)AS.SPURID)AS | KOFIN)WN SFURID)WN
+| -PLHR.KLASM.  | -PLHR. | PLHR)EIS PLHR)MATWN PLHR)MA
+| -KLASM. | KLASM.~PLHR. | HRATE/ELABETE ]
+/k	< 000000000 B 01 C M:1 $F A L 579 1424 $M E:1 K M:0 N U Ga Pi $L 2 33 28 157 1071 $C $T
+	| 000000010 p45
+	| 000002000 E:0
+	| 000003000 788
+	| 0000?01?0 W
+	| 0000?31?0 346
+	| 002000000 WH
+	| 010001000 f
+	| 010001010 Th 565 700 c
+	| 01001?0?0 $I vg
+	| 0100?11?0 k
+	| 01201?0?0 D
+	| 111001010 De
+	| ????????? b >
+" KAI POSAS SPURIDAS ELABETE "
+/m	< 1101????1 B D W $C $S $F $L $T $I vg e >}
+
+{{}
+[ /k KAI LEGOUSIN AUTWi hEPTA
+| KAI/hOI.DE -KAI | LEG./EIPON | ^LEG./EIPAN | -AUTWi | AUT.~LEG. | AUTWi/hWi ]
+/k	< 00?000 B C L $C vg
+	| 00?1?? 01
+	| 01?010 $I
+	| 1101?? p45 A D $M Ga 157 $T F 28 700 K Pi M U 33 N $L $F 124 2 565 1071 1424
+	| 1111?? W Th
+	| 20?000 De 579 l
+	| 20?1?? k
+	| 21?001 a
+	| ?????? b >
+/m	< ------ $* >}
+
+/k @ Mk8:21
+{{}
+[ /k KAI ELEGEN AUTOIS 
+| -KAI | ELEGEN/LEGEI ELEGEN/EIPEN | -AUT. ]
+/k	< 000 01 C L $C M U 33 De 1424 $F 124 B 2 A $M Ga 157 $T 579 l vg
+	| 001 N
+	| 010 K Pi 565 1071 D F 700 28 W Th $I f b d q
+	| 01? p45
+	| 020 $L a
+	| 110 k i >
+/m	< --- $* >}
+
+{{}
+[ hOUPW SUNIETE
+| PWS+/hOUPW | OUN+/hOUPW | hOUPW/OU | SUN./NOEITE SUN./SUNNOEITE ]
+/k	< 0000 01 C L $C M U 33 De 1424 K Pi 565 1071 1 118 209
+	| 000? k
+	| 0010 579
+	| 0100 $F 124
+	| 1000 A N W Th 1582
+	| 1001 D:1
+	| 1002 D:0
+	| 100? l vg $I f i
+	| 1010 $M Ga 157 $T F 700 28
+	| 1011 B 2
+	| 101? b d q a
+	| ???? p45 >
+" PWS OU NOEITE ... "
+/m	< 0011 1424 Th
+	| 1011 B 01 D W $C $I vg e $S $L
+	| 1111 565 f >}
+
+" More Matt here? "
+
+" Aland 156. A Blind Man is Healed at Bethsaida Mark 8:22-26 "
+/k @ Mk8:22
+{{}
+[ /k KAI ERXONTAI EIS BHQSAIDAN
+| ERX)ETAI | ERX./HLQON=venerunt | -EIS | BHQ./BHQANIAN ]
+/k	< 0000 B 01:1 L Th $F $C p45 C 69 33 579 W De 28 1071 k
+	| 0001 D
+	| 0010 aur vg
+	| 0011 d i l
+	| 0101 a f q
+	| 0110 c
+	| 0111 b ff2
+	| 1000 N $L 157 01:0 A $M K M U Ga Pi 2 565 700 1424 $T >
+/m	< ---- $* >}
+
+[ /k KAI FEROUSIN AUTWi TUFLON
+| KAI/+IDOU=ecce | TUFL./+DAIMONIZOMENON ]
+/k	< 00 B 01:1 L Th $F $C C 69 33 579 D W 28 1071 N 157
+	     01:0 A $M K M U Ga Pi 2 565 700 1424 $T $L
+	| 0? p45
+	| 01 De
+	| 00 $I vg k
+	| 10 c >
+/m	< -- $* >
+
+[ /k KAI PARAKALOUSIN AUTON hINA AUTOU hAYONTAI
+| K.PAR./PARAKALONTES | -AUTON | hAY.~AUTOU ]
+/k	< 000 B $C $T $S $L $F p45 D 33
+	| 001 700
+	| 000 $I vg
+	| 100 a
+	| 010 i k >
+/m	< --- $* >
+
+/k @ Mk8:23
+{{}
+[ /k KAI EPILABOMENOS THS XEIROS TOU TUFLOU
+| )LABOMENOS | EPILAB)E | T)HN.XEIR)A | TUFL./+KAI=apprehendit.manum,et
+| EPILAB./+AUTOU | XEIROS/+AUTOU | -T.TUFL. | -TOU | T.TUFL.~XEIROS ]
+/k	< 000000000 B 01 C L De 33 $C 157 A $M K M N U Ga Pi 118 $F 2 1071 $T
+	| 0000000?0 a aur c vg k
+	| 000001000 983 579:1 1424
+	| 000001010 579:0
+	| 0000011?? p45 W Th $L 700 788 565
+	| 0000101?? 28
+	| 101000000 D
+	| 1010000?0 f ff2 l
+	| 1111000?0 b d
+	| 1111000?1 i
+	| 1111011?? q >
+/m	< --------- $* >}
+
+[ /k ECHNEGKEN AUTON ECW THS KWMHS
+| ECHGA)GEN | )HGAGEN | -AUTON ]
+/k	< 000 B 01 C L De 33 $C p45 Th 579
+	| 100 D W $L 700 788 28 1424 A $M K M N U Ga Pi 118 $F 2 1071 $T $I vg k
+	| 110 669
+	| 101 157 565 >
+/m	< --- $* >
+
+[ /k KAI PTUSAS EIS TA OMMATA AUTOU
+| -KAI | EN(PTUSAS | -EIS ]
+/k	< 000 B $C $T $S $L $F
+	| ??0 p45
+	| 010 W
+	| 001 579
+	| 0?0 $I vg k
+	| 1?0 b >
+/m	< --- $* >
+
+" Swanson missing 700 "
+{{}
+[ /k EPIQEIS TAS XEIRAS AUTWi EPHRWTA AUTON
+| KAI+/EPIQ. | EPEQ)HKEN | EPIQ)ENTAS | AUTWi~T.XEIRAS | EP+/AUTWi | AUTWi/AUTOU
+| KAI+/EPHR. | EPHRWT)HSEN | (HRWTA ]
+/k	< 000000000 B 01 C De:1 $M L U Ga Th Pi 2 157 565 1424 $C $T D M De:0 579
+	| 000000010 N
+	| 000001000 A K 1071 q
+	| 0000????? 33
+	| 001000000 $I
+	| 001001000 aur f l vg
+	| 100000000 $L $F 28
+	| 100001010 c a k
+	| 100010001 W
+	| 1000????? p45
+	| 101000000 b d
+	| ????????? 700 >
+/m	< --------- $* >}
+
+" Swanson missing M here: "
+{{}
+[ /k EI TIS BLEPEIS
+| -EI.TIS.BL. | EI/+EI | -TIS | BLEP)EI ]
+/k	< 0000 B De 157 579 $C C Th D 565
+	| 0001 01:0 1071 N 69 788 346 $F 01:1 A $M K L U Ga Pi $L 124 2 28 700 1424 $T $I vg k
+	| 0011 W
+	| 0101 M
+	| 1??? 33
+	| ???? p45 >
+/m	< ---- $* >}
+
+/k @ Mk8:24
+{{}
+[ /k KAI ANABLEYAS ELEGEN
+| KAI/hO.DE | -ANABL. | ELEGEN/EIPEN ELEGEN/LEGEI ]
+/k	< 000 B De 157 579 $C 01:1 A $M K L M U Ga Pi $L 124 2 28 700 1424 $T $I vg
+	| 001 01:0 1071 C Th ff2 k
+	| 002 D 565 N 69 788 346 $F
+	| 102 W
+	| 111 c
+	| ?01 p45
+	| ??? 33 >
+/m	< --- $* >}
+
+[ /k BLEPW TOUS ANQRWPOUS ]
+
+{{}
+[ /k hOTI hWS DENDRA hORW PERIPATOUNTAS
+| -hOTI | hWS.DENDRA(bis) | -hORW | 5/*TOUNTA | -hORW.PERIP. ]
+/k	< 00000 B L N De 01 A C:0 $M K M:0 U Ga Pi $F 2 157 579 $C $T
+	| 00010 F
+	| 01100 M:1
+	| 10100 C:1 $L 28 788 1071 1424 D W Th 565 983 $I vg k
+	| 10??1 700
+	| ???00 p45
+	| ????? 33 >
+/m	< ----- $* >}
+
+/k @ Mk8:25
+{{}
+[ /k EITA PALIN EPEQHKEN TAS XEIRAS
+| EITA/KAI | (EQHKEN | EPI)QEIS | XEIRAS/+AUTOU ]
+/k	< 0000 C:1 $L 28 788 1071 1424 F M:1 De 01 A C:0 $M K M:0 U Ga Pi $F 2 157 579 $C $T
+	| 0001 N W
+	| 0010 Th 565 700
+	| 0100 B L WH
+	| 0?00 aur f l vg
+	| 0?10 a
+	| 0??? p45
+	| 1010 D
+	| 1?00 b d ff2 i q k
+	| 1?01 c
+	| ???? 33 >
+/m	< ---- $* >}
+
+{{}
+[ /k EPI TOUS OFQALMOUS AUTOU
+| KAI+/EPI | AUTOU/TOU.TUFLOU ]
+/k	< 00 B $C $T $S $L $F p45 $I vg k
+	| 01 579
+	| 10 ff2 >
+/m	< -- $* >}
+
+{{}
+[ /- KAI EPOIHSEN AUTON ANABLEYAI
+| + | ^-KAI | ^KAI/+impositis.manibus | ^EP./HRCATO | ^-AUTON ]
+/k	< 0???? B 01 C:0 L W De $L 28 $C p45 C:1 579 788 k
+	| 10000 $F A $M K M N U Ga Pi 118 124 2 33 157 1071 1424 $T a q f
+	| 10011 D $I vg
+	| 10111 b
+	| 11000 565 700
+	| 11001 Th >
+/m	< ----- $* >}
+
+{{}
+[ /k KAI DIEBLEYEN
+| -K.DIEBL. | EN(EBLEYEN ]
+/k	< 00 B 01 C:0 L W De $L 28 $C $F 579 788 k
+	| 01 C:1
+	| 0? p45
+	| 1? D Th 565 700 A $M K M N U Ga Pi 118 124 2 33 157 1071 1424 $T $I vg >
+/m	< -- $* >}
+
+{{}
+[ KAI APEKATESTH KAI_2 ENEBLEPEN THLAUGWS hAPANTA
+| APEKATE)STAQH | -KAI_2 | KAI_2/hWSTE
+| -ENEBL.  | (EBL. AN(EBL. | ENEBLE)YEN ENEBLE)YAI
+| hAP.~THL | D(HLAUGWS | (PANTA | hAPANT)AS ]
+/k	< 0000000000 B 01:1 $C
+	| 0000000100 L
+	| 0000010100 C:0
+	| 0000010110 C:1
+	| 0000110100 01:0
+	| 0000200100 De
+	| 01?1??0110 579
+	| 1000000000 $F 28
+	| 1000001010 W:1
+	| 1000010000 1 209
+	| 1000010001 A E K N Ga Pi:0 Om 118 1071 S Y U Pi:1 1582 $T
+	| 10000101?? 33
+	| 1000110000 Th
+	| 1000110010 565
+	| 1000200000 346 983
+	| 1000201010 W:0
+	| 1000210000 700
+	| 1000210001 F H M 124 2 157 1424 2327 574 669
+	| 1010220001 D
+	| ?01???0??? $I vg
+	| ?01???1??? f
+	| ?01??????? c
+	| ?1????0??? i
+	| ?1???????? k
+	| ?????????? p45 >
+/m	< ---------- $* >}
+
+/k @ Mk8:26
+[ /k KAI APESTEILEN ]
+
+[ /k AUTON EIS OIKON AUTOU LEGWN
+| EIS.OIK.~AUTON | TON+/OIK. | LEG./KAI.LEGEI.AUTWi LEG./ANABLEPEIS=praecipiens ]
+/k	< 000 B A C $M K L N Ga Pi 33 157 $C 28 574 669:0
+	| 100 01:0
+	| 110 01:1
+	| 001 D
+	| 010 M U De $L 2 700 W Th $F 565 1071 124 579 1424 $T 669:1
+	| 0?0 $I vg k
+	| 0?1 d
+	| 0?2 c >
+/m	< --- $* >
+
+{{}
+[ /- hUPAGE EIS TON OIKON SOU KAI
+| + | ^-TON ]
+/k	< 0? B A C $M K L N Ga Pi 33 157 $C 01 M U De $L 2 700 W 579 1424 $T c k
+	| 10 D $F 565 1071 124
+	| 11 Th 28
+	| 1? $I vg >
+/m	< -- $* >}
+
+{{}
+" Swanson missing U, Ga starting at EIS: "
+[ /k MHDE EIS THN KWMHN EISELQHiS
+| -MHDE...EISELQ. | MHDE/MH MHDE/MHDENI.EIPHiS MHDE/EAN 
+| -THN | -EISELQ. | EIS.T.K.EIS:(bis) ]
+/k	< 00000 B 01:1 L $L $C A C $M K M N Pi 157 $T De 118 2 579 700 33
+	| 00100 1424
+	| 01000 01:0 W
+	| 01?10 c
+	| 02010 D
+	| 03000 Th $F 565 28
+	| 03001 1071
+	| 03?00 $I vg
+	| 0?000 124
+	| 0??10 q d
+	| 1???? k
+	| ????? U Ga >
+/m	< ----- $* >}
+
+{{}
+[ /- MHDE EIPHS TINI EN THi KWMHi
+| + | ^MHDE/MHDENI | ^-TINI | ^MHDE+/EN.T.K | ^EN.THi.KWMHi ]
+/k	< 0???? B 01 L W $L $C D
+	| 10000 A C $M K M N Pi 157 $T 33 1071 1424 De 118 124 2 579 700
+	| 10100 Th 565
+	| 10110 $F 28
+	| 11100 d ff2 i k
+	| 11101 $I vg
+	| ????? U Ga > 
+/m	< ----- $* >}

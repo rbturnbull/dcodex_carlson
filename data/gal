@@ -1,0 +1,5798 @@
+* ROOT
+  p46 p51
+  01 A~02 B~03 C~04 D~06 F~010 G~013
+  H~015 I~016 K~018 L~020 P~025 Ps~044
+  056 075 0122 0176 0261
+  1 6 33 69 88 104 131 205 209 223 226 323 330 440 460 489
+  517 547 614 618 796 876 910 927 945 999
+  1022 1175 1241 1241s 1242 1243 1245 1270 1315 1319 1352 1424 1448
+  1505 1573 1611 1646 1734 1735 1738 1739 1780 1799
+  1827 1836 1837 1854 1874 1881 1891 1960 1982
+  2125 2138 2147 2344 2400 2401 2412 2423 2464 2495 2815 2892
+  ar~B61 b~B89 d~B75 f~B78 g~B77 r~B64 t vg pesh hark sa bo
+  Ir Marc Epiph MVict Ambst Chrys NA
+  ;
+
+" ^ Chron "  " Commenting out Chron for testing purposes "
+
+" $G = Greek witnesses from Swanson "
+= $G p46 01 A B C D F G H I K L P Ps 056 075 0122 0176 0261
+  1 6 33 69 88 104 131 205 209 226 323 330 440 460 489
+  517 547 614 618 796 910 927 945 999
+  1175 1241 1241s 1242 1243 1245 1270 1315 1319 1352 1424 1448
+  1505 1573 1611 1646 1734 1735 1738 1739 
+  1827 1836 1837 1854 1874 1891 1982
+  2125 2147 2344 2400 2412 2464 2495 2815 ;
+
+" $T = witnesses collated against the Textus Receptus "
+= $T 223 876 1022 1799 1960 2401 2423 ;
+
+" $I = Itala witnesses "
+= $I ar g t ; " + b d r <: $L "
+
+" $L = Latin Witnesses "
+= $L b d f r vg MVict Ambst ;
+
+" $X = Muenster's backtranslation of Harklensis & my base for pesh "
+= $X 1505 1611 2138 2495 hark pesh ;
+
+" $? = Missing or lacunose witnesses "
+= $? p51 C 0122 0176 0261 1241 2344 $I pesh sa bo Ir Marc Epiph ;
+
+" $0 = NA and MSS collated against NA, including ROOT "
+= $0 NA ROOT 1780 2892 ;
+
+=- $I t ;
+
+" Get rid of incompletely collated and/or artificial witnesses "
+- NA ar bo g t sa p51 ROOT ;
+- MVict Ambst r ;
+
+@ Ga1:1
+=+ $? r ; " r lac. 1:1-2:4 "
+{{}
+" Paulus apostolus non ab hominibus neque per hominem "
+[ PAULOS APOSTOLOS OUK AP ANQRWPWN  OUDE  DIA ANQRWPOU
+| ANOU/ANWN ]
+	< 0 $G $0 $T 1022:1 $L Marc 33 Ir $X 1881
+	| 1 440 1243 1245 1505 1836 2495 1022:0 Chrys >
+" sed  per Jesum Christum et Deum patrem "
+[ ALLA DIA IHSOU XRISTOU KAI QEOU PATROS
+| DIA/+QELHMATOS | -KAI.QU.PATR. ]
+	< 00 $G $0 $T $L Ir $X 1881 Chrys
+	| 01 Marc
+	| 10 33 >
+" qui suscitavit eum   a  mortuis "
+[ TOU EGEIRANTOS AUTON EK NEKRWN
+| AUT)WN |*0L AUTON/eum AUTON/illum |*1P EK/+OIKOU=byt ]
+	< 000 $G $0 01:1 $T $X 1881 Chrys
+	| 001 pesh
+	| 010 $L
+	| 020 vg
+	| 100 01:0 2125 > }
+
+@ Ga1:2
+=- $? p51 ;
+{{}
+" et  qui  mecum   omnes  fratres      ecclesiis      Galatae "
+[ KAI hOI SUN EMOI PANTES ADELFOI TAIS EKKLHSIAIS THS GALATIAS
+| -EMOI | -PANTES |*1P T.GAL./THS.EN.THi.GALATIAi=d'yt.bgl+y' ]
+	< 000 $G $0 $T $L p51 $X 1881 Chrys
+	| 001 pesh
+	| 010 1319:1 1505 1611 2495
+	| 110 1319:0 > }
+
+@ Ga1:3
+{{}
+" Gratia vobis et  pax "
+[ XARIS  hUMIN KAI EIRHNH 
+| ADELFOI+/XAR. | hH(MIN |*P SUN+/hUM.=`mkwn ]
+	< 000 $G $0 $T $L p51 $X 1881 Chrys
+	| 001 pesh
+	| 010 1241s
+	| 100 P 1799
+	| ??? I > }
+=+ $? I ; " GALATI *** HNH APO *** "
+{{}
+" a   Deo  patre nostro et  Domino Jesu  Christo "
+[ APO QEOU PATROS hHMWN KAI KURIOU IHSOU XRISTOU
+| TOU+/PATR. | -hHMWN | KAI.KU~hHMWN |*1P wmn=APO+/KU ]
+	< 0000 01 P 056 Ps 33 131 1241s 1573 1836 1837 2125:1 2464 A 876 NA $0
+	| 0010 $G $T 2423:1 p51 $X 1881 1780:1 2892
+	| 0011 pesh
+	| 01?0 547 910 999 1319 1424 1874 1891 2147 1448 1799 2423:0 Chrys
+	| 1000 2125:0
+	| 1010 1780:0
+	| ?000 ar b
+	| ?010 $L sa bo > }
+
+@ Ga1:4
+{{}
+" qui dedit  semet ipsum "
+[ TOU DONTOS hEAUTON
+| hE.~DONTOS | *(AUTON ]
+	< 00 $G $0 01:2 056:1 $T 330 2400 88 1175 1241s 1505 1735 1836 2464 1243 H G A 01:0 D K L Ps 075 1 69 131 205 209 226 517 614 910 1245 1270 1646 1734 1739 1854 1891 1982 2125 2412 223 1022 1799 2401 2423 $X 1881 104 1424 1874 2147 F:1 F:0 Chrys
+	| 01 056:0 33 p46
+	| 0? $L
+	| 1? MVict b
+	| ?? p51 g > }
+{{}
+" pro       peccatis nostris "
+[ hUPER TWN hAMARTIWN hHMWN
+| hUPER/PERI | -TWN | hAMAR)TELWN | hU(MWN ]
+	< 0000 $G $0 01:2 056:1 $T 330 2400 88 1175 1241s 1505 1735 1836 2464 056:0 33 Chrys pesh
+	| 0001 1243
+	| 00?? H p51
+	| 1000 G A 01:0 D K L Ps 075 1 69 131 205 209 226 517 614 910 1245 1270 1646 1734 1739 1854 1891 1982 2125 2412 223 1022 1799 2401 2423 $X 1881 104 1424 1874 2147 1780 2892
+	| 1001 F:1
+	| 1011 F:0
+	| 1100 p46
+	| 1??? g
+	| ??00 $L > }
+{{}
+" ut    eriperet nos "
+[ hOPWS ECELHTAI hHMAS
+| ECEL)EI(TAI ECEL)E(TAI |*0L ECEL./eriperet /liberavit ]
+	< 00 $G $0 01:2 056:1 $T 330 1243 G A 01:0 D K L Ps 075 1 69 131 205 209 226 517 614 910 1245 1270 1646 1734 1739 1854 1891 1982 2125 2412 223 1022 1799 2401 2423 $X 1881 F:1 F:0 056:0 p46 Chrys
+	| 01 $L
+	| 02 Ambst MVict
+	| 10 33 2400 88 1175 1241s 1505 1735 1836 2464 104 1424 1874
+	| 20 2147
+	| ?? H p51 g > }
+=+ $? H ;
+{{}
+" de      seculo      praesenti malo "
+[ EK TOU1 AIWNOS TOU2 ENESTWTOS PONHROU
+| EK/APO | TOU1/AUTOU | ENEST.PON.~AIWN. ENEST.~AIWN. PON.~ENEST.
+| -TOU2 | TOU+/PON. |*0L PONHROU/nequam /malo /maligno ]
+	< 000000 B A P 33 1241s 1739 1837 p46 $0 01:0
+	| 000010 1881
+	| 000?00 pesh
+	| 001100 489 927
+	| 002010 1505 1573 2495
+	| 002100 $G 01:2 910:1 $T $X 910:0 Chrys 1780 2892
+	| 002??1 vg f
+	| 002??2 b d MVict
+	| 002??3 Ambst
+	| 003?00 hark
+	| 012100 69
+	| 102010 330 2400
+	| 102100 104
+	| ?02100 H
+	| ?02??? g $I
+	| ??0000 p51 > }
+{{}
+" secundum voluntatem Dei et  patris nostri "
+[ KATA TO QELHMA TOU QEOU KAI PATROS hHMWN
+| -TO | -TOU | -hHMWN ]
+	< 000 B A P 33 1241s 1739 1837 p46 $0 489 927 1505 1573 2495 $G 01:2 910:1 $T $X 69 330 2400 104 H Chrys
+	| 010 910:0
+	| 100 01:0
+	| ??0 $L
+	| ??1 Ambst
+	| ??? g $I p51 1881 > }
+
+@ Ga1:5
+{{}
+" cui  gloria in      saecula    saeculorum amen "
+[ hWi hH DOCA EIS TOUS AIWNAS TWN AIWNWN AMHN
+| hWi/hOU | hWi/+ESTIN |*1P T)ON.AIWN)A | -TOUS | -TWN.AIWNWN ]
+	< 00000 $G $0 88:1 $T $X 1881 Chrys
+	| 00001 1735 1 209 460 796 1243 1245 1837
+	| 00010 88:0
+	| 000?0 Ambst
+	| 00100 pesh
+	| 01000 1175
+	| 0?0?0 $L
+	| 11000 330 2400
+	| ??00? p51 > }
+
+@ Ga1:6
+{{}
+" miror   quod sic    tam cito transferimini "
+[ QAUMAZW hOTI hOUTWS   TAXEWS METATIQESQE 
+| *(MAZW | QAUM./+DE | -hOUTWS | hOUT)W | -TAXEWS |*0e METATIQESQ)AI ]
+	< 000000 $G $0 D:1 D:2 876 1799 2401 2412 2423:1 Marc $X 1881 Chrys
+	| 000001 01 D:0 1 614 910 1175 1241s 1646 2125 2147 2464
+	| 000010 460 618 1738
+	| 0000?? -e
+	| 000100 p46 K 056 205 209 323 517 547 796 945 1245 1352 1891 $T 2423:0
+	| 000101 6
+	| 000?00 $L
+	| 001?00 pesh 1982
+	| 0100?? g
+	| 111?01 F G
+	| ?00000 p51 > }
+{{}
+" ab  eo qui vocavit  nos  in gratiam Christi  in  aliud   evangelium "
+[ APO TOU KALESANTOS hUMAS EN XARITI (XRISTOU) EIS hETERON EUAGGELION
+|*1P XU~APO..XAR. | hUM.~KAL. | hH(MAS | -XU | IU+/XU | TOU+/XU | -EUAGGELION ]
+	< 0000000 $G $0 $T F:1 p51 1505 1611 2138 2495 1881 Chrys
+	| 0000001 205
+	| 0000100 D 1837 $X
+	| 00001?0 d
+	| 0001000 F:0 G
+	| 00010?0 Ambst
+	| 000?0?0 Marc
+	| 0010000 33 1646 p46:1
+	| 0010010 1424
+	| 0010100 1241s
+	| 0011000 p46:0
+	| 01000?0 $L
+	| 01010?0 b MVict
+	| 1000000 pesh
+	| ???000? bo
+	| ???1??? ar g > }
+
+@ Ga1:7
+{{}
+" quod not est aliud nisi aliqui sunt qui conturbant  vos "
+[ hO OUK ESTIN ALLO EI MH TINES EISIN hOI TARASSONTES hUMAS
+| -hO..ALLO | EST)HN |*1P -ALLO | ALL)ON ALL)W | EISIN~TINES
+| P(ARASSONTES | -hUMAS.KAI.QELONTES | hUM.~TAR. | hH(MAS ]
+	< 000000000 $G $0 1874:1 $T 01 $X 1881 Chrys
+	| 000000001 1241s 1646
+	| 000000010 MVict
+	| 000001000 F G
+	| 000010000 d
+	| 000010010 $L b
+	| 0000????? Marc
+	| 000100000 1982
+	| 000200000 1874:0 2464:1 2892
+	| 0002001?? 2464:0
+	| 001?00000 pesh
+	| 00??00000 p46
+	| 00??00??? p51
+	| 010000000 2147
+	| 1???00000 Ambst > }
+{{}
+" et  volunt   convertere     evangelium     Christi "
+[ KAI QELONTES METASTREYAI TO EUAGGELION TOU XRISTOU
+| -KAI.QEL. | TOU+/MET. | DIA(STREYAI ANA(TREYAI |*0L MET./convertere /avertere
+| XU/KU ]
+	< 00000 $G $0 $T $X 1881 01:1 2464:1
+	| 00100 1505 1611 2495
+	| 00200 Chrys
+	| 00?00 p46 hark
+	| 01000 927
+	| 0?010 $L
+	| 0?020 MVict
+	| 10000 01:0
+	| ?0001 2464:0
+	| ?0??? p51 > }
+
+@ Ga1:8
+=+ $? p46 ;
+{{}
+" sed  et  si   nos   aut angelus de caelo "
+[ ALLA KAI EAN hHMEIS  H  AGGELOS EC OURANOU 
+|*1P ALLA/~DE=dyn | -KAI | -EAN | KAI.EAN/KAN |*0L KAI.EAN/et.si KAI.EAN/licet
+| TE+/hHM. | hHMEIS/EGW | hU(MEIS | -AGGELOS | -EC.OUR. ]
+	< 0000000000 056 1 33 69 205 209 226 323 440 547 796 945 1242 1319 1448 L 1854 $T $0 330 1739:0 1175 1739:1 Ps F G 1799 D 1738 $G 1874:1 223 1022 2412 1424 01 A P 1241s Marc 104 1352:1 6 876 1837 $X 1881
+	| 0000000010 1352:0
+	| 0000000100 1245
+	| 0001000000 B
+	| 0001001000 Chrys
+	| 0001010001 Epiph
+	| 000?100000 Ambst
+	| 000?100001 MVict
+	| 000?200000 $L
+	| 000??00000 hark
+	| 010???0000 2400 1874:0
+	| 100??00000 pesh
+	| ????????00 p51
+	| ?????????? ar g > }
+" Schmid 1995:315 (hUMIN PAR' hO EUHGG. hUMIN) contra NA27 McionT "
+{{}
+" -IZHTAI = pres.subj. ; -ISHTAI = aor.subj. ; -IZETAI = pres.ind. "
+"   -izet = pres.subj. ; -izaverit = pf.subj. ; -izat = pres.ind. "
+" evangelizet   vobis "
+[ EUAGGELIZHTAI hUMIN
+| EU)H(AGGELIZHTAI | EUAGGELI)S(HTAI | EUAGGELIZ)E(TAI |*0e EUAGGELIZHT)E
+| -hUMIN | hUMIN~EUAGG. | hH)MIN | hUM(AS ]
+	< 00000000 056 1 33 69 205 209 226 323 440 547 796 945 1242 1319 1448 D:2 L 1854 $T $0 1245 $X $L 1646 1735 1827 2815
+	| 00000001 330 D:1 2400
+	| 00000100 B 1739:0 1175
+	| 00000110 1739:1
+	| 00001??? Ps F G ar Ambst
+	| 00010000 1799
+	| 00010001 D:0
+	| 00100000 1738 $G 1874:1 223 1022 2412 1874:0 1881 Chrys 1780 2892 1505 2495
+	| 00100001 1424
+	| 00100010 1352:0
+	| 00100??? p51
+	| 00?00000 hark pesh
+	| 01000000 01:2 A P Epiph d
+	| 01000010 1241s
+	| 01000100 MVict
+	| 01001??? 01:0 g b
+	| 0100???? Marc
+	| 01100000 104
+	| 01100010 1352:1
+	| 10000000 6 876
+	| 11000000 1837 > }
+{{}
+" praeterquam quod evangelizavimus vobis anathema sit "
+[ PAR         hO   EUHGGELISAMEQA  hUMIN ANAQEMA ESTW
+| -PAR...hUMIN | hO/hWi |*0L PAR.hO/praeterquam.quod /praeterquam
+| EUHGGELISA)MHN | EU)A(GGELISAMEQA
+| EUHGGEL./PARALABETE |*0e (EUHGG/PARALABET)AI | -hUMIN | hH)MIN | hUM(AS
+|*1P ESTW~ANAQ. ]
+	< 00000000000 B 01 P $G $0 $T $X
+	| 00000000001 pesh
+	| 00000000010 1448
+	| 00000000100 F 1241s
+	| 00001000000 1 2495 G D
+	| 00010000000 1739 056 1881
+	| 000??101??? Epiph 999 Chrys
+	| 000??110100 2401
+	| 00100000000 b:1 $L
+	| 00100001??? Ambst
+	| 00200000000 b:0 d
+	| 01000000000 1243 075
+	| 010??101??? 2464
+	| 0?0000000?? p51
+	| 1?????????? 1734 > }
+
+@ Ga1:9
+{{}
+" Sicut "
+[ hWS | -hWS...ESTW ] 
+	< 0 $G $0 1874:1 $T $L p51 $X 1881 Chrys
+	| 1 056 1874:0 1799 > }
+
+=- $? 2344 ;
+{{}
+" NB           vobis: dative mandatory, not evidence for hUM)IN "
+" praediximus  et nunc iterum dico si quis vobis evangelizaverit "
+[ PROEIRHKAMEN KAI ARTI PALIN LEGW EI  TIS hUMAS EUAGGELIZETAI
+| PROEIRH)KA | PROE./+hUMIN |*0L ARTI/TOTE=tunc | -PALIN | PALIN~ARTI
+| EI/EAN | -hUMAS | hUM)IN | hH)MAN |*0L EUAGG./evangeliza- /annuntia-
+| EUAGGELI)S(HTAI | EUAGGELIZ)H(TAI |*0e EUAGGELIZET)E |*1P EUAGG.~hUM. ]
+	< 00000000000000 $G $0 01:2 1646:0 $T $X 1881
+	| 00000000000010 A 6 547 1243 1982 2147 2892
+	| 00000000000100 F G
+	| 00000001000000 440 1175 1315 1874:1
+	| 00000001100000 1241s
+	| 0000001??0000? Ps
+	| 00000?0?011100 $L
+	| 00000?0?021100 b d
+	| 00001000000000 1780
+	| 0001?000000000 1734
+	| 00100?0?011100 f
+	| 00?00?00??0??0 hark
+	| 01000000000000 460 618 1738
+	| 0????????????? sa
+	| 10000000000000 01:0 323 489 796 927 945 1646:1
+	| 10000100001100 Chrys
+	| 10?00?00??0??1 pesh
+	| 1????????????? ar
+	| ???000???0000? p51
+	| ???00????????? 2344
+	| ?????????????? 056 1874:0 1799 > }
+
+=- $? 0261 ;
+{{}
+" praeter id quod accepistis anathema sit "
+[ PAR          hO PARELABETE ANAQEMA ESTW
+|*0L PAR/praeter.id /praeterquam | hO/hWi | hO/+EUAGGELIZETAI.H.PAR.hO
+| PAREL./EUHGGELISAMEQA.hUMIN PAREL./EL... |*0e PARELAB)ETAI
+|*1P ESTW~ANAQ. ]
+	< 000000 $G $0 1646:1 1874:1 2125:1 $T $X 1881 1780:1
+	| 000010 F G 1315 1646:0 1735 2125:0
+	| 0001?0 Ps Chrys
+	| 0002?0 p51
+	| 000??? 0261
+	| 001000 1780:0
+	| 010000 075 1243 2464
+	| 100000 $L
+	| 200000 Ambst b d MVict
+	| ?000?0 hark
+	| ?000?1 pesh
+	| ??0000 2344
+	| ?????? 056 1874:0 1799 > }
+
+@ Ga1:10
+=- $? p46 ;
+{{}
+"         hominibus, Deo: datives mandatory, not ev. for Greek dative "
+" modo enim hominibus suadeo aut   Deo "
+[ ARTI GAR  ANQRWPOUS PEIQW  H TON QEON
+| AN)OIS | -PEIQW...ANOIS | EPI)QW |*0L PEIQW/suadeo /satisfacio
+|*0L H/aut /an | T)Wi.Q)Wi ]
+	< 000000 B $0 $G $T $X 1881 p46 2344 1319 88 Chrys
+	| 000001 460 618 1738
+	| 001000 F G
+	| 01???? 056
+	| 100000 104
+	| ?0000? 0261
+	| ?0011? $L
+	| ?0012? b MVict
+	| ?0021? Ambst
+	| ?????? p51 > }
+{{}
+" aut quaero hominibus placere "
+[   H   ZHTW ANQRWPOIS ARESKEIN
+| H/EI | ZHTW/+TWN | AN)OUS | ARESKEIN~ANOIS ANOIS~ZHTW ]
+	< 0000 B $0 $G $T $X 1881 460 618 1738 F G 104 Chrys
+	| 0001 440 1315
+	| 0010 1424 876 1 1245
+	| 00?? p46 2344
+	| 0100 1319
+	| 0??0 0261 $L
+	| 1000 88
+	| 0002 pesh
+	| ???0 056
+	| ???? p51 > }
+=+ $? p51 ;
+{{}
+" si adhuc hominibus placere Christi servus non    essem "
+[ EI  ETI  ANQRWPOIS HRESKON XRISTOU DOULOS OUK AN HMHN
+| EI/H /KAN | EI/+GAR | -ETI | AN)OUS | XU/XS | DOUL.~XU | -AN | hHM(IN ]
+	< 00000000 $0 B D:0 1175 A P Ps 6 330 1573 1739 1837 2400 2464 33 01 F:1 G p46 1881
+	| 00000001 1241s
+	| 00001000 1319
+	| 00010000 F:0
+	| 000?00?0 $L b:0
+	| 000?01?0 Ambst
+	| 01000000 $G $T 131:1 D:1 D:2 440 1424 876 056 $X Chrys 1780 2892
+	| 01000001 1243 1315 1646 1874
+	| 01000100 pesh
+	| 01010000 1
+	| 01100000 88 131:0
+	| 01110010 1245
+	| 11000000 460
+	| 200?00?0 b:1
+	| ?0?????? $I bo
+	| ??0????? 0261 2344 > }
+
+@ Ga1:11
+{{}
+" Notum  enim vobis facio fratres    evangelium "
+[ GNWRIZW GAR hUMIN       ADELFOI TO EUAGGELION
+| -GAR | GAR/DE | hUM(AS | -ADELFOI | ADEL.~GNWR.hUMIN
+| TO/TE | TO.EUAGG:ter ]
+	< 0000000 B:1 01:1 G 33 $0 D:0 $L
+	| 0000001 B:0
+	| 0000010 F
+	| 0001?00 MVict
+	| 00????? ar g sa
+	| 0100000 p46 $G 01:0 01:2 D:1 D:2 $T $X 1881 b 2892
+	| 0100100 1799
+	| 0101?00 6 460 618 1243 1738 1739 2400
+	| 0111?00 330
+	| 01?00?? 2344
+	| 01????? bo
+	| 1?00000 1735 Chrys 1780
+	| 1?00100 P
+	| ??????? 0261 > }
+{{}
+" quod evangelizatum est a me   quia non est secundum hominem "
+[ TO   EUAGGELISQEN    hUP EMOU hOTI OUK ESTIN KATA  ANQRWPON
+| TO.EUAGG./hOQEN | EU)H(GGALISQEN |*0L EUAGG./evangeliza- /praedica-
+| hUP/hUPER | hOTI.OUK/OUKETI | -ESTIN |*1P KATA/PARA=mn ]
+	< 0000000 $G $0 $T 0261 $X 1881 Chrys
+	| 0000001 pesh
+	| 0001000 6
+	| 0010000 $L d
+	| 0010010 b
+	| 0020000 Ambst
+	| 0100000 A 1424 1735 075 131 614 999 1505 2412 2495
+	| 0100100 1837
+	| 1??0000 p46
+	| ???0000 2344 > }
+
+@ Ga1:12
+=- $? I ;
+{{}
+" neque enim ego   ab homine     accepi illud "
+[ OUDE  GAR  EGW PARA ANQRWPOU PARELABON AUTO
+| -GAR | -EGW | *(ELABON | PARELAB)WN |*0L PAREL./accepi /excepi
+| -AUTO | AUT)ON AUT)Wi ]
+	< 0000000 $G $0 D:2 $T 2401:1 $X 69 01 D:0 D:1 F G 33 A P Ps 88 104 205 209 1241s 1319 1739 1837 1881 I Chrys
+	| 0000001 460 618
+	| 0000002 2464 2892
+	| 000001? 2401:0
+	| 0000100 $L d MVict:1
+	| 0000200 MVict:0
+	| 0001000 2147
+	| 0010002 1175
+	| 0100000 323 796 945
+	| 1000000 1573
+	| 1000100 b
+	| ?0?0000 0261
+	| ??0???? 2344 > }
+{{}
+" neque didici "
+[ OUTE EDIDAXQHN 
+| OUTE/OUDE OUTE/H=aut OUTE/KAI=w
+| EDIDAXQ)H EDIDAXQ)HMEN |*0L EDID./didici /doctus.sum ]
+	< 000 D:2 2401:1 460 618 2401:0 323 796 945 $G $0 $T $X 6:0 1799 1982 1960 2400
+	| 003 pesh
+	| 020 330
+	| 0?? 0261
+	| 100 69 01 D:0 D:1 F G 33 A P Ps 88 104 205 209 1319 1739 1837 2464 2147 1175 1573 1881 Chrys
+	| 110 1241s
+	| 201 Ambst
+	| ?00 2344
+	| ?01 $L
+	| ?02 MVict
+	| ??? I > }
+{{}
+" sed per revelationem Jesu Christi "
+[ ALLA DI APOKALUYEWS IHSOU XRISTOU
+| ALLA/+APO | IU- | XU- | XU~IU ]
+	< 0000 $G $0 6:0 $T $L $X 1881 1241s Chrys
+	| 0001 330
+	| 001? 1799
+	| 010? 1982 1960
+	| 0??? 2344 I
+	| 1000 2400
+	| ?0?? 0261 > }
+
+@ Ga1:13
+=+ $? 0261 ;
+{{}
+" audistis enim    meam conversatione aliquando "
+[ HKOUSATE GAR THN EMHN ANASTROFHN    POTE
+| A(KOUSATE | -GAR |*0L ANASTR.~EMHN | POTE~T.EM.ANASTR. ]
+	< 0000 $G $0 $T $X 1881 d Chrys
+	| 0010 $L
+	| 0011 b
+	| 0100 2138
+	| 1000 1319
+	| ???? 2344 > }
+{{}
+" in     judaismo quoniam supra modum  persequebar  ecclesiam     Dei "
+[ EN TWi IOUDAISMWi hOTI KAQ hUPERBOLHN EDIWKON THN EKKLHSIAN TOU QEOU
+| -TWi |*0L hOTI/quoniam /quia /quod |*0L KAQ/supra /super | EDIWK)WN ]
+	< 0000 $G $0 $T $X 1881 Chrys
+	| 0001 33
+	| 0110 $L
+	| 0210 Ambst
+	| 0220 MVict
+	| 0310 b
+	| 0320 d
+	| 1000 F
+	| ???? 2344 p51 I >
+}
+=+ $? I ;
+{{}
+" et expugnabam illam "
+[ KAI EPORQOUN AUTHN
+| EPORQOUN/EPOLEMOUN | -AUTHN |*0L AUTHN/illam /eam ]
+	< 000 $G $0 $T $X 1881 Chrys
+	| 100 F G
+	| 101 $L
+	| 102 Ambst
+	| 11? MVict
+	| ??? p51 > }
+
+@ Ga1:14
+{{}
+" et proficiebam in     judaismo "
+[ KAI PROEKOPTON EN TWi IOUDAISMWi
+| E(PROEKOPTON | EPRO)*(KOPTON | PROEKOPT)WN ]
+	< 000 $G $0 1836:1 $T $X 1881 $L Chrys
+	| 001 1836:0
+	| 100 p46
+	| 110 056
+	| ??? p51 > }
+{{}
+" supra multos  coetaneos    in    genere meo abundantius "
+[ hUPER POLLOUS SUNHLIKIWTAS EN TWi GENEI MOU PERISSOTERWS
+|*0L hUPER/supra /super | SUNHL./+MOU |*1P d'it.hw'=TOUS+/EN.T.GENEI
+| PERISSOTER)ON | PERISSOTER)O(S ]
+	< 00000 $G $0 $T 1022:1 Epiph $X 1881 p46:1 Chrys
+	| 00001 1175 2400 330 2147 1245 1243 1022:0
+	| 00010 p46:0
+	| 00100 pesh
+	| 100?? $L
+	| 110?? MVict
+	| 200?? Ambst d
+	| ?00?? 2344 > }
+{{}
+" aemulator existens paternarum mearum traditionem "
+[ ZHLWTHS hUPARXWN TWN PATRIKWN MOU PARADOSEWN
+| -ZHL. | ZHLWTHS/ZHLW.TIS | -MOU ]
+	< 000 $G $0 $T Epiph $X $L p46 Chrys
+	| 001 MVict
+	| 010 F
+	| 1?0 1881
+	| ?0? 2344 > }
+
+@ Ga1:15
+{{}
+" cum autem placuit         ei qui segregavit me de utero  matris meae "
+[ hOTE DE EUDOKHSEN (hO QEOS) hO     AFORISAS ME EK KOILIAS MHTROS MOU
+| -DE | DE/ALLA~:sed | HU(DOKHSEN | -hO.QS
+|*0w AF)W(RISAS |*0L ME~AF. | EK/APO ]
+	< 0000000 $G $0 $T 1739 $X 2138 D:0 D:1 1881 d Chrys
+	| 0000100 D:2 69 517 1424 88 6 1780
+	| 0001000 pesh F G p46
+	| 0001010 $L
+	| 0001100 B
+	| 0010000 P 104 330 460 618 1175 2400
+	| 0010100 075
+	| 0010?00 A
+	| 0011000 1611
+	| 0011100 1505 2495
+	| 0101010 MVict
+	| 1?01??? Epiph
+	| ???0??? bo sa
+	| ???1??? ar g Ir > }
+{{}
+"  et vocavit per     gratiam suam "
+[ KAI KALESAS DIA THS XARITOS AUTOU
+| -KAI...AUTOU | -KAI.KAL. | KAL./PARAKALESAS | KALESAS/+ME | QEIAS+/XAR. ]
+	< 00000 $G $0 $T 2423:0 Ir 1505 1611 2138 2495 $L Chrys
+	| 00001 075
+	| 00010 460 618 1242 1245 1734 1 1738 1854 1022 2423:1 $X b
+	| 00100 1780
+	| 01??0 Epiph
+	| 1???? p46 1739 6 1881
+	| ????? p51 > }
+
+@ Ga1:16
+{{}
+" revelare       filium suum in me "
+[ APOKALUYAI TON hUION AUTOU EN EMOI
+| KAI+/APOK. |*0e APOKALUY)E |*0L hINA+/APOKALUY)Hi=ut.revelaret | -EN ]
+	< 0000 $G $0 $T Ir Epiph $X 1881 Ambst Chrys
+	| 0001 945
+	| 0010 $L
+	| 0100 2464
+	| 1000 6
+	| ?000 p51 > }
+{{}
+"   ut evangelizarem illum in      gentibus "
+[ hINA EUAGGELIZWMAI AUTON EN TOIS EQNESIN
+| AUTON~EUAGG. | EUAGGELI)S(WMAI | EUAGGELIZ)O(MAI |*0L AUTON/illum /eum | -EN ]
+	< 00000 $G $0 $T $X 1881 D:2 945 Chrys
+	| 00001 1780
+	| 00100 L P 6 88 104 131 460 489 614 618 927 999 1243 1245 1315 1319 1424 1573 1827 1836 1837 1874 1982 2147 2138
+	| 00?00 hark pesh
+	| 01000 p46 D:0 D:1 330 2400 Ir
+	| 01010 $L
+	| 01020 Ambst b d
+	| 11020 MVict > }
+{{}
+" continuo non    acquievi carni et sanguini "
+[   EUQEWS OU PROSANEQEMHN SARKI KAI hAIMATI
+| PRO(ANEQEMHN *(ANEQEMHN ]
+	< 0 $G $0 $T 1505 1611 2138 2495 1881 $L Chrys
+	| 1 1836 33 104 2400
+	| 2 $X > }
+
+@ Ga1:17
+{{}
+" neque veni    in Hierosolymam "
+[ OUDE ANHLQON EIS hIEROSOLUMA
+| AP(HLQON *(HLQON |*0L -EIS | EIS/EPI ]
+	< 000 $G $0 88:1 $T $X 1881 Chrys
+	| 001 330
+	| 100 B D F G 88:0 2464 p51 2344 1836 1799 pesh
+	| 200 p46 d
+	| 21? $L b > }
+{{}
+" ad antecessores meos apostolos   sed abii     in Arabiam "
+[ PROS   TOUS PRO EMOU APOSTOLOUS ALLA APHLQON EIS ARABIAN
+| PROS/EIS | T(OIS | -PRO |*0L T.PRO.EMOU/antecessores /prae-
+| AN(HLQON | APHLQ)A | EIS/PROS ]
+	< 0000000 $G $0 $T $X 1881 1874:1 Chrys
+	| 0000001 1874:0
+	| 0000010 p46
+	| 0000100 1241s
+	| 00010?0 $L
+	| 00020?0 Ambst b d MVict
+	| 0010000 F:1 G
+	| 0110000 F:0
+	| 1000000 104 > }
+{{}
+" et iterum reversus sum in Damascum "
+[ KAI PALIN  hUPESTREYA EIS DAMASKON
+|*0L hUPESTR./reversus.sum /regressus.sum |*0L -EIS ]
+	< 00 $G $0 1874:1 $T $X 1881 1874:0 Chrys
+	| 0? p51
+	| 10 f
+	| 11 $L
+	| 21 Ambst
+	| ?0 2344 > }
+
+@ Ga1:18
+{{}
+" deinde post annos tres veni       Hierosolymam "
+[ EPEITA META ETH   TRIA ANHLQON EIS hIEROSOLUMA
+|*1P EPEITA/KAI=w | TRIA~ETH | PALIN+/ANHLQON | AP(HLQON
+| -EIS.hIER. |*0L -EIS | TA+/hIER. ]
+	< 0000000 $G $0 $T $X Chrys
+	| 0000001 1245
+	| 000001? Ambst
+	| 000?000 f
+	| 000?01? $L
+	| 00??000 2344
+	| 0100000 01 A P 440 1241s 1315 1739 1837 2464 1799 1881
+	| 0111000 33
+	| 1101000 pesh
+	| ????000 p51:1
+	| ????1?0 p51:0 > }
+{{}
+" videre     Petrum et  remansi apud   eum diebus quindecim "
+[ hISTORHSAI KHFAN KAI EPEMEINA PROS AUTON hMERAS DEKAPENTE
+| KHFAN/PETRON | *(EMEINA |*0L AUTON/eum /illum ]
+	< 000 B 01:0 A 33 1241s 1739:0 $0 pesh
+	| 010 p46
+	| 0?0 p51
+	| 100 $G 01:2 1739:1 $T $X 1881 Chrys 1780 2892
+	| 102 Ambst d
+	| 110 460 614 999 1175 2412 2401
+	| 111 $L
+	| 112 b
+	| ?00 2147 > }
+=- $? 0261 ;
+
+@ Ga1:19
+{{}
+" alium autem  apostolorum non  vidi nisi  Jacobum     fratrem     Domini "
+[ hETERON DE TWN APOSTOLWN OUK EIDON EI MH IAKWBON TON ADELFON TOU KURIOU
+| -DE | TWN/TON | -OUK,+OUDENA | OU)X
+| OI(DON | EID)EN | EIDON/+OUDENA OUDENA+/EID. ]
+	< 0000000 $G $0 D:1 D:2 $T $X 1881 Chrys
+	| 0000010 33
+	| 0000100 P 1611
+	| 0001000 p46 B
+	| 001?001 F D:0 G $L
+	| 001?002 b MVict
+	| 0100000 104 205 1960
+	| 1100000 1243
+	| ?000000 2344
+	| ?000001 p51
+	| ??????? 0261 > }
+
+@ Ga1:20
+=+ $? p51 ;
+{{}
+" quae autem scribo vobis ecce coram "
+[   hA DE     GRAFW hUMIN IDOU ENWPION
+| hUM(WN | -IDOU | ENWP.~IDOU ]
+	< 000 $G $0 $T $X 1881 $L Chrys
+	| 001 1836
+	| 01? 075 1241s 1319
+	| 100 614 2412 2401
+	| ?00 2344 2147 p46 > }
+{{}
+"     Deo  quia non mentior "
+[ TOU QEOU hOTI OU YEUDOMAI
+| TOU.QU/KU |*0L hOTI/quia /quoniam ]
+	< 00 $G $0 $T 2138 1881 Chrys pesh
+	| 01 $L
+	| 02 Ambst
+	| 10 33 $X
+	| ?? 0261 > }
+
+@ Ga1:21
+=- $? C ;
+=+ $? p51 0261 ;
+{{}
+" deinde veni  in     partes "
+[ EPEITA HLQON EIS TA KLIMATA
+| EPEITA/hOTI | HLQ)WN | EIS/EPI
+| T)O.KLIM)A | KLH(MATA |*0L KLIM./partes /regionem ]
+	< 000000 $G $0 1735:1 $T 2401:1 $X 1881 Chrys
+	| 000001 $L
+	| 000010 A K L 075 69 88 104 330 910 1175 1245 1735:0 1836 1874 2401:0 1243 2147
+	| 000102 Ambst
+	| 001000 460 618 1270 1738
+	| 010010 2464
+	| 0?0000 2344
+	| 100000 440
+	| 100010 1315
+	| ?00??? p46 > }
+{{}
+"      Syriae et       Ciliciae "
+[ THS1 SURIAS KAI THS2 KILIKIAS
+| -THS1...KAI | -THS1 | -KAI..KILIKIAS | -KAI | -THS2 ]
+	< 00000 $G $0 01:1 $T $X Chrys
+	| 00001 01:0 075 330 547 2400 33 1881
+	| 001?? 460 1836
+	| 00??? p46 2344
+	| 01001 1505 1611 2495
+	| 0?00? $L hark
+	| 0?01? Ambst
+	| 1?000 1734 > }
+
+@ Ga1:22
+=+ $? p46 ;
+{{}
+" eram autem ignotus "
+[ HMHN DE AGNOOUMENOS
+| HM(EN | DE/GAR -DE | hA+/AGN. ]
+	< 000 $G $0 $T $X 1881 $L
+	| 001 876
+	| 010 Chrys
+	| 020 pesh
+	| 100 F 440 > }
+=- $? I ;
+{{}
+"     facie          ecclesiis      judaeae  quae  in Christo "
+[ TWi PROSWPWi TAIS1 EKKLHSIAIS THS IOUDAIAS TAIS2 EN XRISTWi
+| EN+/TWi.PROSWP. | -TWi | PROSWPWi/PROSW | TAIS1/THS | EKKLHSI)AS
+| -T.EN.XW | TAIS2/THS |*0L TAIS2/+erant /+sunt |*0L erant~EN.XW EN.XW~sunt ]
+	< 000000000 $G $0 $T 517:1 B:1 D:2 $X 1881
+	| 000000100 D:0 D:1 K 205 330 460 1241s 1242 1505 2495 517:0 1611
+	| 000001??? Chrys
+	| 000010000 B:0
+	| 000100100 1836
+	| 000110100 1243
+	| 000?00100 2344
+	| 001000000 1780
+	| 010000000 F G
+	| 010000100 796
+	| 0?0000000 I
+	| 0?0000011 $L
+	| 0?0000021 d MVict
+	| 0?0001??? Ambst
+	| 100000000 440
+	| 100000100 618 1738
+	| 1?0010022 b > }
+
+@ Ga1:23
+{{}
+" tantum autem audientes erant "
+[  MONON DE    AKOUONTES HSAN
+|*0L MONON/tantum /solum |*0L DE/autem DE/modo DE/sed='l'~
+| AKOU)SA(NTES=auditum.habebant AK.HSAN/HKOUON=audiebant | EI(SAN ]
+	< 0000 $G $0 $T $X 1881 F 2344 1175 1241s 614 I Chrys
+	| 0001 2147 2464
+	| 0010 440 1315 2892
+	| 00?? 33
+	| 0300 pesh
+	| 1100 d
+	| 1110 $L
+	| 1220 MVict
+	| 1310 b
+	| 2220 Ambst > }
+{{}
+" quoniam qui persequebatur nos aliquando "
+[    hOTI hO       DIWKWN hHMAS POTE 
+|*0L hOTI/quoniam /quia /quod.id | -hO | hO)S |*1P POTE~DIWKWN.hHMAS
+| hO)I.DIWK)ONTES | DIWK)ON | E(DIWK)EN | hU(MAS ]
+	< 00000000 $G $0 $T $X 1881 2147 440 1315 33 Chrys
+	| 00000001 F
+	| 0000000? 2344
+	| 00000100 460 618 1874 2400 1243 2464
+	| 00000101 1175
+	| 00010000 pesh
+	| 00100010 1241s
+	| 01?00000 614
+	| 1??00000 $L
+	| 2??00000 Ambst b
+	| 2??01000 d
+	| 3??00000 MVict
+	| ???????0 I > }
+=- $? p46 ;
+{{}
+" nunc evangelizat      fidem quam aliquando expugnabat "
+[ NUN EUAGGELIZETAI THN PISTIN HN       POTE EPORQEI
+|*0L EUAGG./evangeliza- /praedica- /annuntia- | EUAGGELIZ)ON(TAI
+|*0e EUAGGELIZET)E | -THN | PIST)HN | -POTE
+| EPORQEI/EPOLEM(EI EPORQEI/KARESKAPTE EPORQEI/EDIWKEN | EPORQ)H ]
+	< 00000000 $G $0 1739:0 D:1 D:2 $T 1022:0 1881 1505 1611 2138 2495 pesh
+	| 00000001 L P 075 6 104 330 460 618 1175 1646 1735 1738 1837 2400 1022:1 Chrys 2892
+	| 00000010 F G
+	| 00000020 1739:1
+	| 00000030 $X
+	| 000000?0 hark
+	| 00000100 2815 2464
+	| 00000??? 2344
+	| 00001001 2125
+	| 00010000 614 999 2412 2401
+	| 00010001 1315
+	| 00100000 A 1352 D:0
+	| 00101000 2147
+	| 00101001 1243
+	| 100?0010 $L
+	| 200?0010 Ambst
+	| 300?0010 b
+	| 310?0010 d
+	| ????00?? I
+	| ??????1? $I > }
+
+@ Ga1:24
+{{}
+"  et clarificabant in me       Deum "
+[ KAI      EDOCAZON EN EMOI TON QEON
+| EDOCAZ)WN |*0L EDOC./clarifica- /magnifica- | EN.EMOI~EDOC.
+| TON.QN+/EN.EMOI | -T.QN ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00010 1780
+	| 00011 1505 1611 2495
+	| 00100 D F G
+	| 01100 $L
+	| 02100 Ambst b d MVict
+	| 10000 2464 > }
+
+@ Ga2:1
+=+ $? I ;
+{{}
+" deinde post quattuordecim annos iterum ascendit "
+[ EPEITA  DIA  DEKATESSARWN ETWN   PALIN ANEBHN
+| ETWN~DEK. | *(TESSARWN | -PALIN | ANEB.~PALIN PALIN/+DE~EP.DIA.DEK.ETWN
+| AN)HLQON | ANEB)H ]
+	< 000000 $G $0 33:1 $T $X 1881
+	| 000001 33:0
+	| 000010 C
+	| 000100 D F G d
+	| 000200 pesh
+	| 001?00 075 Chrys
+	| 001?0? Ir
+	| 00??00 Marc
+	| 010000 1241s
+	| 100000 $L
+	| 100100 b
+	| 101?00 Ambst
+	| ??00?? $I sa
+	| ??01?? ar g
+	| ??1??? bo
+	| ?????? I > }
+{{}
+" in  Hierosolymam cum Barnaba assumpto      et Tito "
+[ EIS hIEROSOLUMA META BARNABA SUMPARALABWN KAI TITON
+|*0L -EIS | BARNAB)AS BARNAB)AN | KAI~SUMP. | *(PARALABWN ]
+	< 0000 $G $0 $T $X 1881 Chrys
+	| 0010 pesh
+	| 0001 1734
+	| 0100 p46
+	| 0200 460 618 1738
+	| 1000 $L
+	| 1010 MVict
+	| ???? 2344 Ir > }
+
+@ Ga2:2
+=+ $? P ; " lac. 2:2-5 "
+{{}
+" ascendi autem secundum revelationem et contuli cum illis "
+[  ANEBHN DE        KATA APOKALUYIN  KAI ANEQEMHN AUTOIS
+| KAI+/ANEB. | ANEB)H | ANE)BALO(MHN=exposui | -AUTOIS ]
+	< 0000 $G $0 $T $X 1881 $L Chrys
+	| 0001 Ps
+	| 0010 F G Ambst b MVict
+	| 00?0 P
+	| 0100 330
+	| 0?00 Ir
+	| 1000 489 > }
+{{}
+"  evangelium quod praedico in gentibus "
+[ TO EUAGGELION hO KHRUSSW EN TOIS EQNESIN
+| hO/hWi | KURUSS)WN | -EN |*0L EN/EIS.T)A.EQN)H=inter.gentes ]
+	< 0000 $G $0 $T $X 1881 Ir 131 223 2412 $L Chrys
+	| 0001 b d MVict
+	| 0010 Ambst
+	| 0110 1836
+	| 1000 2464
+	| ?000 2344 > }
+{{}
+" seorsum autem his qui videbantur "
+[ KAT IDIAN DE   TOIS    DOKOUSIN
+| -KAT...DOKOUSIN | T.DOK.~KAT.ID. |*0L KAT.IDIAN/seorsum /secreto | -DE
+| KAI+/ID. | DOK./+TI.EINAI=aliquid.esse sibi.aliquid+/DOK. firmamenta+/DOK. ]
+	< 000000 $G $0 $T $X 1881 1836 2464 Chrys
+	| 000010 131
+	| 000100 223
+	| 000??? 2344
+	| 001000 $L
+	| 001001 f
+	| 001003 MVict
+	| 002000 b d
+	| 002002 Ambst
+	| 010100 pesh
+	| 1????? 2412
+	| ?????? Ir > }
+{{}
+" ne forte in vacuum currerem aut cucurrissem "
+[ MH PWS  EIS KENON     TREXW  H  EDRAMON
+| PWS/POTE | KAI(NON | EDR.~TREX. ]
+	< 000 $G $0 $T Marc 1505 1611 2138 2495 1881 $L Chrys
+	| 001 $X
+	| 00? hark pesh
+	| 010 A 69 1646 F G 1735
+	| 100 1319 > }
+
+@ Ga2:3
+{{}
+" sed neque "
+[ ALL OUDE |*1P -ALL | OUDE/OUTE ]
+	< 00 $G $0 $T Marc Epiph $X 1881 Chrys
+	| 01 F G
+	| 0? $L
+	| 10 pesh > }
+{{}
+" titus qui mecum erat cum esset gentilis compulsus est circumcidi "
+[ TITOS hO SUN EMOI       hELLHN WN           HNAGKASQH PERITMHQHNAI
+| -hO...EMOI | -hO | SUN/EN | WN/hON WN/hOS WN/Wi
+|*0L WN/cum.esset~ WN/- |*0L hELLHN/gentilis /graecus | OU+/HNAGK.
+| HNAGKASQ)HN |*0L HNAGK./compulsus.est /coactus | PERIT)N(HQHNAI ]
+	< 0000000000 $G $0 $T 1022:1 Marc Epiph $X 1881 D:1 D:2 Chrys
+	| 0000000001 D:0
+	| 0000000100 1245 1837 2125 1022:0 1960 1780
+	| 0000110010 $L
+	| 0000120010 b
+	| 0000120020 d
+	| 0000121010 Ambst
+	| 0000220010 MVict
+	| 0001000000 330
+	| 0002000000 2400
+	| 0003000000 1175
+	| 0010000000 1319
+	| 0100000000 B
+	| 1??0000000 p46 > }
+
+@ Ga2:4
+{{}
+" propter autem subintroductos falso fratres qui subintroierunt "
+[ DIA DE TOUS PAREISAKTOUS YEUDADELFOUS hOITINES PAREISHLQON
+| -DE | DE/ALLA~ T.PAR.~DE |*0L PAREISAKTOUS/subintroductos /subinductos 
+| hH(TINES | hOI)* | *(HLQON | PARHSHLQ)WN
+|*0L PAREISHLQON/subintroierunt /subintraverunt /introierunt ]
+	< 00000000 $G $0 1739 $T Epiph $X 1881 Chrys
+	| 00000010 2464
+	| 00000100 2400
+	| 00001000 796
+	| 00010000 1241s
+	| 0020?002 Ambst
+	| 0110?001 $L
+	| 0120?002 MVict
+	| 0210?001 d
+	| 0210?003 b
+	| 1?000000 Marc
+	| 1?10?001 f > }
+{{}
+" explorare        libertatem nostram quam habemus in Christo Jesu "
+[ KATASKOPHSAI THN ELEUQERIAN hHMWN    hHN EXOMEN  EN XRISTWi IHSOU
+|*0L KATASK./explorare /auscultare |*1P -hHMWN
+| EX)WMEN | TWi+/XW | -IU |*1P IU~XW | IU/+TW.KW ]
+	< 0000000 $G $0 p46:1 $T $X 1881 Chrys
+	| 0000001 1780
+	| 00001?0 Marc Epiph
+	| 0001000 p46:0
+	| 0010000 2147 88 460 618 1175 1352 1646 1735 1827 1874 1270 1243
+	| 0100010 pesh
+	| 100?000 $L
+	| 200?1?0 MVict > }
+{{} " Swanson differs from ANTT for 1505,1611 @ hHMAS "
+"   ut nos   in servitutem redigerunt "
+[ hINA hHMAS KATADOULWSOUSIN
+| -hINA...KATADOUL. | hINA/+MH | hU(MAS | hHM)WN
+| KATADOULWS)W(SIN | KATADOULWSO)NTAI
+|*0L KATAD./in.servitutem.redigerunt /in.servitute.red. /in.serv.subicerunt ]
+	< 0000000 B:0 01 A C D 1241s 1837 $0 $X Marc
+	| 0000010 1243 1874 L 1 104 614 1319 1424 1646 1836 2412 2464 223
+	| 0000100 p46 33 1739 1881 B:1
+	| 0000101 $L
+	| 0000102 b
+	| 0000103 Ambst
+	| 0000110 $G $T 1780 2892 2138
+	| 0000??0 hark pesh
+	| 0000??? 2344
+	| 0001110 2400
+	| 0010110 2495 1611 1505
+	| 0100100 F G
+	| 1?????? 88 Epiph Chrys > }
+
+@ Ga2:5
+=- $? r ;
+{{}
+" quibus neque ad horam "
+[  hOIS OUDE PROS hWRAN
+| -hOIS.OUDE | -hOIS |*0L OUDE/neque /nec ]
+	< 000 $G $0 D:1 D:2 $T 1881 $I sa bo Epiph $X Chrys
+	| 001 $L
+	| 010 Marc pesh
+	| 002 f r
+	| 1?? D:0 Ir Ambst b d MVict > }
+=- $? P ; " lac. 2:2-5 "
+{{}
+" cessimus    subjectioni "
+[ EICAMEN THi hUPOTAGHi
+| HC(AMEN | EICA)MHN | EIC./+THi.PARAKLHSEIS | -THi.hUPOT. | EPI(TAGHi ]
+	< 00000 $G $0 $T Marc Epiph $X 1881 $L Chrys
+	| 00001 547
+	| 0001? p46
+	| 00100 1836
+	| 01000 2400
+	| 10000 K 075 999 1243 1424 1646 2464 1315 1874
+	| ??000 Ir
+	| ???00 2147 P > }
+{{}
+" ut      veritas     evangelii  permaneat "
+[ hINA hH ALHQEIA TOU EUAGGELIOU DIAMEINHi
+| ALL+/hINA | EUAGG./QU | *(MEINEI
+|*0i DIAM)H(NEI DIAM)I(NEI | DIAM)E(NHi | DIAMEIN)EI ]
+	< 000000 $G $0 D:1 D:2 $T 547 K 075 999 1243 1424 1646 $X 1881 Chrys
+	| 000001 88 489 614 927 2412
+	| 000010 F G A C 056 1 2400 $L 1780
+	| 000011 330
+	| 000101 2464
+	| 000200 D:0
+	| 000201 1315
+	| 000??? Ir
+	| 001001 1836
+	| 001101 1982
+	| 010000 104 p46
+	| 0????? 2147
+	| 100000 1874
+	| ?00000 2344
+	| ?00??? P > }
+{{}
+" apud vos "
+[ PROS hUMAS |*0L PROS/apud /ad | hH(MAS ]
+	< 00 $G $0 69:1 1646:1 $T Ir $X 1881 Chrys
+	| 01 69:0 1319 1646:0
+	| 10 $L
+	| 20 r
+	| ?? P 2344 > }
+
+@ Ga2:6
+{{}
+" ab his autem qui videbantur esse aliquid "
+[ APO       DE TWN DOKOUNTWN EINAI TI
+| ADELFOI+/APO |*0L APO/ab /de /ad | -DE
+|*0L DOK./vide- /aestima- |*0L DOK./-bantur /-ntur | TI~EINAI ]
+	< 000000 $G $0 $T $X 1881 1243 Chrys
+	| 001000 33
+	| 010110 $L
+	| 010120 b MVict
+	| 010210 Ambst
+	| 100000 1799
+	| 020120 r
+	| 030120 d
+	| ?????? 2344 > }
+{{}
+" quales aliquando fuerint nihil mea interest "
+[ hOPOIOI     POTE HSAN    OUDEN MOI DIAFEREI
+| POTE/TE | EI(SAN |*0L HSAN/fuerint /fuerunt |*0L MOI/meam.conscientiam ]
+	< 0000 $G $0 $T $X 1881 33 1799 2344 Chrys
+	| 0010 $L
+	| 0011 f
+	| 0020 d
+	| 0100 1646
+	| 1000 1243 > }
+{{}
+" personam      Deus hominis non accipit "
+[ PROSWPON (hO) QEOS ANQRWPOU OU LAMBANEI 
+| PROS./+DE /+GAR | -hO | hO.QS~PROS. |*0L PROS./personam /faciem
+| -ANOU | (hO.QS)ANOU~PROSWP. | ANOU~hO.QS |*0L LAMBANEI/ELABEN=accepit ]
+	< 00000000 330 01 A P 88 104 796 1241s 1270 1319 1573 1827 1874:1 1243 p46 33 1175 2400 $0 $X
+	| 00000010 Ps Chrys
+	| 01000000 $G 1874:0 $T 1505 1611 2138 2495 1881 D:1 1646 1780
+	| 01000010 69 614 2412 2344 2892
+	| 01100100 F G D:0 D:2
+	| 0?000000 hark
+	| 0?110000 $L
+	| 0?110001 b
+	| 0?110100 d
+	| 0?111??0 Ambst
+	| 0?120100 MVict
+	| 10000000 056 1734
+	| 20100000 pesh
+	| ???????? 2147 > }
+{{}
+" mihi enim qui videbantur nihil contulerunt "
+[ EMOI GAR  hOI DOKOUNTES OUDEN PROSANEQENTO
+|*1P PROSAN.~EMOI | GAR/DE | -hOI.DOK.
+| hOI.DOK./OIKODOKOUNTES | (OIKODO)MOUNTES
+|*0L DOK./vide- /existima- |*0L DOK./-bantur /-ntur
+| DOK./+TI.EINAI | DOK./+TI.EINAI :EINAI~TI :-TI :TI~DOK.EINAI
+| PRO)*(ANEQENTO | PROS)*(EQENTO=apposuerunt | PROSAN)*(QENTO ]
+	< 000000000000 $G $0 $T $X 1881 Chrys
+	| 000000000010 1836
+	| 000000000100 1780
+	| 000000000??? 2344
+	| 000000011001 F G
+	| 000001100000 $L
+	| 000001111000 f
+	| 000001200010 r
+	| 000001212000 b
+	| 000001213000 d
+	| 000002111000 Ambst
+	| 000002214000 MVict
+	| 000100000000 618 1352
+	| 000110000000 1738
+	| 111??????000 pesh
+	| ??????????00 2147 > }
+
+@ Ga2:7
+{{}
+" sed  e contra   cum vidissent quod creditum est mihi "
+[ ALLA TOUNANTION       IDONTES hOTI PEPISTEUMAI 
+| ALLA/+KAI | TOUP(ANTION |*0L TOUN./e.contra /contra /contrario /magis.contra
+| EIDO(TES |*0L hOTI/quod /quia /quoniam
+| PEPISTEU)T(AI |*0e PEPISTEUM)E | PEPIST./+MOI ]
+	< 00000000 $G $0 056:1 $T 2138 1881 Chrys D:1 D:2
+	| 00000010 D:0 2892
+	| 00000100 056:0
+	| 00000101 G
+	| 00010000 p46 33 330 618 1315 1738 1836 2400 69 1245 C 1780
+	| 00010010 2464
+	| 000????? P
+	| 001?11?1 $L
+	| 001?21?1 Ambst
+	| 002?11?1 d f
+	| 002?21?1 b
+	| 003?21?1 r
+	| 004?31?1 MVict
+	| 01000101 F
+	| 10000000 $X
+	| ?00????? 2344
+	| ?????000 2147 > }
+{{}
+"    evangelium      praeputii   sicut Petro  circumcisionis "
+[ TO EUAGGELION THS1 AKROBUSTIAS KAQWS PETROS THS2 PERITOMHS
+| -KAQWS...PERIT. |*0w KAQ)OS |*1P KAQ./+PEPISTEUTAI='thymn
+| PETR)O | -THS2 ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 0000? $L
+	| 00011 F
+	| 00100 pesh
+	| 01000 460 2464
+	| 0?000 2344
+	| 1???? K > }
+
+@ Ga2:8
+{{}
+" qui enim operatus est Petro  in apostolatum    circumcisionis "
+[  hO GAR  ENERGHSAS    PETRWi EIS APOSTOLHN THS PERITOMHS 
+| -hO...PERITOMHS | -GAR | SUN(ERGHSAS | PETROS/KHFAS
+| PETR.~ENERG. | TWi+/PETR. | PETR)ON | THN+/APOST. | -THS | -PERITOMHS ]
+	< 0000000000 $G $0 01:1 $T Chrys 1780:1 2138
+	| 0000000001 1780:0
+	| 0000000100 $X 1881
+	| 0000000110 440
+	| 0000000?00 hark
+	| 0000001000 L 2401
+	| 0000010000 2147
+	| 00000?0??0 $L
+	| 0001000?00 pesh
+	| 0010100000 1735
+	| 01000?0??0 MVict
+	| 0??????000 2344
+	| 1????????? 1241s F G 01:0 1022 f
+	| ????????00 I > }
+{{}
+" operatus est et mihi inter gentes "
+[ ENHRGHSEN   KAI EMOI EIS TA EQNH
+| EN)E(RGHSEN | -KAI | K)A(MOI | *(MOI | EN+/EMOI
+|*0L EIS/PROS=ad EIS/EN.T)OIS.EQN)ESIN | EQN)HN
+|*1P EIS.T.EQNH/EIS.THN.APOSTOLHN.TWN.EQNWN=b$lyxwt'.d`mm': ]
+	< 00000000 $G $0 D:2 01:1 $T 2138 440 2147 01:0 1022 Chrys
+	| 00001000 999 $X 1881
+	| 0000?000 hark
+	| 0000?001 pesh
+	| 00010010 F:1
+	| 00100000 223 1799 104 A C P 33 1175 075 69 88 330 489 927 1573 1241s G 2892
+	| 00100010 F:0
+	| 00??0000 $L
+	| 00??0200 b r
+	| 00??1100 Ambst
+	| 01??0200 MVict
+	| 0????000 I
+	| 10000000 910 1424
+	| 10100000 p46 D:0 D:1 1837 1319 1448 2400
+	| ?????000 2344 > }
+
+@ Ga2:9
+{{} " GNONTES = aor. part.; GNWNTES = Byz. pres. part. (TLG) "
+" et cum cognovissent gratiam quae data est mihi "
+[ KAI    GNONTES     THN XARIN THN DOQEISAN MOI
+| -KAI | GN)W(NTES |*0L GNONTES/cum.cognovissent /-visset /scientes /cognita
+| -THN.XARIN | XAR./+TOU.QU /+TOU.KU | MOI/+EIS.TA.EQNH ]
+	< 000000 $G $0 $T 1505 1611 2495 2138 1881 pesh
+	| 000001 075 489 927
+	| 000010 $X
+	| 0000?? I
+	| 000100 1836:1
+	| 001000 $L
+	| 002000 d
+	| 004000 MVict
+	| 010000 K 88 330 1175 1646 2400 460 618 1315 1424 1738 1874 2464 1799 2892
+	| 010100 1836:0
+	| 013010 Ambst
+	| 100020 Chrys >}
+
+{{}
+" Jacobus et Cephas et Johannes "
+[ IAKWBOS KAI KHFAS KAI IWANNHS
+| -IAK.KAI | -KAI.KHFAS | KHF.~IAK. IWAN.~KHF. | KHFAS/PETROS ]
+	< 0000 $G $0 I $T 1881 bo sa $X $L Chrys
+	| 0001 p46 r
+	| 0011 D F G ar g Marc Ambst b d f
+	| 0020 Epiph
+	| 01?? A
+	| 0??? P 2344
+	| 1001 MVict > }
+{{}
+" qui videbantur columnae esse "
+[ hOI DOKOUNTES   STULOI EINAI
+| DOK)OUN | STULOI/TULOI |*1P EINAI~STULOI ]
+	< 000 $G $0 I F:2 $T Epiph $X 1881 $L Chrys
+	| 001 pesh
+	| 010 F:0
+	| 0?? p46
+	| 100 460
+	| ??? P > }
+{{}
+" dextras dederunt mihi et Barnabae societatis "
+[  DECIAS EDWKAN  EMOI KAI BARNABAi KOINWNIAS
+| EMOI~EDOKAN KOIN.~ED.EM.K.BARN | EMOI/MOI
+| TE+/KAI | KAI/hINA=ut | BARNAB)AS ]
+	< 00000 $G $0 1319 $T 2138 2464 D 1611 A C 075 1 6 88 104 205 209 226 323 330 440 547 796 945 1241s 1245 1315 1505 1734 1739 1837 2400:1 2495 2344 223 1022 1799 1960 $X 1881 p46 2400:0 1827 I Chrys
+	| 00001 2892
+	| 00100 Epiph
+	| 01000 F G
+	| 0?000 $L
+	| 0?010 d
+	| 1?000 b
+	| 20000 pesh
+	| ????? Marc P > }
+{{}
+"   ut nos     in gentes ipsi autem in circumcisionem "
+[ hINA hHMEIS EIS TA EQNH AUTOI DE EIS THN PERITOMHN 
+| KAI+/hHM. | -hHMEIS | hHM./+MEN |*1P -DE
+|*0L DE/autem /vero |*0L EIS.T.EQ/in.gentes /inter.gentes /in.gentibus ]
+	< 000000 $G $0 01:0 1319 $T 2138 F G Chrys
+	| 000011 $L
+	| 000012 f
+	| 000013 MVict
+	| 000021 Ambst
+	| 0001?0 pesh
+	| 001000 2464 D 1611 01:1 A C 075 1 6 88 104 205 209 226 323 330 440 547 796 945 1241s 1245 1315 1505 1734 1739 1837 2400:1 2495 2344 223 1022 1799 1960 $X 1881 2892
+	| 001011 r
+	| 00???0 p46
+	| 011000 2400:0
+	| 0???00 Marc
+	| 100000 1827
+	| ?????? I Epiph P > }
+
+@ Ga2:10
+=+ $? p46 ;
+{{}
+" tantum  pauperum  ut  memores essemus "
+[ MONON TWN PTWXWN hINA MNHMONEUWMEN
+| MON)W(N | MON./+DE |*0L MONON/tantum /tantummodo
+| hINA~T.PTWX. | T)ON.PTWX)ON |*0L PTWXWN/pauperum /inopum..pauperum
+| MNHMONEU)S(WMEN | MNHMONEU)O(MEN ]
+	< 00000000 $G $0 $T 2401:1 2344 Marc 1505 1611 2138 2495 1881 Chrys
+	| 00000001 88 104 209 460 618 1175 1315 1735 1836 1874 2464 2401:0
+	| 00000010 1837
+	| 00001001 1243
+	| 00010000 F G $X
+	| 00010001 D
+	| 00110100 $L
+	| 00110200 Ambst
+	| 00210100 MVict
+	| 01000000 796 876
+	| 10000000 489 1241s
+	| ??????01 P > }
+{{}
+" quod etiam sollicitus fui hoc ipsum facere "
+[   hO KAI   ESPOUDASA     AUTO TOUTO POIHSAI
+| hO/hOTE -hO |*0L KAI/GAR=enim /etiam /et
+|*0L ESP./sollicitus.fui /sollicite.curavi /studui
+| KAI+/AUTO | EIS+/AUTO | -AUTO | AUT)Wi |*0L TOUTO/ipsum /ipsud ]
+	< 00000000 $G $0 $T $X 1881 Chrys
+	| 00000010 2147 2464
+	| 00001000 330 2400
+	| 000????? 2344
+	| 01100002 d
+	| 02100001 $L
+	| 02100002 b
+	| 02110001 MVict
+	| 03100002 r
+	| 03200001 Ambst
+	| 100001?0 1505 2495
+	| 20000000 pesh
+	| ???????? P > }
+
+@ Ga2:11
+{{}
+" cum autem venisset Cephas    Antiochiam "
+[ hOTE DE      HLQEN KHFAS EIS ANTIOXEIAN
+| ADELFOI+/hOTE | hOTE/hO | -KHFAS | KHFAS/PETROS
+| -EIS.ANTIOX. |*0L -EIS ]
+	< 000000 B A Ps 33 1739 01 1175 C 104 1573:0 1241s $0 1881 pesh
+	| 000001 $L b
+	| 000010 1319
+	| 000100 $G 1573:1 $T $X MVict Chrys 1780 2892
+	| 000101 Ambst d f r
+	| 010100 1837
+	| 100100 1799
+	| ??0000 P
+	| ??01?? $I > }
+
+{{}
+"   in faciem      ei restiti  quia reprehensibilis erat "
+[ KATA PROSWPON AUTWi ANTESTHN hOTI   KATEGNWSMENOS HN
+| AUT)O AUT)OU AUT)WN |*0L AUTWi/ei /illi |*0L hOTI/quia /quoniam
+| ANTEST)H |*0i ANTEST)IN |*0L KATEGN./reprehensibilis /-hensus ]
+	< 000000 $G $0 $T Marc $X 1881 Chrys
+	| 000010 330 1646 1735
+	| 000100 075
+	| 000??0 P 2344
+	| 011001 $L
+	| 021002 Ambst b d r
+	| 022002 MVict
+	| 100010 1874
+	| 200010 2464
+	| 300000 1245 1573 > }
+
+@ Ga2:12
+{{}
+" prius  enim quam venissent quidam ab Jacobo "
+[ PRO TOU GAR         ELQEIN TINAS APO IAKWBOU
+| PRO.TOU/PRWTOU | -GAR | GAR~TOU | GAR/DE |*0L ELQ./ERXESQAI=venire(nt)
+| TIN)A | TINAS/+EN |*0L APO/PROS,IAKWB)ON=ad.jacobum ]
+	< 00000000 $G $0 $T $X 1881 Ambst d Chrys
+	| 00000010 1319
+	| 00000100 p46
+	| 00001000 $L r:1
+	| 00001001 b
+	| 00011100 r:0
+	| 00100000 69 1242 2423
+	| 00100??0 2344
+	| 01??0000 1243 2815
+	| 10000000 2892
+	| ???????? P > }
+=- $? p46 ;
+{{}
+"  cum  gentibus edebat "
+[ META TWN EQNWN SUNHSQIEN
+| -TWN | SUNHSQI)ON |*0i SUN)I(SQIEN
+|*0L SUN./edebat /conbescebatur /sedebat ]
+	< 0000 $G $0 D:1 D:2 $T $X 1881 1319 B 01 D:0 33 330 F G 2138 1 Chrys
+	| 0010 1243 1315 1837 1874 2464 876
+	| 0100 p46
+	| 0??? 2344
+	| 1000 1827
+	| ?001 $L d:1
+	| ?002 r
+	| ?003 d:0
+	| ?00? $I ar bo sa 
+	| ??1? P > }
+{{}
+" cum autem venissent "
+[ hOTE DE HLQON
+| -hOTE...hEAUTON | HLQ)EN ]
+	< 00 $G $0 D:1 D:2 $T $X 1881 $I ar bo sa $L Chrys
+	| 01 B 01 D:0 33 330 F G 2138 p46 g d
+	| 1? 1
+	| ?? 2344 P > }
+=+ $? 2344 ;
+{{}
+" subtrahebat et segregabat se "
+[ hUPESTELLEN KAI AFWRIZEN hEAUTON 
+| MET(ESTELLEN AP(ESTELLEN SUN(ESTELLEN | _EST)EILE |*0l hUPEST)ELE 
+| -K.AFWR. |*1P hEAUTON~K.AFWR. | hUF(WRIZEN | AF)O(RIZEN | AFWRI)S(EN
+| *(AUTON | hEAUTON~K.AF. |*0L hEAUTON/se /semet.ipsum ]
+	< 00000000000 $G $0 p46:1 $T 1022:1 $X F G Chrys
+	| 00000000100 33 440 460
+	| 00000000?01 $L
+	| 00000000?02 r
+	| 00000000?11 b d
+	| 00000001000 1646
+	| 00000010000 L 1243 1837 1874 1022:0 226 999 1245 1315 1982 2892
+	| 00000010100 1836
+	| 00000100000 614 618 927
+	| 00001000000 pesh
+	| 0001??????1 MVict
+	| 00100000000 p46:0 131 330 2400
+	| 00100010000 1505 2464 1881
+	| 10000010000 2147
+	| 20100000000 2495
+	| 31000000000 1424
+	| ?0000000000 C
+	| ?00?????000 P
+	| ??????????? Marc 1 > }
+{{}
+" timens     eos qui ex circumcision erant "
+[ FOBOUMENOS    TOUS EK PERITOMHS
+|*0L TOUS/eos.qui..erant /eos.qui.erant.. | PERIT./+ONTAS=sunt ]
+	< 00 $G $0 $T $X Marc 1881 Chrys
+	| 01 F G
+	| 10 $L
+	| 11 r
+	| 20 Ambst MVict > }
+
+@ Ga2:13
+{{}
+"   et consenserunt cum illo           ceteri judaei "
+[ KAI1 SUNUPEKRIQHSAN AUTWi (KAI2) hOI LOIPOI IOUDAIOI
+|*0L SUNUP./consenserunt /simulaverunt | SUN)AP(EKRIQHSAN
+|*0L AUTWi/simulationi.ejus~ /cum.illo /simulatae..illi
+| -KAI2 | L)U(POI | IOUD./+PANTES ]
+	< 000000 $G $0 01:2 $T $X Chrys
+	| 000001 01:0
+	| 000010 1874 2892
+	| 000100 B p46 6 1739 1881
+	| 010000 330 1982
+	| 101100 $L
+	| 102000 b d MVict
+	| 103000 r
+	| 202000 Ambst
+	| ???0?? sa
+	| ???1?? ar bo > }
+{{}
+" ita ut et Barnabas duceretur ab eis in illa simulatione "
+[ hWSTE KAI BARNABAS SUNAPHXQH AUTWN      THi hUPOKRISEI
+|*0L hWSTE/ita.ut /ita | -KAI | BARNAB)AN
+| *(APHXQH | SUN)UP(HXQH | SUNAPAXQ)HNAI SUNAPHXQ)HSAN
+| OU+/AUTWN | AUT)OIS | THi.hUPOKR.~AUTWN
+|*0L AUTWN/ab.eis /ab.his /eorum /illorum |*0L EN=in+/T.hUPOKR. ]
+	< 00000000000 $G $0 $T 2138 01:0 Chrys
+	| 00000000100 F G D P Ps 33 69 88 104 440 1175 1270 1315 1573 1837 $X 2892
+	| 00000001000 330
+	| 00000200000 614 2412
+	| 00000200100 1319
+	| 00001000000 2400 01:2
+	| 00001010100 1241s
+	| 00010000000 p46
+	| 00100100000 6 1881
+	| 00101100000 1739 1799
+	| 10000000011 $L
+	| 11000000040 r
+	| 11001000130 Ambst MVict
+	| 20000000021 d > }
+
+@ Ga2:14
+{{}
+" sed cum videssem quod non recte ambularent ad    veritatem     evangelii "
+[ ALL hOTE  EIDON  hOTI OUK ORQOPODOUSIN   PROS THN ALHQEIAN TOU EUAGGELIOU
+|*0i I(DON | EID)EN |*0L hOTI/quod /quia /quoniam
+| ORQOPOD)EI |*0L ORQOP./recte.ambularet /via.incedunt /ingrediuntur
+|*1P PROS/EN.T)Hi.ALHQEI)Ai=b$rrh ]
+	< 000000 $G $0 $T P $X 1881 Chrys
+	| 000001 pesh
+	| 001010 $L
+	| 001030 b d
+	| 001110 f
+	| 002020 Ambst
+	| 002030 r
+	| 003030 MVict
+	| 010000 2400
+	| 100000 A G 1175 1424 1836 1874 2464 F L 69 460 1837 1854
+	| ?????? H > }
+{{}
+" dixi     Cephae coram    omnibus "
+[ EIPON TWi KHFAi EMPROSQEN PANTWN 
+| EIP)WN EIP)EN | -TWi | KHFAi/PETRWi ]
+	< 000 B p46 01 A C H Ps 33 88 1175 1319:1 1573 1739 $0 1881 1319:0 1241s pesh
+	| 001 $G D:2 $T $X 2412 2464 945 205 209 323 796 D:0 D:1 1836 2400 330 1780 2892
+	| 011 1243
+	| 0?0 $L
+	| 0?1 Ambst b d f r MVict
+	| 101 2147
+	| 201 Chrys
+	| ??0 P bo sa
+	| ??1 $I > }
+{{}
+" si tu cum judaeus sit "
+[ EI SU    IOUDAIOS hUPARXWN
+| -EI.SU | -EI | EI.SU.IOUDAIOS/EIS.IOUDAIOUS | SU/SOI | SU/+EI
+|*0L hUPARXWN~IOUD. | hUPARXWN/WN | hUPARX)ON | hUPARX./+EQNH ]
+	< 000000000 B p46 1319:1 1739 $0 1881 $G D:2 $T $X 1243 2147 Chrys
+	| 000000001 2412
+	| 000000010 2464
+	| 000000100 945 205 209 323 796 D:0 D:1
+	| 000000?00 $L
+	| 000001?00 Ambst b d r MVict
+	| 000010000 1319:0
+	| 000100000 1241s
+	| 001?00000 1836
+	| 010000000 2400
+	| 1?0??0000 330
+	| ??0??00?? P
+	| ????????? bo sa $I > }
+=- $? H ;
+{{}
+" gentilier et non judaice  vivis "
+[ EQNIKWS KAI OUXI IOUDAIKWS ZHiS 
+| -KAI...IOUDAIKWS | ZHiS~KAI...IOUDAIKWS | -KAI | -OUXI | OU)K ]
+	< 00000 B 01 H A C 33 69 104 1175 1241s $0 Ps
+	| 00001 1319 F G $L
+	| 0000? $I
+	| 0001? 1573
+	| 00101 1739 6
+	| 00??? P
+	| 01000 D:0 330 2400 1837 2464 075 131 1874:1 2495 K $X
+	| 01001 D:1 D:2 1270 $G 1982:1 $T 1874:0 L 618 1836 1315 460 1243 Chrys 1780 2138
+	| 0101? 205 1827 1982:0 2892 hark pesh
+	| 01101 1799
+	| 1???? p46 1881 Ambst b d MVict
+	| ????? ar sa bo > }
+{{}
+" quomodo gentes      cogis  judaizare "
+[    PWS TA EQNH ANAGKAZEIS IOUDAIZEIN
+| PWS/TI |*0L PWS/quomodo /quemadmodum
+| ANAGK.~T.EQNH | ANAGNAZ)HiS | IOUDAIZEIN/IOUDAIKWS.ZHiN ]
+	< 00000 B 01 H A C 33 69 104 1175 1241s $0 1573 1319 F G 1739 P D 330 2400 1837 2464 1270 p46 1881
+	| 00001 Ps
+	| 00101 pesh
+	| 01000 $L
+	| 01110 Ambst
+	| 02000 r
+	| 0?0?? $I ar sa bo
+	| 10000 6 075 131 1611 1874:1 2495 K $G 1982:1 $T $X 1874:0 205 1827 1982:0 Chrys 1780 2892 hark
+	| 10010 L 618 1836 1315 460 1243 1799 > }
+
+@ Ga2:15
+{{}
+"    nos natura judaei   et non ex gentilibus peccatores "
+[ hHMEIS FUSEI IOUDAIOI KAI OUK EC EQNWN      hAMARTWLOI
+|*1P 'n=EI+/hHMEIS | hHM./+DE /+GAR |*0i FUS)I
+| hAMART.~EC.EQNWN | IOUD./+ONTES ]
+	< 00000 $G $0 D:1 D:2 $T 2138 1881 $L Chrys
+	| 00001 p46
+	| 00100 A D:0 F G H
+	| 01000 $X
+	| 01010 hark
+	| 12000 pesh
+	| ????? P > }
+
+@ Ga2:16
+=+ $I t ;
+{{}
+" scientes autem quod non justificatur homo   ex operibus legis "
+[ EIDOTES     DE hOTI  OU DIKAIOUTAI ANQRWPOS EC    ERGWN NOMOU
+| ADELFOI+/EIDOT. | -DE | DE/OUN |*0L hOTI/quod /quia 
+| EC...NOMOU~DIK.ANOS | ERG)ON ERG)O ]
+	< 000000 B 01 D:0 D:1 H G C F L 075 $0 104 330 1175 1319 1573 1646 1734 1827 2147 2400 2464 2138 Chrys
+	| 000010 1241s
+	| 000100 $L
+	| 000200 Ambst b d f r
+	| 001000 223
+	| 01?000 $G D:2 $T 876 $X 1881 1780
+	| 01?001 1243 1874
+	| 01?002 910
+	| 01?200 MVict
+	| 11?000 P 1799
+	| ?00??? $I
+	| ????00 Marc > }
+{{}
+"   nisi per fidem    Jesu Christi  et nos     in Christo Jesu "
+[ EAN MH DIA PISTEWS IHSOU XRISTOU KAI hHMEIS EIS XRISTON IHSOUN
+| EAN/EI | PIST)ES | XU~IU | EIS/EN.X)W.I)U EIS/DIA=per | -IN | IN~XN ]
+	< 000000 $G $0 $T 2138 b
+	| 000001 H 205 209 1175 1241s 1739 $X p46 1881
+	| 00001? 517 547 1827 2401
+	| 000100 $L
+	| 000200 d
+	| 001000 A
+	| 001001 B:1 33
+	| 00???? Marc
+	| 011001 B:0
+	| 100000 876
+	| 100010 Chrys
+	| ??0?00 $I
+	| ??0?01 ar
+	| ????00 I > }
+{{}
+" credi(di)mus  ut justificemur ex    fide Christi  et non ex operibus legis "
+[ EPISTEUSAMEN hINA DIKAIWQWMEN EK PISTEWS XRISTOU KAI OUK EC    ERGWN NOMOU 
+| EPISTEUSAMEN/EBAPTISQHMEN |*1P EK.PIST.XU~DIK.
+| *(PISTEU)O(MEN | EK/DIA | IU+/XU | XU/+IU | -XU ]
+	< 0000000 $G $0 F:1 $T I 1505 1611 2138 2495 1881 d
+	| 0000001 F:0 G
+	| 0000010 $X hark
+	| 0000100 K
+	| 000???? P
+	| 0010000 $L
+	| 0010001 Ambst b MVict
+	| 0011000 r
+	| 0100000 pesh
+	| 0?????? Chrys
+	| 1000000 1982 > }
+{{}
+" quoniam ex operibus legis non justificabitur omnis caro "
+[ hOTI    EC ERGWN    NOMOU  OU DIKAIWQHSETAI   PASA SARC
+| -hOTI...DIK. | hOTI/DIOTI hOTI/hO=qui | -EC...NOMOU
+| OUK+/EC | OU.DIK.~EC...NOMOU | -OU | DIKAI)OU(TAI
+| SARC~PASA | SARC/+ENWPION.T.QU ]
+	< 000000000 p46 01 A D:0 D:1 F G 104 330 1175 1319 1573 1739 2464 33 $0 $X 1881 B Ambst r MVict
+	| 000000101 b
+	| 00000?000 I
+	| 000010000 6
+	| 000100000 2400
+	| 000101000 1241s
+	| 00??????? $I
+	| 010000000 C D:2 H 69 1837 $L
+	| 01000???? P
+	| 010010000 $G $T 2401:1 1780 2138
+	| 010101000 1799
+	| 011??0000 Ps
+	| 020000000 d
+	| 1??????00 460 618 796 1738 1836 2401:0
+	| ????????? Chrys > }
+
+@ Ga2:17
+{{}
+" si autem quaerentes justificari in Christo inventi sumus "
+[ EI DE     ZHTOUNTES DIKAIWQHNAI EN XRISTWi hEUREQHMEN
+| EI.DE/hOTI.EI=quod.si | EI/hOI EI/hW | EN.XW~DIK.
+| hHU(REQHMEN | hEUREQ)W(MEN ]
+	< 00000 $G $0 $T 1022:1 2401:0 $X 1881 b d r Chrys
+	| 00001 p46 88 Ambst MVict
+	| 00010 1505 1573 1611
+	| 00100 1424
+	| 01000 131 999 1243 1245 2401:1
+	| 02000 1022:0
+	| 10000 $L
+	| ??0?0 I
+	| ??0?? P > }
+{{}
+" et   ipsi peccatores numquid Christus peccati minister est absit "
+[ KAI AUTOI hAMARTWLOI ARA    XRISTOS hAMARTIAS DIAKONOS     MH GENOITO 
+| -K.AUTOI | hOU)TOI | AUTOI/+TOI |*0L ARA/numquid /ergo | KAI=et+/XS
+|*1P y$w`=IS+/XS |*0L DIAK./+ESTIN=est ]
+	< 0000000 $G $0 $T $X 1881 Chrys
+	| 0000010 pesh
+	| 0010000 F G
+	| 00?1000 f
+	| 00?1001 $L
+	| 00?2001 Ambst r
+	| 00?2101 MVict
+	| 0100000 618
+	| 1??2000 d
+	| 1??2001 b
+	| ??????? P > }
+
+@ Ga2:18
+=+ $? H ;
+{{}
+" si enim quae destruxi haec iterum aedifico "
+[ EI GAR    hA KATELUSA TAUTA PALIN OIKODOMW
+| KATEL)OI(SA KATEL)I(SA | -TAUTA | PALIN.OIKOD.~TAUTA PALIN~TAUTA
+|*0L T)OUTO=hoc |*0L PALIN/AUTA=eadem |*0L AN(OIKODOMW=reaedifico ]
+	< 000000 $G $0 $T Marc $X 1881 $L Chrys
+	| 000001 Ambst
+	| 000011 r
+	| 001000 1827
+	| 002000 pesh
+	| 002100 MVict
+	| 01??00 489 927
+	| 100000 1837
+	| 200000 876
+	| ???000 H P > }
+{{}
+" prevaricatorem me constituo "
+[ PARABATHN EMAUTON SUNISTANW
+|*1P SUNIST.~EM.~PARAB. |*0L EMAUTON/EME=me | EMAUT)Wi | SUNIST)HMI ]
+	< 0000 B p46 01 A C D:0 D:1 F G 6 33 1175 1319 1739 1573 2464 $0 $X 1881
+	| 0001 $G $T D:2 1505 1611 2138 2495 Chrys 1780 2892
+	| 000? r hark
+	| 100? pesh
+	| 0011 226
+	| 010? $L
+	| ???? P > }
+
+@ Ga2:19
+{{}
+" ego enim per legem legi mortuus sum "
+[ EGW  GAR DIA NOMOU NOMWi APEQANON
+| NOMOU:bis | -NOMWi ]
+	< 00 $G $0 $T $X 1881 $L Chrys
+	| 01 075 1241s
+	| 10 1319 > }
+{{}
+"   ut Deo vivam Christo confixus sum cruci "
+[ hINA QEWi ZHSW XRISTWi SUNESTAURWMAI
+|*1P -hINA | ZHSW~QW | XW/+DE KAI+/XW | SUNESTAUR)O(MAI
+|*0L SUNEST./confixus.sum.cruci /cruci.confixus.sum /cum..crucifixus.sum ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00001 $L
+	| 00002 d
+	| 00003 MVict
+	| 00010 1
+	| 00100 1837
+	| 00201 b
+	| 01000 1352
+	| 10200 pesh
+	| ??000 P > }
+
+@ Ga2:20
+" vivo autem jam non ego "
+[   ZW DE     OUKETI EGW
+|*1P DE/OUN=wmkyl ]
+	< 0 $G $0 $T $X 1881 Chrys $L
+	| 1 pesh > }
+=+ $? P ; " lac. 2:20b-2:21a "
+{{}
+" vivit vero in me Christus "
+[   ZHi DE EN EMOI XRISTOS 
+| -DE DE/ALLA~ |*0L DE/vero /autem /sed~ | hO+/EN.EMOI=qui.in.me.est
+| hO+/XS | XS~EN.EMOI ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00010 460 1836 1837 F G
+	| 010?0 $L
+	| 010?1 b
+	| 020?0 d r
+	| 1?000 205
+	| 20000 pesh
+	| 231?0 Ambst MVict > }
+{{}
+" quod autem nunc vivo in carne "
+[   hO DE    NUN    ZW EN SARKI 
+|*1P -DE |*0L DE/autem /vero | ZW~NUN | E(ZW | EN/EIS.SARK)A=in.carnem ]
+	< 00000 $G $0 $T $X 1881 01:1 Chrys
+	| 00010 01:0
+	| 00100 1241s
+	| 01000 $L
+	| 01001 d r
+	| 02000 Ambst
+	| 1?000 pesh > }
+{{}
+" in fide vivo         filii     Dei "
+[ EN PISTEI ZW THi TOU hUIOU TOU QEOU 
+| EN/EIS.PIST)IN=in.fidem | -ZW |*1P T.T.UU.T.QU~ZW | THi/TWi
+| -TOU.hUIOU | QU+/KAI.XU :XU.KAI+/QU ]
+	< 000000 $G $0 D:1 D:2 $T $X 1881 $L Chrys
+	| 000010 330
+	| 000011 B D:0 F G:1 p46 G:0 d MVict
+	| 000012 b
+	| 000100 1827
+	| 001000 pesh
+	| 01?000 A
+	| 100000 r
+	| ????00 ar bo sa $I
+	| ????11 g > }
+{{}
+" qui dilexit     me et  tradidit   se ipsum pro  me "
+[ TOU AGAPHSANTOS ME KAI PARADONTOS hEAUTON hUPER EMOU
+|*0L ME~TOU.AGAP. ME~AGAP. | hEAUTON+/ME | -KAI | *(DONTOS | PARAD)OUS
+| hEM(AUTON |*0L hEAUTON/se.ipsum /se /semet.ipsum | EMOU/hHMWN ]
+	< 00000000 $G $0 Ps:0 $T $X 1881 1424:1 G:1
+	| 00000001 1836
+	| 00000010 $L
+	| 00000020 Ambst d
+	| 00000030 f
+	| 00000100 1
+	| 00001000 2400 330
+	| 00010000 Chrys pesh
+	| 00100000 1424:0
+	| 01000000 G:0
+	| 10000000 Ps:1
+	| 20000020 b MVict > }
+
+=- $I t ;
+@ Ga2:21
+{{}
+" non abicio  gratiam     Dei "
+[ OUK AQETW THN XARIN TOU QEOU 
+| ADELFOI+/OUK | hO+/OUK
+| AQET)O |*0L AQETW/abicio /sum.ingratus.-ae /ab.initio /irritam.facio ]
+	< 0000 $G $0 517:1 $T $X 1881 1982 517:0 614 2412 Chrys
+	| 0001 $L
+	| 0002 Ambst MVict
+	| 0003 b
+	| 0004 r
+	| 0010 2464
+	| 0100 88
+	| 0??? p46
+	| 1000 1799 > }
+=- $? P ; " lac. 2:20b-2:21a "
+{{}
+" si enim per legem justitia "
+[ EI GAR  DIA NOMOU DIKAIOSUNH
+| EI/H |*0L GAR/enim /nam~
+| -DIA | DIA/EK | hH+/DIK. | DIK./+ESTIN=est ]
+	< 000000 $G $0 517:1 $T 2138 2464 88 1799 P Chrys
+	| 000010 $X
+	| 0000?0 hark pesh
+	| 0000?? p46
+	| 000100 1881
+	| 001?00 1982
+	| 0100?0 $L
+	| 0200?0 r
+	| 0200?1 MVict
+	| 100000 517:0 614 2412 > }
+{{}
+" ergo Christi gratis mortuus est "
+[  ARA XRISTOS DWREAN APEQANEN
+|*1P -ARA | DWR.~XS | EPA(QANEN ]
+	< 000 $G $0 $T $X 1881 1505 1611 2495 p46 $L Chrys
+	| 001 2464
+	| 010 614 2147 2412 f
+	| 100 pesh > }
+
+@ Ga3:1
+=+ $? p46 ;
+{{}
+" o insensati Galatae quis vos fascinavit "
+[ W   ANOHTOI GALATAI TIS hUMAS EBASKANEN
+|*0L ANOHTOI/insensati /stulti
+| TIS/THS TIS/TI | hH)MAS | EBASK)H(NE EBASK)EI(NE
+| EBASK./+THi.ALHQEIA.MH.PEIQESQAI |*0e +PEISESQAI +...PEIQES)QE ]
+	< 000000 B 01 A D:0 D:1 G 6 33:0 1739 $0 Chrys pesh
+	| 000011 C K Ps 910 $G D:2 33:1 $T 1022:0 $X 1881 1780 2892
+	| 000?11 hark
+	| 000012 1315
+	| 000111 1 056 205 323 489 547 796 927 999 1242 1352 2400 2815 945 440 1243 1505 1611 
+	| 000112 1827 1982
+	| 000211 1022:1
+	| 001011 104 1646:0
+	| 001012 1646:1
+	| 001111 1241s
+	| 010000 F
+	| 020111 2495
+	| 0??000 P
+	| 100000 $L
+	| 200000 r MVict
+	| ????00 $I bo sa > }
+{{}
+" ante quorum oculos Jesus Christus praescriptus est crucifixus "
+[ hOIS KAT OFQALMOUS IHSOUS XRISTOS PROEGRAFH       ESTAURWMENOS
+|*0L hOIS/hWN=quorum |*1P PROEGR.~KAT.OFQ.IS.XS | KAT~h(WN | hOIS/EIS
+| OFQALM)OIS | -IS | XS~IS
+| PROEGRAF)EI | PROEGR./+KAI |*0L PROEGR./praescriptus.est /pro-
+| EN.hUMIN+/EST. | ..hUMIN+/EST. ..hH(MIN+/EST. ]
+	< 000000000000 B 01 A C Ps 33:0 1175 1739 104 1573 $0 1881
+	| 000000000011 $G 33:1 $T $X Chrys 1780 2892
+	| 000000000012 2401
+	| 000000010000 1319 88
+	| 000000010011 1245 2147 1874
+	| 000000010012 1836
+	| 000010000000 1241s
+	| 000100000011 1735
+	| 010000000000 pesh
+	| 100001?00211 Ambst
+	| 101000000100 $L
+	| 101000000211 d
+	| 101000001100 f
+	| 101000100200 r
+	| 101000100211 b
+	| 101000101211 MVict
+	| ?0??000????? P
+	| ??????????00 bo sa
+	| ??????????11 $I > }
+
+@ Ga3:2
+=- $? p46 ;
+{{}
+"   hoc solum volo discere a vobis "
+[ TOUTO MONON QELW MAQEIN AF hUMWN 
+| TOUT)W | MAQ.~QELW AF.hUMWN~MAQ. | MAQ)HN | hH(MWN ]
+	< 0000 $G $0 $T $X 1881 D:1 88 1319 618 1243 Ambst b r MVict Chrys
+	| 0001 1241s
+	| 0010 2464
+	| 0100 D:0 D:2 F G d
+	| 0200 $L
+	| 1000 2400
+	| ???? p46 Epiph P > }
+{{}
+" ex operibus legis  spiritum accepistis an ex auditu fidei "
+[ EC    ERGWN NOMOU TO PNEUMA ELABETE     H EC AKOHS PISTEWS 
+| ERG.NOM/AKOHS.PISTEWS | ERG)ON | hO)MOU |*1P ELAB.~T.PNA
+| -TO |*0e ELABET)AI ELAB)H(SE ]
+	< 000000 $G $0 $T $X 1881 D 2400 Chrys
+	| 000001 88 1241s 2464 F:1 G
+	| 000002 1319
+	| 000011 F:0
+	| 0000?0 $L
+	| 000100 pesh
+	| 001000 p46
+	| 010000 618 1243
+	| 1??00? Epiph
+	| ?????? P > }
+
+@ Ga3:3
+{{}
+" sic stulti estis ut coeperistis cum spiritu nunc carne consummamini "
+[ hOUTWS ANOHTOI ESTE ENARCAMENOI     PNEUMATI NUN SARKI EPITELEISQE 
+| hOUT)W hOUT)OS |*0L ANOHTOI/stulti /sine.intellectu /insensati
+|*0e EST)AI | -ENARC...EPITEL. | PNI~ENARC.
+|*0L ENARC./ut..coeperistis /incipientes /cum.coeperistis
+|*0L PNI/cum.spiritu /spiritu
+| NUN/+DE | -EPIT. | EPITELEI)SQAI |*0L EPITEL./consummamini /perficiamini ]
+	< 00000000000 $G $0 $T $X 330:1 D:1 D:2 1827:1 Chrys
+	| 00000000010 01 33 1175 1827:0 2147 88 1241s 2464 D:0 1881 2892
+	| 00000000100 330:0
+	| 00000001000 1611
+	| 0001??????? K
+	| 00100000000 A 104 1780
+	| 00100000010 F G
+	| 01001110001 $L
+	| 02000220001 Ambst
+	| 03000310002 d
+	| 10000000010 1
+	| 20000000000 1243
+	| ???0000???? P >}
+
+@ Ga3:4
+{{}
+"   tanta passi estis sine causa si tamen sine causa "
+[ TOSAUTA EPAQETE         EIKHi1 EI GE KAI    EIKHi2
+|*1P EIKHi1~EPAQETE |*0e EPAQE)TAI | -EI.GE...EIKHi2 | -KAI ]
+	< 0000 $G $0 $T 2401:1 $X 1881 Chrys
+	| 0001 p46 $L
+	| 001? 2401:0
+	| 0100 1241s 2464 F G
+	| 1000 pesh
+	| ???? P > }
+
+@ Ga3:5
+=+ $? 2892 ; " lac. 3:5-4:2 "
+{{}
+" quid ergo tribuit vobis   spiritum et operatur virtutes in vobis "
+[ hO OUN EPIXORHGWN hUMIN1 TO PNEUMA KAI ENERGWN DUNAMEIS EN hUMIN2
+|*0L EPIX./tribuit /praebet
+| -hUMIN1 | hUMIN1~EPIX. | hH(MIN1 | TO.PNA~hUMIN
+| SUN(ERGWN | DUN.~ENERG. EN.hUM.~DUN. | ENERG)OUN
+| OUXI+/DUN. | DUNAM)IS | hH(MIN2 ]
+	< 00000000000 $G $0 D:1 D:2 $T $X Chrys
+	| 00000000010 01 F G D:0
+	| 00000001000 999 2401
+	| 0000000?000 Ir
+	| 00000020000 pesh
+	| 00000100000 460 618 1738
+	| 00000?????? P
+	| 00001000100 323
+	| 00010000000 1 1241s
+	| 00010000001 33
+	| 01???000000 1881
+	| 10000000000 $L
+	| 10000010000 r
+	| 10100000000 d
+	| 20000000000 Ambst > }
+{{}
+" ex operibus legis an ex auditu fidei "
+[ EC1   ERGWN NOMOU H EC2 AKOHS PISTEWS
+| OUK+/EC1 | ERG)ON | NOM./+TO.PNA.ELABETE | NOM./+ESTIN=est | H/ALL ]
+	< 00000 $G $0 $T Ir $X 1881 $L Chrys
+	| 00010 MVict
+	| 00100 A
+	| 01000 1243
+	| 10001 323
+	| ????? P > }
+
+@ Ga3:6
+=- $? I ;
+{{}
+" sicut Abraham credidit     Deo "
+[ KAQWS ABRAAM EPISTEUSEN TW QEWi
+| KAQ)OS | KAQ./+GEGRAPTAI | KAQ./+KAI | EPIST.~ABR. |*0e EPISTEU)SAI ]
+	< 00000 $G $0 $T $X 1881 $L Chrys
+	| 00001 131 999
+	| 0000? I
+	| 00010 pesh
+	| 00100 223
+	| 01010 F G Ambst b f
+	| 10000 1243
+	| ?000? Ir P >}
+{{}
+" et reputatum est ei ad justitiam "
+[ KAI ELOGISQH AUTWi EIS DIKAIOSUNHN
+|*0L ELOG./reputatum /aestimatum /deputatum |*0L AUTW/ei /illi
+| DIAKAIOSUN)H ]
+	< 000 $G $0 $T $X 1881 Chrys
+	| 001 1573
+	| 110 $L
+	| 120 f
+	| 200 Ambst
+	| 320 r
+	| ??0 Ir > }
+
+@ Ga3:7
+{{}
+" cognoscite ergo quia qui ex fide sunt  hii filii~sunt Abraham "
+[ GINWSKETE   ARA hOTI hOI EK PISTEWS hOUTOI hUIOI EISIN ABRAAM
+| GINWSKE)TAI |*0L GINWSK./cognosc- /intellig- |*0L GINWSK./-ite /-itis 
+| hOTI~ARA |*0L hOTI/quia /quoniam | -hOI | hOUT)I
+| EISIN~hUIOI EISIN.ABR~hUIOI | hOI+/hUIOI ]
+	< 000000000 B p46 2464 Ps 1837 01:0 $0 Chrys
+	| 000000010 $G $T $X 1881 01:2
+	| 000000011 L 205 1242 2495 88 1505
+	| 000000021 209
+	| 000000110 223
+	| 000001000 1241s
+	| 00000?000 P
+	| 000100010 1734
+	| 01101001? $L
+	| 01201001? Ambst b f
+	| 02102001? r
+	| 0??0?000? Ir
+	| 100000010 A F G 489 1319 1780
+	| 12002001? MVict
+	| ???000??? 2344
+	| ???????1? $I
+	| ????????? I > }
+
+@ Ga3:8
+=+ $? P ; " lac. 3:8-21 "
+{{}
+" providens autem scriptura quia ex fide justificat  gentes    Deus "
+[ PROIDOUSA DE     hH GRAFH hOTI EK PISTEWS DIKAIOI TA EQNH hO QEOS
+| ADELFOI+/PROID. | -DE | DE/GAR | DE/+KAI | -hH |*1P hH.GRAFH/hO.QS
+|*1P EK/EN.PIST)EI=bhymnwt' | TA.EQNH~DIK. | QS/XS ]
+	< 000000000 $G $0 $T $X
+	| 000000001 1241s
+	| 000000010 p46 01 69 330 1175
+	| 000010000 131
+	| 0000?0000 Ir $L
+	| 000100000 205
+	| 001000000 1881 Chrys
+	| 001001100 pesh
+	| 01?000000 1243 1646 1891
+	| 100000000 1799
+	| ????????? I 2344 > }
+{{}
+" praenuntiavit       Abrahae quia benedicentur     in te  omnes  gentes "
+[ PROEUHGGELISATO TWi ABRAAM1 hOTI ENEULOGHQHSONTAI EN SOI PANTA TA EQNH
+|*0L PROEUHGG./praenuntiavit /pronuntiavit /praedixit
+| PROEUHGGELIS)TAI | -TWi | TWi/TO | LEGOUSA=dicens+/hOTI
+|*1P ABRAAM1/+hWS.EIPEN.hH.GRAFH.hH.hAGIA='yk.d'mr.ktb'.qdy$'
+| -hOTI...ABRAAM2 | hOTI/+EN.TWi.SPERMATI.SOU | *(EULOGHQHSONTAI
+| -EN.SOI | EN.SOI~ENEUL. ]
+	< 00000000000 $G $0 D:1 D:2 $T $X
+	| 00000000100 F G
+	| 00000000101 Chrys
+	| 0000000???? 2344
+	| 00000010??? 2495
+	| 00000100001 pesh
+	| 00010000000 1837
+	| 001?0000000 1241s
+	| 01000000000 D:0 6
+	| 01000000100 1739
+	| 01000001110 1881
+	| 1???0000?00 $L
+	| 1???1000?00 r
+	| 2???0000?10 d
+	| 3???00????? MVict
+	| ?????000?00 Ir > }
+
+@ Ga3:9
+{{}
+" igitur qui ex fide sunt benedicentur cum     fideli Abraham "
+[  hWSTE hOI EK PISTEWS    EULOGOUNTAI SUN TWi PISTWi ABRAAM2
+|*0L hWSTE/igitur /ergo /ita.ut | hWSTE/+KAI
+|*0L hOI/qui..sunt /qui | EULOG)W(NTAI=benedicantur |*1P ABR.~T.PISTWi ]
+	< 00000 $G $0 $T Ir $X 1881 Chrys
+	| 00001 pesh
+	| 01000 1175
+	| 10100 $L
+	| 20100 MVict
+	| 20200 Ambst
+	| 30110 r
+	| ???00 2344
+	| ????? 2495 > }
+
+@ Ga3:10
+{{}
+" quicumque enim ex operibus legis  sunt sub maledicto sunt "
+[ hOSOI      GAR EC    ERGWN NOMOU EISIN hUPO KATARAN EISIN 
+|*0L hOSOI/quicumque /quotquot | EC/hUPO | -ERGWN | ERG)ON ERG)Wi
+|*1P EISIN~NOMOU ]
+	< 00000 $G $0 $T 2344 $X 1881 Chrys
+	| 00001 pesh
+	| 00010 618 1243
+	| 00020 1 1241s
+	| 011?0 Marc
+	| 10000 $L
+	| 20000 Ambst b d
+	| ????? Epiph > }
+=+ $? MVict ; " MVict lac. 3:10b-19 "
+{{}
+" scriptum est enim      maledictus omnis qui non permanserit "
+[ GEGRAPTAI     GAR hOTI EPIKATARATOS PAS hOS OUK EMMENEI
+| -hOTI | hOTI/TI | -EPIK...EMMENEI | -PAS | PAS/+hO.KREMAMENOS
+|*1P EMM./POIEI | EMMEN)H |*0L EMMENEI/permanserit /permanet ]
+	< 00000000 Ps 33 88 104 330 1319 1573 1739 2400 01:0 1175 $0 $X C B F G D 01:2 A 1611:0 1874:1
+	| 00000001 f
+	| 00000002 d
+	| 00000010 2464
+	| 00000100 pesh
+	| 001000?0 1799
+	| 01000000 p46
+	| 1?000000 69 1241s 1881 6 2344 $G $T 1611:1 2138 460 618 1738 205 209 1780 1874:0
+	| 1?000001 $L
+	| 1?000002 b r
+	| 1?000010 1243 2125 1424:1
+	| 1?001010 1424:0
+	| ??000000 Chrys hark
+	| ??010000 Epiph
+	| ???0???? $I > }
+{{}
+" in omnibus quae scripta sunt "
+[       PASI TOIS GEGRAMMENOIS
+| -PASI | EN+/PASI EPI+/PASI | PASI/+TOUTOIS=his
+| PRO(GEGRAMMENOIS EN(GEGRAMMENOIS ]
+	< 0000 Ps 33 88 104 330 1319 1573 1739 2400 01:0 1175 $0 $X C 2464 p46 69 1241s 1881 Epiph
+	| 0001 6
+	| 0002 B
+	| 000? 2344
+	| 0100 F G D 01:2 A 1799 $G $T 1611:1 2138 1243 2125 1424:1 1424:0 $L Chrys 1780
+	| 0101 460 618 1738
+	| 0110 r
+	| 01?? $I
+	| 0200 205 209
+	| 1??0 1505 1611:0 2495 > }
+{{}
+" in     libro       legis  ut faciat  ea "
+[ EN TWi BIBLIWi TOU NOMOU TOU POIHSAI AUTA
+| -EN |*1P T.BIB.T.NOM./TOIS.NOMOIS | BIBL)Wi | NOM)Wi~BIBLI)OU
+| TOU.NOMOU/TOUTWi | NOM./+TOUTOU |*1P -T.POIH.AUTA | AUT)OUS ]
+	< 00000000 $G $0 $T $X 1881
+	| 00000100 Chrys
+	| 00001001 Epiph
+	| 00010000 Ps
+	| 00100000 p46
+	| 00?00000 $L
+	| 01000010 pesh
+	| 10000000 1241s
+	| ?0000000 2344 > }
+
+@ Ga3:11
+=+ $? 2344 ;
+{{}
+" quoniam autem in lege  nemo justificatur "
+[    hOTI DE    EN NOMWi OUDEIS DIKAIOUTAI
+|*0L hOTI/quoniam /quia /quod | -DE |*1P OUD.DIK.~EN.NOM.
+| EN/EK.NOM)OU | TWi+/NOM. ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00001 1243 2815
+	| 00010 33
+	| 00100 pesh
+	| 01000 1799
+	| 1000? $L
+	| 2000? r
+	| 3000? Ambst > }
+{{}
+" apud     Deum manifestum est "
+[ PARA TWi QEWi DHLON          
+| PARA.T.QW/PANTI.POU | -TWi
+| -DHLON |*0L DHLON/manifestum /manifeste | DHLON/+ESTIN=est ]
+	< 00000 $G $0 $T $X 1881 D:2 2412 2125 2400
+	| 01000 88 1241s 1505 1611 2495 2464 D:0 D:1
+	| 011?? F G
+	| 0?000 hark pesh
+	| 0?010 d
+	| 0?011 $L
+	| 0?020 b
+	| 0?1?? f
+	| 1?000 Chrys
+	| ????? Epiph Marc > }
+{{}
+" quia     justus ex    fide vivit "
+[ hOTI hO DIKAIOS EK PISTEWS ZHSETAI
+| GEGRAPTAI+/hOTI | GAR+/hOTI | -hO.DIK. | -hO | hO/OU ]
+	< 00000 $G $0 $T $X 1881 D:2 88 1241s 1505 2495 1611:1 2464 Chrys
+	| 00001 2412
+	| 0001? 2125 1611:0
+	| 000?0 $L
+	| 001?? 2400
+	| 10000 pesh
+	| 100?0 d
+	| 11000 D:0 D:1 F G
+	| 110?0 f
+	| ??000 Epiph Marc > }
+
+@ Ga3:12
+=+ $? 2423 ;
+{{}
+"   lex autem non est   ex fide "
+[ hO DE NOMOS OUK ESTIN EK PISTEWS | -DE ]
+	< 0 $G $0 $T 2423 $X 1881 $L Chrys
+	| 1 p46
+	| ? Marc >}
+{{}
+" sed qui fecerit ea  vivet   in illis "
+[ ALL hO POIHSAS AUTA ZHSETAI EN AUTOIS
+| AUTA/+ANQRWPOS |*1P AUTA/+GEGRAMMENA.EN.AUTWi=dktybn:.bh |*0e ZHSET)E
+| EN/EP | TOIS+/AUTOIS | AUTOIS/AUTWi |*0L AUTOIS/illis /eis ]
+	< 0000000 B 01 C Ps 6 33 88 104 1175 1573 1739 2815 p46 Marc $0 $X A D:1 Chrys
+	| 0000010 F G
+	| 00000?1 $L
+	| 00000?2 Ambst
+	| 0000100 1319
+	| 0001000 1241s
+	| 0010000 D:0
+	| 0100000 pesh
+	| 0?????? bo sa
+	| 1000000 $G D:2 $T 1505 1611 2138 2495 1881 1780
+	| 1010000 2147
+	| 1?????? ar > }
+
+=+ $I t ;
+@ Ga3:13
+{{}
+" Christus nos  redemit    de   maledicto     legis "
+[ XRISTOS hHMAS ECHGORASEN EK THS KATARAS TOU NOMOU
+| ADELFOI+/XS | XS/+GAR |*1P hHMAS~XS ]
+	< 000 $G $0 $T Ir Epiph $X 1881 $L Chrys G
+	| 001 pesh
+	| 010 1315
+	| 100 1799 > }
+{{}
+" factus      pro nobis maledictum quia scriptum est "
+[ GENOMENOS hUPER hHMWN KATARA     hOTI GEGRAPTAI
+| hU(MWN | -KATARA | -hOTI.GEGR. | -hOTI | GEGR./+GAR /+GAR.hOTI ]
+	< 00000 B C D:0 D:1 33 1175 1837 p46 A 1241s $0 G $L
+	| 00011 $G $T 1505 1611 2138 2495 1881 D:2 Chrys 1780
+	| 00012 $X
+	| 0001? hark pesh
+	| 000?? Ir Epiph
+	| 001?? Marc
+	| 01011 1319
+	| 10000 F >}
+{{}
+" maledictus omnis qui pendet     in ligno "
+[ EPIKATARATOS PAS hO KREMAMENOS EPI CULOU |*0m KREM)M(AMENOS ]
+	< 0 $G $0 $T Marc Ir $X 1881 $L Chrys
+	| 1 618 910 999 1243 1424 1573 2400 876 2401 >}
+
+@ Ga3:14
+=+ $? 075 ;
+{{}
+"   ut in gentibus benedictio    Abrahae fieret  in Christo Jesu "
+[ hINA EIS TA EQNH hH EULOGIA TOU ABRAAM GENHTAI EN XRISTWi IHSOU
+|*0L EQHN/gentibus /gentes
+| -hH.EULOG..IU | -hH | GEN.~hH...ABR. | ABR./QU
+| GENH)SE(TAI |*0e GENHT)E | XW/XU -EN,XW/XU | IU~XW ]
+	< 000000000 $G $0 1874:1 $T $X 1881 C 33 Chrys
+	| 000000001 B
+	| 000000011 01
+	| 000000100 1874:0 2464
+	| 000000?00 A
+	| 000001000 L Ps 1 88 104 209 226 323 330
+	| 0000?0000 p46
+	| 000100000 2147
+	| 000100021 pesh
+	| 001000000 F G
+	| 001010000 1245
+	| 10?000000 $L
+	| 20?000000 d
+	| ?0??????0 $I
+	| ?1??????? Marc > }
+{{}
+" ut pollicitationem       spiritus accipiamus per     fidem "
+[ hINA THN EPAGGELIAN TOU PNEUMATOS    LABWMEN DIA THS PISTEWS
+|*1P hINA/KAI,LAB.~T.EP.T.PNOS | EULOG(IAN
+|*0L EPAGG./pollicitationem /promissionem /annuntiationem
+| PNOS/PATROS PNOS/XU | LAB)O(MEN | LABW)* LABW)SI | -THS ]
+	< 0000000 $G $0 D:2 88:1 $T $X 1881
+	| 0000001 1837
+	| 0000020 Chrys
+	| 0000100 1 460 618 1243 1735 2464 1646
+	| 0000101 1836
+	| 0001000 440
+	| 001000? $L
+	| 002000? Ambst
+	| 003000? r
+	| 01?0000 F D:0 D:1 G 88:0 927 Marc
+	| 01?000? d
+	| 01?0010 489
+	| 01?200? b
+	| 01??000 p46
+	| 1000000 pesh
+	| ?0????? $I bo sa > }
+
+@ Ga3:15
+{{}
+" fratres secundum hominem dico tamen hominis "
+[ ADELFOI    KATA ANQRWPON LEGW hOMWS ANQRWPOU
+| -ADELF. | KATA...LEGW~ADEL. |*1P ANON/OIKON.ANWN | -hOMWS.ANOU ]
+	< 0000 $G $0 $T $X 1881 $L Chrys
+	| 0001 Ps
+	| 0010 pesh
+	| 0100 A 1175
+	| 1?00 1243 1837 > }
+{{}
+" confirmatum testamentum nemo spernit aut superordinat "
+[ KEKURWMENHN   DIAQHKHN OUDEIS AQETEI  H EPIDIATASSETAI
+| DIAQ.~KEKUR. |*0L KEKUR./confirmatum /confirmatum.auctoritate
+| PRO(KEKURWMENHN | KE)KRUMM(ENHN
+| AQET)Hi |*0L AQET./spernit /irritum.facit 
+| *(DIATASSETAI EPI)*(TASSETAI |*1P EPIDIAT./+TI.EN.AUTHi=bh.mdm ]
+	< 00000000 $G $0 D:1 D:2 $T $X 01 1881
+	| 00000010 1827
+	| 00000020 D:0
+	| 00001000 1241s 1735
+	| 00010000 1243
+	| 00100000 C Ps 33 330 2400 Chrys
+	| 01000100 $L
+	| 01000200 b r
+	| 01001200 d
+	| 10000000 hark
+	| 10000001 pesh
+	| 12000200 Ambst
+	| ???????? p46 > }
+
+@ Ga3:16
+=+ $? p46 ;
+{{}
+"        Abrahae dictae sunt promissiones et       semini ejus "
+[ TWi DE ABRAAM ERREQHSAN hAI EPAGGELIAI KAI TWi SPERMATI AUTOU
+| -DE |*1P ERR./EPHGELQHSAN='tmlk | ERR)H(QHSAN | EPAGGEL)EISSAI | KAI/hINA ]
+	< 00000 $0 B:0 01 A Ps 056 1 33 88 104 131 205 330 460 1241s 1243 1245 1836 1874 2125 2400 2815 517 945 1270 1837 1175 2464 223 876 1022 1960 $X D:1
+	| 00100 796 1739 1891 1734 B:1 D:2 K L 6 69 209 226 323 440 489 547 614 618 910 927 999 1242 1315 1319 1352 1424 1448 1573 1646 1735 1738 1854 1982 2412 $T 1827 2147 1881 1780
+	| 00?00 hark
+	| 01?00 pesh
+	| 10000 D:0 C Chrys
+	| 10010 G F
+	| 10??0 $L
+	| 10??1 d
+	| ?00?0 I > }
+{{}
+" non dicit et      seminibus quasi in multis "
+[  OU LEGEI KAI TOIS SPERMASIN hWS EPI POLLWN
+| -OU | LEG)W |*1P LEG./+AUTWi=lh | -KAI
+| *(PERMASIN | SPERM./+SOU SPERM./+AUTOU |*0L hWS/quasi /tamquam ]
+	< 0000000 $G $0 D:2 $T $X 1881
+	| 0000001 $L
+	| 0000002 Ambst b r
+	| 0000010 D:0 D:1
+	| 0000012 d
+	| 0000020 1424 Chrys
+	| 0000100 2464 910 1735
+	| 0001000 614 945 2412
+	| 0010000 pesh
+	| 0100000 33
+	| 1000000 440
+	| ???0000 I
+	| ??????? 0176 > }
+{{}
+" sed quasi in uno   et        semini tuo qui est  Christus "
+[ ALL hWS   EF hENOS KAI TWi SPERMATI SOU hOS ESTIN XRISTOS
+|*0L hWS/quasi /sicut /tamquam | -KAI...SOU |*1P K.T.SP.SOU~hWS.EF.hENOS
+| TWi/TO |*1P -SOU | hOS/hOU hOS/hO hOS/hWS | hO+/XS ]
+	< 0000000 $G $0 D:1 D:2 Ps:1 $T 0176 $X 1881
+	| 0000001 1874
+	| 0000010 F:0 G
+	| 0000020 F:1 D:0 1505 1611 2495 Chrys
+	| 0000030 1243
+	| 00000?0 hark
+	| 0001000 910
+	| 000?000 p46 I
+	| 00101?0 pesh
+	| 01???00 Ps:0
+	| 100?00? $L
+	| 200?00? d
+	| 200?02? Ambst b
+	| 300?02? r > }
+
+@ Ga3:17
+=- $? p46 ;
+=+ $? I ;
+{{}
+" hoc autem dico "
+[ TOUTO DE LEGW | -TOUTO.DE.LEGW | LEG)WN  ]
+	< 00 $G $0 $T $X 1881 $L Chrys
+	| 01 1245
+	| 0? I 075 0176
+	| 1? 796 > }
+=- $? 075 ;
+{{}
+" testamentum confirmatum    a     Deo "
+[ DIAQHKHN PROKEKURWMENHN hUPO TOU QEOU
+| *(KEKURWMENHN | PROKE)KRUM(MENHN | -hUPO..QU | -TOU | QU./+EIS.XN ]
+	< 00000 B p46 01 A C 33 330 1175 1241s $0 2464 Ps
+	| 00001 D 69 1837 1799 $G $T 0176 $X 614 1315 1352 2412 Chrys 1780
+	| 00011 1270 1319 1573 1646 2147:1
+	| 001?1 2147:0
+	| 01001 1735
+	| 10000 6
+	| 10001 F G 1827 876
+	| 10010 1739 1881
+	| 10011 1448
+	| 100?0 $L
+	| 100?1 Ambst d
+	| ????0 t bo sa
+	| ????1 I $I > }
+{{}
+" quae post quadringentos et triginta annos "
+[   hO META   TETRAKOSIA KAI TRIAKONTA ETH
+|*0L hO/quae..est hO/quae | ETH~TETRAK..TRIAK. | -KAI
+| TRIA(KOSIA TRIAKONTA=L/A ]
+	< 0000 2400 B p46 01 A C D 33 1175 1241s 1319 1573 1739 330 1270 1799 $0 $X 2464 69 1837 F 1881 Chrys
+	| 0002 G
+	| 0100 $G $T 1505 1611 2138 2495 1780
+	| 0101 614 1315 1352 2412 876
+	| 1000 $L
+	| 1010 b
+	| 2000 r
+	| ???? bo sa I $I > }
+{{}
+" facta est lex non irritum facit ad    evacuandam   promissionem "
+[ GEGONWS NOMOS OUK AKUROI       EIS TO KATARGHSAI THN EPAGGELIAN
+|*0o GEG)W(NWS | GEGON)O(S | hO+/NOMOS | AKUR)H AKUR)EI
+|*0L AKUROI/irritum.facit /infirmat /infirmata
+| KATARGHS)Hi |*0e KATARGHS)E |*0L EPAGG./promissionem /repromissionem ]
+	< 00000000 B p46 01 A C D 33 1175 1241s 1319 1573 1739 2400 330 1270 G 1799 $0 $G $T $X Chrys
+	| 00000010 2464
+	| 00000100 1646:1
+	| 00010000 69
+	| 000?0000 hark pesh
+	| 00100000 1837 1505
+	| 00?01001 $L
+	| 00?01002 d
+	| 00?02001 Ambst
+	| 00?03001 r
+	| 00?03002 b
+	| 01000000 226 1243 1734 1891
+	| 10000000 F:1 489
+	| 10000100 1646:0
+	| 10120000 2495
+	| 11000000 F:0
+	| 11020000 1881
+	| ?00??000 0176 > }
+
+@ Ga3:18
+{{}
+" si enim ex lege    hereditas jam non ex promissione "
+[ EI GAR EK NOMOU hH KLHRONOMIA OUKETI EC EPAGGELIAS 
+| EI/H |*1P GAR/DE=dyn |*0L GAR/enim /nam~ | GAR/+EI | EK/DIA
+| -hH | h)O.KLHRONO)MOS | KLHR./EPAGGELIA | OUKETI/OUK.ESTIN
+|*0L EPAGG./promissione /repromissione ]
+	< 0000000000 $G $0 $T $X 1881 Chrys
+	| 01?0000000 pesh
+	| 0000000010 1241s
+	| 0000000100 1891 1799
+	| 0000001000 945
+	| 0000010000 1243 1424
+	| 0000100000 p46
+	| 0001000000 33
+	| 00100?0001 Ambst b r
+	| 00100?0002 d
+	| 00200?0001 f
+	| 00200?0002 $L
+	| 1000000000 1319 2464 > }
+{{}
+" Abrahae autem per promissionem donavit    Deus "
+[ TWi DE ABRAAM DI EPAGGELIAS KEXARISTAI hO QEOS
+| -TWi...EPAGG | -DI
+| EC(EPAGGELIAS |*0L EPAGG./promissionem /repromissionem
+| E(XARIS)ATO |*1P KEX./+AUTWi | -hO ]
+	< 0000000 $G $0 056:1 $T F:1 $X Chrys
+	| 0000001 F:0
+	| 0000010 pesh
+	| 0000100 6 1739 1799 1881
+	| 0001?0? Ambst f r
+	| 0002?0? $L
+	| 0010000 1241s
+	| 0100000 1175
+	| 0102?0? d
+	| 1???000 0176 056:0 > }
+
+@ Ga3:19
+{{}
+" quid igitur lex propter transgressiones posita est "
+[ TI OUN hO NOMOS TWN PARABASEWN XARIN     PROSETEQH
+| TI..hO.NOM./TINOS..hENEKEN.TON.NOMON |*0L OUN/igitur /ergo
+| PROSET.~T.PARAB.XARIN
+| -PARAB. | T)HS.PARABAS)EWS | PARAB./PRACEWN /PARADOSEWN
+| -XARIN | XAR)IS | XAR.~T.PARAB.
+| -PROSET. | PROSET./EDWKE | *(ETEQH EC(ETEQH | PROSETE)QHN ]
+	< 0000000000000 $G $0 D:1 D:2 $T 1881 sa bo $X
+	| 0000000000001 L
+	| 000000000000? 0176
+	| 0000000000010 876
+	| 0000000000020 2464
+	| 0000000010000 1448
+	| 0000000100000 1241s
+	| 0000011??0010 F G g
+	| 0000011??001? Ir
+	| 0000011??10?? p46
+	| 0000020000010 D:0 ar
+	| 0100000010010 $L
+	| 0100010000010 d
+	| 0100011??0010 Ambst b:0
+	| 0100100010010 f
+	| 0101?????0010 b:1
+	| 0200101??0000 r
+	| 1010000000100 Chrys > }
+{{}
+" donec    veniret   semen "
+[ AXRIS hOU ELQHi TO SPERMA 
+| AXR)H |*0L AXRIS/donec /quoadusque
+| hOU/AN | AN(ELQHi | ELQ)EI | ELQ./ERXHTAI=veniat | T)Wi ]
+	< 0000000 $G $0 $T p46 Ir $X 1881 Chrys
+	| 0000001 88 1315 1735
+	| 0000100 2464
+	| 0001000 1891
+	| 0010000 B 1175 33
+	| 01?0000 $L
+	| 02?0010 b d
+	| 1000000 1243
+	| ??????? 0176 > }
+{{}
+" cui promiserat ordinata per angelos "
+[ hWi EPHGGELTAI DIATAGEIS DI AGGELWN
+| hWi/h)O hWi/h)WS | EPHGG)ELLETAI EPHGG)EILATO HN+(EP)AGGELIA=hw'.$wwdi'
+|*0L EPHGG./promis- /repromis- |*0L EPHGG./promiserat /promissum.est 
+| DIATAG)HS |*0L DIAT./ordinata /disposita | DIATAG)EN=-um
+|*1P DIAT./+hO.NOMOS=nmws' | -DI | DI/DE | AGGEL)OU ]
+	< 00000000000 $G $0 910:1 $T B 1175 Ir 1611 C:1 Chrys 88
+	| 00000000001 945 C:0
+	| 00000000010 910:0
+	| 000000001?0 p46
+	| 00001000000 1319 1836 1874 056 1735
+	| 01000000000 33
+	| 02000000000 6 1739 1799
+	| 03000001000 pesh
+	| 0?110100000 $L
+	| 0?120100000 Ambst
+	| 0?120210000 r
+	| 0?220210000 b d
+	| 10000000000 L 075 1 323 618 1242 1245 1270 1646 1738 1837 1982 2815 1891 $X
+	| 10000000100 489 927 2147 1315
+	| 10000000101 1734
+	| 10001000000 330 460 2400 2464 1243
+	| 120010001?0 1881
+	| 20000000000 1424
+	| ??????????? 0176 >}
+{{}
+" in manu mediatoris "
+[ EN XEIRI MESITOU
+| EN.XEIRI/MEXRI | XEIRI/XERSI ]
+	< 00 $G $0 $T Ir $X 1881 $L
+	| 01 460 618 1738
+	| 1? Chrys
+	| ?? 0176 > }
+=- $? MVict ; " MVict lac. 3:10b-19 "
+
+@ Ga3:20
+{{}
+" mediator autem unius non est "
+[  hO DE MESITHS hENOS OUK ESTIN
+| DE/GAR | hEN)WS | hENOS/hEIS=unus
+| OUK.ESTIN~DE~hENOS~hO.MES. OUK.ESTIN~hENOS ]
+	< 0000 $G $0 $T $X 1881 $L Chrys
+	| 0001 MVict
+	| 0002 pesh
+	| 0010 b
+	| 0100 2464
+	| 1000 33
+	| ???? 0176 > }
+{{}
+" Deus autem unus est "
+[ hO DE QEOS hEIS ESTIN
+| -hO...ESTIN | -DE |*0L DE/autem /vero ] 
+	< 000 $G $0 1241s:1 $T $X 1881 2464 33 Chrys 1780:1
+	| 001 $L
+	| 002 r
+	| 01? 1241s:0
+	| 100 1780:0
+	| ??? 0176 > }
+
+@ Ga3:21
+{{}
+"     lex ergo adversus promissa        Dei   absit "
+[ hO OUN NOMOS KATA TWN EPAGGELIWN (TOU QEOU) MH GENOITO
+|*0L hO/* /quid |*0L OUN/ergo /igitur | NOMOS/OMOS |*0L KATA/adversus /adversum
+| KATA.TWN/KATWN | TWN/TON | -TOU.QU | -TOU | QU/XU ]
+	< 000000000 $G $0 $T $X 1881 Chrys
+	| 000000001 104
+	| 000000010 F:1 G
+	| 0000001?? B p46
+	| 000001000 1243
+	| 000010000 1241s
+	| 000?????? 0176
+	| 001000010 F:0
+	| 1101000?0 $L
+	| 1101001?? d
+	| 1202001?? Ambst
+	| 2102000?0 MVict
+	| ??????0?0 $I bo sa > }
+{{}
+" si enim data esset lex quae  posset  vivificare vere "
+[ EI GAR  EDOQH    NOMOS hO DUNAMENOS ZWiOPOIHSAI ONTWS
+| EI/H | EDOQ)HN | hO+(NOM. |*0L DUN./posset /possit | ZWiOPOIH)QHSETAI
+| ONTWS/ALHQEIA | ONT)OS |*0L ONTWS/vere /omni.modo /pro.certe /omnino ]
+	< 00000000 B $0 $G $T $X 1881 Chrys
+	| 00000010 1243
+	| 000001?0 F G
+	| 00001000 p46
+	| 00100000 614 1827
+	| 00?10003 d
+	| 00?10004 r
+	| 00?10101 $L
+	| 00?21002 b
+	| 00???000 0176
+	| 01000000 330
+	| 10000000 460 > }
+{{}
+" ex lege  esset    justitia "
+[ EK NOMOU AN HN hH DIAKAIOSUNH
+| EK/EN.NOM)Wi | -AN | -HN | AN~EK.NOM. HN~AN | hWN+/hH.DIK. | -hH ]
+	< 000000 A C 1241s 1837 2464 $0 $X
+	| 000100 $G D:1 D:2 $T 1505 1611 2138 2495 1881 Chrys 1780
+	| 000200 Ps:1 33 88 104 1319 1573 1739 01 1175
+	| 000?00 hark pesh
+	| 000?0? $L
+	| 001?00 Ps:0 2400 1799
+	| 00?10? 0176
+	| 010?00 1243 D:0 2815
+	| 011?00 G
+	| 011?01 F
+	| 011?0? g
+	| 011?10 330
+	| 0?1?0? d
+	| 100000 B
+	| 100201 p46 > }
+=- $? P ; " lac. 3:8-21 "
+
+@ Ga3:22
+{{}
+" sed  conclusit  scriptura    omnia  sub peccato "
+[ ALLA SUNEKLEISEN hH GRAFH TA PANTA hUPO hAMARTIAN
+| -TA | -PANTA | PANT)AS | hAMARTI)AS ]
+	< 0000 $G $0 $T P 33 1424 L $X 1881 Chrys
+	| 0001 1270
+	| 000? 0176
+	| 01?0 876
+	| 1000 G F K Ps
+	| 1010 1175
+	| ?000 $L > }
+{{}
+" ut      promissio ex fide     Jesu Christi daretur    credentibus "
+[ hINA hH EPAGGELIA EK PISTEWS IHSOU XRISTOU DOQHi TOIS PISTEUOUSIN
+| -EK |*1P EK/EN.PIST)EI=bhymnwt' | EN+/IU.(X)W | -IU | -XU | XU~IU
+| PISTEU)SASIN |*0L PIST./credentibus /eis.qui.credunt ]
+	< 00000000 $G $0 $T $X 1881 1424:1 Chrys
+	| 00000001 $L
+	| 00000002 b d
+	| 00000010 2464
+	| 000000?? P
+	| 00001?00 0176 2147
+	| 00010?00 1424:0
+	| 00010??? 33
+	| 00100100 L
+	| 01000000 pesh
+	| 10000000 2138 > }
+
+@ Ga3:23
+=- $? 2344 ;
+{{}
+" prius autem quam veniret     fides  sub lege custodiebamur "
+[ PRO TOU DE       ELQEIN THN PISTIN hUPO NOMON EFROUROUMEQA
+| ADELFOI+/PRO | -DE | DE~TOU | DE/GAR | NOM./MONON | NOM)OU
+|*1P hUPO.NOMOU.EFROUR./hO.NOMOS.EFROUREI.hHMAS=nmws'.n+r.hw'.ln ]
+	< 0000000 $G $0 0176 460:1 $T $X 1881 Chrys
+	| 0000010 075
+	| 0000011 pesh
+	| 0000100 F
+	| 0001000 489 927
+	| 0010000 547 945 1611 1827 876
+	| 00?00?0 $L
+	| 00?10?0 Ambst
+	| 01??000 104 205 460:0 614 1315 2412 1022
+	| 11??000 1799
+	| ??????? 2344 > }
+{{}
+"      conclusi in  eam           fidem quae revelanda erat "
+[ SUGKLEIOMENOI EIS THN MELLOUSAN PISTIN     APOKALUFQHNAI
+| SUG)KEKLEIS(MENOI | EIS.THN/ESTIN |*0L EIS/EN.T)Hi..PIST)EI=in.ea.fide
+|*0L MELLOUSAN/-nda /incipiebat /postea /futura | PISTIN/DOCAN
+|*0L APOK./revela- /detege- /retege-
+|*0L APOK./-nda.erat /-ri /-batur /-ta.est /ut.-tur 
+| APOK./+EIS.hUMAS ]
+	< 00000000 B p46 A 33 01 G Ps 104 330 1739 1241s P D:0 $0 1881 $X
+	| 00001000 2464
+	| 01000000 F
+	| 10000000 $G D:1 D:2 $T 1505 1611 2138 2495 1780
+	| 10000001 Chrys
+	| 10010110 $L
+	| 10030140 r
+	| 10030330 d
+	| 10040150 MVict
+	| 10120120 Ambst
+	| 10130230 b
+	| ?0000000 hark pesh
+	| ?????000 2344 > }
+
+@ Ga3:24
+=+ $? P ; " lac. 3:24-39 "
+{{}
+" itaque   lex   pedagogus  noster "
+[ hWSTE hO NOMOS PAIDAGWGOS hHMWN
+| hWS)PER |*0L hWSTE/itaque /ita | hO)+MEN | -hHMWN | hHM)IN ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00001 945 pesh
+	| 00100 6
+	| 00??? I P
+	| 01000 $L
+	| 02000 r
+	| 1001? 1241s
+	| ???0? Epiph
+	| ????? 2344 >}
+{{}
+" fuit     in Christo   ut ex fide   justificemur "
+[ GEGONEN EIS XRISTON hINA EK PISTEWS DIKAIWQWMEN
+| E(GEN)ETO | GEG)W(NEN | XN/+IN | XN/+QU ]
+	< 0000 $G $0 1874:0 $T Epiph $X 1881 D:2 Chrys
+	| 000? I
+	| 0010 D:0 D:1 88 1735 1874:1 F G
+	| 0011 1175 1319 1573
+	| 0100 1241s
+	| 0??? 2344
+	| 1?00 B p46
+	| ?000 $L
+	| ?010 b d f
+	| ???? 0176 > }
+
+@ Ga3:25
+{{}
+" veniente autem     fide jam non sub pedagogo   sumus "
+[ ELQOUSHS DE THS PISTEWS OUKETI hUPO PAIDAGWGON ESMEN
+|*0L DE/autem /at~ |*0L ELQ./veniente /ubi.venit /postquam.venit
+| PAIDAGWG)WN | ESMEN~hUPO.PAID. ]
+	< 0000 $G $0 $T $X 1881 Chrys
+	| 0001 pesh
+	| 0010 330 2400 2464 1243
+	| 1100 Ambst d MVict
+	| 1300 b
+	| 1301 r
+	| 2200 f
+	| 2201 $L
+	| ???? 0176 2344 I > }
+
+@ Ga3:26
+{{}
+" omnes enim filii Dei estis per     fidem   in Christo Jesu "
+[ PANTES GAR hUIOI QEOU ESTE DIA THS PISTEWS EN XRISTWi IHSOU
+| -GAR | ESTE~hUI.QU ESTE~QEOU | hUIOI/+hOI | -QU | TOU+/QU |*0e EST)AI
+| -DIA.T.PIST. | -DIA,T)Hi.PIST)Ei -DIA,T)HS.PIST)EWS
+| -THS | PISTIS/+THS=quae.est | -EN.XW.IU | -EN | IU~XW | XW/XU ]
+	< 00000000000000 $G $0 01:1 $T $X A
+	| 00000000000111 1836 1874 1799
+	| 00000000001??? 1780:1
+	| 00000000010000 Chrys
+	| 00000000100000 2464
+	| 00000000101??? 1780:0
+	| 0000000???0000 33
+	| 00000100000000 F G
+	| 00000100100000 1424
+	| 00000?00100101 p46
+	| 00001000000100 6
+	| 00001000000111 1739 1881
+	| 0001?000000000 1175
+	| 0001?002?????? Marc
+	| 00100000000000 01:0
+	| 00?0?000?00000 $L
+	| 00?0?000?10000 Ambst f
+	| 00?0?01???0000 b
+	| 01?0?001?00000 MVict
+	| 02000000000111 pesh
+	| 0?????0?0????? I
+	| 10000000000000 1243
+	| ??????????0000 2344
+	| ??????????010? sa > }
+
+@ Ga3:27
+{{}
+" quicumque enim in Christo baptizati estis "
+[ hOSOI     GAR EIS XRISTON EBAPTISQHTE
+| -hOSOI...ENED. |*0L hOSOI/quicumque /quotquot
+| -GAR |*0L GAR/enim /nam~ |*0L XN/Christo /-um | XN/+IN
+| EBAPTISQH)MEN |*0e EBAPTISQHT)AI ]
+	< 00000000 $G $0 209:1 226:1 $T $X 1881 6 1739 Chrys
+	| 00000001 2147 2464 F G
+	| 00000010 p46
+	| 00000100 209:0 618
+	| 00100000 Ps
+	| 01011000 $L
+	| 01012000 r
+	| 01021000 MVict
+	| 02011000 Ambst
+	| 0???00?? I
+	| 0?????01 2344
+	| 1??????? 226:0 > }
+{{}
+" Christum induistis "
+[ XRISTON ENEDUSASQE
+| XN/+IN |*0e ENEDUSASQ)AI ]
+	< 00 $G $0 D:1 D:2 226:1 $T $X $L Chrys
+	| 01 D:0 910 1175 1735 A 1881 2464 F G
+	| 10 6 1739
+	| ?? I 226:0 > }
+
+@ Ga3:28
+{{}
+" non est judaeus neque graecus "
+[ OUK ENI IOUDAIOS OUDE hELLHN
+| OUK.ENI/OUKETI | OUK/+GAR=enim | OUDE/OUTE OUDE/KAI ]
+	< 000 $G $0 $T 33 $X 1881 $L Chrys
+	| 001 Ps 323 796 945
+	| 002 1960
+	| 00? I
+	| 010 MVict
+	| 10? p46
+	| ??? 2344 > }
+{{}
+" non set servus neque liber "
+[ OUK ENI DOULOS OUDE ELEUQEROS
+| -OUK.ENI....ELEUQ. | OUK.ENI/OUKETI | OUDE/H ]
+	< 000 $G $0 D:1 D:2 $T 2344 $X 1881 $L Chrys
+	| 001 D:0
+	| 010 p46
+	| 1?? 1982
+	| ??? I > }
+{{}
+" non est masculus et femina "
+[ OUK ENI ARSEN KAI QHLU 
+| -ENI | EK+ENI | ARR(EN | ARS)HS | -KAI | OUDE+/QHL. H+/QHL | QHL)OI ]
+	< 0000000 $G $0 B $T 223 1241s A $X 1881
+	| 0000001 999 1175:1 2464
+	| 0000010 88
+	| 0000120 Chrys 1874
+	| 0001000 F:1 G
+	| 0010000 330 01
+	| 0010001 1175:0
+	| 00?0000 d r
+	| 00?0110 $L
+	| 0100000 056
+	| 1001000 F:0
+	| ??00000 2344 1982
+	| ??????0 p46
+	| ??????? ar g > }
+{{}
+" omnes enim    vos unum estis in Christo Jesu "
+[ PANTES GAR hUMEIS hEIS ESTE  EN XRISTWi IHSOU
+| hA(PANTES | -GAR | hH(MEIS | -hEIS | hEIS/hEN
+| -ESTE |*0e EST)AI | -EN | XW/XU | -IU |*1P IU~XW ]
+	< 00000000000 $G $0 B:0 D:1 D:2 K:0 $T 2464 1881 $X Chrys
+	| 00000000001 pesh
+	| 0000000001? K:1 1245
+	| 00000010000 D:0
+	| 000001?0000 1799
+	| 00001000000 $L
+	| 00001000??? 33
+	| 00001010000 F:1 G F:0
+	| 000010?0000 ar g
+	| 00100000000 223
+	| 0010001001? 1241s
+	| 0101?0011?0 p46
+	| 0??00000000 2344
+	| 10000000000 B:1 01:2
+	| 1001?000100 01:0
+	| 1001?001100 01:1 A > }
+
+@ Ga3:29
+{{}
+" si autem vos Christi "
+[ EI DE hUMEIS XRISTOU 
+| -EI...XU | DE/OUN DE/KAI~=w |*1P XU~hUM.
+| hH(MEIS | hUM./+PANTES | hUM./+hEIS hUM./+hEN | hUM./+ESTE
+| EN+/XU | XU/XW.IU ]
+	< 000000000 01 C L Ps $G $0 $T 2344 $X 1881 D:2 547 B 1175 $L Chrys
+	| 000001111 D:1 D:0
+	| 000002111 d
+	| 000012111 F G
+	| 000100000 1241s
+	| 000?00000 33 A
+	| 010002111 Ambst
+	| 021000000 pesh
+	| 1???????? 876 b MVict
+	| ????????? p46 > }
+{{}
+" ergo    Abrahae semen estis secundum promissionem heredes "
+[ ARA TOU ABRAAM SPERMA ESTE       KAT EPAGGELIAN   KLHRONOMOI
+| ARA/+OUN |*1P SPERMA.ESTE~T.ABR. | SPERM)ATOS | SPERMA/TEKNA
+|*0e EST)AI | KAI+/KAT | KAT(EPAGGELIAN | KLHRONOM)AI |*1P KLH.~KAT.EPAGG. ]
+	< 000000000 C D:1 D:2 88 618 1243 1319 1573 1739 1827 A 01 $0
+	| 000000100 910
+	| 000001000 $G $T $X 1881 Chrys 1780
+	| 0000010?0 2344
+	| 000001100 2125 1646
+	| 000010000 33
+	| 000011000 1241s 1735 2412 2464
+	| 000101000 547
+	| 001000000 B 1175
+	| 010001001 pesh
+	| 100000000 D:0
+	| 100011000 G
+	| 100011010 F
+	| ?00000000 $L
+	| ?0000???? p46 > }
+=- $? P ; " lac. 3:24-39 "
+
+@ Ga4:1
+=+ $? p46 ;
+{{}
+" dico autem quanto tempore       heres parvulus est "
+[ LEGW DE EF hOSON XRONON hO KLHRONOMOS NHPIOS ESTIN
+| LEGW/EGW | LEG)WN | DE/+ADELFOI | DE/+LEGW | DE/+hOTI=quod
+| hOSON/hWSON | -XRONON |*0L hOSON.XRONON/quanto.tempore /quamdiu
+| -hO | h)OI.KLHRONOM)OI ]
+	< 0000000000 $G $0 $T $X 1881 Chrys
+	| 0000000010 489
+	| 00000001?0 $L
+	| 00000002?0 b d MVict
+	| 0000001?00 1241s
+	| 00001002?0 Ambst
+	| 0010000000 G
+	| 00100001?0 f
+	| 0010010000 F
+	| 0100000000 1982
+	| 1000000000 1837
+	| 1001000000 1242
+	| ?000000000 2344
+	| ?????00000 P > }
+{{}
+" nihil differt a servo cum sit dominus omnium "
+[ OUDEN DIAFEREI DOULOU          KURIOS PANTWN WN
+| OUDEN/OUDE | OUDEN/+DE |*0L DIAF./differt /defert
+| KS/NHPIOS | -WN | WN/O |*0L WN~KS.PANTWN WN~PANTWN ]
+	< 0000000 $G $0 $T $X 1881 C:1 Chrys
+	| 0000002 pesh
+	| 0000010 2147
+	| 00001?? C:0
+	| 0000??? P 2344
+	| 0001000 330 2400 2815
+	| 0001010 1243
+	| 0010000 d
+	| 0010001 $L b:1
+	| 0010002 Ambst MVict
+	| 0020001 b:0
+	| 0100000 1573
+	| 1000000 1241s 1799 > }
+
+@ Ga4:2
+=- $? p46 ;
+=- $? 2892 ; " lac. 3:5-4:2 "
+{{}
+" sed   sub tutoribus  est    et auctoribus "
+[ ALLA hUPO EPITROPOUS ESTIN KAI OIKONOMOUS 
+| EPITROP)OU |*0L EPITR./tutor- /curator- /procurator-
+| -ESTIN | K.OIK.~EST. | ESTIN/WN | KLHRW(NOMOUS | OIKONOM)OU OIKONOM)OS ]
+	< 0000000 $G $0 $T $X 1881 B L 2892:0
+	| 0000002 2892:1
+	| 000000? 2344
+	| 0000010 2464
+	| 0000100 Ps
+	| 0001000 Chrys
+	| 001?000 1827 1241s
+	| 0100000 $L
+	| 0200000 b MVict
+	| 0201000 Ambst
+	| 0300000 r
+	| 1000001 1836
+	| 1200000 d > }
+{{}
+" usque ad praefinitum tempus a patre "
+[ AXRI THS PROQESMIAS       TOU PATROS
+| AXRI)S AXR)H |*0L T)OU.PROSQESMI)OU/+XRONOU=..+tempus | PROQ./+THS
+|*1P PATROS/+AUTOU ]
+	< 0000 $G $0 $T $X 1881 2344 2464 Ps 1827 1241s 1836 Chrys
+	| 0001 pesh
+	| 0010 B
+	| 00?0 d
+	| 01?0 $L
+	| 1000 L
+	| 2000 2892 > }
+
+@ Ga4:3
+{{}
+" ita     et nos "
+[ hOUTWS KAI hHMEIS
+| hOUT...hHM./ETI.KATA.ANQRWPON.LEGW
+| hOUT)OS hOUT)W |*0L hOUT./ita /sic | hU(MEIS ]
+	< 0000 p46 $G $0 1836:1 876 2412 $X
+	| 0001 1836:0 1881
+	| 0100 F 1243
+	| 0200 $T 1241s K 330 1175 88 104 205 547 1245 1319 1352 1505 1573 1611 1891 1982 2400 2495 Chrys 2892
+	| 0201 999
+	| 0?10 $L
+	| 0?20 b d r
+	| 1??? Marc > }
+
+{{} " HMEQA=eramus HMEN=eramus EIMEN=sumus WMEN=simus "
+" cum essemus parvuli sub   elementis      mundi eramus servientes "
+[ hOTE HMEN   NHPIOI hUPO TA STOIXEIA TOU KOSMOU HMEQA DEDOULWMENOI
+|*1P NHPIOI~HMEN | TAS+/TA.STOIX. |*0L STOIX./elementis /elementa
+| TOU/TOUTOU | HMEQA/HMEN HMEQA/EIMEN HMEQA/WMEN |*1P DEDOUL.~HMEQA
+|*0L DEDOUL./servientes /subjecti ]
+	< 0000000 33 1175 01 D:0 p46 F G 1319 1573 $0
+	| 0000100 $G D:1 D:2 $T 2344 $X 1881 Chrys 1780 2892
+	| 0000200 1243
+	| 0000300 Epiph
+	| 0000?00 hark Marc
+	| 0001100 1891
+	| 0010?01 $L
+	| 0011?01 f MVict
+	| 0011?02 Ambst
+	| 0021?01 b d
+	| 0100100 1874
+	| 0?00?0? P
+	| 1000?10 pesh > }
+
+@ Ga4:4
+{{}
+"  at ubi venit  plenitudo   temporis "
+[ hOTE DE HLQEN TO PLHRWMA TOU XRONOU
+|*0L hOTE/cum /ubi /postquam |*0L DE/autem /at~ /vero | DE:bis
+| TO/TWi | XRON./NOMOU | T)WN.XRON)WN ]
+	< 000000 $G $0 $T Marc Ir $X 1881 Chrys
+	| 000010 910
+	| 000100 1874
+	| 000?00 P 2344
+	| 110000 r MVict
+	| 210000 Ambst
+	| 220000 $L
+	| 230000 b
+	| 231001 d > }
+" misit           Deus    filium suum "
+[ ECAPESTEILEN hO QEOS TON hUION AUTOU ]
+{{}
+" factum    ex muliere "
+[ GENOMENON EK GUNAIKOS | GEN)N(WMENON | GENN)W(MENON
+|*0L GEN./factum /editum |*0L EK/APO=de |*0L GUN./muliere /femina ]
+	< 00000 $G $0 618:0 $T P Epiph $X 1881 Chrys
+	| 00111 $L
+	| 00212 MVict
+	| 00221 b
+	| 00??? Ir
+	| 01000 2401:0 1 104
+	| 10000 K 999 1836 1874 88 330 460 614 618:1 1505 1319 1573 1646 2400 2412
+	| 11000 223 1022 1799 2401:1 075 226 323 910 517 1242 1982 2147 2815 2138 > }
+{{}
+" factum     sub lege "
+[ GENOMENON hUPO NOMON | hUPO/EK=ex | NOM./XRONON | NOM)OU ]
+	< 000 $G $0 $T Epiph $X 1881 Chrys
+	| 001 1241s
+	| 00? Ir $L
+	| 010 1319
+	| 10? b > }
+
+@ Ga4:5
+{{}
+" ut eos qui sub lege erant redimeret "
+[ hINA TOUS hUPO NOMON      ECAGORASHi
+| NOM./MONON | ECAGORAS)HTAI ECAGORAS)EI ]
+	< 00 $G $0 1646:1 $T Marc Ir $X 1881 $L Chrys
+	| 01 1646:0 131 1243 1836 2147 2464
+	| 02 G 1780
+	| 0? 2344 P
+	| 12 F > }
+{{}
+" ut adoptionem filiorum reciperemus "
+[ hINA    THN hUIOQESIAN APOLABWMEN
+|*1P hINA/KAI,APOL.~T.hUIOQ. |*0L hUIOQ./adoptionem.filiorum /fil.~adopt.
+| *(LABWMEN | APOL)AMBAN(WMEN=recipiamus | APOLAB)O(MEN ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00001 330 460 618 1243 1315 1573 1836 2464 2892
+	| 0000? P
+	| 00100 1242
+	| 01000 $L
+	| 01010 r
+	| 02000 Ambst MVict
+	| 10000 pesh
+	| ????0 Ir > }
+
+@ Ga4:6
+=+ $? Chrys ; " lac. 4:6-7 in Coxianus, but present in Migne "
+{{}
+" quoniam autem estis filii "
+[ hOTI       DE ESTE  hUIOI
+| hOTI/hOTE | DE/ALLA~=sed |*0e EST)AI | hUIOI~ESTE | hUIOI/+QEOU ]
+	< 00000 $G $0 1646:1 $T $X 1881 $L
+	| 00001 D Marc Ambst b d f
+	| 00010 r
+	| 00100 33 1780
+	| 00101 F G
+	| 01011 MVict
+	| 10000 1175 1646:0 1735 2412
+	| ????? 2344 > }
+{{}
+"        misit    Deus  spiritum     filii sui   in        corda nostra "
+[ ECAPESTEILEN hO QEOS TO PNEUMA TOU hUIOU AUTOU EIS TAS KARDIAS hHMWN 
+| -hO.QS | -T.PNA,T)ON.hUI)ON | -T.hUIOU | hUI)OI | -AUTOU
+| EIS/EN,T)AIS.KARDI)AIS | hU(MWN hHMWN/AUTWN ]
+	< 0000000 01 A D:0 D:1 1175 1241s 1827 C 104 P Marc $0 1245 1315 $L
+	| 0000001 $G D:2 1734:1 $T 876 1022:1 1022:0 1738:1 $X 1780
+	| 0000011 MVict
+	| 0000101 489 927
+	| 0000110 Ambst
+	| 0000112 1836
+	| 0000?00 2344
+	| 0001000 G F
+	| 001?000 p46
+	| 001?001 1734:0 1738:0
+	| 0100000 1881
+	| 1000000 B 1739
+	| 1?????0 sa
+	| ??????0 $I > }
+{{}
+" clamantem abba    pater "
+[ KRAZON    ABBA hO PATHR
+| EN.hWi+/KRAZ. | KRA)COMEN KRAZ)ONTAS KRAZ)WN KRAZ)OUSI=clamant KRA)ZOMEN
+|*1P PATHR/+hMWN='kwn ]
+	< 000 C P Marc $0 $G 1734:1 $T 876:1 1022:1 p46 B 1739 $X $L
+	| 001 pesh
+	| 010 1022:0
+	| 020 2344 b d r
+	| 030 1245 1315 075 618 1319 1352 1424 1646 1735 1738:1 1837 2400 2495 876:0 1836 1734:0 1738:0 1881 2892
+	| 040 MVict
+	| 110 F G:0
+	| 150 G:1
+	| ??? sa $I > }
+
+@ Ga4:7
+{{}
+" itaque jam non est servus sed filius "
+[ hWSTE   OUKETI  EI DOULOS ALLA hUIOS
+| -EI | EI/ESTIN=est |*1P EI/ESTE,DOUL)OI,hUI)OI | hUI)OIS ]
+	< 0000 B 01 C D $G $0 $T $X 1881 2464
+	| 0010 pesh
+	| 1000 G 330 F:1
+	| 1001 F:0
+	| 1100 $L
+	| 1?0? 2400 > }
+{{}
+" si autem filius et      heres per Deum "
+[ EI DE    hUIOS KAI KLHRONOMOS DIA QEOU
+| EI/H | DE/hOTI~=quod /KAI~=w | KLHRON)OS
+| -DIA.QEOU | DIA.QU/KLHR..MEN.QU.SUGKLHR..DE.XU
+| QU/QN | KLHR./+QU | DIA.QU/DIA.XU | DIA/+IU ]
+	< 000000000 B p46 01:0 A C:0 33 1739:0 $0 Ambst b r
+	| 000000011 1739:1
+	| 000000110 $G 01:2 C:1 614:0 $T 2138 d 2892
+	| 000000111 6 323 614:1 927 1646 1837 2147 2400 489 223 $X
+	| 00000011? P
+	| 000001000 F G 1881
+	| 00001???? Ps
+	| 0001????? 618 1738
+	| 010000000 $L
+	| 020000111 pesh
+	| 0?0000000 MVict
+	| 100000110 1780
+	| 101000110 2464
+	| ???000000 $I bo
+	| ???000010 sa
+	| ???000110 ar > }
+=- $? Chrys ; " lac. 4:6-7 "
+
+@ Ga4:8
+=- $I t ;
+=- $? I ;
+{{}
+"  sed tunc quidem ignorantes Deum "
+[ ALLA TOTE MEN   OUK EIDOTES QEON 
+| ADELFOI+/ALLA | -ALLA | TOTE/NUN=nunc |*1P MEN/GAR=gyr | MEN/+hOTE
+|*0L OUK.EID./ignorantes /nescientes |*0i I(DOTES | EID)EI(TES | TON+/QN ]
+	< 000000000 B p46 $G $0 $T $X 1881 D:1 D:2 Chrys
+	| 000000010 1739
+	| 000000100 K D:0
+	| 000000??0 2400
+	| 00000100? $L
+	| 00000200? d
+	| 000010001 1960
+	| 000100000 pesh
+	| 000?????? P 2344
+	| 00100100? r MVict
+	| 010000000 1241s
+	| 100000000 1799
+	| ????????? $I > }
+{{}
+"             his qui natura non sunt dii serviebatis "
+[ EDOULEUSATE    TOIS  FUSEI  MH OUSI QEOIS
+| EI.GAR+/EDOUL. | *(DOULEUS)ETE | TOIS...QEOIS~EDOUL. |*1P OUSI~FUS.MH
+| -FUS. | -MH | MH~FUS. | THi+/FUS. |*0i FUS)I FUS)Hi | OUS)Hi | OUSI/OU ]
+	< 00000000000 B:1 p46 01 C 075 33 104 330 489 927 1175 1573 1837 2464 2400 1241s 1739 $0 $X 1881
+	| 00000000001 88
+	| 00000000100 B:0 A
+	| 00000010000 2344 $G $T 1960 1799 1505 1611 2138 2495 Chrys 1780
+	| 00000010210 2892
+	| 000000?0000 hark
+	| 000001?0000 440 1243
+	| 000010???00 1319 K Ir
+	| 000100?0000 pesh
+	| 00100000000 D:0 D:2
+	| 0010000?000 $L
+	| 00100010000 F G D:1
+	| 001010??000 Ambst b d MVict
+	| 111001?1000 Marc
+	| ????000???? $I
+	| ?????????00 P > }
+
+@ Ga4:9
+=- $? I ;
+{{}
+" nunc autem cum cognoveritis Deum "
+[  NUN DE             GNONTES QEON
+| NUN)I | DE/+MALLON
+| GN)W(NTES=cognoscentes
+|*0L GN./cum.cogno-veritis /ubi.cogno- /ut.cogno- /-entes
+|*0L GN./cogno-veritis /-vistis /-scentes
+| -QN | TON+/QN ]
+	< 0000000 $G $0 D:1 D:2 $T $X 1881 Chrys
+	| 0000001 1448 1891
+	| 00000?? I
+	| 0010000 104 226 330 1245 1735 1837 2464 88 K 1175 1874 2892
+	| 001001? 323
+	| 0100000 69
+	| 1000000 D:0 Ps
+	| 1000001 F G
+	| ?00110? $L
+	| ?00120? d
+	| ?00220? b
+	| ?00320? MVict
+	| ?00??0? Ir
+	| ?01430? Ambst r
+	| ??????? P > }
+{{}
+" immo      cogniti sitis a Deo "
+[ MALLON DE GNWSQENTES hUPO QEOU
+| MAL)ON |*0L MALLON/immo /magis | -DE |*0L DE/autem /vero
+|*0L GNWSQ./cogniti.sitis /cogn.estis /cogn.*
+| -hUPO | hUPO/APO | TOU+/QN ]
+	< 00000000 $G $0 $T $X 1881 Chrys
+	| 00000001 K 1424 1448 1854 1738 460 618
+	| 00000010 1836 F
+	| 00000??0 I
+	| 00000??? 2344
+	| 0000???? P
+	| 01000000 pesh
+	| 0102300? Ambst
+	| 011?100? $L
+	| 011?200? f MVict
+	| 011?21?? b
+	| 011?300? r
+	| 0201100? d
+	| 10000000 2464 > }
+{{}
+" quomodo convertimini iterum ad   infirma  et egena elementa "
+[ PWS      EPISTREFETE PALIN EPI TA ASQENH KAI PTWXA STOIXEIA
+| EPISTREFE)SQ(E |*0e EPISTREFET)AI |*0L EPISTR./convertimini /re-
+| -PALIN |*1P PALIN~EPIS. | ASQ./EQNH | ASQEN)EI | PTWXA.STOIXEIA/PTWXIA
+| PTWXA/*TOUTOU.KOSMOU=hujus.mundi ]
+	< 000000000 $G $0 D:1 D:2 1874:1 $T $X 1881 Chrys
+	| 000000010 p46
+	| 0000000?0 2344
+	| 000000100 2464 88 1241s 1352 2147 2412 1780 2892
+	| 000001000 1874:0
+	| 000010000 pesh
+	| 000100000 Marc
+	| 000100100 1243
+	| 001000001 MVict
+	| 002000000 r
+	| 010000000 G 1175 1646 F
+	| 010?00000 I
+	| 100000000 1242 1891 1738
+	| 100000100 460 618
+	| 101000000 $L
+	| 110000000 D:0
+	| ???????00 P > }
+=+ $? P ; " lac. 4:9-11 "
+{{}
+" quibus denuo          servire vultis "
+[ hOIS   PALIN ANWQEN DOULEUEIN QELETE
+|*1P -PALIN |*0L PALIN/denuo /rursus | -ANWQEN |*0L ANWQEN/a.capite /ut.antea
+|*1P QEL.~DOUL./+AUTOIS | DOULEU)SAI | QELE)TAI ]
+	< 0000000 $G $0 $T $X 1881 Chrys
+	| 0000001 131 1646:0 F G 2464 1646:1
+	| 0000010 B 01
+	| 001?000 1
+	| 011?0?0 $L
+	| 02010?0 b
+	| 02020?0 r
+	| 021?0?0 d MVict
+	| 0?00??? I
+	| 1?00100 pesh > }
+
+@ Ga4:10
+=+ $? I ;
+{{}
+"    dies   observatis "
+[ hHMERAS PARATHREISQE
+| hHMER./+GAR | PARATHR)OUNTES | PARATHREISQ)AI |*1P K.MHN.K.KAIR.K.EN.~PARAT. ]
+	< 0000 $G $0 D:1 D:2 1646:1 $T Marc $X $L Chrys
+	| 0010 D:0 6 33 69 1505 2495 131 1646:0 F G 2464 1881 2892
+	| 00?0 hark
+	| 00?1 pesh
+	| 01?0 p46
+	| 0??0 I
+	| 1000 K > }
+{{}
+" et menses  et tempora  et annos "
+[ KAI MHNAS KAI KAIROUS KAI ENIAUTOUS
+| -K.MHNAS | MHNAS/MH | -K.ENIAUTOUS | ENI.~KAIR. ]
+	< 0000 $G $0 1646:1 $T Marc 1243 1874 $X 1881 $L Chrys
+	| 0001 D F G d f r
+	| 001? 876
+	| 0100 1646:0
+	| 1?00 1448
+	| 1?01 b
+	| ??00 I > }
+
+@ Ga4:11
+{{}
+"    timeo vos "
+[ FOBOUMAI hUMAS | -hUMAS ]
+	< 0 $G $0 $T $X 1881 $L Chrys
+	| 1 Ps 075 945 2815 b pesh > }
+{{}                         " KEKOPIAKA=pf. EKOPIASA=aor. EKOPIAKA=nonsense "
+" ne forte sine causa laboraverim in vobis "
+[ MH PWS        EIKHi KEKOPIAKA  EIS hUMAS
+| -PWS | H(KEI |*0L EIKHi/sine.cause /frustra
+| *(EKOPIAKA | *(EKOPIA)SA | hH(MAS ]
+	< 000000 $G $0 $T 1022:1 1646 2464 $X Chrys
+	| 000001 1241s
+	| 000010 p46 1739 2147 1881
+	| 000100 F G
+	| 001??0 $L
+	| 002??0 Ambst
+	| 010000 330 1175 1022:0
+	| 0????0 2344 > }
+=- $? P ; " lac. 4:9-11 "
+
+@ Ga4:12
+{{}
+" estote sicut et ego quia et ego sicut vos "
+[ GINESQE hWS     EGW hOTI KAGW   hWS hUMEIS
+| GINESQ)AI | KA(GW | hOTI/EPEI |*0L hOTI/quia /quoniam
+| KAGW/KAI.EGW /EGW | hH(MEIS | hUM./+EGENOMHN | KAI+/hUM. ]
+	< 00000000 $G $0 D:1 D:2 $T 2344 1505 1611 2138 2495 1881 Chrys
+	| 00000010 $X
+	| 000000?0 hark pesh
+	| 00001000 Ps
+	| 0001?000 f
+	| 00022000 r
+	| 0002?000 MVict
+	| 00100000 056 1 1245 876 1022
+	| 01000000 330 1837
+	| 0101?000 $L
+	| 0101?001 b
+	| 10000000 D:0 F G 69 910 1739 2464 1780
+	| 10000100 1241s
+	| ???????? P > }
+{{}
+" fratres obsecro vos  nihil me laesistis "
+[ ADELFOI DEOMAI hUMWN OUDEN ME HDIKHSATE
+|*0L DEOMAI/obsecro /praecor | ME/MOI |*0L HDIK./laesistis /nocuistis ]
+	< 000 $G $0 $T $X 1881 Chrys
+	| 010 2412
+	| 101 $L
+	| 112 Ambst
+	| 201 r > }
+
+@ Ga4:13
+{{}
+" scitis autem quia per infirmitatem "
+[ OIDATE DE hOTI DI ASQENEIAN
+| -DE |*1P DE/GAR=gyr |*0L hOTI/quia /quod | -DI ]
+	< 0000 $G $0 D:1 D:2 $T 1874 945 1799 $X 1881 Chrys
+	| 0001 1243 2412 323 614 1837
+	| 0010 $L
+	| 0100 pesh
+	| 1000 1242 1448 1734 1735 D:0 F G
+	| 1010 Ambst b r MVict
+	| 1020 d
+	| ???? P > }
+{{}
+"     carnis evangelizavi  vobis jam pridem "
+[ THS SARKOS EUHGGELISAMHN hUMIN TO PROTERON
+| -THS | THS/THi | SARK./+MOU | T.PROT.~EUHGG.hUMIN | EU)A(GGELISAMHN
+| hH(MIN | -T.PROT. | -TO | PR)W(TERON ]
+	< 000000000 $G $0 $T 2138 1881
+	| 000000001 1837
+	| 000000010 330
+	| 000001000 1241s
+	| 000010001 2892
+	| 001000000 $X
+	| 001?001?? Chrys
+	| 00?000000 P
+	| 010000000 1874
+	| 1?0000000 945 1799 F G
+	| ?000000?? $L
+	| ?001000?? r
+	| ???000000 2344 > }
+
+@ Ga4:14
+{{}
+" et temptationem vestram in     carne mea non sprevistis "
+[ KAI TON PEIRASMON hUMWN EN THi SARKI MOU OUK ECOUQENHSATE 
+| -KAI | -hUMWN | hUM./MOU | TON+/EN | EN/EIS.T)ON.SARK)A=in.carnem
+| -THi | -MOU | -OUK.ECOUQ. | -OUK | ECOU)D(ENHSATE ECOUQEN)W(SATE ]
+	< 0000000000 B A D:0 33 $0 F G 01:1
+	| 0000000010 01:0
+	| 00000?0000 $L
+	| 00001?0000 b
+	| 0001000000 1881 C:1 6 1739
+	| 000??????? g bo
+	| 0010000000 1734 p46 1780:1
+	| 0010000010 1780:0
+	| 0010?????? ar
+	| 0011000000 $G $T $X C:0 D:1 D:2 205 209 323 796 945 1245 Chrys
+	| 0011000001 1175
+	| 0011001000 1735
+	| 0011010000 2815
+	| 0011?????? sa
+	| 0111000000 pesh
+	| 01?1000000 69 88 104 1241s 1837 01:2
+	| 01?1000002 2892
+	| 01?10001?? 2464
+	| 0???0?0000 2344
+	| 1011000000 2400
+	| ?1?10?0000 P > }
+{{}
+" neque respuistis "
+[ OUDE ECEPTUSATE
+| -OUDE.ECEP. | DIE(PTUSATE ]
+	< 00 B A D 33 $0 F G 1881 6 1739 $G $T $X 01 1175 2464
+	| 01 205 209 323 796 945 Chrys
+	| 0? P $L
+	| 1? p46 1245
+	| ?? ar sa g bo > }
+=+ $? P ; " lac. 4:14-18 "
+{{}
+" sed sicut angelum Dei excepistis me sicut Christum Jesum "
+[ ALLA hWS1 AGGELON QEOU  EDECASQE ME  hWS2 XRISTON IHSOUN
+|*0L hWS1/sicut /ut | -QU | TOU+/QU | EC(EDECASQE |*0e EDECASQ)AI
+|*1P w=KAI+/hWS2 |*0L hWS2/sicut /ut | IN~XN | IN/IU ]
+	< 000000000 $G $0 $T $X 1881
+	| 000000001 1
+	| 00000000? p46
+	| 000001010 pesh
+	| 00000???? Chrys
+	| 000010000 A 33 1241s 2464 F G D:0 910 999 1315 1424 1646
+	| 000100000 C
+	| 000????00 2344
+	| 001000000 1837
+	| 10?000100 $L
+	| 10?000110 b
+	| 10?000200 Ambst
+	| 20?000200 MVict:1
+	| 21?000200 MVict:0 > }
+
+@ Ga4:15
+{{}
+" ubi est ergo   beatitudo vestra "
+[ POU     OUN hO MAKARISMOS hUMWN
+| POU/TIS | OUN/+HN +Hi /+EGENETO=fuit ESTIN+/OUN | hH(MWN ]
+	< 000 B 01 Ps 075 6 88 104 330 1175 1319 1573 1739 2400 p46 C A 33 2464 $0 1881 1780 pesh
+	| 001 1241s
+	| 00? 2344
+	| 010 1874:1
+	| 020 F G
+	| 040 $L
+	| 0?0 $I bo sa
+	| 100 L 205 440 796 1827 876 1022 $X Chrys
+	| 110 $G D:1 1874:0 $T Ambst d MVict 2892
+	| 130 b r > }
+{{}
+" testimonium enim perhibeo vobis quia si fieri posset "
+[ MARTURW     GAR           hUMIN hOTI EI      DUNATON
+| MARTUR)WN |*0L MART./testimonium..perhibeo /testis..sum
+|*0L MART..hUMIN/perhibeo.vobis /vobis~perhibeo | -GAR | -hUMIN
+|*0L hOTI/quia /quoniam | EI/H
+|*0L DUN./fieri.posset /f.potuisset /f.possit ]
+	< 00000000 $G $0 $T $X 1881 104 Chrys
+	| 00000010 330 1837 2464
+	| 00001000 F G
+	| 0000?000 p46
+	| 01100101 $L
+	| 01200101 d
+	| 01210103 b
+	| 01210201 r MVict
+	| 02100102 Ambst
+	| 10000000 1241s
+	| ???00000 2344 >}
+{{}
+"      oculos  vestros eruissetis et dedissetis mihi "
+[ TOUS OFQALMOUS hUMWN ECORUCANTES      EDWKATE MOI
+| KAI+/TOUS | hH(MWN | AN)ORUCANTES
+| KAI+/EDWK. | AN+/EDWK. EDWK./+AN | ED)O(KATE |*0e EDWKAT)AI | E(MOI ]
+	< 00000000 B 01:0 C Ps 33 1175 1319 1573 1739 p46 D:0 $0 1881
+	| 00000010 A
+	| 00001000 01:2 $G $T 1505 1611 2138 2495 1780 2892
+	| 00001001 Chrys
+	| 00001100 999
+	| 00002000 1241s
+	| 00010000 $X
+	| 00010010 F G
+	| 0001?00? $L
+	| 00101000 1245
+	| 01001100 2464
+	| 0??01??? 2344
+	| 10001000 104 > }
+
+@ Ga4:16
+{{}
+" ergo inimicus vobis factus sum "
+[ hWSTE EXQROS  hUMWN GEGONA
+| hWSTE/+EGW | hH(MWN | hU)MIN | GEG)W(NA | GEG.~hUMWN ]
+	< 00000 $G $0 $T $X D:2 1243 Chrys
+	| 00001 pesh
+	| 00010 1881
+	| 00100 1739 $L
+	| 00101 r
+	| 01000 1241s
+	| 10000 D:0 D:1 F G
+	| 10100 b d
+	| ????? 2344 > }
+{{}
+" verum dicens vobis "
+[     ALHQEUWN hUMIN
+|*0L ALHQ./verum.dicens /verum.praedicans | -hUMIN | hH(MIN ]
+	< 000 $G $0 $T $X D:2 1881 1739 1241s D:0 D:1 F G Chrys
+	| 001 1243
+	| 100 $L
+	| 21? r
+	| ??? 2344 > }
+
+@ Ga4:17
+{{}
+" aemulantur vos non bene "
+[ ZHLOUSIN hUMAS OU KALWS
+| ZHLOU)NTES | hH(MAS | hUM)IN | -OU | KAL)WN ]
+	< 00000 $G $0 $T $X 1881 $L Chrys
+	| 00001 1646
+	| 0000? p46
+	| 00010 1242
+	| 00100 1836
+	| 01000 1241s
+	| 10000 r
+	| ???00 2344 > }
+{{}
+" sed  excludere vos     volunt ut illos aemulemini "
+[ ALLA EKKLEISAI hUMAS QELOUSIN hINA AUTOUS ZHLOUTE
+| EG(KLEISAI | hH(MAS |*0L AUT./illos /eos
+| -ZHL. | ZHL)W(TE |*0e ZHLWT)AI |*1P ZHL.~AUT.
+| ZHL/+ZHLOUTE.DE.TA.KRITTW.XARISMATA ]
+	< 00000000 $G $0 D:2 1646:1 $T $X 1881 Chrys
+	| 00000001 D:0 D:1
+	| 00000010 pesh
+	| 00000100 1315 1319 33 1243 1735 1646:0 2892
+	| 00000101 F G
+	| 00001000 1242 323 945
+	| 00001100 69 1505
+	| 0001???0 2464
+	| 0010?000 $L
+	| 0010?001 f MVict
+	| 0020?000 r
+	| 0020?001 Ambst b d
+	| 01000000 1245 Ps 1891
+	| 01000100 1241s
+	| 0?000000 2344
+	| 10000000 075 1424
+	| 10000100 330 2400
+	| ???????1 ar g
+	| ???????? p46 > }
+
+@ Ga4:18
+=+ $? p46 ;
+{{}
+" bonum autem aemulamini in bono  semper "
+[ KALON DE     ZHLOUSQAI EN KALWi PANTOTE
+| -KALON | -DE | DE/GAR | DE/+KAI | -ZHL. | TO+/ZHL. | ZHLOUSQ)E | -EN.KAL.
+| TWi+/KAL. | KALWi/AGAQWi /KRITTWi | KAL)WN KAL)OIS | PANT.~EN.KALWi ]
+	< 000000000000 A C 1 6 330 1175 1241s 1319 1573 1739 1837 2400 $0 1881
+	| 000000000010 1836
+	| 000000001000 131
+	| 000000100000 B 01 460 618 1243 2147
+	| 00000010?000 $L
+	| 000001000000 $G D:1 D:2 $T $X Chrys 1780 2892
+	| 00000?000000 hark pesh
+	| 00000?00?000 r
+	| 001000100000 33
+	| 001001000000 104
+	| 01?00011???? Ambst b
+	| 01?001000000 D:0
+	| 01?001001101 F G
+	| 01?00?00?020 d
+	| 01?00?00?200 MVict
+	| 01?10010?000 f
+	| 11?000000000 2464
+	| 11?01??00000 Ps
+	| ?????????000 2344 > }
+{{}
+" et non tantum   cum praesens sum apud vos "
+[ KAI MH MONON EN TWi PAREINAI ME  PROS hUMAS
+| MH/OU |*0L MONON/tantum /solum |*1P EN.T.PAR.ME.PROS.hUMAS~MONON
+| TWi/TO | PAR)H(NAI | hH(MAS | PROS.hUMAS~ME ]
+	< 0000000 $G $0 $T $X 1881 Chrys
+	| 0000010 1739
+	| 00000?0 P
+	| 0000100 330 1424 2464 1243
+	| 0001000 2147
+	| 0010001 pesh
+	| 1000000 D F G
+	| ?100000 $L
+	| ?200000 b d r MVict
+	| ?200001 Ambst
+	| ??0??00 2344 > }
+=- $? P ; " lac. 4:14-18 "
+
+@ Ga4:19
+{{}
+" filii mei quos iterum parturio "
+[ TEKNA MOU hOUS  PALIN WDINW
+| TEKN)IA | -MOU | PALIN/PALAI ]
+	< 000 B 01:0 1739 $0 F D:0 G Ambst d MVict
+	| 0?? g
+	| 100 330 69 1175 2400 $G 01:2 D:1 D:2 $T $X $L Chrys 1780 2892
+	| 101 1270
+	| 110 1881
+	| 1?? $I
+	| ?00 hark pesh
+	| ??? 2344 P > }
+{{}
+" donec     formetur Christus in vobis "
+[ MEXRIS hOU MORFWQHi XRISTOS EN hUMIN
+| MEXRIS/AXRIS | MORF)H | XS~MORF. EN.hUMIN~XS | hO+/XS | XS/XU
+| PANTI+/hUM. | hH(MIN ]
+	< 0000000 B 01:0 1739 330 1175 2400 $0
+	| 0000001 69
+	| 1000000 $G $T $X 1881 Chrys 1780
+	| 1100000 2412
+	| 1100100 614
+	| ?000000 hark
+	| ?001010 P
+	| ?00?000 $L
+	| ?01?000 Ambst r
+	| ?020000 pesh > }
+
+@ Ga4:20
+=- $? p46 ;
+{{}
+" vellem autem  esse apud vos   modo "
+[ HQELON DE PAREINAI PROS hUMAS ARTI
+| E(QELON | HQELON/H=aut | -DE | PROS.hUMAS~PAR. ARTI/PROS.hUMAS
+|*0L PAR./esse /praesens.esse /adesse | PAR./+ME
+| -ARTI | ARTI/AR |*0L ARTI/modo /nunc ]
+	< 000000000 $G $0 $T $X 1881
+	| 00000001? 1243
+	| 0000001?? 1424
+	| 000001000 547
+	| 000010001 $L
+	| 000030001 b
+	| 000110001 f
+	| 000220002 Ambst
+	| 000230002 r MVict
+	| 001000000 1734 2147 1799
+	| 010000000 Chrys
+	| 010030001 d
+	| 100000000 6
+	| ????00??? 2344 > }
+{{}
+" et   mutare    vocem meam quoniam confundor in vobis "
+[ KAI ALLACAI THN FWNHN MOU hOTI    APOROUMAI EN hUMIN
+| ALLACAI/HLLASSON=mutarem | MOU~T.FWN. | hOTI/DIOTI |*0L hOTI/quoniam /quia
+| APO)Q(OUMAI | APOROU)SIN ]
+	< 000000 $G $0 $T $X 1881 Chrys
+	| 000001 1827
+	| 000010 1241s
+	| 0000?? 2344 I
+	| 000100 $L
+	| 000200 r
+	| 001?00 547
+	| 00???? P
+	| 010000 1175
+	| 100200 Ambst > }
+
+@ Ga4:21
+=+ $? P ; " lac. 4:21-24 "
+{{}
+" dicite mihi qui  sub lege    vultis esse "
+[ LEGETE MOI  hOI hUPO NOMON QELONTES EINAI
+|*0e LEGET)AI | LEG./+GAR | -MOI | -hOI |*1P QEL.EINAI~hUPO.NOMON
+| NOM)OU | QEL)ON |*0L QEL/vultis /volentes ]
+	< 00000000 $G $0 $T 796 $X 1881
+	| 00000001 $L
+	| 00000002 d r
+	| 00000010 1837
+	| 00000100 440
+	| 00010000 1270 1505 2495
+	| 00010002 b
+	| 000?0000 hark
+	| 000?1000 pesh
+	| 00100001 Ambst
+	| 01000000 Chrys
+	| 10000000 F G 1315 1646 2464:1
+	| 10000010 2464:0
+	| 10000?00 I
+	| ??????00 2344 > }
+{{}
+"     legem non legistis "
+[ TON NOMON OUK AKOUETE
+| NOM./+MOU | -OUK | AKOUETE/ANAGINWSKETE |*0e AKOUE)TAI ]
+	< 0000 $G $0 $T $X 1881 r Chrys
+	| 0001 131 1874:0 2464 1241s
+	| 0010 D 104 1175 $L
+	| 0011 F G
+	| 1100 796
+	| ??01 I
+	| ??10 $I sa > }
+
+@ Ga4:22
+=+ $I t ;
+{{}
+" scriptum est enim quoniam Abraham duos filios habuit "
+[ GEGRAPTAI     GAR hOTI     ABRAAM DUO  hUIOUS ESXEN
+| GAR/+ADELFOI |*0L hOTI/quoniam /quia /quod | hO+/ABR. ]
+	< 000 $G $0 $T $X 1881 Chrys
+	| 001 614 999 1243 2401
+	| 01? $L
+	| 02? Ambst b d
+	| 03? MVict
+	| 100 1241s 1799
+	| ??? 2344 I > }
+{{}
+" unum de       ancilla  et unum de        libera "
+[ hENA EK THS PAIDISKHS KAI hENA EK THS ELEUQERAS
+|*0L EK/de /ex | -KAI | *(LEUQERAS ]
+	< 000 $G $0 p46:1 $T Marc $X 1881 Chrys
+	| 001 p46:0
+	| 100 $L
+	| 110 MVict
+	| 200 Ambst
+	| ??? I 2344 > }
+
+@ Ga4:23
+{{}
+" sed qui    de       ancilla secundam carnem natus est "
+[ ALL hO MEN EK THS PAIDISKHS     KATA SARKA GEGENNHTAI
+|*0L hO/qui /is..qui /ille..qui
+| -MEN | KAI+/KATA | *(GENHTAI | GEGE)N(HTAI |*0e GEGENNHT)E ]
+	< 000000 $G $0 D:1 D:2 69:1 323:1 $T Marc 01 796 $X 1881 Chrys
+	| 000001 1874
+	| 000010 056 33 69:0 323:0 330 1175 1352 1646 2400 2495 6:1
+	| 000011 D:0 2464
+	| 000110 6:0
+	| 001000 131
+	| 00???? 2344
+	| 010000 B pesh
+	| 010010 p46
+	| 100000 Ambst
+	| 110000 $L
+	| 200000 b d MVict
+	| 300000 r
+	| ?????? I > }
+{{}
+" qui autem de        libera per repromissionem "
+[  hO DE    EK THS ELEUQERAS DI  EPAGGELIAS
+| -EK |*0L EK/de /ex | EK.THS:bis | ELEUQER)IAS
+| DIA/KATA.EPAGGELI)AN | THS+/EPAGG. |*0L EPAGG./repromissionem /*prom- ]
+	< 0000000 1241s 2464 A C Ps 33 104 440 1315 $0
+	| 0000010 $G $T 6:0 $X 1881 1780 2892
+	| 00000?0 hark pesh Marc
+	| 0000100 323 945 Chrys
+	| 0001000 01
+	| 0010100 796
+	| 01000?1 $L
+	| 01000?2 r
+	| 02000?2 Ambst
+	| 1?00000 p46
+	| 1?00010 6:1
+	| ??????0 2344 > }
+
+@ Ga4:24
+{{}
+"   quae sunt per allegoriam dicta "
+[ hATINA ESTIN ALLHGOROUMENA
+| ALLO.EX.ALLOU=aliud.ex.alio+/ALLHG.
+|*0L ALLHG./per.allegoriam.dicta /significantia /in.allegoria ]
+	< 00 $G $0 $T Marc $X 1881 F G Chrys
+	| 01 $L
+	| 02 d
+	| 03 r
+	| 12 b
+	| ?? 2344 > }
+{{}
+" haec  enim  sunt duo testamenta "
+[ hAUTAI GAR EISIN DUO DIAQHKAI
+| hAUT)A |*1P GAR/DE=dyn |*0L GAR/enim /nam~ | hAI+/DUO | DIAQHK)H ]
+	< 00000 $G $0 01:2 223 876 1022 1799 1960 2401 $X 1881 Marc 1573 056 796 2344 Chrys
+	| 00010 01:0 1241s 1243 Ps 614 1352 1827 2147 2412 $T
+	| 01000 pesh
+	| 10001 F G
+	| 101?0 $L
+	| 102?0 MVict > }
+=- $? P ; " lac. 4:21-24 "
+{{}
+" unum quidem a monte Sina in servitutem generans "
+[ MIA   MEN APO OROUS SINA EIS  DOULEIAN GENNWSA
+| MI)AN | -APO.OROUS.SINA | APO/EK=ex | OR)OU | -EIS...AGAR
+| EIS/EN.DOULEIAi | DOUL./T.SUNAGWGHN.T.IOUD.KATA.T.NOMOU
+|*1P GENN.~DOUL.
+| GE)N(WSA | GEN)O(SA | GENNWS)AN |*0L GEN./generans /gerens ]
+	< 000000000000 $G $0 $X $T 1245:1
+	| 000000000001 $L
+	| 000000000002 r
+	| 000000000010 1022
+	| 000000001000 618 1245:0 1646 1241s 1881
+	| 000000001100 2464
+	| 000000010000 pesh
+	| 000000100000 Marc
+	| 000001000001 Ambst
+	| 00001??????? 1573
+	| 000100001000 F:1 G
+	| 000100001100 F:0
+	| 001000000001 MVict
+	| 01??00000000 Chrys
+	| 100000000000 056 796
+	| ?0?0000????? 2344
+	| ????00000000 P
+	| ?????0000000 Epiph > }
+{{}
+" quae  est   agar "
+[ hHTIS ESTIN AGAR
+| hHTIS/EI.TIS /hO(TI) | -AGAR...ESTIN_v25 ]
+	< 00 $G $0 $T 2401:1 P $X F G 1881 $L Chrys
+	| 01 999 2401:0
+	| 10 1319 L
+	| 20 Ambst r MVict
+	| ?0 2344
+	| ?? 1573 > }
+
+@ Ga4:25
+{{}
+" Sina enim mons est in Arabia "
+[ TO DE AGAR SINA OROS ESTIN EN THi ARABIAi
+| -TO.DE.AGAR | -DE | DE/GAR | -AGAR | AGAR/ARA 
+| -SINA | OROS~SINA | -ESTIN | ESTIN~OROS | EST./+hON | -EN.THi ]
+	< 00000000000 B D:0 D:2 A 69 88 330 1175 1319 2464 $0
+	| 00000010000 2400 D:1
+	| 0001?000000 Ambst p46
+	| 0001?00???? sa
+	| 00100000000 $G P $T 2401:1 $X 1881 Chrys 1780
+	| 00100000100 Ps 1505 1611 2495
+	| 00100001?00 1837
+	| 00100010000 hark
+	| 00100010100 pesh
+	| 00100100000 d
+	| 00101000000 1874:1
+	| 00110000000 $L
+	| 0011?000000 C F G
+	| 0011?000001 1241s
+	| 0011?000010 01
+	| 0011?001?00 1739
+	| 0011?00???? $I
+	| 0011?0100?0 Epiph
+	| 01?10000000 MVict
+	| 1????000000 1352 1243 1874:0
+	| 1????00000? 2344
+	| ?????000000 1573
+	| ??????????0 999 2401:0 > }
+{{}
+" qui conjunctus est    ei quae nunc est Hierusalem "
+[          SUSTOIXEI DE THi     NUN      hIEROUSALHM
+| hH+/SUST. | SUNSTOIX)OUSA SUSTOIX)ON=conjunctus.est(w/mons=OROS)
+|*0L SUSTOIX./conjung- /consona- | -DE | DE/TADE /KAI~=w | hIER.~NUN
+| THi/THN |*0L THi/ei.quae /huic.quae /ei.qui..juxta | -NUN | NUN)I ]
+	< 0000000000 $G $0 D:1 D:2 $T $X 1881 Chrys
+	| 0000010000 hark
+	| 0000200000 pesh
+	| 0000000001 Ps
+	| 0000001000 1175 2464 1319 1646 L 1 131 323 330 1315
+	| 00000?101? 1243
+	| 0000100000 1241s
+	| 0001?00000 1352
+	| 001000020? b
+	| 0101?00000 D:0
+	| 1101?00000 F G
+	| 1111?0020? Ambst r
+	| 1121?0020? d
+	| 1211?0010? $L
+	| 1211?0030? MVict
+	| ?0000000?? 2344
+	| ?1???????? $I > }
+=- $? 2423 ;
+{{}
+" et servit    cum      filiis ejus "
+[ DOULEUEI GAR META TWN TEKNWN AUTHS
+| -DOUL...AUTHS |*0L DOULEU)OUSA=serviens EN+/(DOUL)EIAi/*ESTIN=in.servitute.est
+| -GAR | GAR/NUN GAR/DE DOUL.GAR/KAI.DOUL. |*1P META/AUTHS.KAI=hy.wbnyhy:
+|*0L AUTHS/ejus /suis ]
+	< 000000 $0 B p46 D:0 D:1 F G 33 1175 01 A C 075 6 88 104 330 1241s 1319 1573 1739 1837 2400 2464 $X
+	| 000310 pesh
+	| 000001 r
+	| 000002 d
+	| 00000? P
+	| 000100 K L Ps 056 1 131 205 209 323 440 460 489 517 547 614 618 796 927 945 999 1242 1245 1836 2125
+	| 000200 1243 D:2 69 226 1270 1352 910 1315 1424 1448 1505 1611 1646 1734 1735 1738 1827 1854 1874 1891 1982 2147 2412 2495 2815 $T 2138 1881 1780 2892
+	| 000301 $L
+	| 000302 f
+	| 011?02 Ambst
+	| 02??02 MVict
+	| 1????? Chrys
+	| ?????? 2344 > }
+
+@ Ga4:26
+{{}
+" illa autem quae sursum est Hierusalem libera   est "
+[   hH DE            ANW    hIEROUSALHM ELEUQERA ESTIN
+|*0L hH/illa..quae /quae ]
+	< 0 $G $0 $T $X 1881 Chrys
+	| 1 $L
+	| 2 b d r MVict 
+	| ? P 2344 > }
+{{}
+" quae  est   mater nostra "
+[ hHTIS ESTIN MHTHR hHMWN
+| -hHTIS.ESTIN | hHTIS/EITIS | ESTIN/ETI | hH+/MHT. | PANTWN+/hHM. ]
+	< 00000 B p46 D F G Ps 33 88 1611:0 C:0 6 1241s 1739 $0 Marc 1881 01:1 pesh
+	| 00001 $G C:1 01:2 1611:1 $T Ir $X 1780 2892
+	| 00010 1505 2495
+	| 000?0 $L
+	| 000?1 b MVict
+	| 000?? 2344 hark
+	| 00101 L
+	| 01000 2464
+	| 1??00 01:0
+	| ???00 Chrys
+	| ????0 g $I bo sa
+	| ????1 ar t 
+	| ????? P > }
+
+@ Ga4:27
+{{}
+" scriptum est enim laetare sterilis quae non paris "
+[ GEGRAPTAI    GAR EUFRANQHTI STEIRA   hH OU TIKTOUSA | OU/MH ]
+	< 0 $G $0 $T $X 1881 Chrys
+	| 1 D F G
+	| ? 2344 P $L > }
+=- $? H ;
+{{}
+" erumpe et clama quae non parturis quia multi    filii   desertae "
+[ hRHCON KAI BOHSON hH OUK WDINOUSA hOTI POLLA TA TEKNA THS ERHMOU
+|*1P w=KAI+/hRHCON |*0L BOHSON/clama /exclama
+| hOTI/TI |*0L hOTI/quia /quoniam | -TA ]
+	< 00000 $G $0 $T $X 1881 Chrys
+	| 00001 2344
+	| 00100 2412
+	| 0101? $L
+	| 0102? r MVict
+	| 0201? Ambst
+	| 10000 pesh
+	| ??000 P > }
+{{}
+" magis quam ejus quae habet       virum "
+[ MALLON H   THS       EXOUSHS TON ANDRA
+| THS/TIS THS/TOIS | ERHMOU+/EX. | -TON
+|*1P T.ANDRA/TA.TEKNA.GUNAIKOS=bnyh:.db`ylt' ]
+	< 0000 $G $0 $T $X 1881 Chrys G:1
+	| 0001 pesh
+	| 0010 6
+	| 0100 G:0
+	| 1000 1874
+	| 2000 614
+	| ?000 2344
+	| ?0?0 $L > }
+
+@ Ga4:28
+{{}
+" nos autem fratres secundum Isaac promissionis filii sumus "
+[ hUMEIS DE ADELFOI     KATA ISAAK   EPAGGELIAS TEKNA ESTE
+| hH(MEIS | hU)MIN=vobis | -DE | ADEL.~hUM. | TEKNA/+QEOU | ESTE~TEKNA
+| ESTE/ESMEN ESTE/MEN ]
+	< 0000000 B H 6 1270 1319 1573 1739:0 p46 D:0 D:1 $0 F G 33 1175 1881 Ambst b MVict
+	| 0000001 440 2892
+	| 0000011 999
+	| 0000100 1739:1
+	| 0010001 2147
+	| 0100000 d
+	| 0?????0 g sa
+	| 1000000 1836
+	| 1000001 $G 2344 P D:2 $T 2401:1 $X $L Chrys 1780
+	| 1010001 1243 2401:0
+	| 1011000 1799
+	| 1?????1 ar bo $I > }
+
+@ Ga4:29
+{{}
+" sed quomodo tunc qui secundum carnem natus fuerat "
+[ ALL hWSPER  TOTE hO      KATA SARKA     GENNHQEIS
+|*1P ALL/KAI=w | hWSPER/hWS hOS)PER |*0L hWSP./quomodo /sicut(i) /~quidem
+| -TOTE |*0L GENN./natus.fuerat /natus.est |*1P GENN.~KATA.SARKA ]
+	< 000000 $G $0 P $T 104 1175 H p46 $X 1881 A Chrys
+	| 000100 Ps
+	| 010000 69
+	| 020000 1837
+	| 0?1010 $L
+	| 0?1020 f
+	| 0?2010 r
+	| 0?2020 d MVict
+	| 0?3020 b
+	| 0??000 2344
+	| 100001 pesh > }
+{{}
+" persequebatur eum qui secundum spiritum  ita et nunc "
+[ EDIWKEN           TON     KATA PNEUMA hOUTWS KAI NUN
+|*0e EDIWK)AI | TON/TO | hOUT)W ]
+	< 000 $G $0 876 1799 2401 2412 $X 1881 Chrys
+	| 001 K 1 69 88 205 209 1241s 1242 1245 1827 1837 1891 $T
+	| 011 104 1175
+	| 0?0 H p46
+	| 100 A
+	| ?01 2344
+	| ??? $L > }
+
+@ Ga4:30
+{{}
+" sed quid dicit scriptura eice        ancillam et     filium ejus "
+[ ALLA  TI LEGEI  hH GRAFH EKBALE THN PAIDISKHN KAI TON hUION AUTHS
+| EKBA)LLE | PAID./+TAUTHN | T.PAID.K.T.hUION.AUTHS/TON.hUION.THS.PAIDISKHS ]
+	< 000 $G $0 P $T $X 1881 2344 p46 F G $L
+	| 001 Chrys
+	| 010 A
+	| 0?0 H
+	| 100 1739 > }
+=+ $? H ;
+{{}
+" non enim    heres erit   filius      ancillae cum      filio       liberae "
+[ OU GAR MH KLHRONOMHSEI hO hUIOS THS PAIDISKHS META TOU hUIOU THS ELEUQERAS
+| -MH | MH~GAR GAR/hOTI~=m+l | KLHRONOMHS)Hi | -T.hUIOU | T.ELEUQ/MOU.ISAAK ]
+	< 00000 $0 $X 1874:1 B 01:1 D:1 D:2 205 209 330 460 489 618 927:0 1245 1319 1646 1735 1738 1837 2400 2401:1 2423 1241s 517 1734 075 2464 6 33 1836
+	| 00001 D:0
+	| 00010 01:0
+	| 00100 $T 1881 A 131 226 323 1243 1424 1982 K L Ps 104 1739 2125 1611 1854 C 056 1 440 547 614 796 910 927:1 945 999 1242 1270 1315 1352 1448 1573 1827 2147 2412 2815 2401:0 Chrys 2892
+	| 00?00 P
+	| 01000 1175
+	| 01100 1891 2344
+	| 1?000 p46 69 88 2495 1874:0
+	| 1?100 1505
+	| 1?101 F G
+	| ?2000 pesh
+	| ??000 $L hark
+	| ??001 Ambst b d MVict
+	| ????1 $I > }
+
+@ Ga4:31
+{{}
+" itaque fratres non sumus  ancillae filii sed        liberae "
+[ DIO    ADELFOI OUK ESMEN PAIDISKHS TEKNA ALLA THS ELEUQERAS
+| -DIO...ELEUQ. | -DIO | DIO/+DE DIO/+OUN
+| hHMEIS+/ADEL. | ARA+/ADEL. | -ADEL. | ADEL./+MOU
+|*1P TEKNA~PAID. | THS+/PAID. | -THS |*1P TEKNA+/T.ELEUQ. ]
+	< 00000000000 B 330 1175 1319 1573 1739 2400 01 D:0 D:1 $0 1881
+	| 000000000?0 Marc
+	| 00000000??0 $L
+	| 00000010000 33
+	| 000001????? Ambst
+	| 00000?????? $I sa
+	| 01000000000 Ps
+	| 01001000000 $G $T $X D:2 Chrys 1780 2892
+	| 01001000100 460 618 1738 876
+	| 01011011001 pesh
+	| 011010????0 bo
+	| 01110000000 A C 88 2464 1241s P
+	| 01110000??0 r
+	| 01200000??0 MVict
+	| 01201000010 F G
+	| 01201?????? g
+	| 01?01???0?? 2344
+	| 01?01?????? p46
+	| 1?????????? 1891 > }
+
+@ Ga5:1
+=- $I t ;
+{{}
+" qua libertate  nos  Christus liberavit "
+[ THi ELEUQERIAi hHMAS XRISTOS HLEUQERWSEN
+|*1P STHKETE.OUN~T.ELEUQ...HLEUQ.
+| THi.ELEUQERIAI.OUN+/T.EL. | THi/hHi /hHLIKHi=quali
+| ELEUQ./+OUN | ELEUQ./+hHi | HL.~hHM.XS
+| -hHMAS | hU(MAS | hH)MWN | XS~hHM. HLEUQ.~hHM. | hO+/XS
+| HLEUQ./ECHGORASE | E(LEUQERWSEN ]
+	< 0000000000000 $0 B 01:0 A D:0 33 sa bo
+	| 0000000001000 Marc 01:2 Ps 1175 1739 1881 1241s 1319 1573 2400
+	| 0000000001001 C:0 69:0 330
+	| 00000000010?? P
+	| 0000100000000 D:1 D:2
+	| 0000100001000 075 6 104 2464 1891:1
+	| 000010000101? $X 1611:0
+	| 000010000111? 2495
+	| 000010010101? Chrys
+	| 0001000001000 2138 C:1 517 1243 1735 614 2412 2815 1022 2423:1
+	| 0001100001000 K L 88 910 1352 1424 1646 1836 1837 1854 056 1734 945 2147:1 131 226 323 440 460 489 547 618 796 927 1242 1270 1315 1448 1738 1827 1982 2125 $T 2423:0 1780 2892
+	| 0001100001001 69:1 1874:1 1 205 209
+	| 000110000101? 1874:0 1611:1
+	| 0001100101000 999 2147:0
+	| 0001100??1100 2344
+	| 0001101???000 1245
+	| 0010000000000 F G
+	| 0010000000?00 $L g
+	| 0010000001?00 Ambst f MVict
+	| 0010000010?00 d
+	| 0010010000?00 b
+	| 0020000001?00 r
+	| 0100100001000 1891:0
+	| 100010000200? pesh
+	| ???????????0? p46 > }
+=+ $? p46 ;
+{{}
+" state       et nolite iterum jugo servitutis contineri "
+[ STHKETE OUN KAI    MH PALIN  ZUGWi  DOULEIAS ENEXESQE
+| STHT)E |*0e STHKET)AI | -OUN |*0L MH/nolite..-eri /ne..-mini
+| PALIN/POLIN | DOUL.~ZUGWi | ENEX.~ZUGWi
+| ANE(XESQE |*0e ENEXESQ)AI |*0L ENEX./contineri /conhiberi /attineamini ]
+	< 0000000000 B C Ps 6 33 104 330 1739 2400 $0 01 1881
+	| 0000000010 1837 A
+	| 0000000100 1874:1
+	| 0000001000 pesh
+	| 0010000000 $G 927:0 P 2344 $T $X 1780 2892
+	| 0010000010 489 927:1 1424
+	| 0010000100 69 614 618 1836 2147 2412 460 1874:0 223 Chrys
+	| 0010010000 D:1
+	| 0010010100 D:2
+	| 0010010110 D:0
+	| 0100000010 2464
+	| 0100010010 F G
+	| 0100100000 1241s
+	| 1000000010 1175
+	| 1000000100 1573
+	| 1010000110 1319
+	| ?001000001 f MVict
+	| ?001010002 Ambst
+	| ?002010003 r
+	| ?011000001 $L
+	| ?011010001 d
+	| ?011011001 b
+	| ???0000000 Marc > }
+
+@ Ga5:2
+=+ $? r ; " r lac. 5:2-6:4 "
+{{}
+" ecce ego Paulus dico vobis quoniam si circumdamini "
+[ IDE  EGW PAULOS LEGW hUMIN hOTI   EAN PERITEMNHSQE
+| EI)DE ID(OU | -PAULOS | hH(MIN |*0L hOTI/quoniam /quia | EAN/AN
+| MH+/PERIT. | PERITEMN)E(SQE |*0e PERITEMNHSQ)AI ]
+	< 00000000 $G $0 01:1 D:1 D:2 $T $X 1881 Chrys
+	| 00000001 D:0 2464 1780
+	| 00000010 075 1175 1874
+	| 000??000 2344
+	| 01000000 01:0 2401
+	| 0?0????? P
+	| 10000000 Ps 33 2400
+	| 10000001 F G
+	| 10000010 460 1836
+	| 10101010 1241s
+	| 20000000 999 1891:1
+	| 20000100 1891:0
+	| ?001?000 $L
+	| ?002?000 Ambst b d f
+	| ???00000 Epiph > }
+=- $? p46 ;
+{{}
+" Christus vobis nihil proderit "
+[  XRISTOS hUMAS OUDEN WFELHSEI
+| -hUMAS...PANTI |*1P OUDEN.WFEL.~hUMAS
+| hH(MAS | WF)EI(LHSEI WFEL)*(EI=prode.est | WFELHS)Hi ]
+	< 00000 $G $0 $T Epiph $X 1881 $L Chrys
+	| 00001 L 323
+	| 00010 C
+	| 00020 b
+	| 000?? P
+	| 00100 2464 69
+	| 00?00 p46
+	| 01000 pesh
+	| 1???? 1241s > }
+
+@ Ga5:3
+{{}
+" testifcor autem rursum "
+[ MARTUROMAI DE    PALIN | MARTUR)W | MARTUR)W(MAI | -PALIN ]
+	< 000 $G $0 D:2 $T Marc $X $L
+	| 001 D:0 D:1 G 1739 1799 1881 Ambst b d MVict Chrys
+	| 00? P
+	| 010 2344 K 1315 1424 1646 1827 1837 1874
+	| 011 F
+	| 1?0 1243
+	| ??1 $I
+	| ??? 1241s > }
+=+ $? P ; " lac. 5:3-4 "
+{{}
+" omni homini circumcidenti se "
+[ PANTI ANQRWPWi PERITEMNOMENWi
+| -PANTI | hOTI~ANQ.PERIT. | AN)OS.PERITEMNOMEN)OS PAN)TA.AN)ON.PERIT..)ON
+| PERI)TEM(NWi PERI)TETMH(MENWi PERI)TEMNW(MENWi ]
+	< 0000 $G $0 $T $X 1881 $L Chrys
+	| 0001 1837
+	| 0002 1241s
+	| 0003 1175 226 330 1874 2400 2464 1799
+	| 0020 b
+	| 1112 Marc
+	| ???0 2344 > }
+{{}
+" quoniam debitor est universae     legis faciendae "
+[ hOTI  OFEILETHS ESTIN   hOLON TON NOMON POIHSAI
+| -hOTI |*0L hOTI/quoniam /quia | POI./PLHRWSAI ]
+	< 000 $G $0 $T 1881 01:2 2138
+	| 001 440 1315 $X Marc pesh Chrys
+	| 010 $L
+	| 020 Ambst b
+	| 100 01:0 > }
+
+@ Ga5:4
+{{}
+" evacuati estis a Christo "
+[ KATHRGHQHTE  APO XRISTOU
+| KATHRGHQ)H |*0e KATHRGHQHT)AI | TOU+/XU ] 
+	< 000 B p46 C D:0 D:1 Ps 104 330 1175 1837 2400 $0 Epiph
+	| 001 $G D:2 $T $X 1881 Chrys 1780 2892
+	| 00? $L 2344 hark pesh
+	| 010 01 F G
+	| 011 A
+	| 101 2464 > }
+{{}
+" qui     in lege  justificamini a gratia excidistis "
+[ hOTINES EN NOMWi DIKAIOUSQE THS XARITOS ECEPESATE
+| hOIT./hOSOI |*0e DIKAIOUSQ)AI |*1P w=KAI+/T.XAR.
+| ECEPES)E(TE ECEPES)H(TE |*0e ECEPESAT)AI ]
+	< 00000 $G $0 226:0 $T 2423:0 $X D:1 $L Chrys
+	| 00001 2892
+	| 00010 1245 D:2 056 6 69 205 226:1 614 796 910 927 945 1352 1448 1982 2412 223 1022 1960 2423:1 1780
+	| 00020 1319 1573
+	| 00100 pesh
+	| 01000 1175 33 1243 1505 2464 D:0 1241s 1881
+	| 01001 G F
+	| 01010 131 489 2147
+	| 10000 Epiph
+	| ?1000 2344 > }
+=- $? P ; " lac. 5:3-4 "
+
+@ Ga5:5
+{{}
+" nos   enim  spiritu ex fide    spem     justitiae expectamus "
+[ hHMEIS GAR PNEUMATI EK PISTEWS ELPIDA DIKAIOSUNHS APEKDEXOMEQA
+| GAR/DE | PNI.EK.PIST./DIA.PISTEWS.EN.PNI | DIK.~ELP. | ELPID)I
+| *(EKDEXOMEQA ]
+	< 00000 $G $0 $T 01:2 $X
+	| 00001 p46 01:0 1739 1881
+	| 0000? $L
+	| 00010 1
+	| 00110 323
+	| 01000 Chrys
+	| 10000 1175 1245
+	| 10001 88
+	| ?00?0 P > }
+
+@ Ga5:6
+=- $? H ;
+{{}
+" nam in Christo Jesu neque circumcisio aliquid valet "
+[ EN GAR XRISTWi IHSOU OUTE PERITOMH         TI ISXUEI
+| -GAR |*0L GAR/nam~ /~autem | -IU | -OUTE...ISX. | OUTE/OU
+| -TI | TI/TIS TI/THi | ISX./ESTIN ]
+	< 00000000 $G $0 $T $X 1881 1780:1
+	| 00000001 Chrys
+	| 00000010 1243
+	| 00000020 1827
+	| 000001?? 075 1836
+	| 00001000 pesh
+	| 00001010 1780:0
+	| 0001???? F G:1
+	| 00100000 B
+	| 00?00020 2344
+	| 00?????? P
+	| 01000000 $L
+	| 02000000 Ambst b d
+	| 1?000000 p46 1735 1837 1646 2400
+	| 1?01???? G:0
+	| ???00000 Marc > }
+=+ $? P ; " lac. 5:6-8 "
+{{}
+" neque praeputium sed fides quae per caritatem operatur "
+[ OUTE AKROBUSTIA ALLA PISTIS      DI AGAPHS ENERGOUMENH
+|*1P ENERG.~DI.AGAPHS | ENERGOUMEN)HS ]
+	< 00 $G $0 $T Marc $X 1881 $L Chrys
+	| 01 p46 H Ps
+	| 10 pesh > }
+
+@ Ga5:7
+{{}
+" currebatis bene quis vos impedivit    veritati "
+[ ETREXETE KALWS TIS hUMAS ENEKOYEN THi ALHQEIAi
+|*1P KALWS~ETREX. | hH(MAS | ENEK./EBASKANE | *(EKOYEN AN(EKOYE
+| -T.ALHQ.MH.PEIQ. | -THi ]
+	< 000000 01:2 $G $0 223 876 1022 1799 2412 2423 $X 1881
+	| 000001 B A 01:0
+	| 00000? $L
+	| 00001? Chrys
+	| 000100 1352
+	| 000200 $T
+	| 001?00 075
+	| 010000 1241s
+	| 100000 pesh > }
+{{}
+" non oboedire {+nemini conserseritis} "
+[ MH PEIQESQAI | MH/KAI |*0e PEISQESQ)E | PEIQ./+MHDENI.PEIQESQAI ]
+	< 000 $G $0 517:1 $T $X 1881 D:0 D:2 $L
+	| 001 F G Ambst b f
+	| 010 1424 517:0 614 1245 1646 2412 1837 33 D:1
+	| 110 1319
+	| ?10 2344
+	| ??0 $I
+	| ??1 ar g
+	| ??? Chrys > }
+
+@ Ga5:8
+{{}
+"   persuasio non est ex eo qui  vocat vos "
+[ hH PEISMONH OUK     EK TOU KALOUNTOS hUMAS
+| -hH.PEIS...EK | -hH | hH/EI | PEIS./PLHSMONH |*0L PEIS./persuasio /suasio
+| PEIS./+hUMWN | -OUK |*1P OUK+/ESTIN |*0L EK/APO=a | TOU/+QU | hUMAS~KAL.
+| KAL./LALOUNTOS | KALOUNT)AS | -hUMAS | hH(MAS | hUM./+ESTIN ]
+	< 0000000000000000 $G $0 1874:1 D:2 $T $X 1881 Chrys
+	| 0000000000000010 323 1424
+	| 0000000000001000 01
+	| 000000000000?000 2344
+	| 0000000000010000 517 1270
+	| 0000000000?001?0 075
+	| 0000000100000000 pesh
+	| 0000001000000000 1891 D:0 D:1
+	| 0001000000000000 1836 440 1611 2400 1837 1780
+	| 0001000000000001 1175
+	| 0010000000010000 1241s
+	| 01???00000000000 1874:0
+	| 0?00100000000000 $L
+	| 0?00201000100000 d
+	| 0?00210011000000 Ambst
+	| 0?00211001000000 b
+	| 0?00211001101000 MVict
+	| 1?????????000000 330
+	| ??????0????????? $I > }
+=- $? P ; " lac. 5:6-8 "
+
+@ Ga5:9
+{{}
+" modicum fermentum totam    massam corrumpit "
+[   MIKRA      ZUMH hOLON TO FURAMA     ZUMOI
+| OUK.OIDATE.hOTI=nescitis.quia+/MIKRA |*1P ZUMH~MIKRA
+| MIKRA/+GAR | ZUM)OI |*0L hOLON/totam /universam | -TO | ZUMOI/DOLOI ]
+	< 0000000 $G $0 D:2 $T $X 1881 Chrys
+	| 0000001 D:0 D:1 Marc
+	| 0000010 p46
+	| 00001?1 $L
+	| 0001000 330
+	| 0010000 L
+	| 0100000 pesh
+	| 10002?1 MVict
+	| ???0000 Epiph P
+	| ??????1 $I > }
+
+@ Ga5:10
+{{}
+" ego confido  in vobis in domino "
+[ EGW PEPOIQA EIS hUMAS EN KURIWi
+| -EGW...Hi | EGW/+DE | EIS/PERI=de | -EN.KW |*1P KW+/hMWN=bmrn ]
+	< 00000 $G $0 460:0 $T 2138 1881 C:1 $L Chrys
+	| 00001 pesh
+	| 00010 B
+	| 00100 MVict
+	| 01000 1611 p46 C:0 F G 88 205 460:1 618 1505 1734 1738 2495 2344 $X f
+	| 1???? 104
+	| ???00 P > }
+{{}
+" quod nihil aliud sapietis "
+[ hOTI OUDEN ALLO FRONHSETE
+|*0L hOTI/quod /quia | ALL)W |*0L FRON./sapietis /sentietis
+| FRONHS)HTE | FRONHSET)AI | FRON./+HN.EXI.hH.ALHQEIA.TOU.XRISTOU ]
+	< 000000 $G $0 P 1837:1 $T 2401:1 $X B Chrys
+	| 000010 G 1243 1881
+	| 000011 F
+	| 000100 1646 1837:0 p46 Ps 075 33 88 999 1735 2400 2401:0
+	| 000??? H
+	| 010000 1874 2892
+	| 010100 2464
+	| 101000 $L
+	| 101001 f
+	| 102000 b d
+	| 202000 Ambst
+	| ?????? 104 > }
+=+ $? H ;
+{{}
+" qui autem conturbat vos portabit judicium quicumque est ille "
+[ hO  DE   TARASSWN hUMAS BASTASEI TO KRIMA hOSTIS EAN Hi
+|*1P DE/KAI~=w | hH(MAS | hUM./+AUTOS
+| -BAST....KRIMA | BASTAS)Hi |*0L E(BASTAS)EN=portavit
+| EAN/AN | Hi/EI /GENHTAI=fuerit |*0L Hi/+AUTOS=ille ]
+	< 000000000 B p46 01 A 33 1315 1319 1573 1837 1739 440 $0 1881 C
+	| 000000010 1175 1241s
+	| 000000100 $G 1874:1 $T $X Chrys 1780 2892
+	| 000000110 2464 1874:0
+	| 000000?00 hark
+	| 000000?01 $L
+	| 000000?20 Ambst MVict
+	| 000000??? Marc
+	| 000001?01 b
+	| 000100100 1836
+	| 001000100 614 2412
+	| 010001?01 d
+	| 100000?00 pesh
+	| ???010??? P
+	| ????????? 104 > }
+
+@ Ga5:11
+{{}
+" ego autem frates "
+[ EGW    DE ADELFOI | -EGW.DE | -DE | ADELF./+MOU ]
+	< 000 $G $0 P $T $X 1881 $L Chrys
+	| 001 1837
+	| 00? 2344
+	| 010 1739 Ps 1 6 88
+	| 1?0 440 > }
+{{}
+" si circumcisionem adhuc praedico "
+[ EI      PERITOMHN ETI    KHRUSSW
+| EI/H | PERITOM)H | -ETI |*1P ETI~PERIT. | ETI/EI.TI ETI/TI | -KHRUSSW ]
+	< 000000 $G $0 2344 $T 88 2464 1315 1241s 1611 2495 $X C:1 D:2 $L Chrys
+	| 000010 C:0
+	| 000020 1175
+	| 0000?1 1505
+	| 000100 pesh
+	| 001??0 D:0 D:1 F G 6 1739 223 1881 Ambst b d MVict
+	| 010000 330
+	| 0?1??? g ar
+	| 0????0 P
+	| 100000 1780 > }
+{{}
+" quid adhuc persecutionem patior "
+[ TI   ETI            DIWKOMAI
+| -ETI | ETI/hOTI | DIWK)W(MAI ]
+	< 000 $G $0 2344 $T C D F G 6 1739 223 330 P $X 88 2464 1881 $L
+	| 001 1315 1175 1241s
+	| 010 1611
+	| 1?0 2495 1505 Chrys pesh > }
+{{}
+" ergo evacuatum est    scandalum      crucis "
+[ ARA     KATHRGHTAI TO SKANDALON TOU STAUROU
+|*0e KATHRGHT)E | TO/TON | -TOU.STAUR. | STAUR./+TOU.XU ]
+	< 0000 $G $0 P 2344 $T $X Chrys
+	| 0001 C A 1270 1837
+	| 0011 1836 323 945
+	| 0100 1874
+	| 0?00 $L
+	| 1000 88 2464 1881
+	| 1001 1241s > }
+
+@ Ga5:12
+=- $? 0122 ;
+{{}
+" utinam et  abscidantur "
+[ OFELON KAI APOKOYONTAI
+| OFEL./ARA |*0w W(FELON | OFELON/+DE | KAI.APO+/KAI | -KAI | APOKOY)W(NTAI ]
+	< 000000 $G $0 $T 1505 1611 2138 2495 1881 Chrys
+	| 000001 D:0 D:1 F G $L
+	| 000010 440
+	| 000011 MVict
+	| 000100 460:0
+	| 001000 $X
+	| 00???0 2344
+	| 010000 1837 L 075 460:1 618 910 1243 1424 1646 1738 1891 1982 2412
+	| 010001 D:2
+	| 1?0001 p46
+	| ??0?00 0122
+	| ?????0 P > }
+{{}
+" qui subvertunt vos [d] "
+[ hOI ANASTATOUNTES hUMAS
+| ANASTAT)O(NTES | SUN(ASTATOUNTES *(ASTATOUNTES
+|*0L ANAST./subvertent /conturbant | -hUMAS |*0L hUM.~ANAST. | hH(MAS ]
+	< 000000 $G $0 0122 2344 $T $X 2138:1 Chrys
+	| 000001 2138:0
+	| 000100 1
+	| 000?00 P
+	| 001000 d
+	| 001010 Ambst b
+	| 002010 $L
+	| 01000? 330
+	| 020000 1881
+	| 100000 C > }
+
+@ Ga5:13
+{{}
+" vos   enim in libertatem vocati estis fratres "
+[ hUMEIS GAR EP ELEUQERIAi EKLHQHTE     ADELFOI
+| -GAR | GAR/DE | ADEL.~EP.ELEUQ.EKLHQ. | -EP | ELEUQERI)AN ELEUQERI)AS
+| *(KLHQHTE |*0e EKKLHQHT)AI ]
+	< 0000000 $G $0 P $T 1881 pesh
+	| 0000100 330 1836 2400
+	| 0000210 33
+	| 0000?00 $L
+	| 0001000 618 1738
+	| 0001100 460
+	| 0100000 1243 $X
+	| 0100001 F G
+	| 0100?00 b
+	| 0110000 Chrys
+	| 1?00000 999
+	| ??00000 2344 > }
+{{}
+" tantum ne     libertatem in occasionem detis carnis "
+[ MONON  MH THN ELEUQERIAN EIS   AFORMHN    THi SARKI
+| MH~MONON | -THN | ELEUQ./+hUMWN | AFORM)H | THi/THS
+| SARK)OS | SARK./+DWTE /+APOXRHSQE=abutamini | ~+DWTE DWTE+~ ]
+	< 00000000 $G $0 D:1 D:2 0122:0 $T 1505 1611 2138 2495 1881 Chrys
+	| 00000011 F G
+	| 00001000 2464
+	| 00001100 D:0 33
+	| 00010000 2400
+	| 00100000 0122:1 69 1319 1573 $X 2892
+	| 001????? 2344
+	| 00?????? P
+	| 01000000 614
+	| 0?00?100 d
+	| 0?00?111 b
+	| 0?00?112 $L
+	| 0?00?121 MVict
+	| 10100000 1175 > }
+=+ $? P ; " lac. 5:13-17 "
+{{}
+"  sed per  caritatem   servite  invicem "
+[ ALLA DIA THS AGAPHS DOULEUETE ALLHLOIS
+| -DIA,T)Hi.AGAP)Hi |*0L AGAP./caritatem /dilectionem
+| AGAP./+TOU.PNEUMATOS | DOULEU)EI(TE |*0e DOULEUET)AI
+| DOUL./+hUMIN=vobis | ALLHL)OUS ]
+	< 0000000 $G $0 $T $X 1881 Chrys
+	| 0000001 1424 1573
+	| 000000? 2344
+	| 0000100 01 A 1 33 1241s
+	| 0001101 460 618 1738
+	| 0010000 104
+	| 010000? $L
+	| 011000? b d MVict
+	| 021001? Ambst
+	| 1010000 D
+	| 1010100 F G
+	| 1?1???? sa $I > }
+
+@ Ga5:14
+=+ $I t ;
+{{}
+" omnis enim lex   in uno sermone impletur "
+[ hO GAR PAS NOMOS EN ENI LOGWi PEPLHRWTAI
+|*0L PAS/omnis /universa | -NOMOS | NOMOS/LOGOS | NOMOS/+EN.hUMIN
+| -EN | -ENI.LOGWi | ENI.LOGWi/OLIGWi |*0L LOG./sermone /verbo
+| PEPL./ANAKEFALAIOUTAI | PLHR)OU(TAI ]
+	< 0000000000 B C 01 A 33 69 104 330 1739 2400 1837 $0 p46
+	| 0000000001 $G D:2 $T 2464 6 460 618 1315 1424 1874 2147 2344 Chrys 1780:0
+	| 000000000? pesh
+	| 0000000010 1573
+	| 0000001001 $X
+	| 000000100? hark
+	| 0000100001 075 1734
+	| 0000100010 1319
+	| 0001000001 D:0 D:1 F G
+	| 000111?00? Marc
+	| 0010000000 1175
+	| 0010000001 K L 323 945 1270 1891 2138 1881 1646
+	| 0100000001 1780:1
+	| 1000000101 $L
+	| 1001100101 b d
+	| 2001100101 MVict
+	| 2001100201 Ambst
+	| ????????00 bo sa
+	| ????????01 $I > }
+{{}
+"        diliges      proximum tuum sicut te ipsum "
+[ EN TWi AGAPHSEIS TON PLHSION SOU  hWS    SEAUTON
+| -EN.TWi | AGAPHS)AI AGAPHS)HS | -SOU
+|*0L hWS/sicut /tamquam | h)EAUTON ]
+	< 00000 209:1 0122:1 B C 01 A 33 $0 D:2 $X
+	| 00001 209:0 0122:0 $G $T 1505 1611 2138 1881 Chrys
+	| 01101 p46
+	| 02000 2464 6 460 618 1315 1424 1646 1874 2147
+	| 10000 D:0 D:1 F G Marc
+	| 10010 $L
+	| 10120 b
+	| ?0??? 2344
+	| ????? bo sa $I > }
+
+@ Ga5:15
+{{}
+" quod si     invicem mordetis et comeditis "
+[      EI DE ALLHLOUS DAKNETE KAI KATESQIETE
+| DAKN...KATESQ.~ALLHL. DAKN.~ALLHL. |*0e DAKNET)AI |*0e KATESQIET)AI ]
+	< 000 $G $0 0122:0 2344 $T $X 1881 D:1 $L Chrys 1780:1
+	| 001 131 1241s
+	| 010 0122:1 1780:0
+	| 011 2464
+	| 100 D:0 D:2 b d f MVict
+	| 111 F G
+	| 200 Ambst > }
+" ww:comeditis, Ambst:criminatis, b:incusatis,
+  d:inaccusatis, f:devoratis, MVict:accusatis "
+{{}
+" videte  ne  ab invicem consumanini "
+[ BLEPETE MH hUP ALLHLWN ANALWQHTE
+|*0e BLEPET)AI | BLEP./+hUPO | -MH
+| ANALWQ.~hUP.ALL. | hUP/AP |*0e ANALWQHiT)AI ]
+	< 000000 $G $0 1243:1 $T $X 1881 D:1 Chrys
+	| 00000? p46
+	| 000010 223
+	| 0000?0 $L
+	| 000100 D:0 D:2
+	| 0001?0 d MVict
+	| 001000 1243:0
+	| 010000 796
+	| 100001 2464
+	| 100101 F G
+	| 100111 1241s
+	| ?????? 2344 > }
+
+@ Ga5:16
+{{}
+" dico autem spiritu ambulate "
+[ LEGW   DE PNEUMATI PERIPATEITE
+| DE/+hUMIN | PERIPATEI)SQE ]
+	< 00 $G $0 $T $X 1881 $L Chrys
+	| 01 p46
+	| 10 b MVict > }
+{{}
+" et desiderium carnis non perficietis "
+[ KAI EPIQUMIAN SARKOS OU MH TELESHTE
+| EPIQUMI)AS |*0L EPIQ./desiderium /concupiscentiam 
+| EPI(TELESHTE | TELES)E(TE TELES)EI(TE |*0e TELESHT)AI ]
+	< 00000 $G $0 D:0 D:1 $T 2401:1 $X 1881 Chrys
+	| 00001 A F G 223
+	| 00010 D:2 1780
+	| 00020 2401:0
+	| 00101 Ps
+	| 01000 $L
+	| 02000 Ambst d
+	| 11000 f
+	| 12000 b > }
+=- $? P ; " lac. 5:13-17 "
+
+@ Ga5:17
+{{}
+" caro enim concupiscit adversus spiritum "
+[ hH GAR SARC EPIQUMEI KATA TOU PNEUMATOS
+| -GAR | GAR/DE |*0L GAR/enim /nam~ | EPIQUM)H ]
+	< 0000 $G $0 $T $X 1881 Chrys
+	| 0001 L 88 2147
+	| 000? p46
+	| 0010 $L
+	| 0020 Ambst d
+	| 0100 1505 1611 2138 2495 
+	| 1??? P
+	| ???? 0122 > }
+{{}
+" spiritus autem adversus carnem "
+[ TO DE PNEUMA   KATA THS SARKOS
+|*1P DE/KAI.EPIQUMEI |*0L DE/autem /vero | TO+/PNA ]
+	< 000 $G $0 $T $X 1881 p46:0 Chrys
+	| 001 p46:1
+	| 010 $L
+	| 020 Ambst
+	| 100 pesh
+	| ??? $I > }
+=+ $? MVict ; " MVict lac. 5:2c-6:1 "
+{{}
+" haec enim invicem adversantur "
+[ TAUTA GAR ALLHLOIS ANTIKEITAI
+| GAR/DE GAR/KAI~=w
+| ALLHL./+SOI=sibi | ANTIK.~ALLHL. | ANTIKEI)NT(AI |*0e ANTIKEIT)E ]
+	< 00000 B D:0 D:1 F G 33 $0
+	| 00001 2892
+	| 000?0 $L
+	| 00101 01:0
+	| 0010? p46
+	| 010?0 Ambst
+	| 0???? $I
+	| 10000 2147 P C D:2 075 69 330 1175 1241s 1739 1837 2400 2464
+	| 10001 A
+	| 10010 1881
+	| 10100 $G $T $X 01:2 2125:1 Chrys 1780
+	| 10101 2125:1
+	| 10110 L 88 205 209 323 489 796 945 999 1243 1315 1319 1424 1573 1734 1738 1827 1836 2815 223
+	| 20100 pesh > }
+=+ $? p46 ;
+{{}
+" ut  non quaecumque vultis illa faciatis "
+[ hINA MH hA EAN     QELHTE TAUTA POIHTE
+| -MH | -hA | hA/hOSA hA/hO | -EAN | EAN/AN
+| E(QELHT)EI | QEL)E(TE |*0e QELHT)AI
+| -TAUTA |*0L TAUTA/illa /ipsa | POI.~TAUTA | POI)EI(TE |*0e POIHT)AI ]
+	< 0000000000000 $0 01 1175 1837 B:1
+	| 0000000000010 330 2400 1874:1
+	| 0000000000100 69
+	| 0000000100001 2464
+	| 0000000100010 1241s
+	| 0000001000010 88
+	| 000000??00001 A
+	| 0000100000000 $G $T 2401:1 $X C:1 D:1 D:2 1780 2892
+	| 0000100000010 1 056 075 6 226 460 618 1245 1270 1738
+	| 0000100100000 131 2147 1960
+	| 0000100100010 1243
+	| 000010011??00 1799:0
+	| 0000101000000 1735 2401:0
+	| 0000101000010 517
+	| 000011001??00 1799:1
+	| 0000?0?001000 $L
+	| 0000?0?002000 d
+	| 0001?00000000 C:0 Chrys
+	| 0001?01000000 1739
+	| 0001?0101??10 1881
+	| 0001?0?01?000 Ambst
+	| 000??00000100 pesh
+	| 0010100000010 104
+	| 0020100000000 D:0
+	| 0020100100001 F G
+	| 01?0100000000 B:0
+	| 1000000000010 1874:0
+	| ?????00000000 33
+	| ????????00010 P > }
+
+@ Ga5:18
+{{}
+" quod si spiritu ducimini "
+[ EI DE PNEUMATI AGESQE
+|*0L DE/quod~ /~autem | PNI/PNA |*0e AGESQ)AI | AG./+QW=dei ]
+	< 0000 $G $0 1874:1 $T $X 1881 D:1 D:2 Chrys
+	| 0010 2464 D:0 F G 440 910 1315 1646
+	| 00?0 A
+	| 0100 1874:0
+	| 1000 $L
+	| 2000 d
+	| 2001 b > }
+{{}
+" non estis sub lege "
+[ OUK ESTE hUPO NOMON
+| OUK/OUKETI | EST)AI ]
+	< 00 $G $0 1874:0 01:0 $T 2138 1881 $L Chrys pesh
+	| 01 F G 2464 33 A
+	| 10 C 075 330 1505 1611 2400 2495 P 1175 1837 1874:1 $X 01:2
+	| 11 1241s > }
+
+@ Ga5:19
+{{}
+" manifesta autem sunt opera carnis "
+[ FANERA DE ESTI TA ERGA THS SARKOS
+| ESTI~DE  |*1P DE/GAR=gyr ]
+	< 00 $0 $G $T $X 1881 $L P 33 A Chrys
+	| 10 Ambst b
+	| 11 pesh > }
+{{}
+" quae sunt fornicatio immunditia luxuria "
+[ hATINA ESTIN PORNEIA AKARQARSIA ASELGEIA
+| hATINA/hINA | ESTIN/+MOIXEIA | ^M.+/P. ^M.+/AK. ^M.+/AS | +MOIX. +MOIXEI)AI
+| -PORNEIA | PORNEI)AI
+| -AKARQ. | AKARQARSI)AI |*0L AKARQ./immunditia /impuritas
+|*0L impudicitia+/ASELG. obscenitas+/ | -ASELG. | ASELGEI)AI ]
+	< 000000000000 B 01:0 1175 C 33 2464 1241s 1739:0 A 075 Marc $0 1881 pesh
+	| 000000001000 $L
+	| 00001?000000 460 618 1738
+	| 011100000000 $G $T $X 01:2 0122 1739:1 Ir
+	| 01110000221? Ambst
+	| 011200000000 2892 1780
+	| 011200001000 f
+	| 011201001100 b
+	| 01120100111? d
+	| 011201010001 F G
+	| 012100000000 1270 1573
+	| 0121001??01? Chrys
+	| 013100000000 330 2400
+	| 112100000000 1319
+	| ?00000000000 P
+	| ?0000000???0 ar bo sa
+	| ?1110000???0 g
+	| ?13100000000 Epiph
+	| ???????????? 2344 > }
+
+@ Ga5:20
+{{}
+" idolatria    veneficia inimicitiae "
+[ EIDWLOLATRIA FARMAKEIA EXQRAI
+| FARM.~EIDWL.
+|*0L EIDWL./idolatria /idolorum.servitus /idolatrocinia | EIDWLOLATRI)AI
+| FARMAKI)AI | FARM.:bis |*0L FARM./veneficia /beneficia /maleficia | EXQR)A ]
+	< 0000000 $0 B 1739 $T $G Ir 2138 1881
+	| 0000001 1738 1836 205 209 1315 1241s 1735 1
+	| 000000? 33
+	| 0000100 056
+	| 0001000 Marc 1505 1611 2495 2401 $X
+	| 0011000 F G
+	| 01?0010 Ambst b
+	| 02?0010 $L
+	| 03?0020 d:0
+	| 03?0030 d:1
+	| 1000000 Chrys
+	| ??????0 P
+	| ??????? $I bo sa > }
+{{}
+" contentiones aemulationes irae "
+[ ERIS ZHLOS QUMOI
+| -ERIS...QUMOI | ER)EIS
+| -ZHLOS...hAIR. | ZHL)OI ZHL)OUS |*0L ZHL./aemulationes /simulationes
+| QUMOI~ZHLOS | FQONOI.FONOI+/QUM. | QUM)OS ]
+	< 00000000 $0 B 1739 D:0 1881
+	| 00000001 pesh
+	| 00010000 $X 223 876 440 489 517 796 927 1242 1352 1448 1982 2147 2815 131 999 1827 1837 1505 1611 2495 056 1738 1836 205 209 1315 01 226 614 2412
+	| 00010100 945
+	| 000??000 A
+	| 001????? 1960
+	| 01000000 33 P
+	| 01001000 d
+	| 01010000 1241s 1735 1 6 460 618 1175 1891 2464 1874:1 C Ps 1245 D:1 D:2 K L 075 0122 69 88 104 330 547 910 1270 1424 1573 1646 1734 1854 2125 2344 $T 1799:1 2401 1243 1874:0 Marc Chrys 1780 2892
+	| 01010001 2400
+	| 01010010 Ir
+	| 01010100 1319
+	| 01011000 $L
+	| 01012000 Ambst
+	| 01020000 F G
+	| 011????? 1799:0
+	| 1?0????? 323
+	| ?1?1???? $I bo sa
+	| ??0????? p46 > }
+=- $? p46 ;
+{{}
+" rixae   dissensiones sectae "
+[ ERIQEIAI DIXOSTASIAI hAIRESEIS
+| -ERIQ...FQ. |*0L ERIQ./rixae /simultates /irritationes |*1P ERIQEI)A
+| hAIRES)IS |*0L hAIR./sectae /haereses ]
+	< 00000 $0 B 1739 $G 1874:1 $T 1799:1 p46 226 Marc Ir $X 1881 Chrys
+	| 00100 pesh
+	| 00010 01 A 1243 1874:0
+	| 01001 $L
+	| 01002 b
+	| 02002 Ambst
+	| 03012 d
+	| 1???? 614 2412
+	| ????? $I bo sa 1960 1799:0 > }
+
+@ Ga5:21
+{{}
+" invidiae homicidia ebrietates comisationes "
+[ FQONOI   ((FONOI)) MEQAI      KWMOI 
+| -FQ. |*1P FQON)OS | FQ./+FONOI | FQ./+FON. FONOI~FQ. | +FON. +FON)OS
+| MEQ)H | -KWM. | KWM)AI KWM)OIS KWM)AN KWM)OS ]
+	< 00000000 B p46 323 $0 33 P Marc Ambst
+	| 00000001 945 01
+	| 0000000? Ir
+	| 000000?? sa
+	| 00111000 1319 $G 0122 $T $X 1881 075 131 1448 796 Chrys 1780 2892
+	| 00111001 1243
+	| 00111002 L b
+	| 0011101? K
+	| 00111100 d
+	| 00112000 $L
+	| 0011???? $I bo
+	| 00121000 056
+	| 01112104 pesh
+	| 10000003 876
+	| ?????000 614 2412 > }
+{{}
+" et his simila      quae praedico vobis sicut praedixi "
+[ KAI TA hOMOIA TOUTOIS hA PROLEGW hUMIN KAQWS PROEIPON
+|*1P TA.hOM.TOUTOIS.hA/hOI.TA.TOIAUTA.PRASSONTES,KAQWS~PROL.hUMIN
+| -hOM. | TOUT.~hOM. |*1P PROEIPON~PROLEGW | *(LEGW
+| KAQ./+KAI | *(EIPON | PROEIP)OMEN | PROEIR)HKA ]
+	< 000000000 $0 B 6 p46 1881 1780
+	| 000000001 F G
+	| 00000000? d
+	| 000000010 1739
+	| 000000100 01:0
+	| 000001000 $G $T 2344 01:2 D:2 $X Chrys 2892
+	| 000001001 D:0 D:1
+	| 00000???? 0122
+	| 000011000 1241s 1874
+	| 00100000? $L
+	| 001001000 075 131 1448 Ir
+	| 01?001000 796
+	| 100101000 pesh
+	| ????01000 Marc
+	| ?????0??? sa $I
+	| ?????1??? bo g t
+	| ????????? P > }
+{{}
+" quoniam qui    talia        agunt    regnum dei non consequentur "
+[ hOTI    hOI TA TOIAUTA PRASSONTES BASILEIAN QEOU OU KLHRONOMHSOUSIN
+|*0L hOTI/quoniam /quod /quia |*0L -TA=-his | QU~BASIL. | -OU
+| KLHRONOM)OU(SIN |*0L KLHR./consequentur /possidebunt ]
+	< 000000 $G $0 1241s:1 $T Marc Ir $X 1881 Chrys
+	| 000010 1243
+	| 000100 1241s:0
+	| 001000 1739
+	| 00??00 33
+	| 110001 $L
+	| 200001 Ambst
+	| 310001 b
+	| 310002 d
+	| ??0000 0122
+	| ????00 P > }
+
+@ Ga5:22
+{{}
+" fructus autem     spiritus est "
+[ hO DE KARPOS TOU PNEUMATOS ESTIN
+| ADELFOI+/hO.DE | -DE |*0L DE/autem /vero | -ESTIN ]
+	< 0000 $G $0 $T Ir $X 1881
+	| 0001 Chrys
+	| 0010 $L
+	| 0020 Ambst
+	| 0100 614 2412 2892
+	| 1000 1799
+	| ???? P 2344 > }
+{{}
+" caritas gaudium pax longanimitas bonitas benignitas "
+[ AGAPH   XARA EIRHNH MAKROQUMIA XRHSTOTHS AGAQWSUNH
+| -XRHST. |*0L MAKR./longanimitas /patentia
+|*0L AGAQ./benignitas /mansuetudo ]
+	< 000 $G $0 $T Ir $X 1881 Chrys
+	| 011 $L
+	| 022 b d
+	| 111 Ambst > }
+
+@ Ga5:23
+{{}
+" fides modestia continentia ((castitas)) "
+[ PISTIS PRAUTHS EGKRATEIA
+| PISTIS/ELPIS=spes | PISTIS/+patientia.manusuetudo
+|*0L PRAUTHS/modestia /lenitas
+| EGKR./+hAGNIA EGKR./+hUPOMONH | EGKR./+XRHSTOTES=bonitas ]
+	< 00000 $G $0 D:2 P 0122 $T $X 1881 sa bo Chrys
+	| 00010 D:0 D:1 F G Ir $I
+	| 00020 104
+	| 00100 $L
+	| 00210 b d
+	| 01110 f
+	| 10211 Ambst > }
+{{}
+" adversus hujusmodi non est   lex "
+[ KATA TWN TOIOUTWN  OUK ESTIN NOMOS
+| T)ON.TOIOUT)ON | *(OUTWN TOU(TWN
+| -OUK...NOMOS |*1P NOMOS~OUK.ESTIN/ESTH=$ym | hO+/NOM. ]
+	< 00000 $G $0 D:2 P 0122 $T $X 1881 D:0 D:1 F G Ir 104 Chrys
+	| 00001 323
+	| 0000? $L
+	| 00010 pesh
+	| 001?? 1241s
+	| 01000 2344
+	| 0200? b
+	| 10000 1243 2464
+	| ????? sa bo $I > }
+
+@ Ga5:24
+{{}
+" qui autem sunt     Christi          carnem crucifixerunt "
+[ hOI DE         TOU XRISTOU IHSOU THN SARKA ESTAURWSAN
+| hOI/EI |*0L sunt+/XU XU/+sunt | T.SARKA~T.XU.IH | KU+/XU | -XU | -IU
+| EN.TAIS+/T.SARKA | SARKA/+AUTWN ]
+	< 00000000 $0 B A C Ps 33 1175 104:0 330 1241s 1319 1573 01:1 075 0122:1 1739
+	| 00000100 $G $T Marc 0122:0 0122:2 104:1 2344 $X d Chrys 1780 2892
+	| 00000111 F G pesh
+	| 00010000 01:0
+	| 00011000 1881
+	| 00100100 69
+	| 01000100 $L
+	| 02000100 b
+	| 02000101 Ambst
+	| 10000100 1315
+	| ?0000100 P
+	| ????00?? bo sa
+	| ????01?? $I > }
+{{}
+" cum         vitiis et  concupiscentiis "
+[ SUN TOIS PAQHMASIN KAI TAIS EPIQUMIAIS
+|*1P SUN/+PASIN=klhyn,PAQ./+AUTWN,EPIQ./+AUTWN
+|*0L PAQ./vitiis /passionibus | SUN+/TAIS | EPIQ./+PNEUMATI ]
+	< 0000 $G $0 P 2344 $T Marc $X 1881 Chrys
+	| 0001 F
+	| 0100 $L
+	| 0200 d
+	| 0210 b
+	| 1000 pesh > }
+
+@ Ga5:25
+{{}
+" si vivimus spiritu "
+[ EI   ZWMEN PNEUMATI | -EI | EI/+DE | PNI~ZWMEN | ZWMEN/+OUN | EN+/PNI ]
+	< 00000 $G $0 1611:1 P 2344 $T Epiph p46 2138 1881 $L
+	| 00001 L
+	| 00100 D 1827 G d
+	| 01000 69
+	| 10010 $X Ps 1505 1611:0 2495 Chrys
+	| 10100 F
+	| ????? $I ar g > }
+{{}
+" spiritu   et ambulemus "
+[ PNEUMATI KAI STOIXWMEN | -KAI | KAI~PNI | STOIX)OU(MEN
+|*1P STOIX./+AUTHi=lh ]
+	< 0000 $G $0 $T 1611:1 2344 Epiph D 1827 69 1881 $I 2138 $L
+	| 0010 2464 614 6 517 K 1646 2147 1 1245 D:2 1735 1739 2412 1022 L 1780
+	| 00?0 P
+	| 0100 Ps 1611:0 Chrys
+	| 0110 1505 2495 $X
+	| 01?0 hark
+	| 01?1 pesh
+	| 1?00 p46 G F b d
+	| 1??? ar g > }
+
+@ Ga5:26
+{{}
+" non efficiamur inanis gloriae cupidi invicem provocantes "
+[ MH GINWMEQA       KENODOCOI         ALLHLOUS PROKALOUMENOI
+| KAI+/MH | G)E(NWMEQA | GIN)O(MEQA
+|*0L GIN.KEN./efficiamur.inanis.gloriae.cupidi /simus.inanem.gloriam.sectantes
+| PRO.~ALL. | ALLHL)OU ALLHL)OIS | -PROK. | PROS(KALOUMENOI ]
+	< 00000000 $G $0 D $T G $X
+	| 00000001 209:0 796 1241s 1734 2400 1 1245 1175 223 1022 Chrys
+	| 0000000? 0122
+	| 00000100 F
+	| 00001000 hark
+	| 0000?01? 2412 876
+	| 00010?00 $L
+	| 00020?00 Ambst
+	| 00100000 88 1827 1982 K 1646
+	| 00100001 1243 L 2147 075
+	| 01000000 69 489 910 1270 1319 1424 1573 1611 1738 2815 517
+	| 01000001 323 927 945 1836 6 2495 2401:1 1780
+	| 01000201 1837
+	| 01100000 2464:1 2344 1799
+	| 01100001 1881 2464:0 614 1505 131 999 1315 1874 2401:0 2892
+	| 10001000 pesh
+	| 10010?00 b
+	| ???????? P > }
+{{}
+"  invicem invidentes "
+[ ALLHLOIS FQONOUNTES | -ALLHL. | ALLHL)OUS | FQON.~ALL. ]
+	< 000 $0 01 A C D F G:1 K L Ps 056 075 33 88 205 226 323 440 945 1175 1270 1352 1448 1611 1735 1739 1836 1854 1874 1982 2495 2815 $T $X Chrys
+	| 001 hark pesh
+	| 010 B p46 G:0 $G 1881
+	| 0?0 $L
+	| 1?? 2412 876
+	| ??? 0122 2344 > }
+
+@ Ga6:1
+{{}
+" fratres etsi praeoccupatus fuerit homo in aliquo delicto "
+[ ADELFOI EAN KAI PROLHMFQHi    ANQRWPOS EN TINI PARAPTWMATI
+| EAN/AN | -KAI |*1P ANOS~PRO.
+| PROS(LHFQHi | PRO)KATA(LHFQHi | PRO)BLHQHi | PROLHMHFQ)HS
+| ANOS/TIS | ANOS/+EC.(hUMWN) | ANOS/+hUMW |*1P -TINI | TINI/TI ]
+	< 000000000000 $G $0 0122:0 1319:1 $T 1611 2138 1881
+	| 000000000001 1319:0
+	| 0000000000?? Chrys
+	| 000000000100 1175 Ps 2464
+	| 000000001100 69 2892 $X
+	| 000000010000 P
+	| 000001000000 1837
+	| 000010000000 K
+	| 000100000000 460 1315 1505 1738 2400 2495 223
+	| 000100100000 0122:1
+	| 010000000000 440
+	| 01100000111? pesh
+	| 100000000000 1352
+	| ?00000000000 $L
+	| ???1000???00 Epiph
+	| ???????001?? sa > }
+=+ $? P ; " lac. 6:1-6 "
+=+ $? 2344 ;
+{{}
+" vos qui spirituales estis hujusmodi instruite "
+[ hUMEIS hOI PNEUMATIKOI KATARTIZETE TON TOIOUTON
+| hH(MEIS | KATARTIZ)ESQ(AI |*0e KATARTIZET)AI
+|*0L KATART./instruite /humiliate | T.TOI.~KATART. ]
+	< 00000 $G $0 $T Epiph $X 1881 Chrys
+	| 00010 b d
+	| 00011 $L
+	| 00020 Ambst
+	| 00100 F G A 056 131 1505 2464
+	| 01100 33
+	| 10100 1241s
+	| ?0010 MVict > }
+{{}
+" in spiritu  lenitatis considerans te ipsum ne  et tu tempteris "
+[ EN PNEUMATI PRAUTHTOS      SKOPWN SEAUTON  MH KAI SU PEIRASQHiS
+| -EN |*0L PRAUT./lenitatis /mansuetudinis /modestia | -SKOP...PEIR.
+| SKOP)ON | SKOP./+hEKASTOS | *(EAUTWi | SEAUT)Wi 
+| SU/AUTOS | PEIRASQ)EI(S | PEIRASQ)Hi ]
+	< 0000000000 $G $0 D:2 $T 1022:1 2401:1 $X 1611:1 1881 Chrys
+	| 0000000010 33 104 L 88 226 999 1245 1315 1352 1646 1735 1827 1836:0 1837 1874 2125 2464 2401:0
+	| 0000000100 D:0 D:1
+	| 0000001010 1424
+	| 0000010000 Epiph
+	| 0000100101 F G
+	| 0001000000 1 460 618 223 1022:0
+	| 0001000010 1241s
+	| 001??????? 2147
+	| 0100000000 $L
+	| 0200000000 Ambst b
+	| 0200110001 d
+	| 03???????? MVict
+	| 1000000000 1505 2495 1611:0
+	| ?000000000 hark pesh > }
+=- $? MVict ; " MVict lac. 5:2c-6:1 "
+
+@ Ga6:2
+{{}
+" aliter alterius onera portate "
+[ ALLHLWN       TA BARH BASTAZETE
+| ADELFOI+/ALLHL. |*1P BAST.~ALL.T.BARH | T.BARH~ALL.
+| ALLHL)OI |*0L ALLHL./aliter.alterius /invicem..vestram
+| BAR)EI | BASTA)S(ETE ]
+	< 0000000 $0 B F G Marc $G $T $X 1881 910 1241s 01:2 2401:1 33 1175 p46 056 Chrys
+	| 0000001 01:0
+	| 0000010 618 1646 1735 1874 2147 2401:0 2464
+	| 0000100 $L
+	| 0000200 Ambst b
+	| 0001000 330
+	| 0010000 hark
+	| 0110000 pesh
+	| 1000000 1799 > }
+{{}
+"  et sic    adimplebitis     legem     Christi "
+[ KAI hOUTWS ANAPLHRWSETE TON NOMON TOU XRISTOU
+|*1P -KAI | hOUT)OS | APO(PLHRWSETE | ANAPLHRW)SATE
+|*0L ANAPL./adimplebitis /implebitis | -TON | XU/QU ]
+	< 0000000 $0 B 323 945 2495
+	| 0000010 F G
+	| 00000?0 Marc
+	| 00001?0 $L
+	| 00002?0 Ambst b MVict
+	| 0001000 $G $T $X 1881 910 1241s 01:2 01:0 Chrys 1780 2892
+	| 0001001 33 1175
+	| 00012?0 d
+	| 0010000 p46
+	| 0101000 056
+	| 1000000 pesh
+	| ???0??? $I bo sa > }
+
+@ Ga6:3
+{{}
+" si enim quis~existimat se aliquid~esse cum sit~nihil ipse se seducit "
+[ EI GAR  DOKEI TIS           EINAI TI     MHDEN WN FRENAPATAi hEAUTON
+| EI.GAR/EIPER |*0L GAR/enim /nam~ |*0L DOKEI/existimat /videtur /putat
+| -TIS |*0L TIS/quis /aliquis | TIS~DOKEI | MHDEN.WN~EINAI.TI
+| -TI | TI~EINAI |*1P MHDEN/MH | WN~MHDEN | hEAUTON~FREN. ]
+	< 000000000000 01 A C 075 104 330 1175 1319 1573 1739 1837 2400 33 69 1241s 2464 B:1 $0 1881
+	| 000000000001 $G $T $X 0122:0 1836:1 1780
+	| 00000001?000 B:0
+	| 00000001?001 0122:1 1646 1836:0
+	| 000000100001 1243 2815
+	| 000001000000 Chrys
+	| 000001000101 pesh
+	| 0001??000001 2147
+	| 01201?000001 Ambst
+	| 013010000001 d
+	| 02101?001011 $L
+	| 02102?000001 b MVict
+	| 100000000000 p46 > }
+
+@ Ga6:4
+{{}
+" opus autem     suum probet unusquisque "
+[ TO DE ERGON hEAUTOU DOKIMAZETW EKASTOS
+|*1P DE/ALLA~='l' |*1P EKASTOS/ANOS='n$~T.ERGON.hE.DOK.
+| -DE | *(AUTOU | DOKIMAZET)O | -EKASTOS ]
+	< 000000 $G $0 F $T 2423:1 $X 1881 Chrys
+	| 000001 B p46
+	| 000010 2464 460 618 1646 1874 2147
+	| 000100 33 69 1241s 1243 1 205 209 945 1270 1799 2423:0
+	| 000?00 $L
+	| 001?00 Ambst
+	| 110000 pesh > }
+{{}
+" et sic in semet ipso tantum gloriam habebit "
+[ KAI TOTE EIS hEAUTON MONON TO KAUXHMA hECEI
+| TOTE/hOUTWS=sic | -EIS | *(AUTON | KAI+/MON.
+| -MON. | MON./MEN MON./NOMON |*0L MON./tantum /soli
+| hECEI~T.KAUX. | hEC)Hi ]
+	< 000000000 $G $0 $T B $X 1881 Chrys
+	| 000000001 1837
+	| 00000000? 0122
+	| 000000010 489 927
+	| 000000100 Ambst b MVict
+	| 000000210 d
+	| 000001000 796
+	| 000002000 2495 1505
+	| 00001??00 2464
+	| 00001??10 pesh
+	| 000100000 88
+	| 001000000 131 p46
+	| 010000001 1243
+	| 100000100 $L
+	| ????????? $I sa bo > }
+=+ $? 0122 ;
+{{}
+"  et non in       altero "
+[ KAI OUK EIS TON hETERON | -KAI | -OUK | TON/TO ]
+	< 000 $G $0 $T $X 1881 $L Chrys
+	| 001 614
+	| 010 1319
+	| 100 p46 > }
+
+@ Ga6:5 
+=- $? r ; " r lac. 5:2-6:4 "
+{{}
+" unusquisque enim onus~suum    portabit "
+[ hEKASTOS GAR TO IDION FORTION BASTASEI
+| GAR/DE |*0L GAR/enim /nam~
+|*0L IDION/suum /proprium |*0L FORT.~IDION |*0L FORT./onus /sarcinam
+| BASTA)ZEI |*0L E(BASTAS)EN=portavit | BAST./+hOSTIS.EAN.Hi | :+EAN :+EAN/AN ]
+	< 000000000 $G $0 $T $X 1881 Chrys
+	| 000000011 1319
+	| 000000012 1352 1982
+	| 000001000 1241s 1245 1646
+	| 000001011 1573
+	| 011020000 Ambst
+	| 011110000 $L
+	| 011110100 b d
+	| 022010000 MVict
+	| 100000000 Ps 1 33 440 1315
+	| ????10000 r > }
+=- $? P ; " lac. 6:1-6 "
+
+@ Ga6:6
+=- $I t ;
+{{}
+" communicet autem is qui catechizatur    verbum "
+[ KOINWNEITW DE        hO KATHXOUMENOS TON LOGON
+| KOINWNEIT)O |*0L hO/is.qui /his.qui /qui | KAQ(HXOUMENOS KAT)OI(XOUMENOS
+| -TON | -LOGON | T)Wi.LOG)Wi T)WN.LOG)WN ]
+	< 000000 $G $0 $T 1022:0 Marc $X 1881 Chrys
+	| 000001 K
+	| 000002 1022:1
+	| 000102 F
+	| 001000 p46
+	| 010?00 $L b:1
+	| 010?1? Ambst
+	| 020?00 b:0
+	| 030?00 r MVict
+	| 100000 2464 618 1646 1243
+	| 102000 2147
+	| ???000 P > }
+{{}
+" ei qui se catechizat in omnibus bonam "
+[    TWi    KATHXOUNTI EN PASIN AGAQOIS
+| -T.KATHX. | T.KATHX.~LOG. | T)O | TWi/+hEAUTWi=se
+| MH+/KATHXOUNTI | KAQ)HXOUNTI KAT)OI(XOUNTI |*1P KATHX./+AUTWi | -EN ]
+	< 00000000 $G $0 $T Marc $X 1881 Ambst d MVict Chrys
+	| 00000001 1799
+	| 00000010 pesh
+	| 00000100 p46
+	| 00000200 1241s 1270
+	| 00001000 1175
+	| 00010000 $L
+	| 00100000 1874:1 1243
+	| 00100200 1874:0 2147
+	| 00?????0 P
+	| 01000000 2400 330
+	| 1??????0 K > }
+
+@ Ga6:7
+=+ $I t ;
+{{}
+" nolite errare deus non irridetur "
+[ MH   PLANASQE QEOS OU MUKTHRIZETAI
+|*0e PLANASQ)AI | hO+/QS
+|*0e MUKTHRIZET)E |*0L MUKT./irridetur /deridetur /ridetur /subsannatur ]
+	< 0000 $G $0 $T Marc $X 1881 D:1 Chrys
+	| 0010 01 927 1646 D:2 1780
+	| 0100 L
+	| 0?01 $L
+	| 0?02 Ambst MVict
+	| 0?03 d
+	| 0?04 r
+	| 1000 F G A 33 1241s 2412 2464
+	| 1010 D:0
+	| ??00 Epiph > }
+{{}
+" quae enim seminaverit  homo  haec  et   metet "
+[ hO GAR EAN SPEIRHi ANQRWPOS TOUTO KAI QERISEI
+| hO/hA | -GAR | -EAN | EAN/AN | SPER)EI | hO+/ANOS | ANOS/hEKASTOS ANOS/TIS
+| TOUTO/TAUTA |*1P -KAI | QERI)SHi | QEWRI(SEI ]
+	< 00000000000 $G $0 D:2 $T $X 1881 Chrys
+	| 00000000001 1505
+	| 00000000010 L 1352
+	| 00000000100 pesh
+	| 00000010000 440 1315
+	| 00000100000 614 2412
+	| 00001000000 2464 1836 88 104 1734 2147 618
+	| 00010000000 B 69 D:1
+	| 00010001000 F G D:0
+	| 000?0000000 Marc
+	| 001?1000000 1 1245 1022
+	| 00??0?00000 r
+	| 00??0?20000 Ambst
+	| 01000000000 205
+	| 0??????1??? g
+	| 1000???1000 p46
+	| 10??0?01000 $L
+	| 1??????1??? $I > }
+
+@ Ga6:8
+{{}
+" quoniam qui seminat in  carne sua     de     carne et metet corruptionem "
+[ hOTI hO SPEIRWN EIS THN SARKA hEAUTOU EK THS SARKOS QERISEI FQORAN
+| KAI+/hOTI |*1P -hOTI | hOTI.hO/hO.GAR |*0L hOTI/quoniam /quia
+|*1P EIS.T.SARKA~SPEIRWN | SPEIR)ON SPEIR)AS
+| -EIS,T)Hi.SARK)I | *(AUTOU |*0L EK/de /ex | SARKOS/+AUTOU
+| KAI+/QER. | QERI)SI(SEI | -FQ. |*1P FQ.~QER. ]
+	< 00000000000000 $G $0 D:2 618:1 $T $X 1881 01:1 1424:1 Chrys 1780:1
+	| 00000000000100 01:0
+	| 00000001000000 1837 Ps 056 075 618:0 1241s 1505 2147 2495 2815 1424:0 1780:0
+	| 00000001000010 1646
+	| 00000001010000 D:0 D:1
+	| 0000000?000000 P
+	| 00000011010000 F G
+	| 00000100000000 1243
+	| 00000101000000 2464
+	| 0000?????????? p46
+	| 0001000?101000 $L
+	| 0001000?110000 d
+	| 0002000?101000 MVict
+	| 0002020?201000 r
+	| 001?000?200000 Ambst
+	| 01??1000000001 pesh
+	| 1001000?100000 b > }
+=+ $? p46 ;
+{{}
+" qui autem seminat in spiritu de      spiritu metet vitam aeternam "
+[ hO DE SPEIRWN EIS TO PNEUMA EK TOU PNEUMATOS QERISEI ZWHN AIWNION
+| hO.DE/KAI.hO |*1P EIS.T.PNA~SPEIRWN | SPEIR)ON SPEIR)W SPEIR)AS
+| EK/EIS.T)OU.PN)S | PNEUMA/+TI
+| KAI+/QER. | QERI)ZEI QERIS)Hi |*1P ZWHN.AIWN.~QER. ]
+	< 00000000 $G $0 D:1 D:2 1646:0 $T $X 1881 $L Chrys
+	| 00000010 614
+	| 00000020 1646:1
+	| 00000100 b
+	| 00010000 D:0
+	| 00100000 618 2464
+	| 00201000 F G
+	| 00300000 r
+	| 10000000 330 2400
+	| 11000001 pesh > }
+
+@ Ga6:9
+{{}
+" bonum autem facientes non deficiamus "
+[ TO DE KALON POIOUNTES  MH EGKAKWMEN
+| -DE |*1P DE/KAI~=w | KAL.~DE POI.~KAL. | KAL)O | POI)WNTES | POI)OUMEN
+| EK(KAKWMEN&infirmemur | EGKAK)HS(WMEN ]
+	< 00000000 B D:0 01 69 1837 P $0 Marc
+	| 00000010 $G D:1 D:2 $T $X Chrys 1780
+	| 00000011 F:1 G
+	| 000000?0 hark
+	| 00000110 1245
+	| 00001000 33
+	| 0000?000 A
+	| 00010011 F:0
+	| 00100010 1739 1881
+	| 00?00000 $L
+	| 00?00010 r
+	| 012000?0 pesh
+	| 1??00000 b
+	| ??????00 bo sa > }
+=+ $? P ; " lac. 6:9-14 "
+{{}
+" tempore enim suo metemus non deficientes "
+[ KAIRWi GAR IDIWi QERISOMEN MH EKLUOMENOI
+|*0L GAR/enim /nam~ |*1P -IDIWi |*0L IDIWi/suo /proprio
+| QERI)Z(OMEN=metimus | QERIS)W(MEN | QERISW)MAI |*1P w=KAI+/MH | -MH
+| EK)K(LUOMENOI | EKLU)W(MENOI |*0L EKLU./deficientes /fatigati ]
+	< 00000000000 $G $0 $T $X 1881 Chrys
+	| 00000000100 6 2401
+	| 000000????? Marc
+	| 00001000000 01 C F G Ps L 460 1646 1315 33 1837 614 1243 69 489 927 1175 1241s 1448 1573 1738 1836 2147 2138 2892
+	| 00001000010 1424
+	| 00001000100 1874 999 2125 618
+	| 00001001000 2400
+	| 00001100010 2464
+	| 01?00010000 pesh
+	| 10100000001 $L
+	| 10100000002 d
+	| 10110000002 b
+	| 10200000002 Ambst r
+	| 20100000001 MVict > }
+
+@ Ga6:10
+=- $? p46 ;
+{{}
+" ergo dum tempus habemus "
+[ ARA OUN hWS KAIRON EXOMEN
+| ARA.OUN/hWSTE=itaque | hWS/hEWS | KAIR)WN | EX)W(MEN | EXO)NTES ]
+	< 00000 $G $0 B:1 $T Marc $X 1881 $L Chrys
+	| 00001 1837:0
+	| 00010 B:0 01 104 1874 33 1827 2412 614 1243 618 6 1780
+	| 00011 1837:1
+	| 00100 910
+	| 01000 330
+	| 10000 r
+	| ???00 p46 > }
+{{}
+" operemur      bonum  ad   omnes "
+[ ERGAZWMEQA TO AGAQON PROS PANTAS
+| ERGA)S(WMEQA | ERGAZ)O(MEQA ]
+	< 00 $0 B:0 01 C D 1 33 88 131 205 209 226 323 440 489 517 547 796 910 927 945 1242 1448 1573 1734 1738 1739 1827 1854 1891 1982 2815 $T $X Ps 1241s F G Marc $I $L Chrys
+	| 01 1319 1646 B:1 A L 056 075 6 69 104 330 460 614 618 999 1175 1243 1245 1270 1315 1352 1735 1837 2125 2147 2400 2412 876 1881
+	| 10 p46 K 1424 1505 1611 1874 2464 2495
+	| 11 1836
+	| ?0 hark pesh > }
+{{}
+" maxime autem ad    domesticos       fidei "
+[ MALISTA DE PROS TOUS OIKEIOUS THS PISTEWS
+| MA)X(LISTA | -DE | OIK)OUS |*0i OIK)IOUS ]
+	< 0000 $G $0 $T D:1 D:2 440:1 $X 1881 $L
+	| 0001 A D:0 131 1243 1319 1837
+	| 0010 440:0
+	| 0100 Ps 1241s Chrys pesh
+	| 1001 F G > }
+
+@ Ga6:11
+=- $I t ;
+{{}
+" videte qualibus litteris scripsi~vobis     mea  manu "
+[  IDETE PHLIKOIS hUMIN GRAMMASIN EGRAYA THi EMHi XEIRI
+| ADELFOI+/ID. |*0e IDET)AI |*0L ID./videte /scitote /vidistis /ecce
+| *(hHLIKOIS | POI(LIKOIS | PHLIKOIS/POSOIS=quantibus
+| GRAMM.~hUMIN EGR.~GRAMM. GRAM.EGR.~hUMIN | hU(MWN | hH(MIN ]
+	< 000000000 $G $0 $T 1611 2138 1881 Chrys
+	| 000000001 056
+	| 000000010 1505 2495
+	| 000000100 $X F G D
+	| 000000200 2815
+	| 000000?00 hark pesh
+	| 000010000 6 1245 1837 1780
+	| 000100000 B:0 1 33 p46
+	| 001000100 d
+	| 001000300 $L
+	| 002000300 Ambst
+	| 003000100 r
+	| 004001300 MVict
+	| 010010000 1241s
+	| 110000000 1799 > }
+
+@ Ga6:12
+{{}
+" quicumque volunt      placere in carne "
+[ hOSOI   QELOUSIN EUPROSWPHSAI EN SARKI
+| hOSOI/+GAR | EPROS(WPHSAI ]
+	< 00 $G $0 D:1 D:2 $T $X 1881 $L Chrys
+	| 01 D:0
+	| 10 b > }
+{{}
+" hi           cogunt   vos    circumcidi "
+[ hOUTOI ANAGKAZOUSIN hUMAS PERITEMNESQAI
+| -hOUTOI |*0L ANAGK./cogunt /compellunt | hH(MAS |*0e PERITEMNESQ)E ]
+	< 0000 C D 33 104 1739 $0 B 1175 p46 $G $T $X 69 1242 1837 1881 1245
+	| 0001 01 A 1 1827 1780
+	| 0010 1241s 618 1738 1799
+	| 0100 $L
+	| 0200 d MVict
+	| 1000 Chrys > }
+=+ $? 1245 ;
+{{}
+" tantum ut      crucis      Christi persecutionem non patiantur "
+[ MONON hINA TWi STAURWi TOU XRISTOU                MH DIWKWNTAI
+| -MONON..PERITEMNESQAI(6:13) | -MONON |*1P hINA~MONON
+| DIA+/T)OU.STAUROU EIS+/T)ON.STAUR)ON | -MH | MH~T.STAURWi..XU | -XU | XU/+IU
+| DIWK)O(NTAI |*0L DIWK./persecutionem..patiantur /fugentur ]
+	< 0000000000 D 33 1739 $0 01
+	| 0000000001 $L
+	| 0000000002 d
+	| 0000000010 C 104 A 1241s
+	| 0000000100 B
+	| 0000000110 1175 p46
+	| 00100000?0 pesh
+	| 0000010000 $T $X 1827 1738 Ps 205 209 226 330 440 517 614 796 999 1734 1854 1891 2412 2495 2815 1573 1315 88 547 945 1424 1982 1611 Chrys 1780 2892
+	| 0000010010 1 618 1799 1874 2147 2464 1243 K 075 131 323 460 910 1448 1836 2125 1505 L G F 1319 056 6 489 927 1270 1352 1646 1735 2400 876
+	| 00000100?0 hark
+	| 0000010110 69
+	| 0000011100 1242
+	| 00001?0001 f
+	| 00001?0010 1837
+	| 0001000001 b
+	| 0002000001 r
+	| 0100010001 Ambst
+	| 1????????? 1881
+	| ???????0?? $I
+	| ?????????? 1245 > }
+
+@ Ga6:13
+{{}
+" neque enim qui circumciduntur       legem custodiunt "
+[  OUDE  GAR hOI PERITEMNOMENOI AUTOI NOMON FULASSOUSIN
+| OUDE/OUTE OUDE/OU | AUTOI~hOI.PERIT. | PERI)TETMH(MENOI
+| hOI+/AUTOI | -AUTOI | TON+/NOM. |*1P FUL.~NOMON ]
+	< 0000000 1315 01 D 33 88 547 945 1242 1424 1739 1874 2147 2464 A C K 075 104 131 323 460 910:0 1448 1836 1837 2125 1241s $T Marc $0 $X
+	| 0000100 Chrys
+	| 0001000 1243
+	| 0010000 $G 910:1 223 1022 1960 2401 2423 2138 2495 F G 1780 2892
+	| 001?0?0 d r MVict
+	| 0100001 pesh
+	| 011?0?0 Ambst b
+	| 0?0?1?0 $L
+	| 0?10100 1573
+	| 1000010 1611 1505
+	| 1010000 p46 1799
+	| 2000000 1982
+	| ??0???? ar
+	| ??1???? g bo
+	| ??????? 1881 > }
+{{}
+" sed  volunt   vos   circumcidi "
+[ ALLA QELOUSIN hUMAS PERITEMNESQAI
+| QELOUSIN/BOULONTAI | hH(MAS |*0e PERITEMNESQ)E | PERIT./+v12b-13a ]
+	< 0000 $G $0 1270:1 $T $X Chrys
+	| 0001 1270:0 1836 1874
+	| 0010 1175 1243
+	| 0100 1799
+	| 1000 C
+	| 1010 A
+	| 1100 1241s
+	| ?000 $L
+	| ???? 1881 > }
+{{}
+" ut   in         carne~vestra glorientur "
+[ hINA EN THi hUMETERAi SARKI KAUXHSWNTAI
+| -hINA | hH(METERAi | SARKI~hUM. | KAUXHS)O(NTAI ]
+	< 0000 $G $0 G:1 $T 1799 $X Ambst d r MVict Chrys
+	| 0001 1874:1 2464 1837 D G:0 910 1175 1243 1315 1352 1424 1505 1646 1735 1836 2400 1960 1881 b
+	| 0010 $L
+	| 0100 6 33 440 796 999 1739
+	| 0101 460 1241s 2147 2412 1874:0
+	| 1000 1827 pesh > }
+
+=+ $I t ;
+@ Ga6:14
+{{}
+" mihi autem absit "
+[ EMOI DE    MH GENOITO
+| ADELFOI+/EMOI |*0L DE/autem /vero | GEN./+ME ]
+	< 000 $G $0 $T Ir $X 1881 Chrys
+	| 001 p46 pesh
+	| 010 $L
+	| 020 Ambst
+	| 100 1799 > }
+{{}
+" gloriari  nisi  in     cruce       domini nostri Jesu Christi "
+[ KAUXASQAI EI MH EN TWi STAURWi TOU KURIOU hHMWN IHSOU XRISTOU
+| TO+/KAUX. | KAUX)HS(ASQAI |*0e KAUXASQ)E | KAUX./+OUDAMOS=in.nullo
+| TOU.XU+/T.KU | KU/XU | -KU.hM.IU
+| -hHMWN.IU.XU | -hHMWN | hHMWN/MOU | -IU.XU ]
+	< 00000000000 $G $0 1646:1 F:1 D:2 $T $X $L Chrys
+	| 00000000010 6 1739 1881
+	| 00000001??? Ambst
+	| 000000101?1 2147
+	| 000000101?? Ir
+	| 00000100000 F:0
+	| 00001000001 1836
+	| 00010000000 MVict
+	| 00100000000 618 1319 1646:0 1780
+	| 01000000000 A D:0 D:1
+	| 10000000000 2892
+	| ???00000000 P > }
+{{}
+" per quem mihi mundus crucifixus est et ego mundo "
+[ DI   hOU EMOI KOSMOS ESTAURWTAI       KAGW KOSMWi
+|*1P KOSMOS.ESTAUR.~*(MOI),KAGW/+ESTAURWMAI=zqyp.'n'
+| hO+/KOSM. | TWi+/KOSM. ]
+	< 000 B 01 A C:0 D:0 D:1 33 1175 p46 $0 Ir 1881
+	| 001 $G D:2 $T $X C:1 Chrys 1780 2892
+	| 00? Marc hark
+	| 010 F G
+	| 0?? P $L
+	| 10? pesh > }
+=- $? P ; " lac. 6:9-14 "
+
+@ Ga6:15
+{{}
+" in Christo enim Jesu neque "
+"          circumcisio aliquid valet neque praeputium sed nova creatura "
+[ OUTE GAR PERITOMH         TI ESTIN OUTE AKROBUSTIA ALLA KAINH KTISIS
+| OUTE.GAR/EN.GAR.XW.IU.OUTE | -GAR | GAR+/PERIT. |*1P ESTIN~TI
+| TI/THi TI/TIS |*0L TI/aliquid /quidquam | EST./ISXUEI | K)E(NH ]
+	< 00000000 B p46 33 1175 1739:0 $0
+	| 00000010 Ps 075 1611 1505 Chrys
+	| 00000100 r
+	| 00000200 Ambst
+	| 00010000 pesh
+	| 10000000 01:0 A C D:0 D:1 6 2464 G
+	| 10000010 $G 01:2 D:2 209:1 $T $X 1881 1780:1 2892
+	| 10000011 1874
+	| 10000100 d MVict
+	| 10000110 $L
+	| 10001000 F
+	| 10001010 330
+	| 10002001 1241s
+	| 10002010 1780:0 209:0 1243
+	| 100????? P
+	| 10100000 1739:1
+	| 10?????? $I bo
+	| 11000010 2400 > }
+
+@ Ga6:16
+{{}
+" et quicumque hanc regulam secuti fuerint "
+[ KAI hOSOI TWi KANONI TOUTWi STOIXHSOUSIN
+|*0L hOSOI/quicumque /quotquot | TOUTWi.STOIXHSOUSIN/+TWi
+| TWi/TO | TOUT)O | TOUTWi~T.KAN.
+| STOIX)*(OUSIN | STOIXHS)W(SIN |*0L STOIX./sequo- /secto- ]
+	< 00000000 $G $0 $T $X C:1
+	| 00000010 p46 075 1424 1836
+	| 00000100 1646 G:1 1739 A F D 6 1881 C:0 Chrys
+	| 00001000 pesh
+	| 00010000 614 618 2412 2147 2464
+	| 00110000 1243
+	| 01000100 G:0
+	| 10000102 d
+	| 10001011 $L
+	| 10001102 b r MVict
+	| 20001101 Ambst
+	| ?????10? $I
+	| ???????? P > }
+{{}
+" pax super illos et misericordia "
+[ EIRHNH EP AUTOUS KAI ELEOS 
+| -K.ELEOS ]
+	< 0 $G $0 D:2 $T $X 1881 $L F G D:1 d 2147 D:0 Chrys
+	| 1 MVict
+	| ? P > }
+{{}
+" et super   Israhel     Dei "
+[ KAI EPI TON ISRAHL TOU QEOU
+| -KAI2 | QU/KU ]
+	< 00 $G $0 D:2 $T $X 1881 $L Chrys
+	| 01 F G D:1 d MVict
+	| 10 2147
+	| 11 D:0
+	| ?? P > }
+
+@ Ga6:17
+{{}
+" de  cetero nemo mihi molestus sit "
+[ TOU LOIPOU KOPOUS MOI MHDEIS PAREXETW
+| T)ON.LOIP)ON T)O.LOIP)ON | MHDEIS~MOI~KOP. E(MOI)~TIS~KOP.MH
+|*0L KOPOUS..PAREXETW/molestus.sit /laborem..praestet /molestius.praestet
+| -MOI | MOI/MOU | PAREXET)O ]
+	< 000000 $G $0 $T 2423:1 440 $X Chrys
+	| 020000 pesh
+	| 000001 1243
+	| 000010 33
+	| 0001?0 1241s 1881
+	| 010000 D:1 D:2
+	| 010??0 Epiph
+	| 011000 $L
+	| 012000 r
+	| 013000 MVict
+	| 100000 330 2400
+	| 110000 D:0
+	| 200000 2423:0
+	| ?????0 P > }
+{{}
+" ego enim   stigmata     Jesu  in    corpore meo porto "
+[ EGW GAR TA STIGMATA TOU IHSOU EN TWi SWMATI MOU BASTAZW
+| -TA | STIGM)A | KU+/IU | KU/+hHMWN KU/+MOU | -IU | IU/+XU | STOM(ATI ]
+	< 0000000 B A 33 1241s p46 $0
+	| 0000001 C
+	| 0000110 Marc P Ps 075 1175 1319 1573 2464
+	| 0010000 $G D:1 D:2 $T $X 1881 1780 2892
+	| 0010010 01 056
+	| 0010100 1854
+	| 0011000 pesh 796
+	| 0011010 D:0 F G Chrys
+	| 0012000 1739
+	| 0110000 330
+	| 1010000 2138
+	| ?000000 $L
+	| ?010010 Ambst b d r
+	| ?011010 MVict
+	| ??0000? t
+	| ??0011? bo
+	| ??1101? $I > }
+
+@ Ga6:18
+{{}
+"   gratia     domini nostri Jesu Christi "
+[ hH XARIS TOU KURIOU hHMWN IHSOU XRISTOU
+| KU/XU | -hHM. | -XU ]
+	< 000 $G $0 P $T 1799:1 $X $L Chrys
+	| 001 517 1424 1573 1734 2138
+	| 010 01 1241s 1739 1836 2464 69 1881
+	| 100 F 2412 1799:0 > }
+{{}
+" cum       spiritu vestro fratres amen "
+[ META TOU PNEUMATOS hUMWN ADELFOI AMHN
+| T.PNOS/PANTWN | -TOU | -hUM. | hH(MWN | -ADELF. | -AMHN ]
+	< 000000 $G $0 $T $X 1881 Chrys
+	| 000001 G
+	| 000010 330 2400
+	| 000100 1241s
+	| 001?00 1505
+	| 010000 1243
+	| 0?0000 $L
+	| 0?0001 Ambst b
+	| 0?000? MVict
+	| 100000 1836 > }
