@@ -38,7 +38,7 @@ body {
 }
 #hover {
     position: absolute;
-    width: 230px;
+    width: 330px;
     height: auto;
     left: 0px;
     right: 0px;
@@ -65,12 +65,12 @@ body {
 <div id=logo></div>
 {% if location.next %}
     <div id=next_location>
-        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/">Next</a>
+        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/{{ parallel.code }}/">Next</a>
     </div>
 {% endif %}
 {% if location.prev %}
     <div id=prev_location>
-        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/">Prev</a>
+        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/{{ parallel.code }}/">Prev</a>
     </div>
 {% endif %}
 <center>
@@ -118,11 +118,10 @@ $( document ).ready(function() {
         sublocationdiv = $(this).parent();
         sublocation_id = sublocationdiv.data('sublocationid');
         reading = $(this);
-
         $.ajax({
             type: "POST",
             url: "/dcodex_carlson/set_attestation/",
-            data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id, 'witness_id': {{ witness.id }} },
+            data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id, 'witness_id': {{ witness.id }}, 'parallel_id': {{ parallel.id }} },
             success: function(msg){
                 if (msg == "OK") {
                     sublocationdiv.children( '.reading' ).removeClass( 'selected' );

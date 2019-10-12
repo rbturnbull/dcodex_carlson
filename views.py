@@ -26,6 +26,16 @@ def location_siglum( request, location_id, siglum_text ):
 
     return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':None} )
 
+
+def location_siglum_parallel( request, location_id, siglum_text, parallel_code ):
+    location = get_object_or_404(Location, id=location_id) 
+    sublocations = location.sublocation_set.all()
+    siglum = get_object_or_404(Siglum, name=siglum_text) 
+    parallel = get_object_or_404(Parallel, code=parallel_code) 
+
+    return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':parallel} )
+
+
 def location( request, location_id ):
     location = get_object_or_404(Location, id=location_id) 
     sublocations = location.sublocation_set.all()
@@ -66,8 +76,16 @@ def set_attestation( request ):
 
     parallel = None
     parallel_id = request_dict.get('parallel_id')
+    parallel_code = request_dict.get('parallel_code')    
     if parallel_id:
         parallel = get_object_or_404(Parallel, id=parallel_id) 
+    elif parallel_code:
+        parallel = get_object_or_404(Parallel, code=parallel_code) 
+        
+    logger = logging.getLogger(__name__)    
+
+    logger.error("Parallel in view")
+    logger.error(parallel)
     
     response = witness.set_attestation( sublocation=sublocation, code=reading_code, parallel=parallel, corrector=corrector )
     return HttpResponse("OK" if response else "FAIL")

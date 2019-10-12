@@ -46,7 +46,7 @@ class Witness(models.Model):
         Attestation.objects.filter( witness=self, sublocation=sublocation, corrector=corrector, parallel=parallel ).all().delete()
         attestation = Attestation( witness=self, sublocation=sublocation, code=code, corrector=corrector, parallel=parallel )
         attestation.save()
-        
+                
         return attestation
     
 class Siglum(models.Model):
@@ -146,7 +146,7 @@ class Attestation( models.Model ):
     sublocation = models.ForeignKey( SubLocation, on_delete=models.CASCADE )
     code      = models.CharField(max_length=1)
     witness   = models.ForeignKey( Witness, on_delete=models.CASCADE )
-    corrector = models.IntegerField( default=None, null=True )
+    corrector = models.IntegerField( default=None, null=True, blank=True )
     parallel  = models.ForeignKey( Parallel, on_delete=models.SET_DEFAULT, default=None, null=True )
     def __str__(self):
         return "%s %s %s %s %s" % (self.sublocation, self.code, self.witness, self.corrector, self.parallel)
@@ -231,7 +231,7 @@ class Collation( models.Model ):
                 parallel = None
                 parallel_code = match[0]
                 if len(parallel_code) > 0:
-                    parallel, created = Parallel.objects.get_or_create( code=parallel_code )                
+                    parallel = self.parallels.filter( code=parallel_code ).get()           
             
                 sigla_names = match[1].split()
             
@@ -263,7 +263,7 @@ class Collation( models.Model ):
                     parallel = None
                     parallel_code = match[0]
                     if len(parallel_code) > 0:
-                        parallel, created = Parallel.objects.get_or_create( code=parallel_code )                
+                        parallel = self.parallels.filter( code=parallel_code ).get()           
                 
                     mode = match[1]
                     sigla_names = match[2].split()
@@ -288,7 +288,7 @@ class Collation( models.Model ):
                     parallel = None
                     parallel_code = match[0]
                     if len(parallel_code) > 0:
-                        parallel, created = Parallel.objects.get_or_create( code=parallel_code )                
+                        parallel = self.parallels.filter( code=parallel_code ).get()           
                 
                     verse_ref = match[1]
                 
@@ -316,13 +316,13 @@ class Collation( models.Model ):
                         reading = Reading( sublocation=sublocation, text=reading.strip(), order=reading_index+1 )
                         reading.save()
             
-                for parallel in re.findall('(.*?)<(.*?)>', parallels):
+                for parallel in re.findall('/*([a-z]?)\s*<(.*?)>', parallels):
                     parallel_code = parallel[0].strip()
                     collation_codes = parallel[1].strip().split("|")
                 
                     parallel = None
                     if len(parallel_code) > 0:
-                        parallel, created = Parallel.objects.get_or_create( code=parallel_code )
+                        parallel = self.parallels.filter( code=parallel_code ).get()           
                 
                     for collation_code in collation_codes:
                         sigla = collation_code.strip().split()
@@ -371,7 +371,7 @@ class Collation( models.Model ):
             parallels = location.get_parallels()
             for parallel in parallels:
                 if parallel != None:
-                    print(parallel.code, file=file)
+                    print("/"+parallel.code, file=file)
                 print("<", file=file)
                 codes_dict = defaultdict(list)
 
