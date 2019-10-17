@@ -1,0 +1,54 @@
+body {
+    background: white;
+    font-family: 'Gentium Plus';
+    
+}
+.reading {
+    font-size: 2.0em;
+    background: #efefef;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid #007AFF;
+    cursor: pointer;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.sublocation {
+    padding: 10px;
+    margin: 20px;
+    background-color: none;
+
+}
+.basetext {
+    font-size: 4.0em;
+    text-align: center;
+}
+.selected {
+    background-color: yellow;
+    border: 2px solid red;
+}
+#hover {
+    position: absolute;
+    width: 330px;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    display: none;
+    background-color: #bbbbbb;
+    padding: 20px;
+    border-radius: 15px;  
+    font-size: 2.0em;  
+    z-index: 9999999;
+}
+#next_location {
+    position: absolute;
+    right: 0px;
+    top:0px;
+}
+#prev_location {
+    position: absolute;
+    left: 0px;
+    top:0px;
+}

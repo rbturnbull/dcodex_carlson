@@ -1,67 +1,17 @@
-{% extends "dcodex/base.html" %}
+{% extends "dcodex/base_sidebars.html" %}
 {% load static %}
 {% block title %}Location{% endblock %}
 {% load dcodex_carlson_tags %} 
 {% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'dcodex/css/comparison.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'dcodex_carlson/css/location.css' %}" />
+
 <style>
-body {
-    background: white;
-    font-family: 'Gentium Plus';
-    
-}
-.reading {
-    font-size: 2.0em;
-    background: #efefef;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 15px;
-    border: 2px solid #007AFF;
-    cursor: pointer;
-    padding-left: 40px;
-    padding-right: 40px;
 
-}
-.sublocation {
-    padding: 10px;
-    margin: 20px;
-    background-color: none;
-
-}
-.basetext {
-    font-size: 4.0em;
-    text-align: center;
-}
-.selected {
-    background-color: yellow;
-    border: 2px solid red;
-}
-#hover {
-    position: absolute;
-    width: 330px;
-    height: auto;
-    left: 0px;
-    right: 0px;
-    display: none;
-    background-color: #bbbbbb;
-    padding: 20px;
-    border-radius: 15px;  
-    font-size: 2.0em;  
-}
-#next_location {
-    position: absolute;
-    right: 0px;
-    top:0px;
-}
-#prev_location {
-    position: absolute;
-    left: 0px;
-    top:0px;
-}
 </style>
 {% endblock %}
 
-{% block content %}
+{% block middle %}
 <div id=logo></div>
 {% if location.next %}
     <div id=next_location>
@@ -74,8 +24,8 @@ body {
     </div>
 {% endif %}
 <center>
-{% for verse_label in location.verse_labels.all %}
-    <span class=verse_reference>{{ verse_label.reference }}</span>
+{% for verse_label in location.closest_verse_labels.all %}
+    <span class=verse_reference>{{ verse_label.bible_verse }}</span>
 {% endfor %}
 
 <div class=basetext>{{ location.base_text_greek }}</div>
@@ -102,6 +52,20 @@ body {
 {% endfor %}
 
 </center>
+
+
+{% endblock %}
+
+{% block right_sidebar %}
+
+{% for verse_label in verse_labels %}
+    <div id='comparison{{ verse_label.bible_verse.id }}'></div>
+{% endfor %}
+
+{% endblock %}
+
+
+{% block extra %}
 <div id=hover></div>
 {% endblock %}
 
@@ -110,6 +74,17 @@ body {
 <script src="{% static 'dcodex_carlson/js/location.js' %}"></script>
 <script>
 var hover_xhr = null;
+function load_comparison(verse_id, manuscript_id, div_name) {
+    $( div_name ).load( "/dcodex/ajax/comparison/", { manuscript_id:manuscript_id, verse_id:verse_id }, function() {
+        $(".mshover").hover(function(){
+            $('#msHover').load("/dcodex/ajax/transcription-mini/", { manuscript_id:$(this).data('manuscriptid'), verse_id:$(this).data('verseid') } );
+            $('#msHover').show();
+        }, function() {
+            $('#msHover').hide();	  
+            $('#msHover').html("");
+        });        
+    } );
+}
 
 $( document ).ready(function() {
     console.log( "loading from location.html" );
@@ -157,7 +132,10 @@ $( document ).ready(function() {
             $("#hover").hide();
         }
     );
-
+    {% for verse_label in location.closest_verse_labels.all %}
+        load_comparison({{ verse_label.bible_verse.id }}, {{ witness.manuscript.id }}, '#comparison{{ verse_label.bible_verse.id }}' );
+    {% endfor %}
+    
 });
 </script>
 {% endblock %}

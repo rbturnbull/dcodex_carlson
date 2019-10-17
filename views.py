@@ -23,8 +23,10 @@ def location_siglum( request, location_id, siglum_text ):
     #siglum = Siglum.objects.filter(name=siglum_text).first()
 
     siglum = get_object_or_404(Siglum, name=siglum_text) 
+    
+    verse_labels = location.closest_verse_labels().all()
 
-    return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':None} )
+    return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':None, 'verse_labels':verse_labels,} )
 
 
 def location_siglum_parallel( request, location_id, siglum_text, parallel_code ):
@@ -32,8 +34,9 @@ def location_siglum_parallel( request, location_id, siglum_text, parallel_code )
     sublocations = location.sublocation_set.all()
     siglum = get_object_or_404(Siglum, name=siglum_text) 
     parallel = get_object_or_404(Parallel, code=parallel_code) 
-
-    return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':parallel} )
+    
+    verse_labels = [verse_label for verse_label in location.closest_verse_labels().all() if verse_label.parallel == parallel]
+    return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':parallel, 'verse_labels':verse_labels,} )
 
 
 def location( request, location_id ):

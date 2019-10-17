@@ -1,18 +1,21 @@
 from django.db import models
-#from dcodex_bible import BibleVerse
 import re
 import sys, os
 from collections import defaultdict
 import unicodedata
 import logging
+from dcodex_bible.models import BibleVerse
+from dcodex.models import Manuscript
 
 
 def convert_greek_unicode(text):
-    betacode = "FPAULOSTKQNRDEWIXHGMhCZB" + "i"
-    unicode  = "φπαυλοστκθνρδεωιχηγμ῾ξζβ" + "\u0345"
+    betacode = "YFPAULOSTKQNRDEWIXHGMhCZB" + "i"
+    unicode  = "ψφπαυλοστκθνρδεωιχηγμ῾ξζβ" + "\u0345"
     trans = str.maketrans(betacode, unicode)
     text = text.translate(trans)
     text = text.replace("σ ", "ς ")
+    text = text.replace("σ.", "ς.")
+    text = text.replace("σ)", "ς)")
     if text[-1] == "σ":
         text = text[:-1] + "ς"
     return unicodedata.normalize("NFC", text) # This isn't working for rough breathing...
@@ -28,6 +31,8 @@ class Witness(models.Model):
     intf_id = models.IntegerField(null=True, default=None)
     year_min = models.IntegerField(null=True, default=None)
     year_max = models.IntegerField(null=True, default=None)
+    manuscript = models.ForeignKey( Manuscript, on_delete=models.SET_DEFAULT, default=None, null=True )
+    
     def __str__(self):
         siglum = self.siglum_set.first()
         if siglum:
@@ -84,12 +89,13 @@ class VerseLabel(models.Model):
         if self.parallel:
             parallel_switch = "/%s " % (self.parallel.code)
         return "%s@ %s" % (parallel_switch, self.reference )
-
+    def bible_verse(self):
+        return BibleVerse.get_from_string( self.reference )
 
 class Location(models.Model):
-    verse_labels = models.ManyToManyField(VerseLabel)
+    verse_labels = models.ManyToManyField(VerseLabel, blank=True)
     base_text = models.CharField(max_length=200)
-    macros = models.ManyToManyField( Macro )
+    macros = models.ManyToManyField( Macro, blank=True )
     
     def __str__(self):
         return self.base_text
@@ -104,6 +110,13 @@ class Location(models.Model):
         return Location.objects.filter( id__gt=self.id ).order_by('id').first()
     def prev(self):
         return Location.objects.filter( id__lt=self.id ).order_by('-id').first()
+        
+    def closest_verse_labels(self):
+        closest_location_with_labels = Location.objects.filter( id__lte=self.id).exclude(verse_labels=None ).order_by('-id').first()
+        if closest_location_with_labels:
+            return closest_location_with_labels.verse_labels
+        return None
+
     
 class SubLocation(models.Model):
     location = models.ForeignKey( Location, on_delete=models.CASCADE )
@@ -138,7 +151,7 @@ class Reading(models.Model):
     class Meta:
         ordering = ['order']
     def text_greek(self):
-        return convert_greek_unicode( self.text ).replace(".", " ")
+        return convert_greek_unicode( self.text )
         
 
     
