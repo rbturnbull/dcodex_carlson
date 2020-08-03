@@ -3,8 +3,24 @@ from django.contrib import admin
 # Register your models here.
 from .models import *
 
-admin.site.register(Location)
-admin.site.register(SubLocation)
+class SublocationInline(admin.TabularInline):
+    model = SubLocation
+    extra = 0
+    
+@admin.register(Location)    
+class LocationAdmin(admin.ModelAdmin):
+    inlines = [SublocationInline]
+
+
+class AttestationInline(admin.TabularInline):
+    model = Attestation
+    extra = 0
+
+@admin.register(SubLocation)    
+class SubLocationAdmin(admin.ModelAdmin):
+    inlines = [AttestationInline]
+
+
 admin.site.register(Reading)
 admin.site.register(Siglum)
 admin.site.register(Witness)

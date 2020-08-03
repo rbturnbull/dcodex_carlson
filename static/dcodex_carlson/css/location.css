@@ -3,6 +3,7 @@ body {
     font-family: 'Gentium Plus';
     
 }
+
 .reading {
     font-size: 2.0em;
     background: #efefef;
@@ -21,9 +22,14 @@ body {
     background-color: none;
 
 }
-.basetext {
+#basetext {
     font-size: 4.0em;
     text-align: center;
+}
+.transcription {
+    font-size: 2.0em;
+    text-align: center;
+    color:#007AFF;
 }
 .selected {
     background-color: yellow;
@@ -31,7 +37,7 @@ body {
 }
 #hover {
     position: absolute;
-    width: 330px;
+    width: 530px;
     height: auto;
     left: 0px;
     right: 0px;
@@ -39,16 +45,58 @@ body {
     background-color: #bbbbbb;
     padding: 20px;
     border-radius: 15px;  
-    font-size: 2.0em;  
+    font-size: 1.4em;  
     z-index: 9999999;
 }
 #next_location {
     position: absolute;
-    right: 0px;
-    top:0px;
+    right: 10px;
+    top:10px;
 }
 #prev_location {
     position: absolute;
+    left: 10px;
+    top:10px;
+}
+#next_location_bottom {
+    left: 10px;
+    width: 50px;    
+    bottom:10px;
+    float: left;
+}
+#prev_location_bottom {
+    left: 10px;
+    width: 50px;
+    bottom:10px;
+    float: left;
+
+}
+
+#collation_locations {
+	position: absolute;
+    top: 125px;
+    bottom: 0px;
     left: 0px;
-    top:0px;
+    width: 100%;
+	overflow:scroll;
+	z-index: 2;
+}
+.collation_location {
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    color: #007AFF;
+    background-color: #dddddd;
+    cursor: pointer;    
+}
+.collation_location_selected {
+    background-color: yellow;
+}
+#variants {
+	position: absolute;
+    top:50%;
+    width:100%;
+	overflow:scroll;
+    bottom: 0px;
+    background-color: white;
 }

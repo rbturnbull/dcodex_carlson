@@ -21,6 +21,7 @@ def location_siglum( request, location_id, siglum_text ):
     location = get_object_or_404(Location, id=location_id) 
     sublocations = location.sublocation_set.all()
     #siglum = Siglum.objects.filter(name=siglum_text).first()
+    collation = location.collation_set.first()
 
     siglum = get_object_or_404(Siglum, name=siglum_text) 
     
@@ -34,9 +35,17 @@ def location_siglum_parallel( request, location_id, siglum_text, parallel_code )
     sublocations = location.sublocation_set.all()
     siglum = get_object_or_404(Siglum, name=siglum_text) 
     parallel = get_object_or_404(Parallel, code=parallel_code) 
-    
     verse_labels = [verse_label for verse_label in location.closest_verse_labels().all() if verse_label.parallel == parallel]
-    return render(request, 'dcodex_carlson/location.html', {'location': location, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':parallel, 'verse_labels':verse_labels,} )
+        
+    transcription = None
+    manuscript = None
+    bible_verse = None
+    if siglum.witness.manuscript and len(verse_labels) > 0:
+        manuscript = siglum.witness.manuscript
+        bible_verse = verse_labels[0].bible_verse()
+        transcription = manuscript.transcription( bible_verse )
+
+    return render(request, 'dcodex_carlson/location.html', {'location': location, 'manuscript':manuscript, 'bible_verse':bible_verse,'transcription':transcription, 'sublocations': sublocations, 'siglum':siglum, 'witness':siglum.witness, 'parallel':parallel, 'verse_labels':verse_labels,} )
 
 
 def location( request, location_id ):

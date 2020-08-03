@@ -6,6 +6,7 @@ import unicodedata
 import logging
 from dcodex_bible.models import BibleVerse
 from dcodex.models import Manuscript
+from django.db.models import Max, Min
 
 
 def convert_greek_unicode(text):
@@ -62,6 +63,16 @@ class Siglum(models.Model):
         return self.name
     class Meta:
         verbose_name_plural = 'Sigla'
+
+    @classmethod
+    def get_with_corrector( cls, text ):
+        siglum_components = text.split(":")
+        siglum_name = siglum_components[0]
+        corrector = None
+        if len(siglum_components) > 1:
+            corrector = int(siglum_components[1])
+        return cls.objects.filter( name=siglum_name ).first(), corrector
+    
     
 class Macro(models.Model):
     name = models.CharField(max_length=200)
@@ -116,14 +127,36 @@ class Location(models.Model):
         if closest_location_with_labels:
             return closest_location_with_labels.verse_labels
         return None
+    def max_sublocations_order( self ):
+        dictionary = self.sublocation_set.all().aggregate(Max('order'))
+        return dictionary.get( "order__max" )
+    def add_sublocation( self, reading_text, sigla_for_zero = None, parallel = None ):
+        prev_order = self.max_sublocations_order()
+        order = prev_order + 1 if prev_order is not None else 0
+        sublocation = SubLocation( location=self, order=order )
+        sublocation.save()
+        
+        reading = Reading( sublocation=sublocation, text=reading_text, order=1 )
+        reading.save()
+        
+        code = 0
+        for siglum_text in sigla_for_zero:        
+            siglum, corrector = Siglum.get_with_corrector(siglum_text)
+            if not siglum:
+                print("Cannot find",siglum_text)
+                continue
+                            
+            siglum.witness.set_attestation(sublocation=sublocation, code=code, corrector=corrector, parallel=parallel)
 
-    
+        return sublocation
+            
 class SubLocation(models.Model):
     location = models.ForeignKey( Location, on_delete=models.CASCADE )
     order    = models.IntegerField( )
-    weighting = models.CharField(max_length=10, default="")
+    weighting = models.CharField(max_length=10, default="", blank=True)
     def __str__(self):
-        return "%s:%d" % (str(self.location), self.order)
+        readings = [str(reading) for reading in self.reading_set.all()]
+        return "id %d - %s: %s [%d]" % (self.id, str(self.location), " ".join(readings), self.order)
     class Meta:
         ordering = ['order']
     def get_parallels(self):
@@ -353,9 +386,79 @@ class Collation( models.Model ):
                                 witness.set_attestation(sublocation=sublocation, code=code, corrector=corrector, parallel=parallel)
 
                 prev_location_data = location_data
+                
+    def import_witness_from_file(self, witness, path):
+        with open(path) as file:        
+            data = file.read().replace('\n', ' ')
+        
+            # Save Comments
+            comments = re.findall('"(.*?)"', data)
+        
+            # Remove comments
+            data = re.sub('".*?"','',data)
+        
+            locations = data.split("[")
+            initial_data = locations.pop(0)
+        
+            prev_location_data = initial_data
+            
+            my_locations = self.locations.all()
+            
+            for location_index, location_data in enumerate(locations):
+                components = re.search( "(.*)\](.*)", location_data )
+                if  not components:
+                    print("NO components")
+                    sys.exit()
+            
+                sublocations = components.group(1).strip().split("|")
+                parallels = components.group(2).strip()
+
+                base_text = sublocations.pop(0).strip()
+        
+                location = my_locations[location_index]
+                if location.base_text != base_text:
+                    print("Mismatch base text:", location_index, base_text, location, location.id )
+                    return
+
+                if location.sublocation_set.count() != len(sublocations):
+                    print("Mismatch sublocations:", location, location.id)
+                    
+                    for sublocation in location.sublocation_set.all():
+                        print( sublocation.id, " ".join([str(reading) for reading in sublocation.reading_set.all()]) )
+                    print("--")
+                    for order, sublocation_text in enumerate(sublocations):
+                        print(sublocation_text)
+                    print()
+                    return
+
+                # HACK - this assumes that all the sublocation readings are the same as in the file
+                sublocation_objects = location.sublocation_set.all()
+                
+                for parallel in re.findall('/*([a-z]?)\s*<(.*?)>', parallels):
+                    parallel_code = parallel[0].strip()
+                    collation_codes = parallel[1].strip().split("|")
+                
+                    parallel = None
+                    if len(parallel_code) > 0:
+                        parallel = self.parallels.filter( code=parallel_code ).get()           
+                
+                    for collation_code in collation_codes:
+                        sigla = collation_code.strip().split()
+                        vector = sigla.pop(0)
+                    
+                        for siglum_text in sigla:
+                            # Search for this witness given in arguments for function
+                            file_siglum, corrector = Siglum.get_with_corrector( siglum_text )
+                            if not file_siglum or file_siglum.witness != witness:
+                                continue
+                            
+                            for code, sublocation in zip(vector, sublocation_objects):      
+                                witness.set_attestation(sublocation=sublocation, code=code, corrector=corrector, parallel=parallel)
+
+                prev_location_data = location_data
                             
 
-    def export(self, file=sys.stdout):
+    def export(self, file=sys.stdout, binary=False):
         output = ""
         print("* %s %s ;" % (
             " ".join(["/%s" % parallel.code for parallel in self.parallels.all()]),
@@ -376,7 +479,11 @@ class Collation( models.Model ):
             print( "[ %s" % (location.base_text), file=file )
             sublocations = location.sublocation_set.all()
             for sublocation in sublocations:
-                print(" |%s %s" % ( sublocation.weighting, " ".join( [reading.text for reading in sublocation.reading_set.all()] )   ), file=file)
+                if binary:
+                    for reading in sublocation.reading_set.all():
+                        print(" |%s %s" % ( sublocation.weighting, reading.text ), file=file)                
+                else:
+                    print(" |%s %s" % ( sublocation.weighting, " ".join( [reading.text for reading in sublocation.reading_set.all()] )   ), file=file)
             print("]", file=file)
         
             if len(sublocations) == 0:
@@ -397,7 +504,17 @@ class Collation( models.Model ):
                         for sublocation in sublocations:
                             attestation = Attestation.objects.filter( sublocation=sublocation, witness=witness, parallel=parallel, corrector=corrector ).first()
                             symbol = attestation.code if attestation else "?"
-                            codes += symbol
+                            if binary:
+                                for reading_index, reading in enumerate(sublocation.reading_set.all()):
+                                    if not symbol.isdigit():
+                                        codes += symbol
+                                    else:
+                                        if int(symbol) == reading_index+1:
+                                            codes += "1"
+                                        else:
+                                            codes += "0"
+                            else:
+                                codes += symbol
                     
                         corrector_suffix = ":%d" % corrector if corrector != None else ""
                         witness_string = "%s%s" % (witness, corrector_suffix)

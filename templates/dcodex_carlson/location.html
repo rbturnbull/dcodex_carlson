@@ -12,23 +12,27 @@
 {% endblock %}
 
 {% block middle %}
-<div id=logo></div>
+<div id=header>
 {% if location.next %}
-    <div id=next_location>
-        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/{{ parallel.code }}/">Next</a>
+    <div id=next_location class='inputHeader inputButton noselect'>
+        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;→&nbsp;&nbsp;</a>        
     </div>
 {% endif %}
 {% if location.prev %}
-    <div id=prev_location>
-        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/{{ parallel.code }}/">Prev</a>
+    <div id=prev_location class='inputHeader inputButton noselect'>
+        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;←&nbsp;&nbsp;</a>
     </div>
 {% endif %}
 <center>
 {% for verse_label in location.closest_verse_labels.all %}
-    <span class=verse_reference>{{ verse_label.bible_verse }}</span>
+    <a href="/dcodex_carlson/{{ location.id }}/{{ siglum }}/{{ verse_label.parallel.code }}/"><span class="verse_reference inputHeader">{{ verse_label.bible_verse }}</span></a>
 {% endfor %}
+<div class=transcription >{{ transcription.transcription }} <input type="image" src="{% static 'dcodex/images/preview.png' %}" class="mshover comparison_button" data-manuscriptid="{{ manuscript.id }}" data-verseid="{{ bible_verse.id }}"></div>
 
-<div class=basetext>{{ location.base_text_greek }}</div>
+
+<div id=basetext>{{ location.base_text_greek }}</div>
+</div>
+<div id=variants>
 
 {% for sublocation in sublocations %}
     <div class=sublocation data-sublocationid="{{ sublocation.id }}">
@@ -44,14 +48,30 @@
 
         {% witness_attests_reading witness sublocation '?' parallel as selected %}                
         <span class="reading {% if selected %}selected{% endif %}" data-code="?">?</span>
-        
+        <!--
         {% witness_attests_reading witness sublocation '-' parallel as selected %}                                
         <span class="reading {% if selected %}selected{% endif %}" data-code="-">—</span>        
+        -->
     </div>
     <hr>
 {% endfor %}
-
 </center>
+
+<div style='height: 400px; '>
+{% if location.prev %}
+    <div  id=prev_location_bottom class='inputHeader inputButton noselect'>
+        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;←&nbsp;&nbsp;</a>    
+
+    </div>
+{% endif %}
+{% if location.next %}
+    <div id=next_location_bottom class='inputHeader inputButton noselect'>
+        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;→&nbsp;&nbsp;</a>        
+    </div>
+{% endif %}
+
+</div>
+</div>
 
 
 {% endblock %}
@@ -65,12 +85,36 @@
 {% endblock %}
 
 
+
+{% block left_sidebar %}
+
+<center>
+    <img src="{% static 'dcodex/images/DCodex-Logo.svg' %}" id='logo' />
+</center>
+<div id=collation_locations>
+    {% for collation_location in location.collation_set.first.locations.all %}
+        <div class="collation_location {% if collation_location.id == location.id %}collation_location_selected{% endif %}" id="collation_location{{ collation_location.id }}">
+            <div>
+            {% for collation_location_verse in collation_location.verse_labels.all %}
+            {{ collation_location_verse.bible_verse.reference_abbreviation }}
+            {% endfor %}
+            </div>
+            {{ collation_location.base_text_greek }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+
 {% block extra %}
 <div id=hover></div>
+<div id=msHover style='overflow:hidden;'></div>
 {% endblock %}
 
 
 {% block javascript %}
+<script src="{% static 'dcodex/js/jquery.scrollTo.min.js' %}"></script>
 <script src="{% static 'dcodex_carlson/js/location.js' %}"></script>
 <script>
 var hover_xhr = null;
@@ -122,8 +166,8 @@ $( document ).ready(function() {
                 data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id},
                 success: function(msg){
                     $("#hover").html(msg);  
-                    var left = event.pageX  + 10;
-                    var top = event.pageY + 20;
+                    var left = event.pageX  + 20;
+                    var top = event.pageY + 30;
                     $('#hover').css({top: top,left: left}).show();
                 }
             });
@@ -136,6 +180,9 @@ $( document ).ready(function() {
         load_comparison({{ verse_label.bible_verse.id }}, {{ witness.manuscript.id }}, '#comparison{{ verse_label.bible_verse.id }}' );
     {% endfor %}
     
+    $('#collation_locations').scrollTo($('#collation_location{{ location.id }}' ));				
+
+    $('#variants').css( {top: $('#header').height()});
 });
 </script>
 {% endblock %}
