@@ -55,10 +55,10 @@ class CollationModelTests(TestCase):
         """
         tests roundtrip of importing Carlson's 'Caesarean' collation file and exporting it
         """
-        return self.compare_import_export( 'data/caes' )
+        return self.compare_import_export( '../dcodex_carlson/data/caes' )
         
     def test_import_export_galatians( self ):
         """
         tests roundtrip of importing Carlson's 'Galatians' collation file and exporting it
         """
-        return self.compare_import_export( 'data/gal' )        
+        return self.compare_import_export( '../dcodex_carlson/data/gal' )        
