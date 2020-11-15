@@ -1,2 +1,2 @@
 # dcodex_carlson
-DCodex Extension for working with Stephen Carlon's stemma program
+DCodex Extension for working with Stephen Carlson's stemma program
