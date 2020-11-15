@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Collation
+from dcodex_carlson.models import Collation
 import os
 import difflib
 import tempfile

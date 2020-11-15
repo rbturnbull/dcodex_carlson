@@ -1,12 +1,14 @@
 from django.db import models
+from django.db.models import Max, Min
 import re
 import sys, os
 from collections import defaultdict
 import unicodedata
 import logging
-from dcodex_bible.models import BibleVerse
 from dcodex.models import Manuscript
-from django.db.models import Max, Min
+from dcodex_bible.models import BibleVerse
+
+
 
 
 def convert_greek_unicode(text):
