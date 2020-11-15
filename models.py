@@ -17,8 +17,9 @@ def convert_greek_unicode(text):
     text = text.replace("σ ", "ς ")
     text = text.replace("σ.", "ς.")
     text = text.replace("σ)", "ς)")
-    if text[-1] == "σ":
+    if len(text) > 0 and text[-1] == "σ":
         text = text[:-1] + "ς"
+    text = text.replace("_"," ")
     return unicodedata.normalize("NFC", text) # This isn't working for rough breathing...
 
 class Parallel(models.Model):
@@ -48,6 +49,10 @@ class Witness(models.Model):
         if attestation_count:
             return True
         return False
+    
+    def get_attestation(self, sublocation, corrector=None, parallel=None):
+        return Attestation.objects.filter( witness=self, sublocation=sublocation, corrector=corrector, parallel=parallel ).first()
+    
     def set_attestation(self, sublocation, code, corrector=None, parallel=None):
         Attestation.objects.filter( witness=self, sublocation=sublocation, corrector=corrector, parallel=parallel ).all().delete()
         attestation = Attestation( witness=self, sublocation=sublocation, code=code, corrector=corrector, parallel=parallel )
@@ -63,6 +68,7 @@ class Siglum(models.Model):
         return self.name
     class Meta:
         verbose_name_plural = 'Sigla'
+        ordering = ['name']
 
     @classmethod
     def get_with_corrector( cls, text ):
@@ -194,6 +200,7 @@ class Attestation( models.Model ):
     witness   = models.ForeignKey( Witness, on_delete=models.CASCADE )
     corrector = models.IntegerField( default=None, null=True, blank=True )
     parallel  = models.ForeignKey( Parallel, on_delete=models.SET_DEFAULT, default=None, null=True )
+    text      = models.TextField( default=None, blank=True, null=True)
     def __str__(self):
         return "%s %s %s %s %s" % (self.sublocation, self.code, self.witness, self.corrector, self.parallel)
 

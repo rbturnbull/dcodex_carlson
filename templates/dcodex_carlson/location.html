@@ -15,19 +15,19 @@
 <div id=header>
 {% if location.next %}
     <div id=next_location class='inputHeader inputButton noselect'>
-        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;→&nbsp;&nbsp;</a>        
+        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/">&nbsp;&nbsp;→&nbsp;&nbsp;</a>        
     </div>
 {% endif %}
 {% if location.prev %}
     <div id=prev_location class='inputHeader inputButton noselect'>
-        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;←&nbsp;&nbsp;</a>
+        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/">&nbsp;&nbsp;←&nbsp;&nbsp;</a>
     </div>
 {% endif %}
 <center>
 {% for verse_label in location.closest_verse_labels.all %}
-    <a href="/dcodex_carlson/{{ location.id }}/{{ siglum }}/{{ verse_label.parallel.code }}/"><span class="verse_reference inputHeader">{{ verse_label.bible_verse }}</span></a>
+    <a href="/dcodex_carlson/{{ location.id }}/{{ siglum }}/"><span class="verse_reference inputHeader">{{ verse_label.bible_verse }}</span></a>
 {% endfor %}
-<div class=transcription >{{ transcription.transcription }} <input type="image" src="{% static 'dcodex/images/preview.png' %}" class="mshover comparison_button" data-manuscriptid="{{ manuscript.id }}" data-verseid="{{ bible_verse.id }}"></div>
+<div class=transcription style='direction: rtl;'>{{ transcription.transcription }} <input type="image" src="{% static 'dcodex/images/preview.png' %}" class="mshover comparison_button" data-manuscriptid="{{ manuscript.id }}" data-verseid="{{ bible_verse.id }}"></div>
 
 
 <div id=basetext>{{ location.base_text_greek }}</div>
@@ -57,16 +57,20 @@
 {% endfor %}
 </center>
 
+<div >
+    <input type="text" id="text" name="text" style='font-size: 2.0em; direction: rtl;'>
+    <input type="button" class="button" id="savetext" value="Save Text">
+</div>
 <div style='height: 400px; '>
 {% if location.prev %}
     <div  id=prev_location_bottom class='inputHeader inputButton noselect'>
-        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;←&nbsp;&nbsp;</a>    
+        <a href="/dcodex_carlson/{{ location.prev.id }}/{{ siglum }}/">&nbsp;&nbsp;←&nbsp;&nbsp;</a>    
 
     </div>
 {% endif %}
 {% if location.next %}
     <div id=next_location_bottom class='inputHeader inputButton noselect'>
-        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/{{ parallel.code }}/">&nbsp;&nbsp;→&nbsp;&nbsp;</a>        
+        <a href="/dcodex_carlson/{{ location.next.id }}/{{ siglum }}/">&nbsp;&nbsp;→&nbsp;&nbsp;</a>        
     </div>
 {% endif %}
 
@@ -118,21 +122,24 @@
 <script src="{% static 'dcodex_carlson/js/location.js' %}"></script>
 <script>
 var hover_xhr = null;
-function load_comparison(verse_id, manuscript_id, div_name) {
-    $( div_name ).load( "/dcodex/ajax/comparison/", { manuscript_id:manuscript_id, verse_id:verse_id }, function() {
-        $(".mshover").hover(function(){
-            $('#msHover').load("/dcodex/ajax/transcription-mini/", { manuscript_id:$(this).data('manuscriptid'), verse_id:$(this).data('verseid') } );
-            $('#msHover').show();
-        }, function() {
-            $('#msHover').hide();	  
-            $('#msHover').html("");
-        });        
-    } );
-}
 
 $( document ).ready(function() {
     console.log( "loading from location.html" );
-    
+    $('#savetext').click(function(e) {
+        $.ajax({
+            type: "POST",
+            url: "/dcodex_carlson/set_text/",
+            data: {'text':$('#text').val(), 'sublocation_id':sublocation_id, 'witness_id': {{ witness.id }}, 'parallel_id': "" },
+            success: function(msg){
+                if (msg == "OK") {
+                }
+                else {
+                    alert("There was a problem setting the attestation.");
+                }
+            }
+        });        
+
+    });
     $('.reading').click(function(e) {
         sublocationdiv = $(this).parent();
         sublocation_id = sublocationdiv.data('sublocationid');
@@ -140,7 +147,7 @@ $( document ).ready(function() {
         $.ajax({
             type: "POST",
             url: "/dcodex_carlson/set_attestation/",
-            data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id, 'witness_id': {{ witness.id }}, 'parallel_id': {{ parallel.id }} },
+            data: {'code':$(this).data('code'), 'sublocation_id':sublocation_id, 'witness_id': {{ witness.id }}, 'parallel_id': "" },
             success: function(msg){
                 if (msg == "OK") {
                     sublocationdiv.children( '.reading' ).removeClass( 'selected' );

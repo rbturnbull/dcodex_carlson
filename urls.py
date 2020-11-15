@@ -9,4 +9,5 @@ urlpatterns = [
     path('<int:location_id>/', views.location, name='location'),
     path('attestations/', views.attestations, name='attestations'),
     path('set_attestation/', views.set_attestation, name='set_attestation'),
+    path('get_attestation/', views.get_attestation, name='get_attestation'),
 ]
